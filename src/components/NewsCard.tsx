@@ -1,6 +1,17 @@
 import React from 'react';
 
-export default function NewsCard({ item }) {
+type NewsItem = {
+  image?: string;
+  subcategory: string;
+  title: string;
+  description?: string;
+};
+
+type NewsCardProps = {
+  item: NewsItem;
+};
+
+export default function NewsCard({ item }: NewsCardProps) {
   return (
     <div className="d-flex flex-column h-100 text-start">
       {item.image && item.image.trim() !== '/' && (
@@ -42,4 +53,3 @@ export default function NewsCard({ item }) {
     </div>
   );
 }
-    

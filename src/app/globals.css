@@ -40,3 +40,22 @@ a {
     color-scheme: dark;
   }
 }
+
+.section-new{
+  
+  display: flex;
+}
+.section-new-image{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  padding-top: 1rem;
+}
+
+
+@media (max-width: 768px) {
+  .section-new{
+   flex-direction: column;
+}
+
+}

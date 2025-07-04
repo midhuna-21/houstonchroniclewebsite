@@ -9,11 +9,11 @@ interface SectionWrapperProps {
 
 export default function SectionWrapper({ title, children }: SectionWrapperProps) {
   return (
-    <section className="bg-white px-0">
+    <section className="bg-white px-3">
       <div className="container-fluid px-0">
         <div
         className="flex-grow-1"
-        style={{ flexBasis: '75%', maxWidth: '950px' }}
+        style={{ flexBasis: '75%', maxWidth: '850px' }}
         >
         <h3
           className="fw-bold border-top border-2 border-black pt-3 mb-4 text-start"

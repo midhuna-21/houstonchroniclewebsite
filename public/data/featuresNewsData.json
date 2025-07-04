@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "title": "Black Lion makes last-minute $8B bid in high-stakes Citgo auction"
+  },
+  {
+    "id": 2,
+    "title": "Shell denies reported talks to acquire BP in potential mega oil merger"
+  },
+  {
+    "id": 3,
+    "title": "Why Rick Perry wants to build a Trump-inspired nuclear power complex in Texas",
+    "description": "Former Gov. Rick Perry's new company is trying to build a nuclear homage to President Donald Trump near Amarillo to propel the country's AI ambitions.",
+    "image": "/images/energy.webp"
+  },
+  {
+    "id": 4,
+    "title": "Cheniere Energy approves $2.9 Billion expansion at Corpus Christi LNG facility"
+  },
+  {
+    "id": 5,
+    "title": "Encino Energy layoffs expected following sale to EOG Resources"
+  }
+]
