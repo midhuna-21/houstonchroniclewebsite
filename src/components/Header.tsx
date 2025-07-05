@@ -8,11 +8,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default function Header() {
   const [expanded, setExpanded] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const [isFixed, setIsFixed] = useState(false);
 
   useEffect(() => {
     if (typeof document !== 'undefined') {
       require('bootstrap/dist/js/bootstrap.bundle.min');
     }
+
+    const handleScroll = () => {
+      setIsFixed(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const toggleIcon = (
@@ -41,11 +49,17 @@ export default function Header() {
           backgroundColor: '#1c2146',
           minHeight: '78px',
           padding: '0.5rem 1.5rem',
+          position: isFixed ? 'fixed' : 'sticky', // 👈 switch based on scroll
+          top: 0,
+          left: 0,
+          right: 0,
+          width: '100%',
+          zIndex: 1050,
         }}
         className="text-white"
       >
         <Container fluid className="p-0 d-flex justify-content-between align-items-center position-relative">
-          {/* Toggle always visible */}
+          {/* Toggle */}
           <div className="d-flex align-items-center gap-3">
             <button
               onClick={() => setExpanded(!expanded)}
@@ -65,7 +79,7 @@ export default function Header() {
               {toggleIcon}
             </button>
 
-            {/* Logo for mobile view only */}
+            {/* Mobile Logo */}
             <div className="d-lg-none">
               <Link href="/" className="text-decoration-none">
                 <h1
@@ -78,7 +92,7 @@ export default function Header() {
             </div>
           </div>
 
-          {/* Center logo for large screens only */}
+          {/* Center Logo */}
           <div className="d-none d-lg-block position-absolute top-50 start-50 translate-middle">
             <Link href="/" className="text-decoration-none">
               <h1
@@ -92,7 +106,6 @@ export default function Header() {
 
           {/* Right Side */}
           <div className="d-flex align-items-center gap-3 ms-auto">
-            {/* Desktop offer */}
             <div className="d-none d-lg-block bg-danger text-white px-3 py-2"
               style={{
                 fontSize: '1rem',

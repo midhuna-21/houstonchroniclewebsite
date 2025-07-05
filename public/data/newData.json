@@ -1,5 +1,6 @@
 {
   "main": {
+     "slug":"astros",
     "category": "POLITICS",
     "title": "House GOP struggles to win over holdouts on Trump's tax bill in late-night session",
     "description": "House Republicans strained through a day of starts and stops trying to advance President Donald Trump’s tax and spending cuts package. A procedural vote that started late Wednesday was held open…",
@@ -7,19 +8,23 @@
   },
   "side": [
     {
+       "slug":"astros",
       "category": "TRENDING",
       "title": "Texas 4th of July drone show aims to set world record with cowboy hat"
     },
     {
+       "slug":"astros",
       "category": "TRENDING",
       "title": "Houston-area animal shelters participating in Empty the Shelters event"
     }
   ],
   "bottom": {
+     "slug":"astros",
     "category": "SPECIAL EVENTS",
     "title": "Top things to do in Houston: Freedom Over Texas, 'The Tap Dance Kid'"
   },
   "bottomTrending": {
+     "slug":"astros",
     "category": "TRENDING",
     "title": "TopGolf and Marvel Studios tee up for 'Fantastic Four' themed experience"
   }

@@ -1,8 +1,10 @@
 // ContentLayout.tsx
 import React from "react";
 import SectionWrapper from "./SectionWrapper";
+import Link from "next/link";
 
 interface NewsItem {
+  slug:string;
   category?: string;
   title: string;
   image?: string;
@@ -26,7 +28,9 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
       <div className="row">
         {/* Left: Main Card (50% width) */}
         <div className="col-md-6">
+          
           <div>
+       <Link href={`/details/${main.slug}`}>
             <img
               src={main.image}
               alt={main.title}
@@ -37,6 +41,7 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
                 height: "300px" // Fixed height for consistency
               }}
             />
+            </Link>
             <h4 className="fw-bold mb-2">{main.title}</h4>
             <p className="text-muted small">{main.description}</p>
           </div>

@@ -1,4 +1,5 @@
  export type HighlightBlock = {
+  slug:string;
   category: string;
   headline: string;
   description: string;
@@ -14,6 +15,7 @@
 
 export const latestHighlightsData: HighlightBlock[] = [
   {
+    slug:'astros',
     category: 'Astros',
     headline: `'They all mean a lot': Jose Altuve passes Jeff Bagwell on Astros' hits list`,
     description: `Hall of Famer Craig Biggio is the only player with more hits in an Astros uniform than Jose Altuve.`,
@@ -40,6 +42,7 @@ export const latestHighlightsData: HighlightBlock[] = [
     
   },
    {
+      slug:'astros',
     category: 'Local',
     headline: `Texas AG defends shutdown of midwife's health clinics amid abortion prosecution`,
     description: `Lawyers for Texas Attorney General Ken Paxton said that accused abortionist Maria Rojas didn't use her opportunity to defend against the closure in March.`,
@@ -64,12 +67,14 @@ export const latestHighlightsData: HighlightBlock[] = [
 
 export const topNewsData = [
   {
+    slug:'astros',
     subcategory: 'Trending',
     title: 'Houston Zoo welcomes birth of critically endangered eastern bongo calf',
     description: '',
     image: '/images/bongo.webp',
   },
   {
+     slug:'astros',
     subcategory: 'Housing',
     title: 'Houston Housing Authority to pay $10k, settling lawsuit containing fake quotes',
     description:
@@ -77,12 +82,14 @@ export const topNewsData = [
     image: '',
   },
   {
+      slug:'astros',
     subcategory: 'Business',
     title: 'McDonald’s launches limited-time Happy Meal toy set for adults',
     description: '',
     image: '/images/happymeal.webp',
   },
    {
+   slug:'astros',
     subcategory: 'Trending',
     title: "Lil Happy Meal miniatures include tiny McDonald's restaurant, micro PlayPlaces",
     description: "The Lil McDonald’s Happy Meal comes with one of 21 miniature McDonald's-themed toys starting on July 1. The toys are inspired by what customers see when they visit the restaurant, just mini.",
@@ -94,19 +101,23 @@ export const topNewsData = [
 // data/editorsPicksData.ts
 
 export const editorsPicksData = [
-  {
+  { 
+      slug:'astros',
     title: 'Houston workers are moving farther away from their jobs',
     image: '/images/map.webp',
   },
   {
+     slug:'astros',
     title: 'Falkenberg: This July 4th, I’m honoring two national anthems',
     image: '/images/singer.webp',
   },
   {
+  slug:'astros',
     title: "Jay-Z, Beyoncé's family shoutout this Houston restaurant",
     image: '/images/party.webp',
   },
   {
+    slug:'astros',
     title: 'Houston in June 1995: A month of partying',
     image: '/images/foody.webp',
   },
@@ -117,6 +128,7 @@ export const newsData = [
   {
     // Section 0: Sports
     main: {
+   slug:'astros',
       category: "SPORTS",
       title: "Astros OF Chas McCormick joining Triple-A Sugar Land for rehab assignment",
       description: "Chas McCormick, sidelined since May 29 with an injury, is set to start rehab assignment with the Astros’ Triple-A affiliate.",
@@ -124,24 +136,27 @@ export const newsData = [
     },
     side: [
       {
+          slug:'astros',
         title: "Mayde Creek linebacker/edge rusher Kosi Okpala commits to Texas",
         description: "Kosi Okpala, ranked as the No. 35 overall player in Texas, chose Longhorns over Baylor, Houston and Miami."
       },
       {
+         slug:'astros',
         title: "Astros pitcher warming up before game",
         image: "/images/astros.webp"
       }
     ],
     bottomCards: [
-      { title: "Yordan Alvarez's setback due to inflammation", image: "/images/astros.webp" },
-      { title: "U.S. vs. Mexico in Gold Cup final at NRG", image: "/images/astros.webp" },
-      { title: "Rice to play at Notre Dame in 2026", image: "/images/astros.webp" },
-      { title: "Astros go for a sweep at Rockies", image: "/images/astros.webp" }
+      {   slug:'astros',title: "Yordan Alvarez's setback due to inflammation", image: "/images/astros.webp" },
+      {  slug:'astros', title: "U.S. vs. Mexico in Gold Cup final at NRG", image: "/images/astros.webp" },
+      {   slug:'astros',title: "Rice to play at Notre Dame in 2026", image: "/images/astros.webp" },
+      {   slug:'astros',title: "Astros go for a sweep at Rockies", image: "/images/astros.webp" }
     ]
   },
   {
     // Section 1: Business
     main: {
+        slug:'astros',
       category: "BUSINESS",
       title: "Tesla delivered nearly 60K fewer vehicles in Q2 this year than in 2024",
       description: "Tesla said it delivered about 384,000 vehicles in Q2 this year, a significant drop from last year.",
@@ -149,24 +164,27 @@ export const newsData = [
     },
     side: [
       {
+         slug:'astros',
         title: "Perigold launches first physical store in Houston",
         description: "Luxury retailer Perigold opens its first physical store in Houston amid strong shopper demand."
       },
       {
+         slug:'astros',
         title: "Credit card points benefit wealthy, burden poor",
         image: "/images/visa.webp"
       }
     ],
     bottomCards: [
-      { title: "Apple sees record growth in India", image: "/images/switch.webp" },
-      { title: "Amazon to invest $5B in Texas data centers", image: "/images/gatesfoundation.webp" },
-      { title: "Mortgage rates hit 7%", image: "/images/exon.webp" },
-      { title: "H-E-B expands tech grocery format", image: "/images/car.webp" }
+      {  slug:'astros',title: "Apple sees record growth in India", image: "/images/switch.webp" },
+      {   slug:'astros',title: "Amazon to invest $5B in Texas data centers", image: "/images/gatesfoundation.webp" },
+      {   slug:'astros',title: "Mortgage rates hit 7%", image: "/images/exon.webp" },
+      {   slug:'astros',title: "H-E-B expands tech grocery format", image: "/images/car.webp" }
     ]
   },
   {
     // Section 2: Technology
     main: {
+       slug:'astros',
       category: "Opinion",
       title: "OpenAI launches new voice assistant with GPT-5 base",
       description: "OpenAI introduces a smarter, more intuitive voice assistant powered by the latest GPT-5 model.",
@@ -174,24 +192,27 @@ export const newsData = [
     },
     side: [
       {
+      slug:'astros',
         title: "Apple announces iOS 19 with enhanced AI tools",
         description: "iOS 19 features on-device AI, smarter Siri, and more privacy controls."
       },
       {
+      slug:'astros',
         title: "New AI chip from NVIDIA promises 5x performance",
         image: "/images/ai.webp"
       }
     ],
     bottomCards: [
-      { title: "Meta rolls out Threads 2.0 globally", image: "/images/office.webp" },
-      { title: "Google Lens now supports real-time translation", image: "/images/uslady.webp" },
-      { title: "Tesla’s humanoid robot prototype debuts", image: "/images/noodlesfood.webp" },
-      { title: "Amazon expands drone delivery zones", image: "/images/waterdance.webp" }
+      {  slug:'astros',title: "Meta rolls out Threads 2.0 globally", image: "/images/office.webp" },
+      {  slug:'astros',title: "Google Lens now supports real-time translation", image: "/images/uslady.webp" },
+      {  slug:'astros',title: "Tesla’s humanoid robot prototype debuts", image: "/images/noodlesfood.webp" },
+      {  slug:'astros',title: "Amazon expands drone delivery zones", image: "/images/waterdance.webp" }
     ]
   },
   {
     // Section 3: Health
     main: {
+       slug:'astros',
       category: "Politics",
       title: "New obesity drug shows promising results in Phase 3 trials",
       description: "A breakthrough obesity drug has shown a 25% reduction in weight during testing.",
@@ -199,24 +220,27 @@ export const newsData = [
     },
     side: [
       {
+       slug:'astros',
         title: "Doctors warn against TikTok health trends",
         description: "Experts urge users to verify medical advice with licensed professionals."
       },
       {
+         slug:'astros',
         title: "Fitness wearables track mental health signs",
         image: "/images/switch.webp"
       }
     ],
     bottomCards: [
-      { title: "FDA approves first gene therapy for sickle cell", image: "/images/camcar.webp" },
-      { title: "Yoga linked to lower stress levels", image: "/images/roadway.webp" },
-      { title: "Intermittent fasting boosts metabolism", image: "/images/manloud.webp" },
-      { title: "Heart disease down 10% this year", image: "/images/assembly.webp" }
+      { slug:'astros', title: "FDA approves first gene therapy for sickle cell", image: "/images/camcar.webp" },
+      {  slug:'astros',title: "Yoga linked to lower stress levels", image: "/images/roadway.webp" },
+      {  slug:'astros',title: "Intermittent fasting boosts metabolism", image: "/images/manloud.webp" },
+      {  slug:'astros',title: "Heart disease down 10% this year", image: "/images/assembly.webp" }
     ]
   },
   {
     // Section 4: World
     main: {
+      slug:'astros',
       category: "Food & Lifestyle",
       title: "Peace talks resume between neighboring nations after 5 years",
       description: "Diplomatic discussions restart in hopes of ending long-standing regional conflict.",
@@ -224,24 +248,27 @@ export const newsData = [
     },
     side: [
       {
+      slug:'astros',
         title: "UN warns of global water crisis by 2030",
         description: "Water demand expected to surpass supply without major conservation efforts."
       },
       {
+        slug:'astros',
         title: "Protests erupt in European capital over reform laws",
         image: "/images/hands.webp"
       }
     ],
     bottomCards: [
-      { title: "Global inflation slows, still elevated", image: "/images/breakingnews.webp" },
-      { title: "World leaders to meet at climate summit", image: "/images/grass.webp" },
-      { title: "Africa sees tech-driven economic boom", image: "/images/building.webp" },
-      { title: "Global migration trends shifting rapidly", image: "/images/delicious.webp" }
+      {  slug:'astros',title: "Global inflation slows, still elevated", image: "/images/breakingnews.webp" },
+      {  slug:'astros',title: "World leaders to meet at climate summit", image: "/images/grass.webp" },
+      {  slug:'astros',title: "Africa sees tech-driven economic boom", image: "/images/building.webp" },
+      { slug:'astros',title: "Global migration trends shifting rapidly", image: "/images/delicious.webp" }
     ]
   },
   {
     // Section 5: Entertainment
     main: {
+      slug:'astros',
       category: "Local",
       title: "Hollywood studios reach agreement to end strike",
       description: "Studios and unions agree on fair pay, AI limits, and working conditions after months of standstill.",
@@ -249,25 +276,28 @@ export const newsData = [
     },
     side: [
       {
+      slug:'astros',
         title: "BTS returns with world tour in 2025",
         description: "The K-pop sensation is making a global comeback after a 2-year hiatus."
       },
       {
+    slug:'astros',
         title: "Oscar nominations dominated by indie films",
         image: "/images/elementary.webp"
       }
     ],
     bottomCards: [
-      { title: "Netflix to release 30 original films this year", image: "/images/wokringpeople.webp" },
-      { title: "Barbie sequel confirmed for 2026", image: "/images/singing.webp" },
-      { title: "Taylor Swift sets new ticket sale record", image: "/images/craft.webp" },
-      { title: "Cannes Film Festival draws record attendance", image: "/images/petrol.webp" }
+      { slug:'astros',title: "Netflix to release 30 original films this year", image: "/images/wokringpeople.webp" },
+      { slug:'astros',title: "Barbie sequel confirmed for 2026", image: "/images/singing.webp" },
+      { slug:'astros',title: "Taylor Swift sets new ticket sale record", image: "/images/craft.webp" },
+      { slug:'astros',title: "Cannes Film Festival draws record attendance", image: "/images/petrol.webp" }
     ]
   },
 
    {
     // Section 6: Entertainment
     main: {
+    slug:'astros',
       category: "Bayou City History",
       title: "Hollywood studios reach agreement to end strike",
       description: "Studios and unions agree on fair pay, AI limits, and working conditions after months of standstill.",
@@ -275,19 +305,21 @@ export const newsData = [
     },
     side: [
       {
+        slug:'astros',
         title: "BTS returns with world tour in 2025",
         description: "The K-pop sensation is making a global comeback after a 2-year hiatus."
       },
       {
+       slug:'astros',
         title: "Oscar nominations dominated by indie films",
         image: "/images/arts.webp"
       }
     ],
     bottomCards: [
-      { title: "Netflix to release 30 original films this year", image: "/images/2floorb.webp" },
-      { title: "Barbie sequel confirmed for 2026", image: "/images/applause.webp" },
-      { title: "Taylor Swift sets new ticket sale record", image: "/images/guitar.webp" },
-      { title: "Cannes Film Festival draws record attendance", image: "/images/peoplespeaking.webp" }
+      { slug:'astros',title: "Netflix to release 30 original films this year", image: "/images/2floorb.webp" },
+      { slug:'astros',title: "Barbie sequel confirmed for 2026", image: "/images/applause.webp" },
+      { slug:'astros',title: "Taylor Swift sets new ticket sale record", image: "/images/guitar.webp" },
+      { slug:'astros',title: "Cannes Film Festival draws record attendance", image: "/images/peoplespeaking.webp" }
     ]
   }
 
@@ -296,6 +328,7 @@ export const newsData = [
 
 export const featureData = [
   {
+    slug:'astros',
     section: "Energy",
     articles: [
       {
@@ -324,6 +357,7 @@ export const featureData = [
   },
 
   {
+    slug:'astros',
     section: "Entertainment",
     articles: [
       {
@@ -352,6 +386,7 @@ export const featureData = [
   },
 
    {
+    slug:'astros',
     section: "Investigations",
     articles: [
       {
@@ -385,6 +420,7 @@ export const featureData = [
 // trendingData.ts
 export const trendingData = [
   {
+    slug:"astros",
     section: "Trending In Sports",
     items: [
       {
@@ -405,6 +441,7 @@ export const trendingData = [
     ]
   },
   {
+    slug:"astros",
     section: "Trending In Business",
     items: [
       {
@@ -438,6 +475,7 @@ export const trendingData = [
     ]
   },
    {
+    slug:"astros",
     section: "Politics",
     items: [
       {
@@ -458,6 +496,7 @@ export const trendingData = [
     ]
   },
    {
+    slug:"astros",
     section: "Freatures Writer",
     items: [
       {
@@ -492,6 +531,7 @@ export const trendingData = [
     ]
   },
    {
+    slug:"astros",
     section: "New Columns",
     items: [
       {
@@ -556,21 +596,164 @@ export const dailyPuzzles = [
 
 
 export const popularArticles = [
-  { title: 'Judge rules in favor of Texas voter ID law' },
-  { title: 'City council approves new downtown park project' },
-  { title: 'High school football season kicks off with big win' },
-  { title: 'Weather alert: Thunderstorms expected this weekend' },
-  { title: 'New restaurant opening brings fresh flavors to town' },
+  { slug:"astros",title: 'Judge rules in favor of Texas voter ID law' },
+  { slug:"astros",title: 'City council approves new downtown park project' },
+  { slug:"astros",title: 'High school football season kicks off with big win' },
+  { slug:"astros",title: 'Weather alert: Thunderstorms expected this weekend' },
+  { slug:"astros",title: 'New restaurant opening brings fresh flavors to town' },
 ];
 
  
 
 
 export const opinionArticles = [
-  { title: 'Why local journalism still matters in 2025' },
-  { title: 'The case for walkable neighborhoods' },
-  { title: 'Let teachers teach: a letter from the classroom' },
-  { title: 'Climate change needs more than awareness — it needs action' },
+  { slug:"astros",title: 'Why local journalism still matters in 2025' },
+  { slug:"astros",title: 'The case for walkable neighborhoods' },
+  { slug:"astros",title: 'Let teachers teach: a letter from the classroom' },
+  { slug:"astros",title: 'Climate change needs more than awareness — it needs action' },
 ];
 
- 
+
+
+export interface EditorialItem {
+  id: number;
+  slug:string;
+  title: string;
+  description: string;
+  image: string;
+}
+
+
+export const editorialData : EditorialItem[] = [
+  {
+    id: 1,
+    slug:'astros',
+    title: 'From The Editorial Board',
+    description:
+      'Celebrate the Fourth by reading the Declaration of Independence',
+    image: '/images/usflag.webp',
+  },
+  {
+    id: 2,
+    slug:'astros',
+    title: 'From The Editorial Board',
+    description: 'Honor the Constitution by reflecting on its principles',
+    image: '/images/carplace.webp', 
+  },
+  {   id: 2,
+    slug:'astros',
+    title: 'From The Editorial Board',
+    description: 'Honor the Constitution by reflecting on its principles',
+    image: '/images/greenbottle.webp', 
+  },
+  {   id: 2,
+    slug:'astros',
+    title: 'From The Editorial Board',
+    description: 'Honor the Constitution by reflecting on its principles',
+    image: '/images/trumpspeach.webp', 
+  }
+];
+
+
+
+
+
+export interface NewsTextItem {
+  id: number;
+  slug:string
+  title: string;
+}
+
+
+export const NewsTextData : NewsTextItem[] = [
+  {
+    id: 1,
+    slug:"astros",
+    title: "Leon Hale in 1966: Out where the bacon is crisper, the coffee weaker"
+  },
+  {
+    id: 2,
+    slug:"astros",
+    title: "From 1975: 'Jaws' delivers on suspense",
+    },
+  {   id: 2,
+    slug:"astros",
+    title: "Sig Byrd in 1955: A visit to Friendsylvania on our coastal prairie",
+    },
+  {   id: 2,
+    slug:"astros",
+    title: "Leon Hale in 1980: Enjoying the day, starting at 5 a.m.",
+     },
+      {   id: 3,
+    slug:"astros",
+    title: "Sig Byrd in 1955: Some flashbacks from an 8-year-old nightmare",
+     },
+      {   id: 4,
+    slug:"astros",
+    title: "Leon Hale in 1983: The secrets of the junk drawer",
+     },
+     
+      {   id: 3,
+    slug:"astros",
+    title: "Leon Hale in 1964: The true story of why he doesn't chew tobacco",
+     },
+];
+
+
+
+
+// data/lottoData.ts
+
+export interface LottoItem {
+  id: number;
+  slug:string,
+  title: string;
+  description: string;
+  image: string;
+}
+
+export const lottoData: LottoItem[] = [
+  {
+    id: 1,
+    slug:"astros",
+    title: 'Stacking the Odds',
+    description:
+      'How rich investors stacked the odds for a $95 million Texas Lotto win: A Houston Chronicle investigation',
+    image:'/images/lottoimage.webp',
+  },
+];
+
+// data/letsPlayData.ts
+
+export interface GameItem {
+  id: number;
+  name: string;
+  image: string;
+}
+
+export const gameData: GameItem[] = [
+  { id: 1, name: 'SpellTower', image: '/images/spelltower.webp' },
+  { id: 2, name: 'Pile-up poker', image: '/images/pileuppoker.webp' },
+  { id: 3, name: 'Typeshift', image: '/images/typeshift.webp' },
+  { id: 4, name: 'Really Bad Chess', image: '/images/reallybadchess.webp' },
+  { id: 5, name: 'Flipkart', image: '/images/flipkart.webp' },
+  { id: 6, name: 'Crossword', image: '/images/crossword.webp' },
+  { id: 7, name: 'Wordbind', image: '/images/wordbind.webp' },
+  { id: 8, name: 'CubeClear', image: '/images/cubeclear.webp' },
+  { id: 9, name: 'Bongo', image: '/images/bongo.webp' },
+];
+
+
+// /data/promoData.ts
+export interface PromoData {
+  message: string;
+  highlight: string;
+  buttonText: string;
+}
+
+export const promoData: PromoData = {
+  message: 'JULY FOURTH SALE! Get our best offer for a limited time:',
+  highlight: '6 months for only 99¢.',
+  buttonText: 'SAVE NOW',
+};
+

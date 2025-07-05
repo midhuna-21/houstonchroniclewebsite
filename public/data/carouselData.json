@@ -1,17 +1,20 @@
 [
   {
+    "slug":"astros",
     "tag": "Real Estate",
     "heading": "Unsure what to say at your property tax hearing? Our tool can write you a script",
     "description": "Let AI help you find the right words and win your appeal.",
     "image": "/images/realestate.webp"
   },
   {
+     "slug":"astros",
     "tag": "Real Estate",
     "heading": "Navigate Houston real estate like a pro",
     "description": "We break down neighborhoods, taxes, and pricing trends.",
     "image": "/images/realestate.webp"
   },
   {
+    "slug":"astros",
     "tag": "Real Estate",
     "heading": "Avoid these common mistakes when buying property",
     "description": "Our checklist helps you close deals with confidence.",
