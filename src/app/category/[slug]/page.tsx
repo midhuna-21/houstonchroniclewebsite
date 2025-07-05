@@ -1,3 +1,5 @@
+// src/app/category/[slug]/page.tsx
+
 import { navData, slugToKeyMap } from '@/data/navData';
 import CategoryContent from '@/components/CategoryContent';
 import NavigationSection from '@/components/NavigationSection';
@@ -9,17 +11,17 @@ type Props = {
   };
 };
 
-export default function CategoryPage({ params }: Props) {
+export default async function CategoryPage({ params }: Props) {
   const { slug } = params;
 
-  const navKey = slugToKeyMap[slug]; 
+  const navKey = slugToKeyMap[slug];
 
   if (!navKey || !navData[navKey]) return notFound();
 
   return (
     <>
       <NavigationSection />
-      <CategoryContent activeMain={navKey}/>
+      <CategoryContent activeMain={navKey} />
     </>
   );
 }
