@@ -1,17 +1,39 @@
+"use client";
+import { useEffect } from 'react';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Footer() {
+  useEffect(() => {
+    const accordions = document.querySelectorAll('.accordion-button');
+    accordions.forEach(btn => {
+      btn.addEventListener('click', () => {
+        setTimeout(() => {
+          accordions.forEach(button => {
+            const arrow = button.querySelector('.accordion-arrow');
+            if (arrow) {
+              if (button.classList.contains('collapsed')) {
+                arrow.innerHTML = '▼';
+              } else {
+                arrow.innerHTML = '▲';
+              }
+            }
+          });
+        }, 200);
+      });
+    });
+  }, []);
+
   return (
     <footer className="text-white pt-5 pb-3" style={{ backgroundColor: '#1c2146' }}>
       <div className="container-fluid px-4">
         <div className="row pt-4 pb-5 align-items-stretch gx-2">
 
-          {/* Left Column (Logo + Social) */}
+          {/* Left Column: Logo + Social */}
           <div className="col-md-2 mb-4 border-end border-secondary h-100 d-flex flex-column align-items-start px-2">
             <h1 className="m-0 fw-bold text-white" style={{ fontFamily: 'monospace', fontSize: '1.1rem' }}>
-              HOUSTON <span className="text-warning">★</span> CHRONICLE
+              HOUSTON <span style={{ color: '#ffc107' }}>★</span> CHRONICLE
             </h1>
             <div className="d-flex gap-2 mt-3">
               {[FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn].map((Icon, i) => (
@@ -33,7 +55,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Center Columns - Only on md and up */}
+          {/* Middle Columns (About, Contact, Services) - Visible only on md+ */}
           <div className="col-md-5 mb-4 border-end border-secondary h-100 px-2 d-none d-md-block">
             <div className="row h-100">
               <div className="col">
@@ -60,7 +82,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Right Column - Only on md and up */}
+          {/* Right Column (Account) - Visible only on md+ */}
           <div className="col-md-3 mb-4 ps-4 h-100 d-none d-md-block">
             <h6 className="text-uppercase">Account</h6>
             <ul className="list-unstyled small">
@@ -69,7 +91,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Accordions - Only on small screens */}
+          {/* Accordion (Only visible on small screens) */}
           <div className="d-block d-md-none px-2">
             <div className="accordion" id="footerAccordion">
               {[
@@ -87,8 +109,18 @@ export default function Footer() {
                       data-bs-target={`#collapse${index}`}
                       aria-expanded="false"
                       aria-controls={`collapse${index}`}
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        fontSize: '1rem',
+                        fontWeight: 'bold'
+                      }}
                     >
                       {section.title}
+                      <span className="accordion-arrow" style={{ marginLeft: 'auto', transition: 'transform 0.2s' }}>
+                        ▼
+                      </span>
                     </button>
                   </h2>
                   <div
@@ -110,6 +142,7 @@ export default function Footer() {
               ))}
             </div>
           </div>
+
         </div>
 
         <hr className="border-secondary my-4" />
@@ -127,7 +160,10 @@ export default function Footer() {
 
           <div
             className="border border-light px-3 py-1 text-white"
-            style={{ whiteSpace: 'nowrap', borderRadius: '3px' }}
+            style={{
+              whiteSpace: 'nowrap',
+              borderRadius: '3px'
+            }}
           >
             Your Privacy Choices (Opt Out of Sale/Targeted Ads)
           </div>
