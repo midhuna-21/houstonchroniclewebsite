@@ -92,7 +92,6 @@ export default function Header() {
             </div>
           </div>
 
-          {/* Center Logo */}
           <div className="d-none d-lg-block position-absolute top-50 start-50 translate-middle">
             <Link href="/" className="text-decoration-none">
               <h1
@@ -131,7 +130,6 @@ export default function Header() {
         </Container>
       </Navbar>
 
-      {/* Mobile offer below header */}
       <div className="d-lg-none bg-danger text-white px-3 py-2 text-center fw-semibold" style={{
         fontSize: '0.95rem',
         borderRadius: '3px',
