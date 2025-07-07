@@ -2,12 +2,11 @@ import { getArticleBySlug } from '@/lib/detailFunction';
 import ArticleHeader from '@/components/ArticleHeader';
 import DetailFirstSection from '@/components/DetailFirstSection';
 import { notFound } from 'next/navigation';
-import ArticleSecondSection from '@/components/ArticleSecondSection';
-import SingleParagraph from '@/components/SingleParagraph';
 import ArticleBodyRenderer from '@/components/ArticleBodyRender';
 import EditorsPicksSection from '@/components/EditorsPick';
-import ArticleWrapper from '@/components/ArticleWrapper';
 import LetsPlaySection from '@/components/LetsPlay';
+import MostPopularList from '@/components/MostPopularlist';
+import { popularArticles } from '@/data/homeData';
 
 interface PageProps {
   params: { slug: string };
@@ -30,7 +29,7 @@ export default async function DetailPage({ params }: PageProps) {
 
 
   return (
-    <div>
+    <div className="mt-5 container-fluid">
       <ArticleHeader
         category={article.category}
         title={article.title}
@@ -39,18 +38,15 @@ export default async function DetailPage({ params }: PageProps) {
         date={article.date}
       />
 
-      {/* ✅ Detail Image/Audio Section */}
-     <DetailFirstSection
-  images={article.images}
-  captions={article.captions}
-  credits={article.credits}
-  audioTitle={article.audioTitle}
-/>
-
-    <ArticleBodyRenderer body={article.body} />
-
-        <EditorsPicksSection />
-        <LetsPlaySection />
+      <DetailFirstSection
+        images={article.images}
+        captions={article.captions}
+        credits={article.credits}
+        audioTitle={article.audioTitle}
+      />
+      <ArticleBodyRenderer body={article.body} />
+      <EditorsPicksSection />
+      <LetsPlaySection />
     </div>
   );
 }

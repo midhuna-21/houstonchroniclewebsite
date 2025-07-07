@@ -11,7 +11,10 @@ export default function NavigationSection() {
   return (
 <div
   className="w-100 border-bottom"
-  style={{ borderBottom: '1px solid #ccc', backgroundColor: '#fff' }}
+  style={{ borderBottom: '1px solid #ccc', backgroundColor: '#fff',
+      fontSize: '16px',
+  fontFamily: "'Rubik', Arial, sans-serif"
+   }}
 >
   <div
     className="d-flex justify-content-start justify-content-md-center px-3 py-2"

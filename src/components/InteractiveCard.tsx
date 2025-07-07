@@ -3,7 +3,7 @@ import React from 'react';
 const InteractiveCard = () => {
   return (
     <div
-      className="border"
+      className="border my-md-0 my-4"
       style={{
         maxWidth: '400px',
         margin: 'auto',

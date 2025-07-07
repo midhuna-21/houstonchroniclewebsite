@@ -49,7 +49,7 @@ export default function Header() {
           backgroundColor: '#1c2146',
           minHeight: '78px',
           padding: '0.5rem 1.5rem',
-          position: isFixed ? 'fixed' : 'sticky', // 👈 switch based on scroll
+          position: isFixed ? 'fixed' : 'sticky', 
           top: 0,
           left: 0,
           right: 0,
@@ -59,7 +59,7 @@ export default function Header() {
         className="text-white"
       >
         <Container fluid className="p-0 d-flex justify-content-between align-items-center position-relative">
-          {/* Toggle */}
+
           <div className="d-flex align-items-center gap-3">
             <button
               onClick={() => setExpanded(!expanded)}
@@ -104,14 +104,15 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Right Side */}
           <div className="d-flex align-items-center gap-3 ms-auto">
-            <div className="d-none d-lg-block bg-danger text-white px-3 py-2"
+            <div className="d-none d-lg-block text-white px-3 py-2"
               style={{
-                fontSize: '1rem',
                 fontWeight: 600,
                 borderRadius: '3px',
                 whiteSpace: 'nowrap',
+                backgroundColor:'#DC0000',
+                fontSize: '16px',
+                fontFamily: "'Rubik', Arial, sans-serif"
               }}
             >
               BEST OFFER! 6 Months for 99¢
@@ -120,7 +121,9 @@ export default function Header() {
             <Link
               href="/signin"
               className="text-white text-decoration-underline fw-bold"
-              style={{ fontSize: '0.95rem' }}
+              style={{   
+                fontSize: '16px',
+                fontFamily: "'Rubik', Arial, sans-serif" }}
             >
               Sign In
             </Link>

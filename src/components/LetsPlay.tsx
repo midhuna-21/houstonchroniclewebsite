@@ -36,66 +36,74 @@ export default function LetsPlaySection() {
 
   return (
     <div
-      className="w-100 bg-white mt-5 border-top border-2 border-dark"
-      style={{ paddingTop: '0.5rem'}}
+      className="w-100 bg-white mt-5 border-top border-2 border-dark mb-4"
+      style={{ paddingTop: '0.5rem' }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="w-100">
-        <h5 className="fw-bold">Let's Play</h5>
+        <h5 className="fw-bold"
+          style={{
+            fontSize: '18px',
+            fontFamily: "'Rubik', Arial, sans-serif",
+            fontWeight: 600
+          }}
+
+        >Let's Play</h5>
 
         <div className="position-relative">
 
-  <div
+          <div
             ref={containerRef}
             onScroll={updateScrollState}
             className="d-flex overflow-auto"
             style={{
               scrollBehavior: 'smooth',
               scrollbarWidth: 'none',
-               gap: '14px', // less space between items
+              gap: '14px',
             }}
-            >
-         {gameData.map((game) => (
-  <div
-    key={game.id}
-    className="d-flex align-items-center flex-shrink-0">
-    <div
-      className="d-flex align-items-center rounded"
-      style={{
-        width: '60px',
-        height: '60px',
-        flexShrink: 0,
-      }}
-    >
-      <Image
-        src={game.image}
-        alt={game.name}
-        width={40}
-        height={40}
-        style={{ objectFit: 'contain' }}
-      />
-    </div>
-    <span
-      className="fw-bold"
-      style={{
-        fontSize: '1.05rem',
-        whiteSpace: 'nowrap',
-        marginLeft: '12px',
-      }}
-    >
-      {game.name}
-    </span>
-  </div>
-))}
- 
+          >
+            {gameData.map((game) => (
+              <div
+                key={game.id}
+                className="d-flex align-items-center flex-shrink-0">
+                <div
+                  className="d-flex align-items-center rounded"
+                  style={{
+                    width: '60px',
+                    height: '60px',
+                    flexShrink: 0,
+                  }}
+                >
+                  <Image
+                    src={game.image}
+                    alt={game.name}
+                    width={40}
+                    height={40}
+                    style={{ objectFit: 'contain' }}
+                  />
+                </div>
+                <span
+                  className="fw-bold"
+                  style={{
+                    fontSize: '16px',
+                    fontFamily: "'Rubik', Arial, sans-serif",
+                    fontWeight: 600
+                  }}
+
+                >
+                  {game.name}
+                </span>
+              </div>
+            ))}
+
           </div>
           {isHovered && canScrollLeft && (
             <button
               onClick={() => scroll('left')}
               className="position-absolute top-50 start-0 translate-middle-y"
               style={{
-                border: '1px solid red',
+                border: '1px solid #b50021',
                 borderRadius: '50%',
                 width: '30px',
                 height: '30px',
@@ -106,7 +114,7 @@ export default function LetsPlaySection() {
                 zIndex: 2,
               }}
             >
-              <FaChevronLeft size={10} color="red" />
+              <FaChevronLeft size={10} color="#b50021" />
             </button>
           )}
 
@@ -115,7 +123,7 @@ export default function LetsPlaySection() {
               onClick={() => scroll('right')}
               className="position-absolute top-50 end-0 translate-middle-y"
               style={{
-                border: '1px solid red',
+                border: '1px solid #b50021',
                 borderRadius: '50%',
                 width: '34px',
                 height: '34px',
@@ -126,7 +134,7 @@ export default function LetsPlaySection() {
                 zIndex: 2,
               }}
             >
-              <FaChevronRight size={10} color="red" />
+              <FaChevronRight size={10} color="#b50021" />
             </button>
           )}
         </div>

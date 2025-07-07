@@ -28,24 +28,27 @@ export default function NewsCard({ item }: NewsCardProps) {
       )}
       <p
         className="fw-bold mb-1"
+
         style={{
-          color: '#B10024',
+          color: '#B10021',
           textTransform: 'uppercase',
-          fontSize: '0.75rem',
+          fontSize: '14.224px',
+          fontWeight: 700,
+          fontFamily: "'Rubik', Arial, sans-serif"
         }}
       >
         {item.subcategory}
       </p>
       <h5
-        className="fw-bold text-black mb-2"
-        style={{ fontSize: '1.05rem' }}
+        className="mb-2"
+        style={{ fontSize: '22.784px', color: '#111111', fontWeight: 700, fontFamily: "'Archivo', Arial, sans-serif", }}
       >
         {item.title}
       </h5>
       {item.description && (
         <p
           className="text-muted mb-0"
-          style={{ fontSize: '0.9rem', lineHeight: '1.4' }}
+          style={{ fontSize: '16px', color: '#444444', fontWeight: 400, fontFamily: "'Rubik', Arial, sans-serif" }}
         >
           {item.description}
         </p>

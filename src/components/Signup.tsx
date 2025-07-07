@@ -11,6 +11,8 @@ const Signup: React.FC = () => {
     marginTop: '1.5rem',
     position: 'relative',
     fontSize: '0.9rem',
+    maxWidth: '750px',
+    margin: '1.5rem auto',
   };
 
   const logoStyle: React.CSSProperties = {
@@ -45,52 +47,99 @@ const Signup: React.FC = () => {
     padding: '0.3rem 0.75rem',
     border: '1px solid #ccc',
     borderRadius: '4px 0 0 4px',
-    width: '100%',
-    maxWidth: '250px',
-    flex: '1',
-    backgroundColor: 'white', // Remove black autofill color
+    flex: '1 1 auto',
+    minWidth: '0',
+    backgroundColor: 'white',
     color: '#000',
+    maxWidth: '250px',
   };
 
   const buttonStyle: React.CSSProperties = {
-    height: '40px',
+    fontWeight: 'bold',
+    fontSize: '13px',
+    fontFamily: "'Rubik', Arial, sans-serif",
     backgroundColor: borderColor,
-    color: 'white',
+    color: '#ffffff',
     border: 'none',
     padding: '0 16px',
     borderRadius: '0 4px 4px 0',
-    fontWeight: 'bold',
     whiteSpace: 'nowrap',
-    fontSize: '0.85rem',
+    flexShrink: 0,
   };
 
   return (
-    <div className="container">
+    <div className="container px-3">
       <div style={containerStyle} className="text-center text-md-start">
         <div style={logoStyle}>HC</div>
-
         <div className="row align-items-center mt-4">
           <div className="col-md-6 mb-4 mb-md-0">
-            <h6 style={{ fontWeight: 'bold', fontSize: '1rem' }}>Sign up for The 713</h6>
-            <p style={{ marginBottom: 0 }}>
+            <h6
+              style={{
+                fontWeight: 600,
+                fontSize: '16px',
+                fontFamily: "'Rubik', Arial, sans-serif",
+              }}
+            >
+              Sign up for The 713
+            </h6>
+            <p
+              style={{
+                fontWeight: 400,
+                fontSize: '13px',
+                fontFamily: "'Rubik', Arial, sans-serif",
+              }}
+            >
               Never miss a Houston story with news briefings throughout the day.
             </p>
           </div>
-          <div className="col-md-6 d-flex flex-column flex-md-row align-items-stretch justify-content-md-end">
-            <label htmlFor="email" className="visually-hidden">Email</label>
-            <input
-              type="email"
-              id="email"
-              placeholder="Enter your email"
-              style={inputStyle}
-            />
-            <button style={buttonStyle}>Sign Up</button>
+
+          <div
+            className="col-md-6 d-flex flex-column justify-content-md-end"
+          >
+            <label
+              htmlFor="email"
+              style={{
+                color: '#000000',
+                fontWeight: 700,
+                fontSize: '13px',
+                fontFamily: "'Rubik', Arial, sans-serif",
+                marginBottom: '0.3rem',
+                textAlign: 'left',
+                width: '100%',
+              }}
+            >
+              Email
+            </label>
+
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                flexWrap: 'nowrap',
+              }}
+            >
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                style={inputStyle}
+              />
+              <button style={buttonStyle}>Sign Up</button>
+            </div>
           </div>
+
         </div>
 
         <hr style={hrStyle} />
 
-        <p style={{ fontSize: '0.75rem', marginBottom: 0 }}>
+        <p
+          style={{
+            fontSize: '11px',
+            marginBottom: 0,
+            fontFamily: "'Rubik', Arial, sans-serif",
+            color: '#444444',
+          }}
+        >
           By signing up, you agree to our{' '}
           <span style={linkStyle}>Terms Of Use</span> and acknowledge that your
           information will be used as described in our{' '}

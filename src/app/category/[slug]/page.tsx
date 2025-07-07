@@ -21,7 +21,10 @@ export default async function CategoryPage({ params }: Props) {
   return (
     <>
       <NavigationSection />
+      <div className='container-fluid'>
+
       <CategoryContent activeMain={navKey} />
+      </div>
     </>
   );
 }

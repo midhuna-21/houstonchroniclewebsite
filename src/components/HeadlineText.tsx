@@ -10,10 +10,9 @@ const HeadlineText: React.FC<HeadlineTextProps> = ({ text }) => {
     <ArticleWrapper>
       <h3
         style={{
-          fontWeight: "bold",
-          fontSize: "20px",
-          color: "#000",
-          margin: 0,
+          fontSize: '29px',
+          fontFamily: "'Rubik', Arial, sans-serif",
+          fontWeight: 600
         }}
       >
         {text}

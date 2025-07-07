@@ -1,5 +1,6 @@
 import React from "react";
 import ArticleWrapper from "./ArticleWrapper";
+import { parseUnderlinedText } from "@/lib/paresedUnderlineText";
 
 interface ImportantParagraphProps {
   label: string;
@@ -9,25 +10,26 @@ interface ImportantParagraphProps {
 const ImportantParagraph: React.FC<ImportantParagraphProps> = ({ label, description }) => {
   return (
     <ArticleWrapper>
-     <p
+      <p
         style={{
-          fontSize: "16px",
-          lineHeight: "1.6",
-          color: "#222",
+          fontSize: "18px",
+          color: "#000000",
           margin: 0,
+          fontFamily: "'Mullish', Verdana, sans-serif",
+          fontWeight: 400
         }}
       >
         <strong>{label}:</strong>{" "}
         <span
-          style={{
-            textDecoration: "underline",
-            textDecorationColor: "red",
-            textDecorationThickness: "1px",
-            textUnderlineOffset: "2px",
-            color: "#222",
+           style={{
+          fontSize: "18px",
+          color: "#000000",
+          margin: 0,
+          fontFamily: "'Mullish', Verdana, sans-serif",
+          fontWeight: 400
           }}
         >
-          {description}
+           {parseUnderlinedText(description)}
         </span>
       </p>
     </ArticleWrapper>

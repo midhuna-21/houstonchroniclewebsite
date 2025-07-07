@@ -4,7 +4,9 @@ export type ArticleBlock =
   | { type: 'italicParagraph'; text: string }
   | { type: 'important'; label: string; description:string }
   | { type: 'video'; src: string; title: string; caption: string; credit: string }
-  | { type: 'heading'; text: string };
+  | { type: 'heading'; text: string }
+  | { type: 'image'; src: string; title: string; caption: string; credit: string };
+  
 
 
 
@@ -40,7 +42,7 @@ export const articles: Article[] = [
     role: 'Quality of Life Reporter',
     date: 'July 4, 2025',
     content: 'Full article content here...',
-    images: ['/images/astros.webp', '/images/astros.webp', '/images/astros.webp'],
+    images: ['/images/astros.webp'],
     captions: [
       'River debris...',
       'Burleson family surveys...',
@@ -53,20 +55,21 @@ export const articles: Article[] = [
   {
     heading: null,
     blocks: [
-      { type: 'paragraph', text: 'Thomas Rux stood miles down the road from Riverside RV Park — where his trailer stood before rushing waters swept his home away.' },
+      { type: 'paragraph', text: 'Thomas [[Rux stood miles down the road]] from Riverside RV Park — where his trailer stood before rushing waters swept his home away.' },
       { type: 'notedParagraph', text: "Rux, like many in Central Texas, had to seek shelter after devastating floods claimed the lives of at least 24 and left many unaccounted for in Kerr County on Friday. " },
       { type: 'paragraph', text: '“If it wasn’t for these trees … I would’ve lost everything,” said Rux, who lives in nearby Ingram. “It would have been down the river and gone. I got to cherry pick, and I got all my guns out, my valuables, and I’m going in and just getting a few more stuff right now while I can.” ' },
       { type: 'paragraph', text: `Rux recalled getting a wake-up call from emergency first responders urging him to evacuate. The National Weather Service’s Austin/San Antonio office recorded the Guadalupe River’s gauge at a 22-foot rise in about two hours. The Associated Press reported the gauge failed after it recorded the river level at 29.5 feet. The Guadalupe River's “total length is approximately 250 miles” with its north and south forks in Kerr County, according to Texas Parks and Wildlife.` },
       { type: 'important', label: "MISSING GIRLS", description: `What we know about Camp Mystic, the Texas summer camp where 20 girls are missing after deadly floods` },
       { type: 'paragraph', text: `“I grabbed my keys, my wallet, turned on my alarm, shut the door, locked the doors and I left,” Rux said. “Then I got a call from my alarm company that I was getting robbed and I knew my trailer was gone. I already knew it at that point.”` },
      
-      {
-        type: 'video',
-        src: '/video-thumbnail.jpg',
-        title: 'Scenes from the devastating floods in Kerr County',
-        caption: 'Thomas Rux talks about evacuating...',
-        credit: 'Chris Lee / San Antonio-Express News',
+       {
+        type: 'image',
+        src: '/images/astros.webp',
+        title: 'Map',
+        caption: '*Each gauge has a unique placement, though they are generally located below the streambed. Values shown are hourly maximums.',
+        credit: 'Chart: Alexandra KanikSource: USGS',
       },
+
     ]
   },
 
@@ -148,13 +151,13 @@ export const articles: Article[] = [
         text: `“We couldn’t do much,” she said. “The water was rising so fast. Within 45 minutes at the most, the water was from where it is now to the deck. It was gone. Everything was gone.”`,
       }, 
       
-       {
-        type: 'video',
-        src: '/video-thumbnail.jpg',
-        title: 'Scenes from the devastating floods in Kerr County',
-        caption: 'Thomas Rux talks about evacuating...',
-        credit: 'Chris Lee / San Antonio-Express News',
-      },
+      //  {
+      //   type: 'video',
+      //   src: '/video-thumbnail.jpg',
+      //   title: 'Scenes from the devastating floods in Kerr County',
+      //   caption: 'Thomas Rux talks about evacuating...',
+      //   credit: 'Chris Lee / San Antonio-Express News',
+      // },
       
       {
         type: 'paragraph',

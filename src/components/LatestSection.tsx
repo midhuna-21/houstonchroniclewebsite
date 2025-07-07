@@ -23,30 +23,36 @@ const LatestSection: React.FC = () => {
   const { main, side, bottom, bottomTrending } = newsData as NewsData;
 
   const categoryStyle: React.CSSProperties = {
-    fontWeight: 'bold',
+    fontWeight: 700,
     textTransform: 'uppercase',
-    color: '#b10032',
-    fontSize: '0.9rem',
-    marginBottom: '0.25rem',
+    color: '#b50021',
+    fontSize: '14.224px',
+    fontFamily: "'Rubik', Arial, sans-serif"
   };
 
   const titleStyle: React.CSSProperties = {
-    fontWeight: 'bold',
-    fontSize: '1.2rem',
+    fontSize: '18px',
+    fontFamily: "'Archivo', Arial, sans-serif",
+    fontWeight: 700,
+    color: '#111111',
     marginBottom: '0.5rem',
   };
 
   const descriptionStyle: React.CSSProperties = {
-    fontSize: '1rem',
-    color: '#555',
+    fontSize: '16px',
+    color: '#444444',
+    fontWeight: 400,
+    fontFamily: "'Rubik', Arial, sans-serif"
   };
 
   return (
     <SectionWrapper title="Latest">
       <div className="row">
-        {/* Main Section (image + content) */}
+        
         <div className="col-12 col-md-8 order-1 order-md-2 mb-4">
+          
           <div className="row">
+            
             <div className="col-md-5 mb-3 mb-md-0">
               <Image
                 src={main.image || ''}
@@ -62,28 +68,32 @@ const LatestSection: React.FC = () => {
               <p style={descriptionStyle}>{main.description}</p>
             </div>
           </div>
+          
         </div>
 
-        {/* Side Section */}
         <div className="col-12 col-md-4 order-2 order-md-1 mb-4">
           {side.map((item, index) => (
             <div key={index} className="mb-4">
               <div style={categoryStyle}>{item.category}</div>
               <h5 style={titleStyle}>{item.title}</h5>
+               {index < side.length - 1 && (
+          <hr style={{ borderTop: '1px solid #ccc', margin: '1rem 0' }} />
+        )}
             </div>
           ))}
         </div>
 
-        {/* Bottom Section */}
         <div className="col-12 order-3">
           <div className="row">
             <div className="col-md-6 mb-3">
               <div style={categoryStyle}>{bottom.category}</div>
               <h5 style={titleStyle}>{bottom.title}</h5>
             </div>
+            
             <div className="col-md-6 mb-3">
               <div style={categoryStyle}>{bottomTrending.category}</div>
               <h5 style={titleStyle}>{bottomTrending.title}</h5>
+              
             </div>
           </div>
         </div>

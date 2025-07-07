@@ -1,5 +1,6 @@
 import React from "react";
 import ArticleWrapper from "./ArticleWrapper";
+import { parseUnderlinedText } from "@/lib/paresedUnderlineText";
 
 interface SingleParagraphProps {
   text: string;
@@ -7,17 +8,17 @@ interface SingleParagraphProps {
 
 const SingleParagraph: React.FC<SingleParagraphProps> = ({ text }) => {
   return (
-    <ArticleWrapper>
-      <p
-        style={{
-          fontSize: "16px",
-          lineHeight: "1.6",
-          color: "#222",
-          margin: 0,
-        }}
-      >
-        {text}
-      </p>
+   <ArticleWrapper>
+    <p
+      style={{
+        color: "#000000",
+        fontSize: '18px',
+        fontFamily: "'Mullish', Verdana, sans-serif",
+        fontWeight: 400
+      }}
+    >
+      {parseUnderlinedText(text)}
+    </p>
     </ArticleWrapper>
   );
 };

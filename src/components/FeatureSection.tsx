@@ -24,23 +24,25 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
   const mainItem = articles[2];
   const bottomItems = articles.slice(3, 5);
 
-  if (!mainItem) return null; // safeguard if data is too short
+  if (!mainItem) return null;
 
   return (
     <SectionWrapper title={section}>
-      {/* Top section */}
       <div className="row border-bottom pb-4">
-        {/* Left */}
         <div className="col-md-3">
-          <h5 style={{ fontWeight: 'bold' }}>{section}</h5>
+
           {leftItems.map(item => (
             <div key={item.id} className="border-bottom pb-3 mb-3">
-              <h6 style={{ fontWeight: 'bold' }}>{item.title}</h6>
+              <h6 style={{
+                fontSize: '18px',
+                fontFamily: "'Archivo', Arial, sans-serif",
+                fontWeight: 700
+              }}
+              >{item.title}</h6>
             </div>
           ))}
         </div>
 
-        {/* Middle */}
         <div className="col-md-4 text-center">
           {mainItem.image && (
             <img
@@ -52,24 +54,39 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
           )}
         </div>
 
-        {/* Right */}
         <div className="col-md-5">
-          <h4 style={{ fontWeight: 'bold' }}>{mainItem.title}</h4>
-          {mainItem.description && <p>{mainItem.description}</p>}
+          <h4 style={{
+            fontSize: '18px',
+            fontFamily: "'Archivo', Arial, sans-serif",
+            fontWeight: 700
+          }}
+          >{mainItem.title}</h4>
+          {mainItem.description && <p style={{
+            fontSize: '16px',
+            fontFamily: "'Rubik', Arial, sans-serif", fontWeight: 400
+          }}
+
+          >{mainItem.description}</p>}
         </div>
       </div>
 
-      {/* Bottom 2x1 grid */}
       <div className="row pt-3">
         {bottomItems.map((item, idx) => (
           <div
             key={item.id}
             className={`col-md-6 ${idx === 0 ? 'border-end' : ''}`}
           >
-            <h6 style={{ fontWeight: 'bold' }}>{item.title}</h6>
+            <h6 style={{
+              color:"#111111",
+              fontSize: '18px',
+              fontFamily: "'Archivo', Arial, sans-serif",
+              fontWeight: 700
+            }}
+            >{item.title}</h6>
           </div>
         ))}
       </div>
+        <div className="mt-4" />
     </SectionWrapper>
   );
 };

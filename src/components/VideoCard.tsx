@@ -19,7 +19,6 @@ const VideoCard: React.FC<VideoCardProps> = ({ src, title, caption, credit }) =>
           overflow: "hidden",
         }}
       >
-        {/* Image/Video Thumbnail */}
         <img
           src={src}
           alt={title}
@@ -30,7 +29,6 @@ const VideoCard: React.FC<VideoCardProps> = ({ src, title, caption, credit }) =>
           }}
         />
 
-        {/* Overlay content */}
         <div
           style={{
             position: "absolute",
@@ -45,7 +43,6 @@ const VideoCard: React.FC<VideoCardProps> = ({ src, title, caption, credit }) =>
             alignItems: "center",
           }}
         >
-          {/* Play Icon */}
           <div
             style={{
               width: "40px",
@@ -70,12 +67,10 @@ const VideoCard: React.FC<VideoCardProps> = ({ src, title, caption, credit }) =>
             />
           </div>
 
-          {/* Caption */}
           <h5 style={{ margin: 0, fontWeight: "bold" }}>{title}</h5>
         </div>
       </div>
 
-      {/* Photo description */}
       <p className="mt-2" style={{ fontSize: "14px", color: "#444" }}>
         {caption} 
       </p>

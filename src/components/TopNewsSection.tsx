@@ -29,13 +29,12 @@ export default function TopNewsSection() {
 
   return (
 <SectionWrapper title="Top News">
-  <div className="w-100 px-2" style={{ maxWidth: '1150px', margin: '0 auto' }}>
+  <div className="w-100">
     <div className="row g-0 position-relative">
-      <div className="col-12 col-md-6 pe-md-4">
+      <div className="col-12 col-md-6">
         {leftColumn.map((item, idx) => (
           <div
             key={idx}
-            className="px-3 py-4"
             style={{
               borderBottom: idx !== leftColumn.length - 1 ? '1px solid #eee' : 'none',
               paddingRight: '10px',
@@ -46,7 +45,6 @@ export default function TopNewsSection() {
         ))}
       </div>
 
-      {/* Vertical Divider */}
       <div
         className="d-none d-md-block"
         style={{
@@ -59,14 +57,14 @@ export default function TopNewsSection() {
         }}
       />
 
-      <div className="col-12 col-md-6 ps-md-4">
+      <div className="col-12 col-md-6 ">
         {rightColumn.map((item, idx) => (
           <div
             key={idx}
-            className="px-3 py-4"
+            className="px-3"
             style={{
               borderBottom: idx !== rightColumn.length - 1 ? '1px solid #eee' : 'none',
-              paddingLeft: '10px',
+              
             }}
           >
             <NewsCard item={item} />
@@ -75,16 +73,14 @@ export default function TopNewsSection() {
       </div>
     </div>
 
-    {/* Full-width horizontal line after content */}
     <hr style={{ borderTop: '1px solid #ccc', marginTop: '20px' }} />
 
-    {/* Optional aside */}
     <aside
       className="d-none d-lg-block ps-3"
     />
   </div>
   <div className="section-new justify-content-between" style={{ maxWidth: '1150px', margin: '30px auto', padding: '0 15px' }}>
-      {/* Left column */}
+    
       <div className="flex-grow-1 pe-3">
         {leftData.map((item, idx) => (
           <MiniNewsCard
@@ -96,10 +92,8 @@ export default function TopNewsSection() {
         ))}
       </div>
 
-      {/* Vertical Divider */}
       <div style={{ width: '1px', backgroundColor: '#ccc', margin: '0 10px' }}></div>
 
-      {/* Right column */}
       <div className="flex-grow-1">
         {rightData.map((item, idx) => (
           <MiniNewsCard

@@ -8,9 +8,10 @@ import { ArticleSection } from '@/data/detailData'; // Update with correct type
 import HeadlineText from './HeadlineText';
 import NotedParagraph from './NotedParagraph';
 import ItalicParagraph from './ItalicParagraph';
+import ImageCard from './ImageCard';
 
 interface Props {
-  body: ArticleSection[]; // <-- NEW: array of sections
+  body: ArticleSection[]; 
 }
 
 const ArticleBodyRenderer: React.FC<Props> = ({ body }) => {
@@ -26,8 +27,6 @@ const ArticleBodyRenderer: React.FC<Props> = ({ body }) => {
             switch (block.type) {
               case 'paragraph':
                 return <SingleParagraph key={index} text={block.text} />;
-              case 'notedParagraph':
-                return <NotedParagraph key={index} text={block.text} />;
               case 'italicParagraph':
                 return <ItalicParagraph key={index} text={block.text} />;
               case 'important':
@@ -41,6 +40,16 @@ const ArticleBodyRenderer: React.FC<Props> = ({ body }) => {
               case 'video':
                 return (
                   <VideoCard
+                    key={index}
+                    src={block.src}
+                    title={block.title}
+                    caption={block.caption}
+                    credit={block.credit}
+                  />
+                );
+                 case 'image':
+                return (
+                  <ImageCard
                     key={index}
                     src={block.src}
                     title={block.title}

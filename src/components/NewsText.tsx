@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import { NewsTextData, NewsTextItem } from '@/data/homeData';
 import SectionWrapper from './SectionWrapper';
 
@@ -15,13 +14,14 @@ const NewsText: React.FC = () => {
           style={{ gap: '1rem' }}
         >
           <div className="flex-grow-1">
-          
+
             <p
               className="mb-0"
               style={{
-                fontWeight: 'bold',
-                fontSize: '1.1rem',
-                lineHeight: '1.2',
+                color: "#111111",
+                fontWeight: 700,
+                fontSize: '18px',
+                fontFamily: "'Archivo', Arial, sans-serif",
               }}
             >
               {item.title.split(' ').map((word, index) => (

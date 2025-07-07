@@ -1,7 +1,6 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import data from '../../public/data/carouselData.json';
-import Image from 'next/image';
 
 interface CarouselItem {
   tag: string;
@@ -12,125 +11,153 @@ interface CarouselItem {
 
 const CarouselSection: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
   const items: CarouselItem[] = data;
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize(); // initial check
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % items.length);
   };
 
   return (
-    <div style={{ width: '100%', padding: '40px 0', boxSizing: 'border-box' }}>
-    <div
-  style={{
-    display: 'flex',
-    flexDirection: 'row',
-    maxWidth: '1200px',
-    height: '400px', // 👈 Reduced height
-    margin: '0 auto',
-    overflow: 'hidden',
-    boxShadow: '0 4px 15px rgba(0,0,0,0.1)',
-    position: 'relative',
-    border: '2px solid black',
-  }}
->
-        {/* Left: Image */}
-        <div style={{ flex: 1 }}>
-    <img
-        src={items[currentIndex].image}
-          alt={items[currentIndex].heading}
-      style={{
-        width: '100%',
-        height: '100%',
-        objectFit: 'cover',
-        borderRight: '2px solid black' // 👈 Right border to separate image
-      }}
-    />
-  </div>
-
-        {/* Right: Content */}
+    <div style={{ width: '100%', padding: '90px 0', boxSizing: 'border-box' }}>
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'flex-start',
+          maxWidth: '100%',
+          overflow: 'hidden',
+          flexDirection: isMobile ? 'column' : 'row',
+        }}
+      >
+        {/* Content Box */}
         <div
           style={{
-            flex: 1,
-            backgroundColor: '#fefefe',
-            padding: '40px',
+            width: isMobile ? '100%' : '1200px',
+            height: isMobile ? 'auto' : '450px',
             display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            position: 'relative',
+            flexDirection: isMobile ? 'column' : 'row',
+            boxShadow: '0 4px 15px rgba(0,0,0,0.1)',
+            border: '2px solid black',
           }}
         >
-          {/* Tag */}
-          <div
-            style={{
-              backgroundColor: 'black',
-              color: 'white',
-              fontSize: '12px',
-              textTransform: 'uppercase',
-              display: 'inline-block',
-              padding: '5px 10px',
-              marginBottom: '20px',
-              borderRadius: '3px',
-              width: 'fit-content',
-            }}
-          >
-            {items[currentIndex].tag}
+          {/* Left Image */}
+          <div style={{ flex: 1 }}>
+            <img
+              src={items[currentIndex].image}
+              alt={items[currentIndex].heading}
+              style={{
+                width: '100%',
+                height: isMobile ? '220px' : '100%',
+                objectFit: 'cover',
+                borderRight: isMobile ? 'none' : '2px solid black',
+                borderBottom: isMobile ? '2px solid black' : 'none',
+                display: 'block',
+              }}
+            />
           </div>
 
-          {/* Heading */}
-          <h2
-            style={{
-              fontSize: '26px',
-              fontWeight: 'bold',
-              color: '#000',
-              marginBottom: '10px',
-            }}
-          >
-            {items[currentIndex].heading}
-          </h2>
-
-          {/* Underline */}
+          {/* Right Content */}
           <div
             style={{
-              width: '50%',
-              height: '1px',
-              backgroundColor: '#ccc',
-              marginBottom: '20px',
-            }}
-          ></div>
-
-          {/* Description */}
-          <p style={{ color: '#444', fontSize: '16px', lineHeight: '1.5' }}>
-            {items[currentIndex].description}
-          </p>
-
-          {/* Next Button */}
-          <button
-            onClick={nextSlide}
-            style={{
-              position: 'absolute',
-              right: '-25px',
-              top: '50%',
-              transform: 'translateY(-50%)',
-              width: '50px',
-              height: '50px',
-              backgroundColor: '#d0021b',
-              borderRadius: '50%',
-              color: 'white',
-              border: 'none',
-              fontSize: '24px',
-              cursor: 'pointer',
-              boxShadow: '0 0 10px rgba(0,0,0,0.1)',
+              flex: 1,
+              backgroundColor: '#fefefe',
+              padding: isMobile ? '30px 20px' : '50px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
             }}
           >
-            →
-          </button>
+            <div
+              style={{
+                backgroundColor: 'black',
+                color: 'white',
+                fontSize: '14px',
+                textTransform: 'uppercase',
+                letterSpacing: '2px',
+                display: 'inline-block',
+                padding: '8px 16px',
+                marginBottom: '25px',
+                width: 'fit-content',
+              }}
+            >
+              {items[currentIndex].tag}
+            </div>
+
+            <h2
+              style={{
+                fontSize: '32.432px',
+                fontWeight: 700,
+                fontFamily: "'Archivo', Arial, sans-serif",
+                color: '#111111',
+                marginBottom: '12px',
+              }}
+            >
+              {items[currentIndex].heading}
+            </h2>
+
+            <div
+              style={{
+                color: '#444444',
+                width: '30%',
+                height: '1px',
+                backgroundColor: '#ccc',
+                marginBottom: '25px',
+              }}
+            ></div>
+
+            <p
+              style={{
+                color: '#444444',
+                fontSize: '17px',
+                lineHeight: '1.6',
+                fontFamily: "'Rubik', Arial, sans-serif",
+                fontWeight: 400,
+              }}
+            >
+              {items[currentIndex].description}
+            </p>
+          </div>
         </div>
+
+        {/* Next Button */}
+        {!isMobile && (
+          <div style={{ marginLeft: '30px' }}>
+            <button
+              onClick={nextSlide}
+              style={{
+                width: '60px',
+                height: '60px',
+                borderRadius: '50%',
+                border: '1px solid black',
+                backgroundColor: 'transparent',
+                color: 'black',
+                fontSize: '28px',
+                cursor: 'pointer',
+              }}
+            >
+              →
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Dots */}
       <div
         style={{
-          marginTop: '20px',
+          marginTop: '25px',
           display: 'flex',
           justifyContent: 'center',
         }}
@@ -139,12 +166,11 @@ const CarouselSection: React.FC = () => {
           <div
             key={index}
             style={{
-              width: '10px',
-              height: '10px',
+              width: '7px',
+              height: '7px',
               borderRadius: '50%',
-              margin: '0 5px',
-              backgroundColor:
-                currentIndex === index ? '#d0021b' : '#ccc',
+              margin: '0 6px',
+              backgroundColor: currentIndex === index ? '#d0021b' : '#ccc',
               transition: 'background-color 0.3s',
             }}
           ></div>

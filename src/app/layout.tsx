@@ -31,7 +31,10 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Header />
         {/* <PromoBanner data={promoData} /> */}
-        {children}
+        <div className="container-fluid">
+
+        {children} 
+        </div>
         <Footer />
       </body>
     </html>
