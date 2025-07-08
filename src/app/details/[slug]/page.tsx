@@ -6,14 +6,12 @@ import ArticleBodyRenderer from '@/components/ArticleBodyRender';
 import EditorsPicksSection from '@/components/EditorsPick';
 import LetsPlaySection from '@/components/LetsPlay';
 import MostPopularList from '@/components/MostPopularlist';
-import { popularArticles, trendingData } from '@/data/homeData';
-import TrendingCard from '@/components/TrendingCard';
-import EditorialBoard from '@/components/EditorialBoard';
+import { popularArticles } from '@/data/homeData';
 import LatestNewsCard from '@/components/LastestNewsCard';
 import AuthorInfo from '@/components/AuthorInfo';
 
 interface PageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 
@@ -26,7 +24,7 @@ function getSlugSafe(slug: string) {
 }
 
 export default async function DetailPage({ params }: PageProps) {
-  const slug = getSlugSafe(params.slug);
+  const slug = getSlugSafe((await params).slug);
   const article = getArticleBySlug(slug);
 
   if (!article) return notFound();

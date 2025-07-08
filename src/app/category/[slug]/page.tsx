@@ -1,14 +1,16 @@
+
+
 import { notFound } from 'next/navigation';
 import { navData, slugToKeyMap } from '@/data/navData';
 import CategoryContent from '@/components/CategoryContent';
 import NavigationSection from '@/components/NavigationSection';
 
 export default async function CategoryPage({
-  params, 
+  params,
 }: {
-  params: { slug: string };
+  params:Promise< { slug: string }>;
 }) {
-  const { slug } = params;
+  const { slug } =await params;
 
   const navKey = slugToKeyMap[slug];
   if (!navKey || !navData[navKey]) return notFound();
@@ -23,7 +25,9 @@ export default async function CategoryPage({
   );
 }
 
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<
+  { slug: string }[]
+> {
   return Object.keys(slugToKeyMap).map((slug) => ({
     slug,
   }));
