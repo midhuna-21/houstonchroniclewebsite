@@ -4,7 +4,7 @@ import CategoryContent from '@/components/CategoryContent';
 import NavigationSection from '@/components/NavigationSection';
 
 export default async function CategoryPage({
-  params,
+  params, 
 }: {
   params: { slug: string };
 }) {

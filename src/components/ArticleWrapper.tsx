@@ -7,13 +7,9 @@ interface ArticleWrapperProps {
 
 const ArticleWrapper: React.FC<ArticleWrapperProps> = ({ children }) => {
   return (
-    <div className="container mt-4 mb-3">
-      <div className="row">
-        <div className="col-md-9">
-          {children}
-        </div>
-
-        <div className="col-md-3"></div>
+    <div className="container-fluid mb-5">
+      <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+        {children}
       </div>
     </div>
   );

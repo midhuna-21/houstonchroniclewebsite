@@ -79,7 +79,6 @@ export default function Header() {
               {toggleIcon}
             </button>
 
-            {/* Mobile Logo */}
             <div className="d-lg-none">
               <Link href="/" className="text-decoration-none">
                 <h1

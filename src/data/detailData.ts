@@ -211,3 +211,41 @@ export const articles: Article[] = [
 
   
 
+export interface LatestNewsCardItem {
+  id: number;
+  slug:string;
+  title: string;
+  description: string;
+  image: string;
+}
+
+
+export const latestNewsData : LatestNewsCardItem[] = [
+  {
+    id: 1,
+    slug:'astros',
+    title: 'From The Editorial Board',
+    description:
+      'Celebrate the Fourth by reading the Declaration of Independence',
+    image: '/images/usflag.webp',
+  },
+  {
+    id: 2,
+    slug:'astros',
+    title: 'From The Editorial Board',
+    description: 'Honor the Constitution by reflecting on its principles',
+    image: '/images/carplace.webp', 
+  },
+  {   id: 3,
+    slug:'astros',
+    title: 'From The Editorial Board',
+    description: 'Honor the Constitution by reflecting on its principles',
+    image: '/images/greenbottle.webp', 
+  },
+  {   id: 4,
+    slug:'astros',
+    title: 'From The Editorial Board',
+    description: 'Honor the Constitution by reflecting on its principles',
+    image: '/images/trumpspeach.webp', 
+  }
+];
