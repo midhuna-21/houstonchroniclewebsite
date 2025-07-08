@@ -29,18 +29,25 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
   return (
     <SectionWrapper title={section}>
       <div className="row border-bottom pb-4">
-        <div className="col-md-3">
+        <div className="col-md-3 border-end">
 
-          {leftItems.map(item => (
-            <div key={item.id} className="border-bottom pb-3 mb-3">
-              <h6 style={{
-                fontSize: '18px',
-                fontFamily: "'Archivo', Arial, sans-serif",
-                fontWeight: 700
-              }}
-              >{item.title}</h6>
+          {leftItems.map((item, index) => (
+            <div
+              key={item.id}
+              className={`pb-3 mb-3 ${index !== leftItems.length - 1 ? 'border-bottom' : ''}`}
+            >
+              <h6
+                style={{
+                  fontSize: '18px',
+                  fontFamily: "'Archivo', Arial, sans-serif",
+                  fontWeight: 700,
+                }}
+              >
+                {item.title}
+              </h6>
             </div>
           ))}
+
         </div>
 
         <div className="col-md-4 text-center">
@@ -77,7 +84,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
             className={`col-md-6 ${idx === 0 ? 'border-end' : ''}`}
           >
             <h6 style={{
-              color:"#111111",
+              color: "#111111",
               fontSize: '18px',
               fontFamily: "'Archivo', Arial, sans-serif",
               fontWeight: 700
@@ -86,7 +93,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
           </div>
         ))}
       </div>
-        <div className="mt-4" />
+      <div className="mt-4" />
     </SectionWrapper>
   );
 };

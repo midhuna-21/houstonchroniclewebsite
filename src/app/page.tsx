@@ -73,17 +73,17 @@ export default function Home() {
 
 
         <div className="row">
-  <div className="col-md-9">
-    <ContentLayout data={newsData[1]} />
+          <div className="col-md-9">
+            <ContentLayout data={newsData[1]} />
 
-    <div className="mt-4">
-      <FeatureSection data={featureData[0]} />
-    </div>
-  </div>
-  <div className="col-md-3">
-    <TrendingCard data={trendingData[1]} />
-  </div>
-</div>
+            <div className="mt-4">
+              <FeatureSection data={featureData[0]} />
+            </div>
+          </div>
+          <div className="col-md-3">
+            <TrendingCard data={trendingData[1]} />
+          </div>
+        </div>
 
 
 
@@ -105,14 +105,14 @@ export default function Home() {
           </div>
         </div>
 
-      <div className="row">
-  <div className="col-md-9">
+        <div className="row">
+          <div className="col-md-9">
             <ContentLayout data={newsData[4]} />
-    <div className="mt-4">
-      <FeatureSection data={featureData[1]} />
-    </div>
-  </div>
-  <div className="col-md-3">
+            <div className="mt-4">
+              <FeatureSection data={featureData[1]} />
+            </div>
+          </div>
+          <div className="col-md-3">
             <TrendingCard data={trendingData[3]} />
           </div>
         </div>

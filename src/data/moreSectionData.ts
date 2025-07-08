@@ -1,4 +1,3 @@
-// data/moreSectionData.ts
 import { NavKey } from './navData';
 
 export interface MoreSectionContent {

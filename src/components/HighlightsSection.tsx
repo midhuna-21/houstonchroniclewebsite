@@ -5,7 +5,7 @@ import { latestHighlightsData } from '@/data/homeData';
 
 export default function LatestHighlightsSection() {
   return (
-    <section>
+    <section >
         {latestHighlightsData.map((block, i) => (
           <div key={i}>
             <div className="row g-4 align-items-stretch flex-column flex-md-row">
@@ -80,7 +80,7 @@ export default function LatestHighlightsSection() {
               </div>
 
               {block.image && (
-                <div className="col-md-6 order-0 order-md-1 d-flex align-items-stretch">
+                <div className="col-md-6 order-0 order-md-1 d-flex align-items-stretch border-end">
                   <div
                     style={{
                       width: '100%',

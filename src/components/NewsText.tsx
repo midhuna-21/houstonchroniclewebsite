@@ -24,7 +24,7 @@ const NewsText: React.FC = () => {
                 fontFamily: "'Archivo', Arial, sans-serif",
               }}
             >
-              {item.title.split(' ').map((word, index) => (
+              {item.title?.split(' ').map((word, index) => (
                 <React.Fragment key={index}>
                   {word}{' '}
                   {(index + 1) % 5 === 0 && <br className="d-none d-md-block" />}

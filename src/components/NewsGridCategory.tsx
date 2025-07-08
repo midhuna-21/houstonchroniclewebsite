@@ -23,7 +23,6 @@ const NewsGrid: React.FC<NewsGridProps> = ({ data }) => {
   <div style={{ paddingBottom: '70px' }}>
   <div className="row g-4">
     
-    {/* LEFT COLUMN */}
     <div className="col-md-6" style={{ borderRight: '1px solid #ddd' }}>
       <div style={{ position: 'relative' }}>
         <Image
@@ -89,9 +88,8 @@ const NewsGrid: React.FC<NewsGridProps> = ({ data }) => {
       </p>
     </div>
 
-    {/* RIGHT COLUMN */}
+    {/* RIGHT  */}
     <div className="col-md-6">
-      {/* DESKTOP: 2x2 grid */}
       <div className="d-none d-md-block">
         <div className="row g-4">
           {right.map((item, index) => (
@@ -134,7 +132,7 @@ const NewsGrid: React.FC<NewsGridProps> = ({ data }) => {
         </div>
       </div>
 
-      {/* MOBILE: stacked list with image right */}
+      {/* MOBILE */}
       <div className="d-block d-md-none">
         {right.map((item, index) => (
           <div className="d-flex flex-row-reverse align-items-start mb-3" key={index}>

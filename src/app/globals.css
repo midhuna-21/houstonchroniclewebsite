@@ -58,4 +58,17 @@ a {
    flex-direction: column;
 }
 
+@media (min-width: 768px) {
+  footer.footer-fixed {
+    height: 320px;
+    overflow: hidden;
+  }
+}
+
+#footerAccordion .accordion-button::after {
+  filter: brightness(0) invert(1);
+}
+
+
+
 }

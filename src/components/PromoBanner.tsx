@@ -32,7 +32,7 @@ const PromoBanner: React.FC<Props> = ({ data }) => {
         fontWeight: 'bold',
         padding: '14px 0',
         position: 'fixed',
-        top: '60px', // Make sure your header is below this value
+        top: '60px', 
         zIndex: 999,
       }}
     >

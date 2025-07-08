@@ -75,7 +75,6 @@ const VideoCard: React.FC<VideoCardProps> = ({ src, title, caption, credit }) =>
         {caption} 
       </p>
 
-      {/* Byline */}
       <p style={{ fontSize: "13px", color: "#666" }}>{credit}</p>
     </ArticleWrapper>
   );

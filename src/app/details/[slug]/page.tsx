@@ -5,8 +5,6 @@ import { notFound } from 'next/navigation';
 import ArticleBodyRenderer from '@/components/ArticleBodyRender';
 import EditorsPicksSection from '@/components/EditorsPick';
 import LetsPlaySection from '@/components/LetsPlay';
-import MostPopularList from '@/components/MostPopularlist';
-import { popularArticles } from '@/data/homeData';
 
 interface PageProps {
   params: { slug: string };

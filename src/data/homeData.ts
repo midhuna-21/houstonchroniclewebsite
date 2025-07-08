@@ -98,7 +98,6 @@ export const topNewsData = [
   
 ];
 
-// data/editorsPicksData.ts
 
 export const editorsPicksData = [
   { 
@@ -126,7 +125,6 @@ export const editorsPicksData = [
 
 export const newsData = [
   {
-    // Section 0: Sports
     main: {
    slug:'astros',
       category: "SPORTS",
@@ -154,7 +152,6 @@ export const newsData = [
     ]
   },
   {
-    // Section 1: Business
     main: {
         slug:'astros',
       category: "BUSINESS",
@@ -182,7 +179,6 @@ export const newsData = [
     ]
   },
   {
-    // Section 2: Technology
     main: {
        slug:'astros',
       category: "Opinion",
@@ -210,7 +206,6 @@ export const newsData = [
     ]
   },
   {
-    // Section 3: Health
     main: {
        slug:'astros',
       category: "Politics",
@@ -238,7 +233,6 @@ export const newsData = [
     ]
   },
   {
-    // Section 4: World
     main: {
       slug:'astros',
       category: "Food & Lifestyle",
@@ -266,7 +260,6 @@ export const newsData = [
     ]
   },
   {
-    // Section 5: Entertainment
     main: {
       slug:'astros',
       category: "Local",
@@ -295,7 +288,6 @@ export const newsData = [
   },
 
    {
-    // Section 6: Entertainment
     main: {
     slug:'astros',
       category: "Bayou City History",
@@ -416,8 +408,6 @@ export const featureData = [
 ];
 
 
-
-// trendingData.ts
 export const trendingData = [
   {
     slug:"astros",
@@ -555,8 +545,6 @@ export const trendingData = [
 ];
 
 
-// homeData.js 
-
 export const trendingNavItems = [
   'Top News',
   'Elections 2025',
@@ -564,8 +552,6 @@ export const trendingNavItems = [
   'Tech Innovations',
 ];
 
-
-// data/dailyPuzzlesData.js
 
 export const dailyPuzzles = [
   {
@@ -640,13 +626,13 @@ export const editorialData : EditorialItem[] = [
     description: 'Honor the Constitution by reflecting on its principles',
     image: '/images/carplace.webp', 
   },
-  {   id: 2,
+  {   id: 3,
     slug:'astros',
     title: 'From The Editorial Board',
     description: 'Honor the Constitution by reflecting on its principles',
     image: '/images/greenbottle.webp', 
   },
-  {   id: 2,
+  {   id: 4,
     slug:'astros',
     title: 'From The Editorial Board',
     description: 'Honor the Constitution by reflecting on its principles',
@@ -676,33 +662,30 @@ export const NewsTextData : NewsTextItem[] = [
     slug:"astros",
     title: "From 1975: 'Jaws' delivers on suspense",
     },
-  {   id: 2,
+  {   id: 3,
     slug:"astros",
     title: "Sig Byrd in 1955: A visit to Friendsylvania on our coastal prairie",
     },
-  {   id: 2,
+  {   id: 4,
     slug:"astros",
     title: "Leon Hale in 1980: Enjoying the day, starting at 5 a.m.",
      },
-      {   id: 3,
+      {  id: 5,
     slug:"astros",
     title: "Sig Byrd in 1955: Some flashbacks from an 8-year-old nightmare",
      },
-      {   id: 4,
+      {  id: 6,
     slug:"astros",
     title: "Leon Hale in 1983: The secrets of the junk drawer",
      },
      
-      {   id: 3,
+      {   id: 7,
     slug:"astros",
     title: "Leon Hale in 1964: The true story of why he doesn't chew tobacco",
      },
 ];
 
 
-
-
-// data/lottoData.ts
 
 export interface LottoItem {
   id: number;
@@ -723,8 +706,6 @@ export const lottoData: LottoItem[] = [
   },
 ];
 
-// data/letsPlayData.ts
-
 export interface GameItem {
   id: number;
   name: string;
@@ -744,7 +725,6 @@ export const gameData: GameItem[] = [
 ];
 
 
-// /data/promoData.ts
 export interface PromoData {
   message: string;
   highlight: string;

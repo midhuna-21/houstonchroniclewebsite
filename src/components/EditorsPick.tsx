@@ -1,9 +1,23 @@
-import SectionWrapper from '@/components/SectionWrapper';
 import { editorsPicksData } from '@/data/homeData';
 
 export default function EditorsPicksSection() {
   return (
-    <div className="container" style={{ borderTop: '2px solid black', paddingTop: '1.5rem', marginTop: '2rem' }}>
+    <div
+      className="container"
+      style={{ borderTop: '2px solid black', paddingTop: '1.5rem', marginTop: '2rem' }}
+    >
+      <h5
+        className="fw-bold mb-3"
+        style={{
+          color: "#000000",
+          fontWeight: 700,
+          fontSize: '18  px',
+          fontFamily: "'Rubik', Arial, sans-serif"
+        }}
+      >
+        Editor’s Pick
+      </h5>
+
       <div className="row gx-4 gy-4">
         {editorsPicksData.map((item, idx) => (
           <div key={idx} className="col-12 col-sm-6 col-lg-3">
@@ -23,12 +37,14 @@ export default function EditorsPicksSection() {
                   maxHeight: '160px',
                 }}
               />
-              <h6 className="fw-bold mb-0" style={{
-                color: '#111111',
-                fontSize: '18px',
-                fontWeight: 700,
-                fontFamily: "'Archivo', Arial, sans-serif",
-              }}
+              <h6
+                className="fw-bold mb-0"
+                style={{
+                  color: '#111111',
+                  fontSize: '18px',
+                  fontWeight: 700,
+                  fontFamily: "'Archivo', Arial, sans-serif",
+                }}
               >
                 {item.title}
               </h6>
@@ -37,6 +53,7 @@ export default function EditorsPicksSection() {
         ))}
       </div>
     </div>
+
   );
 }
 

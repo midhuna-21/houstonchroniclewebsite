@@ -49,9 +49,9 @@ const LatestSection: React.FC = () => {
     <SectionWrapper title="Latest">
       <div className="row">
         
-        <div className="col-12 col-md-8 order-1 order-md-2 mb-4">
+        <div className="col-12 col-md-8 order-1 order-md-2 mb-4 ">
           
-          <div className="row">
+          <div className="row ">
             
             <div className="col-md-5 mb-3 mb-md-0">
               <Image
@@ -62,7 +62,7 @@ const LatestSection: React.FC = () => {
                 className="img-fluid w-100"
               />
             </div>
-            <div className="col-md-7">
+            <div className="col-md-7 ">
               <div style={categoryStyle}>{main.category}</div>
               <h3 style={titleStyle}>{main.title}</h3>
               <p style={descriptionStyle}>{main.description}</p>
@@ -71,7 +71,7 @@ const LatestSection: React.FC = () => {
           
         </div>
 
-        <div className="col-12 col-md-4 order-2 order-md-1 mb-4">
+        <div className="col-12 col-md-4 order-2 order-md-1 mb-4 border-end">
           {side.map((item, index) => (
             <div key={index} className="mb-4">
               <div style={categoryStyle}>{item.category}</div>
@@ -83,20 +83,20 @@ const LatestSection: React.FC = () => {
           ))}
         </div>
 
-        <div className="col-12 order-3">
-          <div className="row">
-            <div className="col-md-6 mb-3">
-              <div style={categoryStyle}>{bottom.category}</div>
-              <h5 style={titleStyle}>{bottom.title}</h5>
-            </div>
-            
-            <div className="col-md-6 mb-3">
-              <div style={categoryStyle}>{bottomTrending.category}</div>
-              <h5 style={titleStyle}>{bottomTrending.title}</h5>
-              
-            </div>
-          </div>
-        </div>
+       <div className="col-12 order-3 border-top pt-3">
+  <div className="row">
+    <div className="col-md-6 mb-3 border-end pe-md-4">
+      <div style={categoryStyle}>{bottom.category}</div>
+      <h5 style={titleStyle}>{bottom.title}</h5>
+    </div>
+
+    <div className="col-md-6 mb-3 ps-md-4">
+      <div style={categoryStyle}>{bottomTrending.category}</div>
+      <h5 style={titleStyle}>{bottomTrending.title}</h5>
+    </div>
+  </div>
+</div>
+
       </div>
     </SectionWrapper>
   );

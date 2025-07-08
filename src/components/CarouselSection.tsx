@@ -20,7 +20,7 @@ const CarouselSection: React.FC = () => {
       setIsMobile(window.innerWidth <= 768);
     };
 
-    handleResize(); // initial check
+    handleResize(); 
     window.addEventListener('resize', handleResize);
 
     return () => window.removeEventListener('resize', handleResize);
@@ -42,7 +42,6 @@ const CarouselSection: React.FC = () => {
           flexDirection: isMobile ? 'column' : 'row',
         }}
       >
-        {/* Content Box */}
         <div
           style={{
             width: isMobile ? '100%' : '1200px',
@@ -53,7 +52,6 @@ const CarouselSection: React.FC = () => {
             border: '2px solid black',
           }}
         >
-          {/* Left Image */}
           <div style={{ flex: 1 }}>
             <img
               src={items[currentIndex].image}
@@ -69,7 +67,6 @@ const CarouselSection: React.FC = () => {
             />
           </div>
 
-          {/* Right Content */}
           <div
             style={{
               flex: 1,
@@ -132,7 +129,6 @@ const CarouselSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Next Button */}
         {!isMobile && (
           <div style={{ marginLeft: '30px' }}>
             <button
@@ -154,7 +150,6 @@ const CarouselSection: React.FC = () => {
         )}
       </div>
 
-      {/* Dots */}
       <div
         style={{
           marginTop: '25px',

@@ -1,5 +1,3 @@
-
-
 export const newsCategoryData = {
   main: {
     image: '/images/superHumans.webp',

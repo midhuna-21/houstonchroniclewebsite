@@ -40,7 +40,7 @@
 
   {sub.items.length > 0 ? (
     <>
-      <div className="d-flex gap-3 flex-wrap mb-4">
+      <div className="d-flex gap-3 flex-wrap mb-4 border-bottom border-black">
         {sub.items.map((item) => (
           <Link
             key={item}
@@ -57,14 +57,14 @@
         ))}
       </div>
 
-      <hr
+      {/* <hr
         style={{
           height: '2px',
           backgroundColor: 'black',
           border: 'none',
           marginBottom: '1.5rem',
         }}
-      />
+      /> */}
     </>
   ) : (
     <>

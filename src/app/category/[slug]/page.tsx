@@ -1,5 +1,3 @@
-// src/app/category/[slug]/page.tsx
-
 import { navData, slugToKeyMap } from '@/data/navData';
 import CategoryContent from '@/components/CategoryContent';
 import NavigationSection from '@/components/NavigationSection';
@@ -23,7 +21,7 @@ export default async function CategoryPage({ params }: Props) {
       <NavigationSection />
       <div className='container-fluid'>
 
-      <CategoryContent activeMain={navKey} />
+        <CategoryContent activeMain={navKey} />
       </div>
     </>
   );

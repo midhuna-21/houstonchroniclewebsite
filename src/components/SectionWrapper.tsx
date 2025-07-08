@@ -23,8 +23,6 @@ export default function SectionWrapper({ title, children }: SectionWrapperProps)
           className="fw-bold border-top border-2 border-black pt-3 mb-3 text-start"
           style={{ fontSize: '1.3rem' }}
         >
-
-
           {title}
         </h3>
         {children}

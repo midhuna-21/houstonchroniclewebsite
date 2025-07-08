@@ -12,14 +12,15 @@ const EditorialBoard: React.FC = () => {
         <div
           key={item.id}
           className="d-flex flex-column flex-md-row align-items-start border-bottom pb-3 mb-3"
-          style={{ gap: '1rem' ,  
-                  fontSize: '18px',
-                  fontFamily: "'Archivo', Arial, sans-serif",
-                  fontWeight: 700
-                }}
+          style={{
+            gap: '1rem',
+            fontSize: '18px',
+            fontFamily: "'Archivo', Arial, sans-serif",
+            fontWeight: 700
+          }}
         >
           <div className="flex-grow-1">
-          
+
             <p
               className="mb-0"
               style={{
