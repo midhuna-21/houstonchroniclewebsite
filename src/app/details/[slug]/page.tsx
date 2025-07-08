@@ -9,6 +9,7 @@ import MostPopularList from '@/components/MostPopularlist';
 import { popularArticles } from '@/data/homeData';
 import LatestNewsCard from '@/components/LastestNewsCard';
 import AuthorInfo from '@/components/AuthorInfo';
+import styles from './page.module.css';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -31,7 +32,8 @@ export default async function DetailPage({ params }: PageProps) {
 
 
   return (
-    <div className="mt-5 container-fluid ">
+      <main className={styles.content}>
+        <div className={`container-fluid ${styles.noGutter}`}>
       <ArticleHeader
         category={article.category}
         title={article.title}
@@ -69,5 +71,6 @@ export default async function DetailPage({ params }: PageProps) {
       <EditorsPicksSection />
       <LetsPlaySection />
     </div>
+    </main>
   );
 }

@@ -23,7 +23,7 @@
     const sub = navData[activeMain];
 
     return (
-      <div className="w-100 mt-5">
+      <div className="w-100">
   <div>
   <h1
     className="text-black mb-2"

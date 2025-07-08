@@ -60,81 +60,64 @@ export default function Header() {
       >
         <Container fluid className="p-0 d-flex justify-content-between align-items-center position-relative">
 
-          <div className="d-flex align-items-center gap-3">
-            <button
-              onClick={() => setExpanded(!expanded)}
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-              style={{
-                background: 'none',
-                border: 'none',
-                padding: 0,
-                outline: 'none',
-              }}
-              aria-label="Toggle navigation"
-              aria-controls="basic-navbar-nav"
-              aria-expanded={expanded}
-              type="button"
-            >
-              {toggleIcon}
-            </button>
+       <div className="d-flex align-items-center gap-3">
+  {/* Toggle button: visible on all screen sizes */}
+  <button
+    onClick={() => setExpanded(!expanded)}
+    onMouseEnter={() => setIsHovered(true)}
+    onMouseLeave={() => setIsHovered(false)}
+    style={{
+      background: 'none',
+      border: 'none',
+      padding: 0,
+      margin: 0,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: '32px',
+      height: '32px',
+    }}
+    aria-label="Toggle navigation"
+    aria-controls="basic-navbar-nav"
+    aria-expanded={expanded}
+    type="button"
+  >
+    {toggleIcon}
+  </button>
 
-            <div className="d-lg-none">
-              <Link href="/" className="text-decoration-none">
-                <h1
-                  className="m-0 fw-bold text-white"
-                  style={{ fontFamily: 'monospace', fontSize: '1.1rem' }}
-                >
-                  HOUSTON CHRONICLE
-                </h1>
-              </Link>
-            </div>
-          </div>
+  {/* Mobile-only logo beside toggle */}
+  <div className="d-lg-none">
+    <Link href="/" className="text-decoration-none">
+      <h1
+        className="m-0 fw-bold text-white"
+        style={{
+          fontFamily: 'monospace',
+          fontSize: '18px',
+          display: 'flex',
+          alignItems: 'center',
+          lineHeight: 1,
+        }}
+      >
+        HOUSTON <span style={{ color: '#ffc107', fontSize: '24px', margin: '0 2px' }}>★</span> CHRONICLE
+      </h1>
+    </Link>
+  </div>
+</div>
 
           <div className="d-none d-lg-block position-absolute top-50 start-50 translate-middle">
             <Link href="/" className="text-decoration-none">
               <h1
                 className="m-0 fw-bold text-white"
-                style={{ fontFamily: 'monospace', fontSize: '1.1rem' }}
+                style={{ fontFamily: 'monospace', fontSize: '30px' }}
               >
-                HOUSTON CHRONICLE
+                HOUSTON<span style={{ color: '#ffc107' ,fontSize:'60px'}}>★</span>CHRONICLE
               </h1>
             </Link>
           </div>
 
-          <div className="d-flex align-items-center gap-3 ms-auto">
-            <div className="d-none d-lg-block text-white px-3 py-2"
-              style={{
-                fontWeight: 600,
-                borderRadius: '3px',
-                whiteSpace: 'nowrap',
-                backgroundColor:'#DC0000',
-                fontSize: '16px',
-                fontFamily: "'Rubik', Arial, sans-serif"
-              }}
-            >
-              BEST OFFER! 6 Months for 99¢
-            </div>
-
-            <Link
-              href="/signin"
-              className="text-white text-decoration-underline fw-bold"
-              style={{   
-                fontSize: '16px',
-                fontFamily: "'Rubik', Arial, sans-serif" }}
-            >
-              Sign In
-            </Link>
-          </div>
+          
         </Container>
       </Navbar>
-
-      <div className="d-lg-none bg-danger text-white px-3 py-2 text-center fw-semibold" style={{
-        fontSize: '0.95rem',
-        borderRadius: '3px',
-      }}>
-        BEST OFFER! 6 Months for 99¢
-      </div>
     </>
   );
 }

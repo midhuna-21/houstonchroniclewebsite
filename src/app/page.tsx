@@ -23,15 +23,15 @@ import LetsPlaySection from '@/components/LetsPlay';
 
 export default function Home() {
   return (
-    <div className="bg-white container-fluid">
+    <div className="bg-white">
 
       <NavigationSection />
       <div className="d-flex justify-content-center mt-2">
         <TrendingNav items={trendingNavItems} />
       </div>
 
-      <div style={{ marginTop: '2.5cm' }} />
-      <main className="container-fluid">
+
+   <main className="content">
         <div className="mb-5">
           <LatestHighlightsSection />
         </div>
@@ -143,6 +143,21 @@ export default function Home() {
       </main>
 
       <div style={{ marginBottom: '1.5rem' }} />
+        <style jsx>{`
+        .content {
+          padding-left: 0;
+          padding-right: 0;
+          margin-top:2rem;
+        }
+        @media (min-width: 992px) {
+          .content {
+            padding-left: 7rem;
+            padding-right: 7rem;
+          }
+        }
+      `}</style>
     </div>
+
+    
   );
 }

@@ -1,0 +1,17 @@
+/* app/category/[slug]/page.module.css */
+.content {
+  padding-left: 0;
+  padding-right: 0;
+}
+@media (min-width: 992px) {
+  .content {
+    padding-left: 7rem;
+    padding-right: 7rem;
+    margin-top: 5rem;
+  }
+}
+/* kill Bootstrap’s built‑in gutters on the container */
+.noGutter {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}

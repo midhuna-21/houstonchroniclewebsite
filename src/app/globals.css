@@ -68,7 +68,11 @@ a {
 #footerAccordion .accordion-button::after {
   filter: brightness(0) invert(1);
 }
-
-
+@media (min-width: 992px) {
+  .px-lg-7rem {
+    padding-left: 7rem !important;
+    padding-right: 7rem !important;
+  }
+}
 
 }
