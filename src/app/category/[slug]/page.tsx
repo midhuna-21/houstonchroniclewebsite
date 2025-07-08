@@ -20,9 +20,14 @@ export default async function CategoryPage({ params }: Props) {
     <>
       <NavigationSection />
       <div className='container-fluid'>
-
         <CategoryContent activeMain={navKey} />
       </div>
     </>
   );
+}
+
+export async function generateStaticParams() {
+  return Object.keys(slugToKeyMap).map((slug) => ({
+    slug,
+  }));
 }
