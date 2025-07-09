@@ -2,25 +2,32 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { latestNewsData,LatestNewsCardItem } from '@/data/detailData';
 import SectionWrapper from './SectionWrapper';
 
-const LatestNewsCard: React.FC = () => {
+interface LatestNewsCardItem {
+  title: string;
+  image: string;
+}
+
+interface LatestNewsCardProps {
+  data: LatestNewsCardItem[];
+}
+
+const LatestNewsCard: React.FC<LatestNewsCardProps> = ({ data }) => {
   return (
-    <SectionWrapper title='Lastest Local News'>
-      {latestNewsData.map((item: LatestNewsCardItem) => (
+    <SectionWrapper title="Latest Local News">
+      {data.map((item, idx) => (
         <div
-          key={item.id}
+          key={idx}
           className="d-flex flex-column flex-md-row align-items-start border-bottom pb-3 mb-3"
           style={{
             gap: '1rem',
             fontSize: '18px',
             fontFamily: "'Archivo', Arial, sans-serif",
-            fontWeight: 700
+            fontWeight: 700,
           }}
         >
           <div className="flex-grow-1">
-
             <p
               className="mb-0"
               style={{
@@ -29,12 +36,7 @@ const LatestNewsCard: React.FC = () => {
                 lineHeight: '1.2',
               }}
             >
-              {item.description.split(' ').map((word, index) => (
-                <React.Fragment key={index}>
-                  {word}{' '}
-                  {(index + 1) % 5 === 0 && <br className="d-none d-md-block" />}
-                </React.Fragment>
-              ))}
+              {item.title}
             </p>
           </div>
 

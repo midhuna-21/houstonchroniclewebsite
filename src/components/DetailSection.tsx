@@ -16,13 +16,13 @@ export default function DetailPage({ params }: PageProps) {
       <ArticleHeader
         category={article.category}
         title={article.title}
-        author={article.author}
-        role={article.role}
-        date={article.date}
+        // author={article.author}
+        // role={article.role}
+        // date={article.date}
       />
 
       <div className="container py-4">
-        <p style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>{article.content}</p>
+        {/* <p style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>{article.content}</p> */}
       </div>
     </div>
   );

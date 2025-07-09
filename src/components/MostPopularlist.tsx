@@ -6,13 +6,13 @@ interface Article {
 }
 
 interface MostPopularListProps {
-  articles: Article[];
+  data: Article[];
 }
 
-const MostPopularList: React.FC<MostPopularListProps> = ({ articles }) => {
+const MostPopularList: React.FC<MostPopularListProps> = ({ data }) => {
   return (
     <SectionWrapper title='Most Popular'>
-      {articles.map((article, index) => (
+      {data.map((article, index) => (
         <div key={index} className="d-flex mb-3 pb-3 border-bottom">
           <div className="fw-bold text-danger me-2">{index + 1}.</div>
           <div className="fw-semibold"

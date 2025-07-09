@@ -1,19 +1,21 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import data from '../../public/data/carouselData.json';
 
 interface CarouselItem {
-  tag: string;
-  heading: string;
+  category : string;
+  title: string;
+  shortdescription:string;
   description: string;
   image: string;
 }
 
-const CarouselSection: React.FC = () => {
+interface CarouselSectionProps {
+  data: CarouselItem[];
+}
+
+const CarouselSection: React.FC<CarouselSectionProps> = ({ data }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
-
-  const items: CarouselItem[] = data;
 
   useEffect(() => {
     const handleResize = () => {
@@ -22,12 +24,11 @@ const CarouselSection: React.FC = () => {
 
     handleResize(); 
     window.addEventListener('resize', handleResize);
-
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % items.length);
+    setCurrentIndex((prev) => (prev + 1) % data.length);
   };
 
   return (
@@ -54,8 +55,8 @@ const CarouselSection: React.FC = () => {
         >
           <div style={{ flex: 1 }}>
             <img
-              src={items[currentIndex].image}
-              alt={items[currentIndex].heading}
+              src={data[currentIndex].image}
+              alt={data[currentIndex].title}
               style={{
                 width: '100%',
                 height: isMobile ? '220px' : '100%',
@@ -90,7 +91,7 @@ const CarouselSection: React.FC = () => {
                 width: 'fit-content',
               }}
             >
-              {items[currentIndex].tag}
+              {data[currentIndex].category}
             </div>
 
             <h2
@@ -102,7 +103,7 @@ const CarouselSection: React.FC = () => {
                 marginBottom: '12px',
               }}
             >
-              {items[currentIndex].heading}
+              {data[currentIndex].title}
             </h2>
 
             <div
@@ -124,7 +125,7 @@ const CarouselSection: React.FC = () => {
                 fontWeight: 400,
               }}
             >
-              {items[currentIndex].description}
+              {data[currentIndex].shortdescription}
             </p>
           </div>
         </div>
@@ -157,7 +158,7 @@ const CarouselSection: React.FC = () => {
           justifyContent: 'center',
         }}
       >
-        {items.map((_, index) => (
+        {data.map((_, index) => (
           <div
             key={index}
             style={{

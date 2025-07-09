@@ -1,7 +1,6 @@
-
-
-import { notFound } from 'next/navigation';
-import { navData, slugToKeyMap } from '@/data/navData';
+import fs from 'fs/promises';
+import path from 'path';
+import {slugToKeyMap } from '@/data/navData';
 import CategoryContent from '@/components/CategoryContent';
 import NavigationSection from '@/components/NavigationSection';
 import styles from './page.module.css';
@@ -13,26 +12,33 @@ export default async function CategoryPage({
 }) {
   const { slug } =await params;
 
-  const navKey = slugToKeyMap[slug];
-  if (!navKey || !navData[navKey]) return notFound();
+  const filePath = path.join(process.cwd(), 'public', 'data', `${slug}.json`);
+    const fileContents = await fs.readFile(filePath, 'utf-8');
+    const jsonData = JSON.parse(fileContents);
 
   return (
     <>
-     <NavigationSection />
-      <main className={styles.content}>
-        <div className={`container-fluid ${styles.noGutter}`}>
-          <CategoryContent activeMain={navKey} />
-        </div>
-      </main>
+             <NavigationSection />
+        <main className={styles.content}>
+          <div className={`container-fluid ${styles.noGutter}`}>
+            <CategoryContent activeMain={slug} data={jsonData} />
+          </div>
+        </main>
 
     </>
   );
 }
 
-export async function generateStaticParams(): Promise<
-  { slug: string }[]
-> {
-  return Object.keys(slugToKeyMap).map((slug) => ({
-    slug,
-  }));
+// export async function generateStaticParams(): Promise<
+//   { slug: string }[]
+// > {
+//   return Object.keys(slugToKeyMap).map((slug) => ({
+//     slug,
+//   }));
+// }
+
+export async function generateStaticParams() {
+  const categories = ['business', 'health', 'politics', 'science', 'technology'];
+  return categories.map((slug) => ({ slug }));
 }
+

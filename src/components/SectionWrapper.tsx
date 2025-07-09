@@ -9,7 +9,7 @@ interface SectionWrapperProps {
 
 export default function SectionWrapper({ title, children }: SectionWrapperProps) {
   return (
-    <section className="bg-white px-2">
+<section className="bg-white  mb-5 pt-5">
       <div className="container-fluid px-0">
         <div
         className="flex-grow-1"

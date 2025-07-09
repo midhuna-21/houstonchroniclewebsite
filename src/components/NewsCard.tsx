@@ -8,15 +8,15 @@ type NewsItem = {
 };
 
 type NewsCardProps = {
-  item: NewsItem;
+  data: NewsItem;
 };
 
-export default function NewsCard({ item }: NewsCardProps) {
+export default function NewsCard({ data }: NewsCardProps) {
   return (
     <div className="d-flex flex-column h-100 text-start">
-      {item.image && item.image.trim() !== '/' && (
+      {data.image && data.image.trim() !== '/' && (
         <img
-          src={item.image}
+          src={data.image}
           alt=""
           className="img-fluid mb-2"
           style={{
@@ -37,20 +37,20 @@ export default function NewsCard({ item }: NewsCardProps) {
           fontFamily: "'Rubik', Arial, sans-serif"
         }}
       >
-        {item.subcategory}
+        {data.subcategory}
       </p>
       <h5
         className="mb-2"
         style={{ fontSize: '22.784px', color: '#111111', fontWeight: 700, fontFamily: "'Archivo', Arial, sans-serif", }}
       >
-        {item.title}
+        {data.title}
       </h5>
-      {item.description && (
+      {data.description && (
         <p
           className="text-muted mb-0"
           style={{ fontSize: '16px', color: '#444444', fontWeight: 400, fontFamily: "'Rubik', Arial, sans-serif" }}
         >
-          {item.description}
+          {data.description}
         </p>
       )}
     </div>

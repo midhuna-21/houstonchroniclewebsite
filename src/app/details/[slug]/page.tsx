@@ -1,76 +1,62 @@
-import { getArticleBySlug } from '@/lib/detailFunction';
+import { notFound } from 'next/navigation';
+import { getArticleBySlug, getAllSlugs } from '@/lib/detailFunction';
 import ArticleHeader from '@/components/ArticleHeader';
 import DetailFirstSection from '@/components/DetailFirstSection';
-import { notFound } from 'next/navigation';
 import ArticleBodyRenderer from '@/components/ArticleBodyRender';
-import EditorsPicksSection from '@/components/EditorsPick';
-import LetsPlaySection from '@/components/LetsPlay';
-import MostPopularList from '@/components/MostPopularlist';
-import { popularArticles } from '@/data/homeData';
-import LatestNewsCard from '@/components/LastestNewsCard';
 import AuthorInfo from '@/components/AuthorInfo';
+import MostPopularList from '@/components/MostPopularlist';
+import LatestNewsCard from '@/components/LastestNewsCard';
+import LetsPlaySection from '@/components/LetsPlay';
 import styles from './page.module.css';
+import { popularArticles } from '@/data/homeData';
+import SingleParagraph from '@/components/SingleParagraph';
+import EditorsPicksSection from '@/components/EditorsPick';
+import EditorsData from '../../../../public/data/editorspick.json';
+import MostpopularData from '../../../../public/data/mostpopular.json';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
-
-function getSlugSafe(slug: string) {
-  try {
-    return decodeURIComponent(slug);
-  } catch {
-    return slug;
-  }
-}
-
 export default async function DetailPage({ params }: PageProps) {
-  const slug = getSlugSafe((await params).slug);
-  const article = getArticleBySlug(slug);
+  const article = getArticleBySlug(decodeURIComponent((await params).slug));
 
   if (!article) return notFound();
 
-
   return (
-      <main className={styles.content}>
-        <div className={`container-fluid ${styles.noGutter}`}>
-      <ArticleHeader
+    <main className={styles.content}>
+      <div className={`container-fluid ${styles.noGutter}`}>
+        <ArticleHeader
+          category={article.category}
+          title={article.title}
+          // author={article.author}
+          // role={article.role}
+          // date={article.date}
+        />
+
+        <DetailFirstSection
         category={article.category}
-        title={article.title}
-        author={article.author}
-        role={article.role}
-        date={article.date}
-      />
+          image={article.image}
+          shortdescription={article.shortdescription}
+          description={article.description}
+          // credits={article.credits}
+          // audioTitle={article.audioTitle}
+        />
 
-      <DetailFirstSection
-        images={article.images}
-        captions={article.captions}
-        credits={article.credits}
-        audioTitle={article.audioTitle}
-      />
-      <div className="row mt-4 ">
-        <div className="col-md-9">
-          <ArticleBodyRenderer body={article.body} />
-           <AuthorInfo
-  date="July 2, 2025"
-  name="John Wayne Ferguson"
-  role="Reporter"
-  avatarUrl="/images/aman.webp" 
-  bio="John Wayne Ferguson is a general assignment and breaking news reporter for the Houston Chronicle. A graduate of the University of New Hampshire, John joined the Chronicle in 2022. He was previously a reporter at The Galveston County Daily News. Follow him on Twitter at @johnwferguson."
-/>
+        <div className="row mt-4">
+          <div className="col-md-8  ">
+            {/* <ArticleBodyRenderer body={article.body} /> */}
+            <SingleParagraph text={article.description} />
+          </div>
+
+          <div className="col-md-4">
+            <MostPopularList data={MostpopularData} />
+            <LatestNewsCard data={MostpopularData}/>
+          </div> 
         </div>
-
-        <div className="col-md-3">
-          <MostPopularList articles={popularArticles} />
-            <LatestNewsCard />
-
-        </div>
+<EditorsPicksSection data={EditorsData} />
+        <LetsPlaySection />
       </div>
-     
-
-      <EditorsPicksSection />
-      <LetsPlaySection />
-    </div>
     </main>
   );
 }

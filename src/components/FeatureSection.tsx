@@ -2,9 +2,9 @@ import React from 'react';
 import SectionWrapper from './SectionWrapper';
 
 interface FeatureArticle {
-  id: number;
   title: string;
   description?: string;
+  shortdescription?:string;
   image?: string;
 }
 
@@ -33,7 +33,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
 
           {leftItems.map((item, index) => (
             <div
-              key={item.id}
+              key={index}
               className={`pb-3 mb-3 ${index !== leftItems.length - 1 ? 'border-bottom' : ''}`}
             >
               <h6
@@ -68,19 +68,19 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
             fontWeight: 700
           }}
           >{mainItem.title}</h4>
-          {mainItem.description && <p style={{
+          {mainItem.shortdescription && <p style={{
             fontSize: '16px',
             fontFamily: "'Rubik', Arial, sans-serif", fontWeight: 400
           }}
 
-          >{mainItem.description}</p>}
+          >{mainItem.shortdescription}</p>}
         </div>
       </div>
 
       <div className="row pt-3">
         {bottomItems.map((item, idx) => (
           <div
-            key={item.id}
+            key={idx}
             className={`col-md-6 ${idx === 0 ? 'border-end' : ''}`}
           >
             <h6 style={{

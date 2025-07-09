@@ -7,6 +7,7 @@ interface NewsItem {
   category?: string;
   title: string;
   image?: string;
+  shortdescription:string;
   description?: string;
 }
 
@@ -54,7 +55,7 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
                 fontFamily: "'Rubik', Arial, sans-serif",
                 fontWeight: 400
               }}
-            >{main.description}</p>
+            >{main.shortdescription}</p>
           </div>
         </div>
 
@@ -73,7 +74,7 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
                   fontSize: '16px',
                   fontFamily: "'Rubik', Arial, sans-serif",
                 }}
-              >{side[0].description}</p>
+              >{side[0].shortdescription}</p>
               <hr />
             </div>
           )}

@@ -9,9 +9,9 @@ import { HiOutlineMail } from 'react-icons/hi';
 interface ArticleHeaderProps {
   category: string;
   title: string;
-  author: string;
-  role: string;
-  date: string;
+  author?: string;
+  role?: string;
+  date?: string;
 }
 
 const ArticleHeader: React.FC<ArticleHeaderProps> = ({
@@ -42,13 +42,13 @@ const ArticleHeader: React.FC<ArticleHeaderProps> = ({
 
       <div className="d-flex flex-wrap justify-content-between align-items-center gap-3">
         <div className="text-muted small">
-          <span style={{
+          {/* <span style={{
             color: '#444444',
             fontSize: '14.224px',
             fontFamily: "'Rubik', Arial, sans-serif"
           }}
-          >By</span>
-          <span className="fw-bold"
+          >By</span> */}
+          {/* <span className="fw-bold"
             style={{
               color: '#B50021',
               fontSize: '14.224px',
@@ -66,7 +66,7 @@ const ArticleHeader: React.FC<ArticleHeaderProps> = ({
             fontSize: '14.224px',
             fontFamily: "'Rubik', Arial, sans-serif"
           }}
-          >{date}</span>
+          >{date}</span> */}
         </div>
 
         <div className="d-flex gap-2">
