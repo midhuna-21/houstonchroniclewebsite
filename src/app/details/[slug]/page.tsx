@@ -13,6 +13,8 @@ import SingleParagraph from '@/components/SingleParagraph';
 import EditorsPicksSection from '@/components/EditorsPick';
 import EditorsData from '../../../../public/data/editorspick.json';
 import MostpopularData from '../../../../public/data/mostpopular.json';
+import AuthorData from '../../../../public/data/authour.json';
+
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -47,6 +49,13 @@ export default async function DetailPage({ params }: PageProps) {
           <div className="col-md-8  ">
             {/* <ArticleBodyRenderer body={article.body} /> */}
             <SingleParagraph text={article.description} />
+              <AuthorInfo
+  date={AuthorData[0].date}
+  name={AuthorData[0].name}
+  role={AuthorData[0].role}
+  bio={AuthorData[0].bio}
+  image={AuthorData[0].image}
+/>
           </div>
 
           <div className="col-md-4">

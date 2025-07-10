@@ -1,10 +1,13 @@
 import React from 'react';
 import SectionWrapper from './SectionWrapper';
+import { Linden_Hill } from 'next/font/google';
+import Link from 'next/link';
 
 interface FeatureArticle {
+  slug: string;
   title: string;
   description?: string;
-  shortdescription?:string;
+  shortdescription?: string;
   image?: string;
 }
 
@@ -32,19 +35,23 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
         <div className="col-md-3 border-end">
 
           {leftItems.map((item, index) => (
+
             <div
               key={index}
               className={`pb-3 mb-3 ${index !== leftItems.length - 1 ? 'border-bottom' : ''}`}
             >
-              <h6
-                style={{
-                  fontSize: '18px',
-                  fontFamily: "'Archivo', Arial, sans-serif",
-                  fontWeight: 700,
-                }}
-              >
-                {item.title}
-              </h6>
+              <Link href={`/details/${item.slug}`} className='text-decoration-none'>
+                <h6
+                  style={{
+                    color: '#111111',
+                    fontSize: '18px',
+                    fontFamily: "'Archivo', Arial, sans-serif",
+                    fontWeight: 700,
+                  }}
+                >
+                  {item.title}
+                </h6>
+              </Link>
             </div>
           ))}
 
@@ -52,44 +59,56 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
 
         <div className="col-md-4 text-center">
           {mainItem.image && (
-            <img
-              src={mainItem.image}
-              alt={mainItem.title}
-              className="img-fluid mb-2"
-              style={{ objectFit: 'cover', maxHeight: '200px', width: '100%' }}
-            />
+            <Link href={`/details/${mainItem.slug}`} className='text-decoration-none'>
+
+              <img
+                src={mainItem.image}
+                alt={mainItem.title}
+                className="img-fluid mb-2"
+                style={{ objectFit: 'cover', maxHeight: '200px', width: '100%' }}
+              />
+            </Link>
           )}
         </div>
 
         <div className="col-md-5">
-          <h4 style={{
-            fontSize: '18px',
-            fontFamily: "'Archivo', Arial, sans-serif",
-            fontWeight: 700
-          }}
-          >{mainItem.title}</h4>
-          {mainItem.shortdescription && <p style={{
-            fontSize: '16px',
-            fontFamily: "'Rubik', Arial, sans-serif", fontWeight: 400
-          }}
+          <Link href={`/details/${mainItem.slug}`} className='text-decoration-none'>
 
-          >{mainItem.shortdescription}</p>}
-        </div>
-      </div>
-
-      <div className="row pt-3">
-        {bottomItems.map((item, idx) => (
-          <div
-            key={idx}
-            className={`col-md-6 ${idx === 0 ? 'border-end' : ''}`}
-          >
-            <h6 style={{
-              color: "#111111",
+            <h4 style={{
+              color: '#111111',
               fontSize: '18px',
               fontFamily: "'Archivo', Arial, sans-serif",
               fontWeight: 700
             }}
-            >{item.title}</h6>
+            >{mainItem.title}</h4>
+            {mainItem.shortdescription && <p style={{
+              color: "#444444",
+              fontSize: '16px',
+              fontFamily: "'Rubik', Arial, sans-serif", fontWeight: 400
+            }}
+
+            >{mainItem.shortdescription}</p>}
+          </Link>
+        </div>
+
+      </div>
+
+      <div className="row pt-3">
+        {bottomItems.map((item, idx) => (
+
+          <div
+            key={idx}
+            className={`col-md-6 ${idx === 0 ? 'border-end' : ''}`}
+          >
+            <Link href={`/details/${item.slug}`} className='text-decoration-none'>
+              <h6 style={{
+                color: "#111111",
+                fontSize: '18px',
+                fontFamily: "'Archivo', Arial, sans-serif",
+                fontWeight: 700
+              }}
+              >{item.title}</h6>
+            </Link>
           </div>
         ))}
       </div>

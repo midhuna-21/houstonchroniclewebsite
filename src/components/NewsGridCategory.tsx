@@ -1,8 +1,10 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
+import Link from "next/link";
 
 interface NewsItem {
+  slug: string
   image: string;
   category: string;
   title: string;
@@ -15,19 +17,28 @@ interface NewsGridProps {
 
 const NewsGrid: React.FC<NewsGridProps> = ({ data }) => {
   const main = data[0];
-  const right = data.slice(1, 5); 
+  const right = data.slice(1, 5);
 
   return (
     <div style={{ paddingBottom: '40px' }}>
       <div className="row g-4">
+
         <div className="col-md-6" style={{ borderRight: '1px solid #ddd' }}>
+            <Link href={`/details/${main.slug}`} className='text-decoration-none'>
+
           <div style={{ position: 'relative' }}>
             <Image
               src={main.image}
               alt={main.title}
               width={600}
               height={400}
-              style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
+              style={{
+                width: '100%',
+                height: '240px',
+                objectFit: 'cover',
+                marginBottom: '8px',
+              }}
+
             />
             <div
               style={{
@@ -82,12 +93,15 @@ const NewsGrid: React.FC<NewsGridProps> = ({ data }) => {
           >
             {main.shortdescription}
           </p>
+        </Link>
         </div>
 
         <div className="col-md-6">
           <div className="row g-4">
             {right.map((item, index) => (
+              
               <div className="col-6" key={index}>
+                <Link href={`/details/${item.slug}`} className='text-decoration-none'>
                 <Image
                   src={item.image}
                   alt={item.title}
@@ -113,6 +127,7 @@ const NewsGrid: React.FC<NewsGridProps> = ({ data }) => {
                 </div>
                 <div
                   style={{
+                     color:'#111111',
                     fontWeight: 700,
                     fontSize: '18px',
                     lineHeight: 1.3,
@@ -121,7 +136,9 @@ const NewsGrid: React.FC<NewsGridProps> = ({ data }) => {
                 >
                   {item.title}
                 </div>
+            </Link>
               </div>
+
             ))}
           </div>
         </div>

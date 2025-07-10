@@ -27,9 +27,10 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
     <SectionWrapper title={main.category || ""}>
       <div className="row">
         <div className="col-md-6">
+            <Link href={`/details/${main.slug}`} className='text-decoration-none'>
 
           <div>
-            <Link href={`/details/${main.slug}`}>
+            
               <img
                 src={main.image}
                 alt={main.title}
@@ -40,9 +41,9 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
                   height: "300px" 
                 }}
               />
-            </Link>
             <h4 className=" mb-2"
               style={{
+                color:'#111111',
                 fontSize: '22.784px',
                 fontFamily: "'Archivo', Arial, sans-serif",
                 fontWeight: 700
@@ -57,29 +58,38 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
               }}
             >{main.shortdescription}</p>
           </div>
+          </Link>
         </div>
 
         <div className="col-md-6">
           {side?.[0] && (
+            <Link href={`/details/${side[0].slug}`} className='text-decoration-none'>
+
             <div className="mb-3">
               <h5 className="fw-bold mb-2"
                 style={{
-                  fontSize: '18px',
+                 color:'#111111',
+                  fontSize: '22.784px',
                   fontFamily: "'Archivo', Arial, sans-serif",
                   fontWeight: 700
                 }}
               >{side[0].title}</h5>
               <p className="text-muted small"
                 style={{
+                  color:"#444444",
+                  fontWeight:400,
                   fontSize: '16px',
                   fontFamily: "'Rubik', Arial, sans-serif",
                 }}
               >{side[0].shortdescription}</p>
               <hr />
             </div>
+            </Link>
           )}
 
           {side?.[1] && (
+            <Link href={`/details/${side[1].slug}`} className='text-decoration-none'>
+
             <div>
               <img
                 src={side[1].image}
@@ -93,12 +103,14 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
               />
               <h5 className="mb-2 fw-bold"
                 style={{
+                    color:'#111111',
                   fontSize: '22.784px',
                   fontFamily: "'Archivo', Arial, sans-serif",
                   fontWeight: 700
                 }}
               >{side[1].title}</h5>
             </div>
+            </Link>
           )}
         </div>
       </div>
@@ -108,17 +120,21 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
           <div className="row">
             {bottomCards?.slice(0, 2).map((item, index) => (
               <div className="col-12 py-3 px-2" key={index}>
+            <Link href={`/details/${item.slug}`} className='text-decoration-none'>
                 <div className="row g-2 align-items-center">
+
                   <div className="col-9">
                     <p className="fw-bold mb-1" style={{
                       fontSize: '18px',
                       fontFamily: "'Archivo', Arial, sans-serif",
-                      fontWeight: 700
+                      fontWeight: 700,
+                        color:'#111111',
                     }}
                     >
                       {item.title}
                     </p>
                   </div>
+                          
                   <div className="col-3">
                     {item.image && (
                       <img
@@ -135,6 +151,7 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
                     )}
                   </div>
                 </div>
+                  </Link>
 
                 {index === 0 && (
                   <hr
@@ -157,10 +174,13 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
           <div className="row">
             {bottomCards?.slice(2, 4).map((item, index) => (
               <div className="col-12 py-3 px-2" key={index + 2}>
+            <Link href={`/details/${item.slug}`} className='text-decoration-none'>
                 <div className="row g-2 align-items-center">
+
                   <div className="col-9">
                     <p className="fw-bold mb-1" style={{
                       fontSize: '18px',
+                        color:'#111111',
                       fontFamily: "'Archivo', Arial, sans-serif",
                       fontWeight: 700
                     }}
@@ -169,6 +189,7 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
                     </p>
 
                   </div>
+                  
                   <div className="col-3">
                     {item.image && (
                       <img
@@ -185,6 +206,7 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
                     )}
                   </div>
                 </div>
+                  </Link>
 
                 {index === 0 && (
                   <hr

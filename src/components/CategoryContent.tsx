@@ -7,7 +7,7 @@
   import RightSectionTop from './RightSectionTop';
   import ContentLayout from './ContentLayout';
   import DailyPuzzles from './DailyPuzzles';
-  import { dailyPuzzles, featureData, newsData, trendingData } from '@/data/homeData';
+  import { featureData, newsData, trendingData } from '@/data/homeData';
   import TrendingCard from './TrendingCard';
   import FeatureSection from './FeatureSection';
   import LetsPlaySection from './LetsPlay';
@@ -23,6 +23,9 @@ import EditorsPicksSection from './EditorsPick';
 import SectionWrapper from './SectionWrapper';
 import CarouselSection from './CarouselSection';
 import NewsCard from './NewsCard';
+import DailyPuzzlesData from '../../public/data/puzzles.json';
+import ColumnsFromPastData from '../../public/data/columnsfrompast.json'
+import HorizontalNews from './HorizontalNews';
 
   interface Props { 
     activeMain: string;
@@ -52,6 +55,9 @@ import NewsCard from './NewsCard';
      <div className="col-md-9">
  <NewsGrid data={data.slice(0, 5)} />
  </div>
+    <div className="col-md-3">
+   <InteractiveCard data={BusinessData[0]} />
+            </div>
 </div>
 
 
@@ -59,14 +65,14 @@ import NewsCard from './NewsCard';
     <div className="row">
           <div className="col-md-9">
 
-{/* 
+
  <CategoryFirstSection
               data={{
                 main: data[0],
                 side: [data[1], data[2]],
                 bottomCards: [data[3], data[4], data[5], data[6]],
               }}
-            /> */}
+            />
            
 
               {/* <FeatureSection
@@ -75,7 +81,7 @@ import NewsCard from './NewsCard';
                   articles: TechnologyData.slice(0, 5)
                 }}
               /> */}
-                   <EditorsPicksSection data={data} />
+                   <HorizontalNews data={data} />
                 
 
   {/* <NewsGrid data={newsCategoryData} /> */}
@@ -98,10 +104,21 @@ import NewsCard from './NewsCard';
 
            
           </div>
-          {/* <div className="col-md-3">
-            <DailyPuzzles puzzles={dailyPuzzles} />
-            <TrendingCard data={trendingData[2]} />
-          </div> */}
+          <div className="col-md-3">
+            <DailyPuzzles puzzles={DailyPuzzlesData} />
+            <TrendingCard
+  data={{
+    section: ColumnsFromPastData[0].category, 
+    items: ColumnsFromPastData.map(article => ({
+      image: article.image,
+      title: article.title,
+      description: article.shortdescription,
+      slug:article.slug
+    }))
+  }}
+/>
+       
+          </div>
         </div>
 {/* 
         <div className="col-md-9">

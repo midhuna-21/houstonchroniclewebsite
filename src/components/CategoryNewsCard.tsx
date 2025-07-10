@@ -1,5 +1,6 @@
 import React from 'react';
 import SectionWrapper from './SectionWrapper';
+import Link from 'next/link';
 
 interface CategoryNewsCardProps {
   data: {
@@ -8,15 +9,17 @@ interface CategoryNewsCardProps {
     shortdescription:string;
     image: string;
     author?: string;
+    slug:string;
   };
 }
 
 const CategoryNewsCard: React.FC<CategoryNewsCardProps> = ({ data }) => {
-  const { title, description,shortdescription, image, author } = data;
+  const { title, description,shortdescription, image, author,slug } = data;
 
   return (
 
     <div className="border-bottom mb-4 ">
+            <Link href={`/details/${slug}`} className='text-decoration-none'>
 
       <div className="row align-items-start">
         <div className="col-12 col-md-9">
@@ -70,6 +73,7 @@ const CategoryNewsCard: React.FC<CategoryNewsCardProps> = ({ data }) => {
           />
         </div>
       </div>
+      </Link>
     </div>
   );
 };

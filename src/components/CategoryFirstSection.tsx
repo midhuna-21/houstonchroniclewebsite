@@ -26,9 +26,9 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
     <div style={{ marginBottom: '3rem' }}>
       <div className="row">
         <div className="col-md-6 border-end">
+            <Link href={`/details/${main.slug}`} className='text-decoration-none'>
 
           <div>
-            <Link href={`/details/${main.slug}`}>
               <img
                 src={main.image}
                 alt={main.title}
@@ -39,9 +39,9 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
                   height: "300px" 
                 }}
               />
-            </Link>
             <h4 className=" mb-2"
               style={{
+                color:"#111111",
                 fontSize: '22.784px',
                 fontFamily: "'Archivo', Arial, sans-serif",
                 fontWeight: 700
@@ -56,13 +56,17 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
               }}
             >{main.shortdescription}</p>
           </div>
+          </Link>
         </div>
 
         <div className="col-md-6">
           {side?.[0] && (
+            <Link href={`/details/${side[0].slug}`} className='text-decoration-none'>
+
             <div className="mb-3">
               <h5 className="fw-bold mb-2"
                 style={{
+                  color:"#111111",
                   fontSize: '18px',
                   fontFamily: "'Archivo', Arial, sans-serif",
                   fontWeight: 700
@@ -76,9 +80,12 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
               >{side[0].shortdescription}</p>
               <hr />
             </div>
+            </Link>
           )}
 
           {side?.[1] && (
+            <Link href={`/details/${side[0].slug}`} className='text-decoration-none'>
+
             <div>
               <img
                 src={side[1].image}
@@ -92,12 +99,14 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
               />
               <h5 className="mb-2 fw-bold"
                 style={{
+                  color:"#111111",
                   fontSize: '22.784px',
                   fontFamily: "'Archivo', Arial, sans-serif",
                   fontWeight: 700
                 }}
               >{side[1].title}</h5>
             </div>
+            </Link>
           )}
         </div>
       </div>
@@ -106,10 +115,13 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
         <div className="col-md-6 border-end pe-md-4"> 
           <div className="row">
             {bottomCards?.slice(0, 2).map((item, index) => (
+            <Link href={`/details/${item.slug}`} key={`${item.slug}-${index}`} className='text-decoration-none'>
+
               <div className="col-12 py-3 px-2" key={index}>
                 <div className="row g-2 align-items-center">
                   <div className="col-9">
                     <p className="fw-bold mb-1" style={{
+                      color:"#111111",
                       fontSize: '18px',
                       fontFamily: "'Archivo', Arial, sans-serif",
                       fontWeight: 700
@@ -148,20 +160,24 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
                   />
                 )}
               </div>
+              </Link>
             ))}
           </div>
-        </div>
+        </div>  
 
         <div className="col-md-6 ps-md-4"> 
           <div className="row">
             {bottomCards?.slice(2, 4).map((item, index) => (
+            <Link href={`/details/${item.slug}`}  key={`${item.slug}-${index}`} className='text-decoration-none'>
+
               <div className="col-12 py-3 px-2" key={index + 2}>
                 <div className="row g-2 align-items-center">
                   <div className="col-9">
                     <p className="fw-bold mb-1" style={{
                       fontSize: '18px',
                       fontFamily: "'Archivo', Arial, sans-serif",
-                      fontWeight: 700
+                      fontWeight: 700,
+                      color:"#111111"
                     }}
                     >
                       {item.title}
@@ -198,6 +214,7 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
                   />
                 )}
               </div>
+              </Link>
             ))}
           </div>
         </div>

@@ -1,6 +1,19 @@
+'use client';
 import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
-const InteractiveCard = () => {
+interface InteractiveCardProps {
+  data: {
+    category: string;
+    title: string;
+    shortdescription: string;
+    image: string;
+    slug:string;
+  };
+}
+
+const InteractiveCard: React.FC<InteractiveCardProps> = ({ data }) => {
   return (
     <div
       className="border my-md-0 my-4"
@@ -11,13 +24,16 @@ const InteractiveCard = () => {
         backgroundColor: '#fff',
       }}
     >
+            <Link href={`/details/${data.slug}`} className='text-decoration-none'>
+
       <div style={{ position: 'relative' }}>
-        <img
-          src="/images/interactiveimage.webp" 
-          alt="Interactive Maps"
+        <Image
+          src={data.image}
+          alt={data.title}
+          width={400}
+          height={240}
           style={{ width: '100%', height: 'auto', display: 'block' }}
         />
-
         <div
           style={{
             position: 'absolute',
@@ -33,18 +49,35 @@ const InteractiveCard = () => {
             textTransform: 'uppercase',
           }}
         >
-          INTERACTIVES
+          {data.category}
         </div>
       </div>
 
       <div style={{ padding: '2rem 1rem 1rem', textAlign: 'center' }}>
-        <h5 style={{ fontWeight: 'bold', marginBottom: '1rem' }}>Trackers & Live Maps</h5>
-        <hr style={{ width: '40px', margin: '0 auto 1rem', borderTop: '2px solid #ccc' }} />
-        <p style={{ fontSize: '0.95rem', color: '#333' }}>
-          Explore the Chronicle's full list of the live maps and interactive trackers to stay
-          current on the most important and timely data affecting your area.
+        <h5 style={{ fontWeight: 'bold', marginBottom: '1rem',color:"#111111" }}>{data.title}</h5>
+        <hr
+          style={{
+            
+            width: '40px',
+            margin: '0 auto 1rem',
+            borderTop: '2px solid #ccc',
+          }}
+        />
+        <p
+          style={{
+            fontSize: '0.95rem',
+            color: '#333',
+            display: '-webkit-box',
+            WebkitLineClamp: 2,
+            WebkitBoxOrient: 'vertical',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+          }}
+        >
+          {data.shortdescription}
         </p>
       </div>
+      </Link>
     </div>
   );
 };

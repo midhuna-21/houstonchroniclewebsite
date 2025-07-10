@@ -1,8 +1,7 @@
-import React from 'react';
-import SectionWrapper from './SectionWrapper';
 import Link from 'next/link';
+import React from 'react';
 
-interface EditorsPicksSectionProps {
+interface HorizontalNewsProps {
   data: {
     image: string;
     title: string;
@@ -11,14 +10,14 @@ interface EditorsPicksSectionProps {
   }[];
 }
 
-const EditorsPicksSection: React.FC<EditorsPicksSectionProps> = ({ data }) => {
+const HorizontalNews: React.FC<HorizontalNewsProps> = ({ data }) => {
   return (
-    <SectionWrapper title="Editor's Pick">
+    <div className='mb-5'>
       <div className="row gx-4 gy-4">
         {data.slice(0, 4).map((item, idx) => (
-          
           <div key={idx} className="col-12 col-sm-6 col-lg-3">
             <Link href={`/details/${item.slug}`} className='text-decoration-none'>
+
             <div
               className="h-100 text-start pe-3"
               style={{
@@ -63,12 +62,12 @@ const EditorsPicksSection: React.FC<EditorsPicksSectionProps> = ({ data }) => {
                 {item.title}
               </h6>
             </div>
-          </Link>
+            </Link>
           </div>
         ))}
       </div>
-    </SectionWrapper>
+    </div>
   );
 };
 
-export default EditorsPicksSection;
+export default HorizontalNews;

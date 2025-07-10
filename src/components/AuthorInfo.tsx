@@ -10,7 +10,7 @@ interface AuthorInfoProps {
   name: string;
   role: string;
   bio: string;
-  avatarUrl: string;
+  image: string;
 }
 
 const AuthorInfo: React.FC<AuthorInfoProps> = ({
@@ -18,7 +18,7 @@ const AuthorInfo: React.FC<AuthorInfoProps> = ({
   name,
   role,
   bio,
-  avatarUrl,
+image,
 }) => {
   return (
     <ArticleWrapper>
@@ -26,7 +26,7 @@ const AuthorInfo: React.FC<AuthorInfoProps> = ({
       <div className="d-flex justify-content-between align-items-start flex-wrap gap-2">
         <div className="d-flex align-items-center gap-3">
           <Image
-            src={avatarUrl}
+            src={image}
             alt={name}
             width={50}
             height={50}
@@ -42,7 +42,7 @@ const AuthorInfo: React.FC<AuthorInfoProps> = ({
             >
               {name}
             </div>
-            <div className="text-uppercase text-muted" style={{color:'#767676',  fontWeight: 500 ,fontSize: '14.224px',
+            <div className="text-uppercase" style={{color:'#767676',  fontWeight: 700 ,fontSize: '14.224px',
                 fontFamily: "'Rubik', Arial, sans-serif"}}>
               {role}
             </div>

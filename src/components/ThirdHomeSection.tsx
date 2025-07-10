@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SectionWrapper from './SectionWrapper';
+import Link from 'next/link';
 
 interface NewsItem {
   category: string;
@@ -10,6 +11,7 @@ interface NewsItem {
   shortdescription:string;
   description?: string;
   image?: string;
+  slug:string;
 }
 
 interface Props {
@@ -45,25 +47,28 @@ const ThirdHomeSection: React.FC<Props> = ({ businessData }) => {
   return (
     <SectionWrapper title="Latest">
       <div className="row">
-        {/* Left: First and Second Items */}
         <div className="col-12 col-md-4 order-2 order-md-1 mb-4 border-end">
-          {/* First */}
+            <Link href={`/details/${first.slug}`} className='text-decoration-none'>
+
           <div className="mb-4">
             <div style={categoryStyle}>{first.category}</div>
             <h5 style={titleStyle}>{first.title}</h5>
             <hr style={{ borderTop: '1px solid #ccc', margin: '1rem 0' }} />
           </div>
+          </Link>
+            <Link href={`/details/${second.slug}`} className='text-decoration-none'>
 
-          {/* Second */}
           <div>
             <div style={categoryStyle}>{second.category}</div>
             <h5 style={titleStyle}>{second.title}</h5>
           </div>
+          </Link>
         </div>
 
-        {/* Middle: Main Item with Image */}
         <div className="col-12 col-md-8 order-1 order-md-2 mb-4">
+            <Link href={`/details/${main.slug}`} className='text-decoration-none'>
           <div className="row">
+
             <div className="col-md-5 mb-3 mb-md-0">
               {main.image && (
                 <Image
@@ -75,27 +80,31 @@ const ThirdHomeSection: React.FC<Props> = ({ businessData }) => {
                 />
               )}
             </div>
+            
             <div className="col-md-7">
               <div style={categoryStyle}>{main.category}</div>
               <h3 style={titleStyle}>{main.title}</h3>
               {main.description && <p style={descriptionStyle}>{main.shortdescription}</p>}
             </div>
           </div>
+            </Link>
         </div>
 
-        {/* Bottom Row */}
         <div className="col-12 order-3 border-top pt-3">
           <div className="row">
-            {/* Fourth */}
+
             <div className="col-md-6 mb-3 border-end pe-md-4">
+            <Link href={`/details/${fourth.slug}`} className='text-decoration-none'>
               <div style={categoryStyle}>{fourth.category}</div>
               <h5 style={titleStyle}>{fourth.title}</h5>
+            </Link>
             </div>
 
-            {/* Fifth */}
             <div className="col-md-6 mb-3 ps-md-4">
+            <Link href={`/details/${fifth.slug}`} className='text-decoration-none'>
               <div style={categoryStyle}>{fifth.category}</div>
               <h5 style={titleStyle}>{fifth.title}</h5>
+            </Link>
             </div>
           </div>
         </div>

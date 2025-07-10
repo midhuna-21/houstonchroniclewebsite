@@ -8,7 +8,7 @@ import ThirdHomeSection from '@/components/ThirdHomeSection';
 import Signup from '@/components/Signup';
 import CarouselSection from '@/components/CarouselSection';
 import ContentLayout from '@/components/ContentLayout';
-import { dailyPuzzles, newsData, opinionArticles, popularArticles, promoData, trendingData, trendingNavItems } from '@/data/homeData'
+import { newsData, popularArticles, promoData, trendingData, trendingNavItems } from '@/data/homeData'
 import FeatureSection from '@/components/FeatureSection';
 import { featureData } from '@/data/homeData'
 import TrendingCard from '@/components/TrendingCard';
@@ -27,6 +27,10 @@ import PoliticsData from '../../public/data/politics.json';
 import SportsData from '../../public/data/sports.json';
 import TechnologyData from '../../public/data/technology.json';
 import CategoryFirstSection from '@/components/CategoryFirstSection';
+import MostpopularData from '../../public/data/mostpopular.json';
+import DailyPuzzlesData from '../../public/data/puzzles.json';
+import OpinionData from '../../public/data/opinion.json'
+import CoumnsFromPastData from '../../public/data/columnsfrompast.json'
 
 
 export default function Home() {
@@ -57,24 +61,29 @@ export default function Home() {
           <div className="col-md-9">
             <SecondHomeSection data={BusinessData.slice(0, 6)} />
 
-            {/* <div className="mb-5">
-                <EditorsPicksSection />
-              </div> */}
+            <div className="mb-5">
+              <EditorsPicksSection data={BusinessData} />
+            </div>
             <div className="mb-5">
               <ThirdHomeSection businessData={BusinessData.slice(0, 5)} />
+
             </div>
             {/* <div className="mb-5">
                 <Signup />
               </div> */}
           </div>
 
-          {/* <div className="col-md-3">
-              <DailyPuzzles puzzles={dailyPuzzles} />
-              <MostPopularList articles={popularArticles} />
-              <OpinionList title="Opinion" articles={opinionArticles} />
-            </div> */}
+          <div className="col-md-3">
+            <DailyPuzzles puzzles={DailyPuzzlesData} />
+            <MostPopularList data={MostpopularData} />
+
+            <OpinionList title="Opinion" articles={OpinionData} />
+          </div>
         </div>
 
+        <div>
+          <CarouselSection data={BusinessData} />
+        </div>
 
         <div className="row">
           <div className="col-md-9">
@@ -86,12 +95,20 @@ export default function Home() {
               }}
             />
           </div>
-          {/* <div className="col-md-3">
-            <TrendingCard data={trendingData[0]} />
-          </div> */}
+          <div className="col-md-3">
+            <TrendingCard
+              data={{
+                section: CoumnsFromPastData[0].category,
+                items: CoumnsFromPastData.map(article => ({
+                  image: article.image,
+                  title: article.title,
+                  description: article.shortdescription,
+                  slug:article.slug
+                }))
+              }}
+            />
+          </div>
         </div>
-
-
 
         <div className="row">
           <div className="col-md-9">
@@ -112,12 +129,20 @@ export default function Home() {
               />
             </div>
           </div>
-          {/* <div className="col-md-3">
-            <TrendingCard data={trendingData[1]} />
-          </div> */}
+          <div className="col-md-3">
+            <TrendingCard
+              data={{
+                section: CoumnsFromPastData[0].category,
+                items: CoumnsFromPastData.map(article => ({
+                  image: article.image,
+                  title: article.title,
+                  description: article.shortdescription,
+      slug:article.slug
+                }))
+              }}
+            />
+          </div>
         </div>
-
-
 
         <div className="row">
           <div className="col-md-9">
@@ -129,35 +154,24 @@ export default function Home() {
               }}
             />
           </div>
-          {/* <div className="col-md-3">
-            <EditorialBoard />
-          </div> */}
+          <div className="col-md-3">
+            <EditorialBoard
+              sectionTitle={CoumnsFromPastData[0]?.category || ''}
+              data={CoumnsFromPastData}
+            />
+          </div>
         </div>
 
-        <div className="row ">
+
+        <div className="row">
           <div className="col-md-9">
-            <CategoryFirstSection
+            <ContentLayout
               data={{
                 main: HealthData[0],
                 side: [HealthData[1], HealthData[2]],
                 bottomCards: [HealthData[3], HealthData[4], HealthData[5], HealthData[6]],
               }}
             />
-          </div>
-          {/* <div className="col-md-3">
-            <TrendingCard data={trendingData[2]} />
-          </div> */}
-        </div>
-
-        <div className="row">
-          <div className="col-md-9">
-            {/* <ContentLayout
-              data={{
-                main: BusinessData[0],
-                side: [BusinessData[1], BusinessData[2]],
-                bottomCards: [BusinessData[3], BusinessData[4], BusinessData[5], BusinessData[6]],
-              }}
-            /> */}
             <div className="mt-4">
               <FeatureSection
                 data={{
@@ -167,54 +181,16 @@ export default function Home() {
               />
             </div>
           </div>
-          {/* <div className="col-md-3">
-            <TrendingCard data={trendingData[3]} />
-          </div> */}
+          <div className="col-md-3">
+            <NewsText data={CoumnsFromPastData} />
+            <LottoCard data={CoumnsFromPastData[0]} />
+          </div>
+          <div className="col-md-3">
+
+          </div>
         </div>
 
-
-        <div className="row">
-          {/* <div className="col-md-9">
-            <ContentLayout
-              data={{
-                main: TechnologyData[0],
-                side: [TechnologyData[1], TechnologyData[2]],
-                bottomCards: [TechnologyData[3], TechnologyData[4], TechnologyData[5], TechnologyData[6]],
-              }}
-            />
-            <div className="mb-5">
-              <FeatureSection
-                data={{
-                  section: 'Health',
-                  articles: HealthData.slice(0, 5)
-                }}
-              />
-            </div>
-          </div> */}
-
-          {/* <div className="col-md-3">
-            <TrendingCard data={trendingData[4]} />
-            <LottoCard />
-          </div> */}
-        </div>
-
-        <div className="row">
-          {/* <div className="col-md-9">
-            <ContentLayout
-              data={{
-                main: PoliticsData[0],
-                side: [PoliticsData[1], PoliticsData[2]],
-                bottomCards: [PoliticsData[3], PoliticsData[4], PoliticsData[5], PoliticsData[6]],
-              }}
-            />
-          </div> */}
-          {/* <div className="col-md-3">
-            <NewsText />
-          </div> */}
-        </div>
-        {/* <LetsPlaySection /> */}
-
-
+        <LetsPlaySection />
 
       </main>
 

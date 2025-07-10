@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 interface CarouselItem {
   category : string;
@@ -7,6 +8,7 @@ interface CarouselItem {
   shortdescription:string;
   description: string;
   image: string;
+  slug:string;
 }
 
 interface CarouselSectionProps {
@@ -33,6 +35,8 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({ data }) => {
 
   return (
     <div style={{ width: '100%', padding: '90px 0', boxSizing: 'border-box' }}>
+            <Link href={`/details/${data[currentIndex].slug}`} className='text-decoration-none'>
+
       <div
         style={{
           display: 'flex',
@@ -43,6 +47,7 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({ data }) => {
           flexDirection: isMobile ? 'column' : 'row',
         }}
       >
+
         <div
           style={{
             width: isMobile ? '100%' : '1200px',
@@ -53,6 +58,7 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({ data }) => {
             border: '2px solid black',
           }}
         >
+          
           <div style={{ flex: 1 }}>
             <img
               src={data[currentIndex].image}
@@ -129,7 +135,6 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({ data }) => {
             </p>
           </div>
         </div>
-
         {!isMobile && (
           <div style={{ marginLeft: '30px' }}>
             <button
@@ -151,18 +156,19 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({ data }) => {
         )}
       </div>
 
+      </Link>
       <div
         style={{
           marginTop: '25px',
           display: 'flex',
           justifyContent: 'center',
         }}
-      >
+        >
         {data.map((_, index) => (
           <div
-            key={index}
-            style={{
-              width: '7px',
+          key={index}
+          style={{
+            width: '7px',
               height: '7px',
               borderRadius: '50%',
               margin: '0 6px',

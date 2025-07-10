@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface Article {
   category: string;
@@ -23,8 +24,9 @@ export default function FirstHomeSection({ businessData }: LatestHomeSectionProp
   return (
     <section>
       <div className="row g-4 align-items-stretch flex-column flex-md-row">
-        {/* Left Section */}
+  
         <div className="col-md-3 text-start order-1 order-md-0 d-flex flex-column justify-content-between">
+              <Link href={`/details/${main.slug}`} className='text-decoration-none'>
           <div>
             <p
               style={{
@@ -32,11 +34,14 @@ export default function FirstHomeSection({ businessData }: LatestHomeSectionProp
                 fontWeight: 700,
                 textTransform: 'uppercase',
                 fontSize: '14.224px',
-                fontFamily: "'Rubik', Arial, sans-serif"
+                fontFamily: "'Rubik', Arial, sans-serif",
+                
               }}
             >
               {main.category}
             </p>
+         
+
 
             <h2 style={{
               color: '#111111',
@@ -59,10 +64,10 @@ export default function FirstHomeSection({ businessData }: LatestHomeSectionProp
               {main.shortdescription}
             </p>
           </div>
+             </Link>
         </div>
 
-        {/* Middle Image Section (use image from second data) */}
-        {right1.image && (
+        {main.image && (
           <div className="col-md-6 order-0 order-md-1 d-flex align-items-stretch border-end">
             <div
               style={{
@@ -72,8 +77,10 @@ export default function FirstHomeSection({ businessData }: LatestHomeSectionProp
                 position: 'relative',
               }}
             >
+              <Link href={`/details/${main.slug}`} className='text-decoration-none'>
+
               <Image
-                src={right1.image}
+                src={main.image}
                 alt=""
                 width={1000}
                 height={400}
@@ -84,6 +91,7 @@ export default function FirstHomeSection({ businessData }: LatestHomeSectionProp
                   objectFit: 'cover',
                 }}
               />
+              </Link>
             </div>
           </div>
         )}
@@ -91,10 +99,12 @@ export default function FirstHomeSection({ businessData }: LatestHomeSectionProp
         {/* Right Section: Use second and third data */}
         <div className="col-md-3 ps-3 text-start order-2">
           {/* Right Item 1 */}
+              <Link href={`/details/${right1.slug}`} className='text-decoration-none'>
+
           <div className="mb-4">
-            {right2.image && (
+            {right1.image && (
               <img
-                src={right2.image}
+                src={right1.image}
                 alt=""
                 className="img-fluid mb-2"
                 style={{
@@ -129,8 +139,11 @@ export default function FirstHomeSection({ businessData }: LatestHomeSectionProp
               {right1.title}
             </p>
           </div>
+          </Link>
 
           {/* Right Item 2 */}
+              <Link href={`/details/${right2.slug}`} className='text-decoration-none'>
+
           <div className="mb-4">
             <p
               className="fw-bold mb-1"
@@ -156,8 +169,10 @@ export default function FirstHomeSection({ businessData }: LatestHomeSectionProp
               {right2.title}
             </p>
           </div>
+          </Link>
         </div>
       </div>
+    
     </section>
   );
 }

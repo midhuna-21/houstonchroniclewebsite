@@ -4,6 +4,7 @@ import React from 'react';
 import SectionWrapper from './SectionWrapper';
 import MiniNewsCard from './MiniNewsContent';
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 interface SecondHomeSectionProps {
@@ -11,6 +12,7 @@ interface SecondHomeSectionProps {
     category: string;
     title: string;
     image: string;
+    slug:string;
     shortdescription?: string;
   }[];
 }
@@ -24,6 +26,8 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
       <div className="w-100">
         <div className="row g-0 position-relative">
           <div className="col-12 col-md-6 pe-md-2">
+              <Link href={`/details/${item1.slug}`} className='text-decoration-none'>
+
             <div style={{ borderBottom: '1px solid #eee', paddingBottom: '15px' }}>
               <Image
                 src={item1.image}
@@ -43,7 +47,9 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
               <h5 style={{ fontSize: '22.784px', color: '#111111', fontWeight: 700, fontFamily: "'Archivo', Arial, sans-serif", }}
               >{item1.title}</h5>
             </div>
+            </Link>
 
+            <Link href={`/details/${item2.slug}`} className='text-decoration-none'>
             <div className="pt-3" style={{ borderBottom: '1px solid #eee' }}>
               <p className="text-uppercase " style={{
                 color: '#B10021',
@@ -58,6 +64,7 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
               <p style={{ fontSize: '16px', color: '#444444', fontWeight: 400, fontFamily: "'Rubik', Arial, sans-serif" }}
               >{item2.shortdescription}</p>
             </div>
+            </Link>
           </div>
 
           <div
@@ -73,6 +80,7 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
           />
 
           <div className="col-12 col-md-6 ps-md-3">
+            <Link href={`/details/${item3.slug}`} className='text-decoration-none'>
             <div style={{ borderBottom: '1px solid #eee', paddingBottom: '15px' }}>
               <p className="text-uppercase" style={{
                 color: '#B10021',
@@ -92,7 +100,9 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
                 style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
               />
             </div>
+            </Link>
 
+            <Link href={`/details/${item4.slug}`} className='text-decoration-none'>
             <div className="pt-3">
               <p className="text-uppercase "
                 style={{
@@ -107,6 +117,7 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
               <p style={{ fontSize: '16px', color: '#444444', fontWeight: 400, fontFamily: "'Rubik', Arial, sans-serif" }}
               >{item4.shortdescription}</p>
             </div>
+            </Link>
           </div>
         </div>
 
@@ -116,6 +127,7 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
           className="section-new d-flex justify-content-between"
           style={{ maxWidth: '1150px', margin: '30px auto', padding: '0 15px' }}
         >
+          <Link href={`/details/${item5.slug}`} className='text-decoration-none'>
           <div className="flex-grow-1 pe-3">
             <MiniNewsCard
               category={item5.category}
@@ -123,9 +135,11 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
               image={item5.image}
             />
           </div>
+          </Link>
 
           <div style={{ width: '1px', backgroundColor: '#ccc', margin: '0 10px' }}></div>
 
+            <Link href={`/details/${item6.slug}`} className='text-decoration-none'>
           <div className="flex-grow-1">
             <MiniNewsCard
               category={item6.category}
@@ -133,6 +147,7 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
               image={item6.image}
             />
           </div>
+          </Link>
         </div>
       </div>
     </SectionWrapper>

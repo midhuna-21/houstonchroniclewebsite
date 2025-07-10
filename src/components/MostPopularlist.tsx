@@ -1,8 +1,10 @@
 import React from 'react';
 import SectionWrapper from './SectionWrapper';
+import Link from 'next/link';
 
 interface Article {
   title: string;
+  slug:string;
 }
 
 interface MostPopularListProps {
@@ -13,7 +15,9 @@ const MostPopularList: React.FC<MostPopularListProps> = ({ data }) => {
   return (
     <SectionWrapper title='Most Popular'>
       {data.map((article, index) => (
+        
         <div key={index} className="d-flex mb-3 pb-3 border-bottom">
+          <Link href={`/details/${article.slug}`} className='text-decoration-none'>
           <div className="fw-bold text-danger me-2">{index + 1}.</div>
           <div className="fw-semibold"
             style={{
@@ -23,6 +27,7 @@ const MostPopularList: React.FC<MostPopularListProps> = ({ data }) => {
               fontWeight: 700
             }}
           >{article.title}</div>
+        </Link>
         </div>
       ))}
     </SectionWrapper>

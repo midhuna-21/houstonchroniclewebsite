@@ -553,32 +553,7 @@ export const trendingNavItems = [
 ];
 
 
-export const dailyPuzzles = [
-  {
-    title: "Crossword",
-    description: "Challenge your vocabulary today.",
-    image: "/images/bongo.webp",
-    bgColor: "#f2f2f2",
-  },
-  {
-    title: "Sudoku",
-    description: "Sharpen your logic skills.",
-    image: "/images/spelltower.webp",
-    bgColor: "#e6f7ff",
-  },
-  {
-    title: "Jumble",
-    description: "Unscramble words for fun.",
-    image: "/images/flipkart.webp",
-    bgColor: "#fff0f5",
-  },
-  {
-    title: "Jumble",
-    description: "Unscramble words for fun.",
-    image: "/images/flipkart.webp",
-    bgColor: "#fff0f5",
-  },
-];
+
 
 
 export const popularArticles = [
@@ -592,12 +567,7 @@ export const popularArticles = [
  
 
 
-export const opinionArticles = [
-  { slug:"astros",title: 'Why local journalism still matters in 2025' },
-  { slug:"astros",title: 'The case for walkable neighborhoods' },
-  { slug:"astros",title: 'Let teachers teach: a letter from the classroom' },
-  { slug:"astros",title: 'Climate change needs more than awareness — it needs action' },
-];
+
 
 
 

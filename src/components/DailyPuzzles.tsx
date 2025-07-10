@@ -20,11 +20,13 @@ const DailyPuzzles: React.FC<DailyPuzzlesProps> = ({ puzzles }) => {
   return (
     <SectionWrapper title="Your Daily Puzzles">
       {puzzles.map((puzzle, index) => (
+
         <div
           key={index}
           className="border px-3 py-4 mb-3 d-flex justify-content-between align-items-center"
           style={{ minHeight: '90px' }}
         >
+          
           <div>
             <h6 className="fw-bold mb-1" style={{
               fontSize: '16px', color: '#111111', fontWeight: 700, fontFamily: "'Rubik', Arial, sans-serif"
