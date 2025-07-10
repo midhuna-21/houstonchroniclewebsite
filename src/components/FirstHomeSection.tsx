@@ -13,13 +13,13 @@ interface Article {
 }
 
 interface LatestHomeSectionProps {
-  businessData: Article[];
+  data: Article[];
 }
 
-export default function FirstHomeSection({ businessData }: LatestHomeSectionProps) {
-  const main = businessData[0];
-  const right1 = businessData[1];
-  const right2 = businessData[2];
+export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
+  const main = data[0];
+  const right1 = data[1];
+  const right2 = data[2];
 
   return (
     <section>

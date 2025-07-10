@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 interface Article {
   title: string;
-  slug:string;
+  slug: string;
 }
 
 interface MostPopularListProps {
@@ -13,21 +13,26 @@ interface MostPopularListProps {
 
 const MostPopularList: React.FC<MostPopularListProps> = ({ data }) => {
   return (
-    <SectionWrapper title='Most Popular'>
+    <SectionWrapper title="Most Popular">
       {data.map((article, index) => (
-        
-        <div key={index} className="d-flex mb-3 pb-3 border-bottom">
-          <Link href={`/details/${article.slug}`} className='text-decoration-none'>
-          <div className="fw-bold text-danger me-2">{index + 1}.</div>
-          <div className="fw-semibold"
-            style={{
-              color: "#111111",
-              fontSize: '18px',
-              fontFamily: "'Archivo', Arial, sans-serif",
-              fontWeight: 700
-            }}
-          >{article.title}</div>
-        </Link>
+        <div key={index} className="mb-3 pb-3 border-bottom">
+          <Link href={`/details/${article.slug}`} className="text-decoration-none">
+            <div className="d-flex align-items-start">
+              <div className="fw-bold text-danger me-2">{index + 1}.</div>
+              <div
+                className="fw-semibold"
+                style={{
+                  color: '#111111',
+                  fontSize: '18px',
+                  fontFamily: "'Archivo', Arial, sans-serif",
+                  fontWeight: 700,
+                  lineHeight: '1.3',
+                }}
+              >
+                {article.title}
+              </div>
+            </div>
+          </Link>
         </div>
       ))}
     </SectionWrapper>

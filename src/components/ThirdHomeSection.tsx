@@ -15,11 +15,11 @@ interface NewsItem {
 }
 
 interface Props {
-  businessData: NewsItem[]; 
+  data: NewsItem[]; 
 }
 
-const ThirdHomeSection: React.FC<Props> = ({ businessData }) => {
-  const [first, second, main, fourth, fifth] = businessData;
+const ThirdHomeSection: React.FC<Props> = ({ data }) => {
+  const [first, second, main, fourth, fifth] = data;
 
   const categoryStyle: React.CSSProperties = {
     fontWeight: 700,

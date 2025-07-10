@@ -11,15 +11,15 @@ type Puzzle = {
 };
 
 type DailyPuzzlesProps = {
-  puzzles: Puzzle[];
+  data: Puzzle[];
 };
 
-const DailyPuzzles: React.FC<DailyPuzzlesProps> = ({ puzzles }) => {
-  if (!puzzles || puzzles.length === 0) return null;
+const DailyPuzzles: React.FC<DailyPuzzlesProps> = ({ data }) => {
+  if (!data || data.length === 0) return null;
 
   return (
     <SectionWrapper title="Your Daily Puzzles">
-      {puzzles.map((puzzle, index) => (
+      {data.map((item, index) => (
 
         <div
           key={index}
@@ -31,20 +31,20 @@ const DailyPuzzles: React.FC<DailyPuzzlesProps> = ({ puzzles }) => {
             <h6 className="fw-bold mb-1" style={{
               fontSize: '16px', color: '#111111', fontWeight: 700, fontFamily: "'Rubik', Arial, sans-serif"
 
-            }}>{puzzle.title}</h6>
+            }}>{item.title}</h6>
             <p className="mb-0 text-muted small" style={{
               fontSize: '11.232px', color: '#444444', fontWeight: 400, fontFamily: "'Rubik', Arial, sans-serif"
-            }}>{puzzle.description}</p>
+            }}>{item.description}</p>
           </div>
           <img
-            src={puzzle.image}
-            alt={puzzle.title}
+            src={item.image}
+            alt={item.title}
             style={{
               width: 60,
               height: 60,
               objectFit: 'contain',
               borderRadius: 8,
-              backgroundColor: puzzle.bgColor || '#f8f9fa',
+              backgroundColor: item.bgColor || '#f8f9fa',
             }}
           />
         </div>

@@ -53,10 +53,10 @@ import HorizontalNews from './HorizontalNews';
 </div>
 <div className="row"> 
      <div className="col-md-9">
- <NewsGrid data={data.slice(0, 5)} />
+ <NewsGrid data={[data[0],data[1],data[2],data[3],data[4]]} />
  </div>
     <div className="col-md-3">
-   <InteractiveCard data={BusinessData[0]} />
+   <InteractiveCard data={data[5]} />
             </div>
 </div>
 
@@ -68,9 +68,9 @@ import HorizontalNews from './HorizontalNews';
 
  <CategoryFirstSection
               data={{
-                main: data[0],
-                side: [data[1], data[2]],
-                bottomCards: [data[3], data[4], data[5], data[6]],
+                main: data[6],
+                side: [data[7], data[8]],
+                bottomCards: [data[9], data[10], data[11], data[12]],
               }}
             />
            
@@ -81,7 +81,7 @@ import HorizontalNews from './HorizontalNews';
                   articles: TechnologyData.slice(0, 5)
                 }}
               /> */}
-                   <HorizontalNews data={data} />
+                   <HorizontalNews data={[data[13],data[13],data[15],data[16]]} />
                 
 
   {/* <NewsGrid data={newsCategoryData} /> */}
@@ -96,19 +96,20 @@ import HorizontalNews from './HorizontalNews';
           <div className="col-md-9">
      <SectionWrapper title={`More ${data[0]?.category || ''}`}>
 
-        {data.map((item, index) => (
-  <CategoryNewsCard key={index} data={item} />
+      {data.slice(17).map((item, index) => (
+  <CategoryNewsCard key={index + 17} data={item} />
 ))}
+
             </SectionWrapper>
 
 
            
           </div>
           <div className="col-md-3">
-            <DailyPuzzles puzzles={DailyPuzzlesData} />
+            <DailyPuzzles data={DailyPuzzlesData} />
             <TrendingCard
   data={{
-    section: ColumnsFromPastData[0].category, 
+    section: data[0].category, 
     items: ColumnsFromPastData.map(article => ({
       image: article.image,
       title: article.title,

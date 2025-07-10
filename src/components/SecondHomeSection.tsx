@@ -125,7 +125,7 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
 
         <div
           className="section-new d-flex justify-content-between"
-          style={{ maxWidth: '1150px', margin: '30px auto', padding: '0 15px' }}
+          style={{ maxWidth: '1150px', margin: '30px auto',  }}
         >
           <Link href={`/details/${item5.slug}`} className='text-decoration-none'>
           <div className="flex-grow-1 pe-3">

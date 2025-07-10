@@ -45,7 +45,9 @@ export default function Home() {
 
       <main className="content">
         <div className="mb-5">
-          <FirstHomeSection businessData={BusinessData.slice(0, 3)} />
+          {/* <FirstHomeSection businessData={BusinessData.slice(0, 3)} /> */}
+          <FirstHomeSection data={[BusinessData[0], HealthData[0], SportsData[0]]} />
+
           <hr
             style={{
               border: 'none',
@@ -53,19 +55,20 @@ export default function Home() {
               margin: '2rem 0',
             }}
           />
-          <FirstHomeSection businessData={HealthData.slice(0, 3)} />
+          <FirstHomeSection data={[ScienceData[0], PoliticsData[0], TechnologyData[0]]} />
+
         </div>
 
 
         <div className="row">
           <div className="col-md-9">
-            <SecondHomeSection data={BusinessData.slice(0, 6)} />
+            <SecondHomeSection data={[ScienceData[1], PoliticsData[1], TechnologyData[1], BusinessData[1], HealthData[1], SportsData[1]]} />
 
             <div className="mb-5">
-              <EditorsPicksSection data={BusinessData} />
+              <EditorsPicksSection data={[ScienceData[2], PoliticsData[2], TechnologyData[2], BusinessData[2]]} />
             </div>
             <div className="mb-5">
-              <ThirdHomeSection businessData={BusinessData.slice(0, 5)} />
+              <ThirdHomeSection data={[HealthData[2], SportsData[2], ScienceData[3], PoliticsData[3], TechnologyData[3]]} />
 
             </div>
             {/* <div className="mb-5">
@@ -74,24 +77,26 @@ export default function Home() {
           </div>
 
           <div className="col-md-3">
-            <DailyPuzzles puzzles={DailyPuzzlesData} />
-            <MostPopularList data={MostpopularData} />
+            <DailyPuzzles data={DailyPuzzlesData} />
+            <MostPopularList data={[PoliticsData[4], TechnologyData[4], HealthData[3], SportsData[3], ScienceData[4]]} />
 
+
+            {/* add another any data */}
             <OpinionList title="Opinion" articles={OpinionData} />
           </div>
         </div>
 
         <div>
-          <CarouselSection data={BusinessData} />
+          <CarouselSection data={[ScienceData[5], TechnologyData[5], HealthData[4]]} />
         </div>
 
         <div className="row">
           <div className="col-md-9">
             <ContentLayout
               data={{
-                main: SportsData[0],
-                side: [SportsData[1], SportsData[2]],
-                bottomCards: [SportsData[3], SportsData[4], SportsData[5], SportsData[6]],
+                main: SportsData[4],
+                side: [SportsData[5], SportsData[6]],
+                bottomCards: [SportsData[7], SportsData[8], SportsData[9], SportsData[10]],
               }}
             />
           </div>
@@ -103,7 +108,7 @@ export default function Home() {
                   image: article.image,
                   title: article.title,
                   description: article.shortdescription,
-                  slug:article.slug
+                  slug: article.slug
                 }))
               }}
             />
@@ -114,9 +119,9 @@ export default function Home() {
           <div className="col-md-9">
             <ContentLayout
               data={{
-                main: BusinessData[0],
-                side: [BusinessData[1], BusinessData[2]],
-                bottomCards: [BusinessData[3], BusinessData[4], BusinessData[5], BusinessData[6]],
+                main: BusinessData[3],
+                side: [BusinessData[4], BusinessData[5]],
+                bottomCards: [BusinessData[6], BusinessData[7], BusinessData[8], BusinessData[9]],
               }}
             />
 
@@ -124,7 +129,7 @@ export default function Home() {
               <FeatureSection
                 data={{
                   section: 'Science',
-                  articles: ScienceData.slice(0, 5)
+                  articles: [ScienceData[6], ScienceData[7], ScienceData[8], ScienceData[9], ScienceData[10]]
                 }}
               />
             </div>
@@ -137,7 +142,7 @@ export default function Home() {
                   image: article.image,
                   title: article.title,
                   description: article.shortdescription,
-      slug:article.slug
+                  slug: article.slug
                 }))
               }}
             />
@@ -148,9 +153,9 @@ export default function Home() {
           <div className="col-md-9">
             <ContentLayout
               data={{
-                main: PoliticsData[0],
-                side: [PoliticsData[1], PoliticsData[2]],
-                bottomCards: [PoliticsData[3], PoliticsData[4], PoliticsData[5], PoliticsData[6]],
+                main: PoliticsData[4],
+                side: [PoliticsData[5], PoliticsData[6]],
+                bottomCards: [PoliticsData[7], PoliticsData[8], PoliticsData[9], PoliticsData[10]],
               }}
             />
           </div>
@@ -167,9 +172,9 @@ export default function Home() {
           <div className="col-md-9">
             <ContentLayout
               data={{
-                main: HealthData[0],
-                side: [HealthData[1], HealthData[2]],
-                bottomCards: [HealthData[3], HealthData[4], HealthData[5], HealthData[6]],
+                main: HealthData[4],
+                side: [HealthData[5], HealthData[6]],
+                bottomCards: [HealthData[7], HealthData[8], HealthData[9], HealthData[10]],
               }}
             />
             <div className="mt-4">
