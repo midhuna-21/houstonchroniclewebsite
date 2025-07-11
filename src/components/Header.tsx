@@ -4,6 +4,17 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Navbar, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { slugify } from '../utils/slugify';
+
+
+const NavItems = [
+  { label: 'Business', slug: 'business' },
+  { label: 'Technology', slug: 'technology' },
+  { label: 'Sports', slug: 'sports' },
+  { label: 'Health', slug: 'health' },
+  { label: 'Science', slug: 'science' },
+  { label: 'Politics', slug: 'politics' },
+];
 
 export default function Header() {
   const [expanded, setExpanded] = useState(false);
@@ -49,7 +60,7 @@ export default function Header() {
           backgroundColor: '#1c2146',
           minHeight: '78px',
           padding: '0.5rem 1.5rem',
-          position: isFixed ? 'fixed' : 'sticky', 
+          position: isFixed ? 'fixed' : 'sticky',
           top: 0,
           left: 0,
           right: 0,
@@ -60,49 +71,49 @@ export default function Header() {
       >
         <Container fluid className="p-0 d-flex justify-content-between align-items-center position-relative">
 
-       <div className="d-flex align-items-center gap-3">
-  {/* Toggle button: visible on all screen sizes */}
-  <button
-    onClick={() => setExpanded(!expanded)}
-    onMouseEnter={() => setIsHovered(true)}
-    onMouseLeave={() => setIsHovered(false)}
-    style={{
-      background: 'none',
-      border: 'none',
-      padding: 0,
-      margin: 0,
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      width: '32px',
-      height: '32px',
-    }}
-    aria-label="Toggle navigation"
-    aria-controls="basic-navbar-nav"
-    aria-expanded={expanded}
-    type="button"
-  >
-    {toggleIcon}
-  </button>
+          <div className="d-flex align-items-center gap-3">
+            {/* Toggle button */}
+            <button
+              onClick={() => setExpanded(!expanded)}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+              style={{
+                background: 'none',
+                border: 'none',
+                padding: 0,
+                margin: 0,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '32px',
+                height: '32px',
+              }}
+              aria-label="Toggle navigation"
+              aria-controls="basic-navbar-nav"
+              aria-expanded={expanded}
+              type="button"
+            >
+              {toggleIcon}
+            </button>
 
-  {/* Mobile-only logo beside toggle */}
-  <div className="d-lg-none">
-    <Link href="/" className="text-decoration-none">
-      <h1
-        className="m-0 fw-bold text-white"
-        style={{
-          fontFamily: 'monospace',
-          fontSize: '18px',
-          display: 'flex',
-          alignItems: 'center',
-          lineHeight: 1,
-        }}
-      >
-        HOUSTON <span style={{ color: '#ffc107', fontSize: '24px', margin: '0 2px' }}>★</span> CHRONICLE
-      </h1>
-    </Link>
-  </div>
-</div>
+            {/* Mobile-only */}
+            <div className="d-lg-none">
+              <Link href="/" className="text-decoration-none">
+                <h1
+                  className="m-0 fw-bold text-white"
+                  style={{
+                    fontFamily: 'monospace',
+                    fontSize: '18px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    lineHeight: 1,
+                  }}
+                >
+                  HOUSTON <span style={{ color: '#ffc107', fontSize: '24px', margin: '0 2px' }}>★</span> CHRONICLE
+                </h1>
+              </Link>
+            </div>
+          </div>
 
           <div className="d-none d-lg-block position-absolute top-50 start-50 translate-middle">
             <Link href="/" className="text-decoration-none">
@@ -110,14 +121,82 @@ export default function Header() {
                 className="m-0 fw-bold text-white"
                 style={{ fontFamily: 'monospace', fontSize: '30px' }}
               >
-                HOUSTON<span style={{ color: '#ffc107' ,fontSize:'60px'}}>★</span>CHRONICLE
+                HOUSTON<span style={{ color: '#ffc107', fontSize: '60px' }}>★</span>CHRONICLE
               </h1>
             </Link>
           </div>
 
-          
+
         </Container>
       </Navbar>
+
+      {expanded && (
+        <div
+          className="position-fixed top-0 start-0 h-100"
+          style={{
+            width: '100%',
+            backgroundColor: '#0a1544',
+            zIndex: 1049,
+            overflowY: 'auto',
+          }}
+        >
+          <div className="p-4 text-white h-100">
+            <div className="mb-3">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Search"
+                style={{
+                  backgroundColor: 'transparent',
+                  color: 'white',
+                  border: '1px solid #ccc',
+                }}
+              />
+            </div>
+
+            {/* <button
+        className="btn btn-danger w-100 fw-bold mb-3"
+        onClick={() => setExpanded(false)}
+      >
+        Subscribe
+      </button> */}
+
+            <ul className="list-unstyled">
+              {NavItems.map((item) => (
+                <li
+                  key={item.slug}
+                  className="py-2 border-bottom d-flex justify-content-between align-items-center"
+                  style={{
+                    cursor: 'pointer',
+                    transition: 'background-color 0.2s ease',
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#2f345fff')}
+                  onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
+                >
+                  <Link
+                    href={`/category/${slugify(item.slug)}`}
+                    className="text-white text-decoration-none fw-bold w-100"
+                    onClick={() => setExpanded(false)} // close menu on click
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+          </div>
+
+          {/* 👇 Desktop-specific */}
+          <style jsx>{`
+      @media (min-width: 992px) {
+        div.position-fixed {
+          width: 25% !important;
+        }
+      }
+    `}</style>
+        </div>
+      )}
+
     </>
   );
 }
