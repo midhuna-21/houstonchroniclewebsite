@@ -174,7 +174,7 @@ export default function DetailFirstSection({
                   height={14}
                   style={{ objectFit: "contain" }}
                 /> */}
-                Everlit
+                {/* Everlit */}
               </span>
             </div>
           </div>
