@@ -167,13 +167,13 @@ export default function DetailFirstSection({
                   gap: "4px",
                 }}
               >
-                <img
+                {/* <img
                   src="/images/graphmusic.png"
                   alt="icon"
                   width={14}
                   height={14}
                   style={{ objectFit: "contain" }}
-                />
+                /> */}
                 Everlit
               </span>
             </div>
