@@ -190,7 +190,7 @@ export default function Footer() {
             <div className="d-flex flex-column flex-md-row align-items-center justify-content-center w-100">
 
               <div className="d-flex flex-nowrap flex-wrap align-items-center justify-content-center gap-2 gap-md-4">
-                <Image src="/small-logo.png" alt="Small Logo" width={60} height={20} />
+                {/* <Image src="/small-logo.png" alt="Small Logo" width={60} height={20} /> */}
 
                 <span className="text-nowrap">© 2025 Hearst Newspapers, LLC</span>
 
