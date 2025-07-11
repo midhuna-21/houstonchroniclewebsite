@@ -1,19 +1,19 @@
-  'use client';
+'use client';
 
-  import Image from 'next/image';
-  import Link from 'next/link';
-  import { NavKey, navData } from '../data/navData';
-  import MoreFromSection from './MoreFromSection';
-  import RightSectionTop from './RightSectionTop';
-  import ContentLayout from './ContentLayout';
-  import DailyPuzzles from './DailyPuzzles';
-  import { featureData, newsData, trendingData } from '@/data/homeData';
-  import TrendingCard from './TrendingCard';
-  import FeatureSection from './FeatureSection';
-  import LetsPlaySection from './LetsPlay';
-  import InteractiveCard from './InteractiveCard';
-  import NewsGrid from './NewsGridCategory';
-  import { newsCategoryData } from '@/data/Category';
+import Image from 'next/image';
+import Link from 'next/link';
+import { NavKey, navData } from '../data/navData';
+import MoreFromSection from './MoreFromSection';
+import RightSectionTop from './RightSectionTop';
+import ContentLayout from './ContentLayout';
+import DailyPuzzles from './DailyPuzzles';
+import { featureData, newsData, trendingData } from '@/data/homeData';
+import TrendingCard from './TrendingCard';
+import FeatureSection from './FeatureSection';
+import LetsPlaySection from './LetsPlay';
+import InteractiveCard from './InteractiveCard';
+import NewsGrid from './NewsGridCategory';
+import { newsCategoryData } from '@/data/Category';
 import CategoryNewsCard from './CategoryNewsCard';
 import BusinessData from '../../public/data/business.json';
 import CategoryFirstSection from './CategoryFirstSection';
@@ -27,101 +27,104 @@ import DailyPuzzlesData from '../../public/data/puzzles.json';
 import ColumnsFromPastData from '../../public/data/columnsfrompast.json'
 import HorizontalNews from './HorizontalNews';
 
-  interface Props { 
-    activeMain: string;
-      data: any[]; 
-  }
+interface Props {
+  activeMain: string;
+  data: any[];
+}
 
-  export default function CategoryContent({ activeMain,data }: Props) { 
-    return (
-      <div className="w-100">
-  <div>
-  <h1
-    className="text-black mb-2"
-    style={{
-      fontSize: '36.496px',
-      fontFamily: "'Archivo', Arial, sans-serif",
-      fontWeight: 900
-    }}
-  >
-       {activeMain}
-  </h1>
+export default function CategoryContent({ activeMain, data }: Props) {
+  return (
+    <div className="w-100 container">
+      <div>
+        <h1
+          className="text-black mb-2"
+          style={{
+            fontSize: '36.496px',
+            fontFamily: "'Archivo', Arial, sans-serif",
+            fontWeight: 900
+          }}
+        >
+          {activeMain}
+        </h1>
 
-  <hr style={{ borderTop: '1px solid #4444' }} />
-
-
-</div>
-<div className="row"> 
-     <div className="col-md-9">
- <NewsGrid data={[data[0],data[1],data[2],data[3],data[4]]} />
- </div>
-    <div className="col-md-3">
-   <InteractiveCard data={data[5]} />
-            </div>
-</div>
+        <hr style={{ borderTop: '1px solid #4444' }} />
 
 
+      </div>
+      <div className="row">
+        <div className="col-md-9">
+          <NewsGrid data={[data[0], data[1], data[2], data[3], data[4]]} />
+        </div>
+        <div className="col-md-3">
+          <InteractiveCard data={data[5]} />
+        </div>
+      </div>
 
-    <div className="row">
-          <div className="col-md-9">
 
 
- <CategoryFirstSection
-              data={{
-                main: data[6],
-                side: [data[7], data[8]],
-                bottomCards: [data[9], data[10], data[11], data[12]],
-              }}
-            />
-           
+      <div className="row">
+        <div className="col-md-9">
 
-              {/* <FeatureSection
+          <CategoryFirstSection
+            data={{
+              main: data[6],
+              side: [data[7], data[8]],
+              bottomCards: [data[9], data[10], data[11], data[12]],
+            }}
+          />
+
+
+          {/* <FeatureSection
                 data={{
                   section: 'Technology',
                   articles: TechnologyData.slice(0, 5)
                 }}
               /> */}
-                   <HorizontalNews data={[data[13],data[13],data[15],data[16]]} />
-                
+          <HorizontalNews data={[data[13], data[14], data[15], data[16]]} />
 
-  {/* <NewsGrid data={newsCategoryData} /> */}
-          </div>
 
-          {/* <div className="col-md-3">
+          {/* <NewsGrid data={newsCategoryData} /> */}
+        </div>
+        <div className="col-md-3">
+
+          <DailyPuzzles data={DailyPuzzlesData} />
+          <TrendingCard
+            data={{
+              section: data[0].category,
+              items: [data[17], data[18], data[19], data[20]].map(article => ({
+                image: article.image,
+                title: article.title,
+                description: article.shortdescription,
+                slug: article.slug,
+              })),
+            }}
+          />
+        </div>
+        {/* <div className="col-md-3">
   <InteractiveCard/>
             </div> */}
-          </div>
+      </div>
 
-        <div className="row">
-          <div className="col-md-9">
-     <SectionWrapper title={`More ${data[0]?.category || ''}`}>
+      <div className="row">
+        <div className="col-md-9">
+          <SectionWrapper title={`More ${data[0]?.category || ''}`}>
 
-      {data.slice(17).map((item, index) => (
-  <CategoryNewsCard key={index + 17} data={item} />
-))}
+            {data.slice(21).map((item, index) => (
+              <CategoryNewsCard key={index + 17} data={item} />
+            ))}
 
-            </SectionWrapper>
+          </SectionWrapper>
 
 
-           
-          </div>
-          <div className="col-md-3">
-            <DailyPuzzles data={DailyPuzzlesData} />
-            <TrendingCard
-  data={{
-    section: data[0].category, 
-    items: ColumnsFromPastData.map(article => ({
-      image: article.image,
-      title: article.title,
-      description: article.shortdescription,
-      slug:article.slug
-    }))
-  }}
-/>
-       
-          </div>
+
         </div>
-{/* 
+        <div className="col-md-3">
+
+
+
+        </div>
+      </div>
+      {/* 
         <div className="col-md-9">
           <FeatureSection data={featureData[2]} />
         </div>
@@ -143,9 +146,9 @@ import HorizontalNews from './HorizontalNews';
         <div className="col-md-9">
           <FeatureSection data={featureData[2]} />
         </div>*/}
-         <LetsPlaySection /> 
+      <LetsPlaySection />
 
-      </div>
+    </div>
 
-    );
-  }
+  );
+}

@@ -26,44 +26,45 @@ export default async function DetailPage({ params }: PageProps) {
   if (!article) return notFound();
 
   return (
-    <main className={styles.content}>
+    <main className={`container ${styles.content}`}>
+
       <div className={`container-fluid ${styles.noGutter}`}>
         <ArticleHeader
           category={article.category}
           title={article.title}
-          // author={article.author}
-          // role={article.role}
-          // date={article.date}
+        // author={article.author}
+        // role={article.role}
+        // date={article.date}
         />
 
         <DetailFirstSection
-        category={article.category}
+          category={article.category}
           image={article.image}
           shortdescription={article.shortdescription}
           description={article.description}
-          // credits={article.credits}
-          // audioTitle={article.audioTitle}
+        // credits={article.credits}
+        // audioTitle={article.audioTitle}
         />
 
         <div className="row mt-4">
           <div className="col-md-8  ">
             {/* <ArticleBodyRenderer body={article.body} /> */}
             <SingleParagraph text={article.description} />
-              <AuthorInfo
-  date={AuthorData[0].date}
-  name={AuthorData[0].name}
-  role={AuthorData[0].role}
-  bio={AuthorData[0].bio}
-  image={AuthorData[0].image}
-/>
+            <AuthorInfo
+              date={AuthorData[0].date}
+              name={AuthorData[0].name}
+              role={AuthorData[0].role}
+              bio={AuthorData[0].bio}
+              image={AuthorData[0].image}
+            />
           </div>
 
           <div className="col-md-4">
             <MostPopularList data={MostpopularData} />
-            <LatestNewsCard data={MostpopularData}/>
-          </div> 
+            <LatestNewsCard data={MostpopularData} />
+          </div>
         </div>
-<EditorsPicksSection data={EditorsData} />
+        <EditorsPicksSection data={EditorsData} />
         <LetsPlaySection />
       </div>
     </main>

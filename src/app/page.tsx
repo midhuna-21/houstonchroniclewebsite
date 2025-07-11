@@ -30,12 +30,12 @@ import CategoryFirstSection from '@/components/CategoryFirstSection';
 import MostpopularData from '../../public/data/mostpopular.json';
 import DailyPuzzlesData from '../../public/data/puzzles.json';
 import OpinionData from '../../public/data/opinion.json'
-import CoumnsFromPastData from '../../public/data/columnsfrompast.json'
+import ColumnsFromPastData from '../../public/data/columnsfrompast.json'
 
 
 export default function Home() {
   return (
-    <div className="bg-white">
+    <div className="bg-white ">
 
       <NavigationSection />
       <div className="d-flex justify-content-center mt-2">
@@ -43,7 +43,7 @@ export default function Home() {
       </div>
 
 
-      <main className="content">
+      <main className="container px-3 px-lg-5 mt-4 content">
         <div className="mb-5">
           {/* <FirstHomeSection businessData={BusinessData.slice(0, 3)} /> */}
           <FirstHomeSection data={[BusinessData[0], HealthData[0], SportsData[0]]} />
@@ -82,7 +82,7 @@ export default function Home() {
 
 
             {/* add another any data */}
-            <OpinionList title="Opinion" articles={OpinionData} />
+            {/* <OpinionList title="Opinion" articles={OpinionData} /> */}
           </div>
         </div>
 
@@ -103,13 +103,13 @@ export default function Home() {
           <div className="col-md-3">
             <TrendingCard
               data={{
-                section: CoumnsFromPastData[0].category,
-                items: CoumnsFromPastData.map(article => ({
+                section: "",
+                items: [SportsData[11], SportsData[12], SportsData[13], SportsData[14]].map(article => ({
                   image: article.image,
                   title: article.title,
                   description: article.shortdescription,
-                  slug: article.slug
-                }))
+                  slug: article.slug,
+                })),
               }}
             />
           </div>
@@ -137,13 +137,13 @@ export default function Home() {
           <div className="col-md-3">
             <TrendingCard
               data={{
-                section: CoumnsFromPastData[0].category,
-                items: CoumnsFromPastData.map(article => ({
+                section: "",
+                items: [BusinessData[10], BusinessData[11], BusinessData[12], BusinessData[13]].map(article => ({
                   image: article.image,
                   title: article.title,
                   description: article.shortdescription,
-                  slug: article.slug
-                }))
+                  slug: article.slug,
+                })),
               }}
             />
           </div>
@@ -161,8 +161,8 @@ export default function Home() {
           </div>
           <div className="col-md-3">
             <EditorialBoard
-              sectionTitle={CoumnsFromPastData[0]?.category || ''}
-              data={CoumnsFromPastData}
+              sectionTitle={''}
+              data={[PoliticsData[11], PoliticsData[12], PoliticsData[13], PoliticsData[14]]}
             />
           </div>
         </div>
@@ -187,8 +187,8 @@ export default function Home() {
             </div>
           </div>
           <div className="col-md-3">
-            <NewsText data={CoumnsFromPastData} />
-            <LottoCard data={CoumnsFromPastData[0]} />
+            <NewsText data={ColumnsFromPastData} />
+            <LottoCard data={ColumnsFromPastData[0]} />
           </div>
           <div className="col-md-3">
 

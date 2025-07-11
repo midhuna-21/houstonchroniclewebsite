@@ -2,12 +2,12 @@ import Link from 'next/link';
 import { slugify } from '../utils/slugify';
 
 const NavItems = [
-  { label: 'Business',   slug: 'business'   },
+  { label: 'Business', slug: 'business' },
   { label: 'Technology', slug: 'technology' },
-  { label: 'Sports',     slug: 'sports'     },
-  { label: 'Health',     slug: 'health'     },
-  { label: 'Science',    slug: 'science'    },
-  { label: 'Politics',   slug: 'politics'   },
+  { label: 'Sports', slug: 'sports' },
+  { label: 'Health', slug: 'health' },
+  { label: 'Science', slug: 'science' },
+  { label: 'Politics', slug: 'politics' },
 ];
 
 export default function NavigationSection() {
@@ -25,6 +25,10 @@ export default function NavigationSection() {
         className="d-flex justify-content-start justify-content-md-center px-3 py-2"
         style={{
           whiteSpace: 'nowrap',
+          overflowX: 'auto',
+          overflowY: 'hidden',
+          scrollbarWidth: 'none',
+          msOverflowStyle: 'none',
           fontWeight: 'bold',
           WebkitOverflowScrolling: 'touch',
           gap: '3rem',
@@ -32,7 +36,7 @@ export default function NavigationSection() {
       >
         {NavItems.map((item) => (
           <Link
-            key={item.slug} 
+            key={item.slug}
             href={`/category/${slugify(item.slug)}`}
             className="text-dark text-decoration-none"
             style={{

@@ -96,52 +96,51 @@ const NewsGrid: React.FC<NewsGridProps> = ({ data }) => {
         </Link>
         </div>
 
-        <div className="col-md-6">
-          <div className="row g-4">
-            {right.map((item, index) => (
-              
-              <div className="col-6" key={index}>
-                <Link href={`/details/${item.slug}`} className='text-decoration-none'>
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  width={600}
-                  height={200}
-                  style={{
-                    width: '100%',
-                    height: 'auto',
-                    objectFit: 'cover',
-                    marginBottom: '8px',
-                  }}
-                />
-                <div
-                  style={{
-                    color: '#B50021',
-                    fontWeight: 700,
-                    fontSize: '14.224px',
-                    textTransform: 'uppercase',
-                    marginBottom: '5px',
-                  }}
-                >
-                  {item.category}
-                </div>
-                <div
-                  style={{
-                     color:'#111111',
-                    fontWeight: 700,
-                    fontSize: '18px',
-                    lineHeight: 1.3,
-                    fontFamily: "'Archivo', Arial, sans-serif",
-                  }}
-                >
-                  {item.title}
-                </div>
-            </Link>
-              </div>
-
-            ))}
+     <div className="col-md-6">
+  <div className="row g-4">
+    {right.map((item, index) => (
+      <div className="col-6" key={index}>
+        <Link href={`/details/${item.slug}`} className="text-decoration-none">
+          <div style={{ width: '100%', height: '180px', position: 'relative', marginBottom: '8px' }}>
+            <Image
+              src={item.image}
+              alt={item.title}
+              fill
+              style={{
+                objectFit: 'cover',
+              }}
+            />
           </div>
-        </div>
+
+          <div
+            style={{
+              color: '#B50021',
+              fontWeight: 700,
+              fontSize: '14.224px',
+              textTransform: 'uppercase',
+              marginBottom: '5px',
+            }}
+          >
+            {/* {item.category} */}
+          </div>
+
+          <div
+            style={{
+              color: '#111111',
+              fontWeight: 700,
+              fontSize: '18px',
+              lineHeight: 1.3,
+              fontFamily: "'Archivo', Arial, sans-serif",
+            }}
+          >
+            {item.title}
+          </div>
+        </Link>
+      </div>
+    ))}
+  </div>
+</div>
+
       </div>
     </div>
   );

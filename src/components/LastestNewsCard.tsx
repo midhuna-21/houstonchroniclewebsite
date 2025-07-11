@@ -22,7 +22,8 @@ const LatestNewsCard: React.FC<LatestNewsCardProps> = ({ data }) => {
   <div key={item.slug}>
     <Link href={`/details/${item.slug}`} className='text-decoration-none'>
       <div
-        className="d-flex flex-column flex-md-row align-items-start border-bottom pb-3 mb-3"
+        className="d-flex flex-row align-items-start border-bottom pb-3 mb-3"
+
         style={{
           gap: '1rem',
           fontSize: '18px',

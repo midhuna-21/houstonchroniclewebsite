@@ -66,8 +66,8 @@ const CategoryNewsCard: React.FC<CategoryNewsCardProps> = ({ data }) => {
             alt={title}
             className="img-fluid"
             style={{
-              width: '100%',
-              height: 'auto',
+                 width: '100%',          
+    height: '150px',        
               objectFit: 'cover',
             }}
           />

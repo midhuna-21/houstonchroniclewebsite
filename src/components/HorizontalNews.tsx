@@ -47,7 +47,7 @@ const HorizontalNews: React.FC<HorizontalNewsProps> = ({ data }) => {
     fontFamily: "'Rubik', Arial, sans-serif",
   }}
 >
-  {item.category}
+  {/* {item.category} */}
 </p>
 
               <h6

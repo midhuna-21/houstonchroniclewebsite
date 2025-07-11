@@ -59,16 +59,22 @@ const LottoCard: React.FC<LottoCardProps> = ({ data }) => {
             {data.title}
           </h5>
           <hr style={{ margin: '0.5rem 0' }} />
-          <p
-            style={{
-              color: '#444444',
-              fontSize: '16px',
-              fontFamily: "'Rubik', Arial, sans-serif",
-              fontWeight: 400,
-            }}
-          >
-            {data.shortdescription}
-          </p>
+        <p
+  style={{
+    color: '#444444',
+    fontSize: '16px',
+    fontFamily: "'Rubik', Arial, sans-serif",
+    fontWeight: 400,
+    display: '-webkit-box',
+    WebkitLineClamp: 3,
+    WebkitBoxOrient: 'vertical',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+  }}
+>
+  {data.shortdescription}
+</p>
+
         </div>
       </div>
       </Link>
