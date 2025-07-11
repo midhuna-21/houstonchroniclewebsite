@@ -83,46 +83,11 @@ const ArticleHeader: React.FC<ArticleHeaderProps> = ({
       <div className="d-flex flex-wrap justify-content-between align-items-center gap-3 mt-2">
      
 <div className="d-flex align-items-center gap-2">
-  <div
-   
-    style={{
-      width: '48px',
-      height: '48px',
-      borderRadius: '50%',
-      border: '3px solid #11111',
-      overflow: 'hidden',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-    }}
-  >
-    <Image
-      src={image}
-      alt="Author"
-      width={44}
-      height={44}
-      style={{ borderRadius: '50%' }}
-    />
-  </div>
+
+    
 
   <div className="text-muted small" style={{ fontFamily: "'Rubik', sans-serif", fontSize: '13.5px' }}>
-    <span style={{
-      color: '#444444',
-      fontSize: '14.224px',
-      fontFamily: "'Rubik', Arial, sans-serif"
-    }}>By </span>
-
-    <span className="fw-bold"
-      style={{
-        color: '#B50021',
-        fontSize: '14.224px',
-        fontFamily: "'Rubik', Arial, sans-serif"
-      }}
-    >'dn</span>, <em style={{
-      color: '#444444',
-      fontSize: '14.224px',
-      fontFamily: "'Rubik', Arial, sans-serif"
-    }}>{role}</em>
+   
 
     <div
       className="d-flex align-items-center mt-1"
