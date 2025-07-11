@@ -29,7 +29,7 @@ const SingleParagraph: React.FC<SingleParagraphProps> = ({ text }) => {
             fontFamily: "'Mullish', Verdana, sans-serif",
             fontWeight: 400,
             marginBottom: '1cm',
-            padding: index === 2 ? '12px 16px' : '0', // padding only for the third paragraph
+            padding: index === 2 ? '12px 16px' : '0', 
             borderLeft: index === 2 ? '4px solid #B50021' : undefined,
             backgroundColor: index === 2 ? '#fdf1f2' : undefined,
             borderRadius: index === 2 ? '6px' : undefined,

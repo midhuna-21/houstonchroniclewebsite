@@ -33,7 +33,7 @@ export default async function DetailPage({ params }: PageProps) {
           category={article.category}
           title={article.title}
           date={article.date}
-          image={article.image}
+          image={AuthorData.image}
         />
 
         <DetailFirstSection
@@ -45,13 +45,13 @@ export default async function DetailPage({ params }: PageProps) {
         <div className="row mt-4">
           <div className="col-md-8  ">
             <SingleParagraph text={article.description} />  
-            <AuthorInfo
-              date={AuthorData[0].date}
-              name={AuthorData[0].name}
-              role={AuthorData[0].role}
-              bio={AuthorData[0].bio}
-              image={AuthorData[0].image}
-            />
+            {/* <AuthorInfo
+              date={AuthorData.date}
+              name={AuthorData.name}
+              role={AuthorData.role}
+              bio={AuthorData.bio}
+              image={AuthorData.image}
+            /> */}
           </div>
 
           <div className="col-md-4">
