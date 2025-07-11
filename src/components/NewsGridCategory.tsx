@@ -2,6 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from "next/link";
+import { BiCalendar } from 'react-icons/bi';
 
 interface NewsItem {
   slug: string
@@ -9,6 +10,7 @@ interface NewsItem {
   category: string;
   title: string;
   shortdescription?: string;
+     date:string;
 }
 
 interface NewsGridProps {
@@ -93,6 +95,18 @@ const NewsGrid: React.FC<NewsGridProps> = ({ data }) => {
           >
             {main.shortdescription}
           </p>
+            <div
+                                                  className="d-flex align-items-center mt-1"
+                                                  style={{
+                                                    fontSize: '10px',          
+                                                    fontWeight: 200,              
+                                                    fontFamily: "'Rubik', Arial, sans-serif",
+                                                  }}
+                                                >
+                                                  <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+                                                  <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+                                                  <span style={{ color: '#aaa', marginLeft: '4px' }}>{main.date}</span>
+                                                </div>
         </Link>
         </div>
 
@@ -135,6 +149,18 @@ const NewsGrid: React.FC<NewsGridProps> = ({ data }) => {
           >
             {item.title}
           </div>
+            <div
+                                                  className="d-flex align-items-center mt-1"
+                                                  style={{
+                                                    fontSize: '10px',          
+                                                    fontWeight: 200,              
+                                                    fontFamily: "'Rubik', Arial, sans-serif",
+                                                  }}
+                                                >
+                                                  <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+                                                  <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+                                                  <span style={{ color: '#aaa', marginLeft: '4px' }}>{item.date}</span>
+                                                </div>
         </Link>
       </div>
     ))}

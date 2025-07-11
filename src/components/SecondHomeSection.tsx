@@ -5,6 +5,7 @@ import SectionWrapper from './SectionWrapper';
 import MiniNewsCard from './MiniNewsContent';
 import Image from 'next/image';
 import Link from 'next/link';
+import { BiCalendar } from 'react-icons/bi';
 
 
 interface SecondHomeSectionProps {
@@ -14,12 +15,12 @@ interface SecondHomeSectionProps {
     image: string;
     slug:string;
     shortdescription?: string;
+    date:string;
   }[];
 }
 
 export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
   const [item1, item2, item3, item4, item5, item6] = data;
-  console.log(data, 'data')
 
   return (
     <SectionWrapper title="Top News">
@@ -46,7 +47,21 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
 
               <h5 style={{ fontSize: '22.784px', color: '#111111', fontWeight: 700, fontFamily: "'Archivo', Arial, sans-serif", }}
               >{item1.title}</h5>
+              
+              <div
+              className="d-flex align-items-center mt-1"
+              style={{
+                fontSize: '10px',          
+                fontWeight: 200,              
+                fontFamily: "'Rubik', Arial, sans-serif",
+              }}
+            >
+              <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+              <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+              <span style={{ color: '#aaa', marginLeft: '4px' }}>{item1.date}</span>
             </div>
+            </div>
+            
             </Link>
 
             <Link href={`/details/${item2.slug}`} className='text-decoration-none'>
@@ -63,6 +78,18 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
               >{item2.title}</h5>
               <p style={{ fontSize: '16px', color: '#444444', fontWeight: 400, fontFamily: "'Rubik', Arial, sans-serif" }}
               >{item2.shortdescription}</p>
+            <div
+              className="d-flex align-items-center mt-1"
+              style={{
+                fontSize: '10px',          
+                fontWeight: 200,              
+                fontFamily: "'Rubik', Arial, sans-serif",
+              }}
+            >
+              <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+              <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+              <span style={{ color: '#aaa', marginLeft: '4px' }}>{item2.date}</span>
+            </div>
             </div>
             </Link>
           </div>
@@ -99,6 +126,18 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
                 height={400}
                 style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
               />
+              <div
+              className="d-flex align-items-center mt-1"
+              style={{
+                fontSize: '10px',          
+                fontWeight: 200,              
+                fontFamily: "'Rubik', Arial, sans-serif",
+              }}
+            >
+              <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+              <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+              <span style={{ color: '#aaa', marginLeft: '4px' }}>{item3.date}</span>
+            </div>
             </div>
             </Link>
 
@@ -116,6 +155,18 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
               >{item4.title}</h5>
               <p style={{ fontSize: '16px', color: '#444444', fontWeight: 400, fontFamily: "'Rubik', Arial, sans-serif" }}
               >{item4.shortdescription}</p>
+              <div
+              className="d-flex align-items-center mt-1"
+              style={{
+                fontSize: '10px',          
+                fontWeight: 200,              
+                fontFamily: "'Rubik', Arial, sans-serif",
+              }}
+            >
+              <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+              <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+              <span style={{ color: '#aaa', marginLeft: '4px' }}>{item4.date}</span>
+            </div>
             </div>
             </Link>
           </div>
@@ -123,32 +174,35 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
 
         <hr style={{ borderTop: '1px solid #ccc', marginTop: '30px' }} />
 
-        <div
-          className="section-new d-flex justify-content-between"
-          style={{ maxWidth: '1150px', margin: '30px auto',  }}
-        >
-          <Link href={`/details/${item5.slug}`} className='text-decoration-none'>
-          <div className="flex-grow-1 pe-3">
-            <MiniNewsCard
-              category={item5.category}
-              title={item5.title}
-              image={item5.image}
-            />
-          </div>
-          </Link>
+     <div
+  className="section-new d-flex justify-content-between"
+  style={{ maxWidth: '1150px', margin: '30px auto' }}
+>
+ <Link
+  href={`/details/${item5.slug}`}
+  className="text-decoration-none border-end pe-3"
+  style={{ flex: '0 0 49.2%' }}
+>
+ <MiniNewsCard
+      category={item5.category}
+      title={item5.title}
+      image={item5.image}
+      date={item5.date}
+    />
+  </Link>
 
-          <div style={{ width: '1px', backgroundColor: '#ccc', margin: '0 10px' }}></div>
+  <div style={{ width: '1px', backgroundColor: '#ccc', margin: '0 10px' }}></div>
 
-            <Link href={`/details/${item6.slug}`} className='text-decoration-none'>
-          <div className="flex-grow-1">
-            <MiniNewsCard
-              category={item6.category}
-              title={item6.title}
-              image={item6.image}
-            />
-          </div>
-          </Link>
-        </div>
+  <Link href={`/details/${item6.slug}`} className="text-decoration-none" style={{ flex: '0 0 49.2%' }}>
+    <MiniNewsCard
+      category={item6.category}
+      title={item6.title}
+      image={item6.image}
+      date={item6.date}
+    />
+  </Link>
+</div>
+
       </div>
     </SectionWrapper>
   );

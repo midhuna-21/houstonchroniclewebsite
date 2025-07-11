@@ -2,6 +2,7 @@ import React from 'react';
 import SectionWrapper from './SectionWrapper';
 import { Linden_Hill } from 'next/font/google';
 import Link from 'next/link';
+import { BiCalendar } from 'react-icons/bi';
 
 interface FeatureArticle {
   slug: string;
@@ -9,6 +10,7 @@ interface FeatureArticle {
   description?: string;
   shortdescription?: string;
   image?: string;
+     date:string;
 }
 
 interface FeatureItem {
@@ -51,6 +53,18 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
                 >
                   {item.title}
                 </h6>
+                <div
+                  className="d-flex align-items-center mt-1"
+                  style={{
+                    fontSize: '10px',
+                    fontWeight: 200,
+                    fontFamily: "'Rubik', Arial, sans-serif",
+                  }}
+                >
+                  <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+                  <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+                  <span style={{ color: '#aaa', marginLeft: '4px' }}>{item.date}</span>
+                </div>
               </Link>
             </div>
           ))}
@@ -88,6 +102,18 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
             }}
 
             >{mainItem.shortdescription}</p>}
+            <div
+                                      className="d-flex align-items-center mt-1"
+                                      style={{
+                                        fontSize: '10px',          
+                                        fontWeight: 200,              
+                                        fontFamily: "'Rubik', Arial, sans-serif",
+                                      }}
+                                    >
+                                      <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+                                      <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+                                      <span style={{ color: '#aaa', marginLeft: '4px' }}>{mainItem.date}</span>
+                                    </div>
           </Link>
         </div>
 
@@ -108,6 +134,18 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
                 fontWeight: 700
               }}
               >{item.title}</h6>
+              <div
+                                        className="d-flex align-items-center mt-1"
+                                        style={{
+                                          fontSize: '10px',          
+                                          fontWeight: 200,              
+                                          fontFamily: "'Rubik', Arial, sans-serif",
+                                        }}
+                                      >
+                                        <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+                                        <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+                                        <span style={{ color: '#aaa', marginLeft: '4px' }}>{item.date}</span>
+                                      </div>
             </Link>
           </div>
         ))}

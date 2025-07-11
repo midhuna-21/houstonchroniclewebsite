@@ -16,6 +16,7 @@ export default function DetailPage({ params }: PageProps) {
       <ArticleHeader
         category={article.category}
         title={article.title}
+        image={article.image}
         // author={article.author}
         // role={article.role}
         // date={article.date}

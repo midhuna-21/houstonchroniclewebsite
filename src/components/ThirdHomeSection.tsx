@@ -4,6 +4,7 @@ import Image from 'next/image';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SectionWrapper from './SectionWrapper';
 import Link from 'next/link';
+import { BiCalendar } from 'react-icons/bi';
 
 interface NewsItem {
   category: string;
@@ -11,6 +12,7 @@ interface NewsItem {
   shortdescription:string;
   description?: string;
   image?: string;
+     date:string;
   slug:string;
 }
 
@@ -54,6 +56,18 @@ const ThirdHomeSection: React.FC<Props> = ({ data }) => {
             <div style={categoryStyle}>{first.category}</div>
             <h5 style={titleStyle}>{first.title}</h5>
             <hr style={{ borderTop: '1px solid #ccc', margin: '1rem 0' }} />
+            <div
+              className="d-flex align-items-center mt-1"
+              style={{
+                fontSize: '10px',          
+                fontWeight: 200,              
+                fontFamily: "'Rubik', Arial, sans-serif",
+              }}
+            >
+              <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+              <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+              <span style={{ color: '#aaa', marginLeft: '4px' }}>{first.date}</span>
+            </div>
           </div>
           </Link>
             <Link href={`/details/${second.slug}`} className='text-decoration-none'>
@@ -61,6 +75,18 @@ const ThirdHomeSection: React.FC<Props> = ({ data }) => {
           <div>
             <div style={categoryStyle}>{second.category}</div>
             <h5 style={titleStyle}>{second.title}</h5>
+            <div
+  className="d-flex align-items-center mt-1"
+  style={{
+    fontSize: '10px',          
+    fontWeight: 200,              
+    fontFamily: "'Rubik', Arial, sans-serif",
+  }}
+>
+  <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+  <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+  <span style={{ color: '#aaa', marginLeft: '4px' }}>{second.date}</span>
+</div>
           </div>
           </Link>
         </div>
@@ -85,6 +111,18 @@ const ThirdHomeSection: React.FC<Props> = ({ data }) => {
               <div style={categoryStyle}>{main.category}</div>
               <h3 style={titleStyle}>{main.title}</h3>
               {main.description && <p style={descriptionStyle}>{main.shortdescription}</p>}
+              <div
+  className="d-flex align-items-center mt-1"
+  style={{
+    fontSize: '10px',          
+    fontWeight: 200,              
+    fontFamily: "'Rubik', Arial, sans-serif",
+  }}
+>
+  <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+  <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+  <span style={{ color: '#aaa', marginLeft: '4px' }}>{main.date}</span>
+</div>
             </div>
           </div>
             </Link>
@@ -97,6 +135,18 @@ const ThirdHomeSection: React.FC<Props> = ({ data }) => {
             <Link href={`/details/${fourth.slug}`} className='text-decoration-none'>
               <div style={categoryStyle}>{fourth.category}</div>
               <h5 style={titleStyle}>{fourth.title}</h5>
+              <div
+  className="d-flex align-items-center mt-1"
+  style={{
+    fontSize: '10px',          
+    fontWeight: 200,              
+    fontFamily: "'Rubik', Arial, sans-serif",
+  }}
+>
+  <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+  <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+  <span style={{ color: '#aaa', marginLeft: '4px' }}>{fourth.date}</span>
+</div>
             </Link>
             </div>
 
@@ -104,6 +154,18 @@ const ThirdHomeSection: React.FC<Props> = ({ data }) => {
             <Link href={`/details/${fifth.slug}`} className='text-decoration-none'>
               <div style={categoryStyle}>{fifth.category}</div>
               <h5 style={titleStyle}>{fifth.title}</h5>
+              <div
+  className="d-flex align-items-center mt-1"
+  style={{
+    fontSize: '10px',          
+    fontWeight: 200,              
+    fontFamily: "'Rubik', Arial, sans-serif",
+  }}
+>
+  <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+  <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+  <span style={{ color: '#aaa', marginLeft: '4px' }}>{fifth.date}</span>
+</div>
             </Link>
             </div>
           </div>

@@ -109,6 +109,7 @@ export default function Home() {
                   title: article.title,
                   description: article.shortdescription,
                   slug: article.slug,
+                  date:article.date
                 })),
               }}
             />
@@ -143,6 +144,7 @@ export default function Home() {
                   title: article.title,
                   description: article.shortdescription,
                   slug: article.slug,
+                  date:article.date
                 })),
               }}
             />
@@ -195,7 +197,6 @@ export default function Home() {
           </div>
         </div>
 
-        <LetsPlaySection />
 
       </main>
 

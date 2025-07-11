@@ -32,24 +32,19 @@ export default async function DetailPage({ params }: PageProps) {
         <ArticleHeader
           category={article.category}
           title={article.title}
-        // author={article.author}
-        // role={article.role}
-        // date={article.date}
+          date={article.date}
+          image={article.image}
         />
 
         <DetailFirstSection
           category={article.category}
           image={article.image}
           shortdescription={article.shortdescription}
-          description={article.description}
-        // credits={article.credits}
-        // audioTitle={article.audioTitle}
         />
 
         <div className="row mt-4">
           <div className="col-md-8  ">
-            {/* <ArticleBodyRenderer body={article.body} /> */}
-            <SingleParagraph text={article.description} />
+            <SingleParagraph text={article.description} />  
             <AuthorInfo
               date={AuthorData[0].date}
               name={AuthorData[0].name}
@@ -65,7 +60,6 @@ export default async function DetailPage({ params }: PageProps) {
           </div>
         </div>
         <EditorsPicksSection data={EditorsData} />
-        <LetsPlaySection />
       </div>
     </main>
   );

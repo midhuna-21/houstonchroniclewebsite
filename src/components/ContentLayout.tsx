@@ -1,6 +1,7 @@
 import React from "react";
 import SectionWrapper from "./SectionWrapper";
 import Link from "next/link";
+import { BiCalendar } from "react-icons/bi";
 
 interface NewsItem {
   slug: string;
@@ -8,7 +9,7 @@ interface NewsItem {
   title: string;
   image?: string;
   shortdescription:string;
-  description?: string;
+     date:string;
 }
 
 interface ContentLayoutProps {
@@ -57,6 +58,18 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
                 fontWeight: 400
               }}
             >{main.shortdescription}</p>
+             <div
+                          className="d-flex align-items-center mt-1"
+                          style={{
+                            fontSize: '10px',          
+                            fontWeight: 200,              
+                            fontFamily: "'Rubik', Arial, sans-serif",
+                          }}
+                        >
+                          <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+                          <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+                          <span style={{ color: '#aaa', marginLeft: '4px' }}>{main.date}</span>
+                        </div>
           </div>
           </Link>
         </div>
@@ -82,6 +95,18 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
                   fontFamily: "'Rubik', Arial, sans-serif",
                 }}
               >{side[0].shortdescription}</p>
+              <div
+                          className="d-flex align-items-center mt-1"
+                          style={{
+                            fontSize: '10px',          
+                            fontWeight: 200,              
+                            fontFamily: "'Rubik', Arial, sans-serif",
+                          }}
+                        >
+                          <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+                          <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+                          <span style={{ color: '#aaa', marginLeft: '4px' }}>{side[0].date}</span>
+                        </div>
               <hr />
             </div>
             </Link>
@@ -109,6 +134,18 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
                   fontWeight: 700
                 }}
               >{side[1].title}</h5>
+              <div
+                          className="d-flex align-items-center mt-1"
+                          style={{
+                            fontSize: '10px',          
+                            fontWeight: 200,              
+                            fontFamily: "'Rubik', Arial, sans-serif",
+                          }}
+                        >
+                          <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+                          <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+                          <span style={{ color: '#aaa', marginLeft: '4px' }}>{side[1].date}</span>
+                        </div>
             </div>
             </Link>
           )}
@@ -133,6 +170,18 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
                     >
                       {item.title}
                     </p>
+                    <div
+                          className="d-flex align-items-center mt-1"
+                          style={{
+                            fontSize: '10px',          
+                            fontWeight: 200,              
+                            fontFamily: "'Rubik', Arial, sans-serif",
+                          }}
+                        >
+                          <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+                          <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+                          <span style={{ color: '#aaa', marginLeft: '4px' }}>{item.date}</span>
+                        </div>
                   </div>
                           
                   <div className="col-3">
@@ -149,6 +198,7 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
                         }}
                       />
                     )}
+                    
                   </div>
                 </div>
                   </Link>
@@ -188,6 +238,18 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
                       {item.title}
                     </p>
 
+<div
+                          className="d-flex align-items-center mt-1"
+                          style={{
+                            fontSize: '10px',          
+                            fontWeight: 200,              
+                            fontFamily: "'Rubik', Arial, sans-serif",
+                          }}
+                        >
+                          <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+                          <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+                          <span style={{ color: '#aaa', marginLeft: '4px' }}>{item.date}</span>
+                        </div>
                   </div>
                   
                   <div className="col-3">

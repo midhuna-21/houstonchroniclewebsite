@@ -1,6 +1,7 @@
 import React from 'react';
 import SectionWrapper from './SectionWrapper';
 import Link from 'next/link';
+import { BiCalendar } from 'react-icons/bi';
 
 interface EditorsPicksSectionProps {
   data: {
@@ -8,13 +9,14 @@ interface EditorsPicksSectionProps {
     title: string;
    category:string;
    slug:string;
+   date:string;
   }[];
 }
 
 const EditorsPicksSection: React.FC<EditorsPicksSectionProps> = ({ data }) => {
   return (
     <SectionWrapper title="Editor's Pick">
-      <div className="row gx-4 gy-4">
+      <div className="row gx-4 gy-4 mb-5">
         {data.slice(0, 4).map((item, idx) => (
           
           <div key={idx} className="col-12 col-sm-6 col-lg-3">
@@ -62,6 +64,18 @@ const EditorsPicksSection: React.FC<EditorsPicksSectionProps> = ({ data }) => {
               >
                 {item.title}
               </h6>
+              <div
+                className="d-flex align-items-center mt-1"
+                style={{
+                  fontSize: '10px',          
+                  fontWeight: 200,              
+                  fontFamily: "'Rubik', Arial, sans-serif",
+                }}
+              >
+                <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+                <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+                <span style={{ color: '#aaa', marginLeft: '4px' }}>{item.date}</span>
+              </div>
             </div>
           </Link>
           </div>

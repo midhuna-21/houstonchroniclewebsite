@@ -4,11 +4,13 @@ import React from 'react';
 import Image from 'next/image';
 import SectionWrapper from './SectionWrapper';
 import Link from 'next/link';
+import { BiCalendar } from 'react-icons/bi';
 
 interface EditorialItem {
   title: string;
   image: string;
   slug: string;
+     date:string;
 }
 
 interface EditorialBoardProps {
@@ -42,6 +44,18 @@ const EditorialBoard: React.FC<EditorialBoardProps> = ({ sectionTitle, data }) =
               >
                 {item.title}
               </p>
+                 <div
+                                                  className="d-flex align-items-center mt-1"
+                                                  style={{
+                                                    fontSize: '10px',          
+                                                    fontWeight: 200,              
+                                                    fontFamily: "'Rubik', Arial, sans-serif",
+                                                  }}
+                                                >
+                                                  <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+                                                  <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+                                                  <span style={{ color: '#aaa', marginLeft: '4px' }}>{item.date}</span>
+                                                </div>
             </div>
 
             <div style={{ flexShrink: 0 }}>
@@ -58,6 +72,7 @@ const EditorialBoard: React.FC<EditorialBoardProps> = ({ sectionTitle, data }) =
               />
             </div>
           </div>
+          
         </Link>
       ))}
     </SectionWrapper>

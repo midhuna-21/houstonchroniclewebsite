@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
+import { BiCalendar } from 'react-icons/bi';
 
 interface HorizontalNewsProps {
   data: {
@@ -7,6 +8,7 @@ interface HorizontalNewsProps {
     title: string;
    category:string;
    slug:string;
+   date:string;
   }[];
 }
 
@@ -61,6 +63,18 @@ const HorizontalNews: React.FC<HorizontalNewsProps> = ({ data }) => {
               >
                 {item.title}
               </h6>
+                <div
+                                                                className="d-flex align-items-center mt-1"
+                                                                style={{
+                                                                  fontSize: '10px',          
+                                                                  fontWeight: 200,              
+                                                                  fontFamily: "'Rubik', Arial, sans-serif",
+                                                                }}
+                                                              >
+                                                                <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+                                                                <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+                                                                <span style={{ color: '#aaa', marginLeft: '4px' }}>{item.date}</span>
+                                                              </div>
             </div>
             </Link>
           </div>

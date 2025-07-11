@@ -33,6 +33,12 @@ interface Props {
 }
 
 export default function CategoryContent({ activeMain, data }: Props) {
+  function capitalizeFirstLetterOnly(text: string) {
+  if (!text) return '';
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}
+
+
   return (
     <div className="w-100 container">
       <div>
@@ -44,7 +50,7 @@ export default function CategoryContent({ activeMain, data }: Props) {
             fontWeight: 900
           }}
         >
-          {activeMain}
+        {capitalizeFirstLetterOnly(activeMain)}
         </h1>
 
         <hr style={{ borderTop: '1px solid #4444' }} />
@@ -96,6 +102,7 @@ export default function CategoryContent({ activeMain, data }: Props) {
                 title: article.title,
                 description: article.shortdescription,
                 slug: article.slug,
+                date:article.date
               })),
             }}
           />
@@ -146,7 +153,6 @@ export default function CategoryContent({ activeMain, data }: Props) {
         <div className="col-md-9">
           <FeatureSection data={featureData[2]} />
         </div>*/}
-      <LetsPlaySection />
 
     </div>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import SectionWrapper from './SectionWrapper';
 import Link from 'next/link';
+import { BiCalendar } from 'react-icons/bi';
 
 interface CategoryNewsCardProps {
   data: {
@@ -10,11 +11,12 @@ interface CategoryNewsCardProps {
     image: string;
     author?: string;
     slug:string;
+    date:string;
   };
 }
 
 const CategoryNewsCard: React.FC<CategoryNewsCardProps> = ({ data }) => {
-  const { title, description,shortdescription, image, author,slug } = data;
+  const { title, description,shortdescription, image, author,slug,date } = data;
 
   return (
 
@@ -72,6 +74,18 @@ const CategoryNewsCard: React.FC<CategoryNewsCardProps> = ({ data }) => {
             }}
           />
         </div>
+          <div
+                                                          className="d-flex align-items-center mt-1"
+                                                          style={{
+                                                            fontSize: '10px',          
+                                                            fontWeight: 200,              
+                                                            fontFamily: "'Rubik', Arial, sans-serif",
+                                                          }}
+                                                        >
+                                                          <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+                                                          <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+                                                          <span style={{ color: '#aaa', marginLeft: '4px' }}>{date}</span>
+                                                        </div>
       </div>
       </Link>
     </div>
