@@ -2,13 +2,9 @@ import { notFound } from 'next/navigation';
 import { getArticleBySlug, getAllSlugs } from '@/lib/detailFunction';
 import ArticleHeader from '@/components/ArticleHeader';
 import DetailFirstSection from '@/components/DetailFirstSection';
-import ArticleBodyRenderer from '@/components/ArticleBodyRender';
-import AuthorInfo from '@/components/AuthorInfo';
 import MostPopularList from '@/components/MostPopularlist';
 import LatestNewsCard from '@/components/LastestNewsCard';
-import LetsPlaySection from '@/components/LetsPlay';
 import styles from './page.module.css';
-import { popularArticles } from '@/data/homeData';
 import SingleParagraph from '@/components/SingleParagraph';
 import EditorsPicksSection from '@/components/EditorsPick';
 import EditorsData from '../../../../public/data/editorspick.json';
@@ -21,8 +17,11 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
+
+
 export default async function DetailPage({ params }: PageProps) {
   const article = getArticleBySlug(decodeURIComponent((await params).slug));
+
 
 
   if ((await params).slug == 'wanda-vazquez-charges-dropped') {
@@ -32,6 +31,7 @@ export default async function DetailPage({ params }: PageProps) {
       </main>
     );
   }
+
 
   if (!article) return notFound();
   return (
@@ -53,15 +53,7 @@ export default async function DetailPage({ params }: PageProps) {
 
         <div className="row mt-4">
           <div className="col-md-8  ">
-         <SingleParagraph text={article.description ?? ""} />
-
-            {/* <AuthorInfo
-              date={AuthorData.date}
-              name={AuthorData.name}
-              role={AuthorData.role}
-              bio={AuthorData.bio}
-              image={AuthorData.image}
-            /> */}
+            <SingleParagraph text={article.description ?? ""} />
           </div>
 
           <div className="col-md-4">
@@ -73,4 +65,13 @@ export default async function DetailPage({ params }: PageProps) {
       </div>
     </main>
   );
+}
+
+
+export async function generateStaticParams() {
+  const slugs = getAllSlugs();
+  return slugs.map((slug) => ({
+    slug: slug.slug,
+    category: slug.category
+  }));
 }

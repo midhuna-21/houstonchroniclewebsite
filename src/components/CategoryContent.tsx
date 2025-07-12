@@ -1,30 +1,12 @@
 'use client';
-
-import Image from 'next/image';
-import Link from 'next/link';
-import { NavKey, navData } from '../data/navData';
-import MoreFromSection from './MoreFromSection';
-import RightSectionTop from './RightSectionTop';
-import ContentLayout from './ContentLayout';
 import DailyPuzzles from './DailyPuzzles';
-import { featureData, newsData, trendingData } from '@/data/homeData';
 import TrendingCard from './TrendingCard';
-import FeatureSection from './FeatureSection';
-import LetsPlaySection from './LetsPlay';
 import InteractiveCard from './InteractiveCard';
 import NewsGrid from './NewsGridCategory';
-import { newsCategoryData } from '@/data/Category';
 import CategoryNewsCard from './CategoryNewsCard';
-import BusinessData from '../../public/data/business.json';
 import CategoryFirstSection from './CategoryFirstSection';
-import TechnologyData from '../../public/data/technology.json';
-import ScienceData from '../../public/data/science.json';
-import EditorsPicksSection from './EditorsPick';
 import SectionWrapper from './SectionWrapper';
-import CarouselSection from './CarouselSection';
-import NewsCard from './NewsCard';
 import DailyPuzzlesData from '../../public/data/puzzles.json';
-import ColumnsFromPastData from '../../public/data/columnsfrompast.json'
 import HorizontalNews from './HorizontalNews';
 
 interface Props {
@@ -66,8 +48,6 @@ export default function CategoryContent({ activeMain, data }: Props) {
         </div>
       </div>
 
-
-
       <div className="row">
         <div className="col-md-9">
 
@@ -79,17 +59,8 @@ export default function CategoryContent({ activeMain, data }: Props) {
             }}
           />
 
-
-          {/* <FeatureSection
-                data={{
-                  section: 'Technology',
-                  articles: TechnologyData.slice(0, 5)
-                }}
-              /> */}
           <HorizontalNews data={[data[13], data[14], data[15], data[16]]} />
 
-
-          {/* <NewsGrid data={newsCategoryData} /> */}
         </div>
         <div className="col-md-3">
 
@@ -108,9 +79,7 @@ export default function CategoryContent({ activeMain, data }: Props) {
             }}
           />
         </div>
-        {/* <div className="col-md-3">
-  <InteractiveCard/>
-            </div> */}
+
       </div>
 
       <div className="row">
@@ -128,28 +97,6 @@ export default function CategoryContent({ activeMain, data }: Props) {
 
         </div>
       </div>
-      {/* 
-        <div className="col-md-9">
-          <FeatureSection data={featureData[2]} />
-        </div>
-        <div className="col-md-9">
-          <ContentLayout data={newsData[4]} />
-        </div>
-        <div className="col-md-9">
-          <FeatureSection data={featureData[2]} />
-        </div>
-        <div className="col-md-9">
-          <ContentLayout data={newsData[4]} />
-        </div>
-        <div className="col-md-9">
-          <FeatureSection data={featureData[2]} />
-        </div>
-        <div className="col-md-9">
-          <ContentLayout data={newsData[4]} />
-        </div>
-        <div className="col-md-9">
-          <FeatureSection data={featureData[2]} />
-        </div>*/}
 
     </div>
 

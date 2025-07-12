@@ -5,31 +5,22 @@ import FirstHomeSection from '@/components/FirstHomeSection';
 import SecondHomeSection from '@/components/SecondHomeSection';
 import EditorsPicksSection from '@/components/EditorsPick';
 import ThirdHomeSection from '@/components/ThirdHomeSection';
-import Signup from '@/components/Signup';
 import CarouselSection from '@/components/CarouselSection';
 import ContentLayout from '@/components/ContentLayout';
-import { newsData, popularArticles, promoData, trendingData, trendingNavItems } from '@/data/homeData'
 import FeatureSection from '@/components/FeatureSection';
-import { featureData } from '@/data/homeData'
 import TrendingCard from '@/components/TrendingCard';
-import TrendingNav from '@/components/TrendingNavigation';
 import DailyPuzzles from '@/components/DailyPuzzles';
 import MostPopularList from '@/components/MostPopularlist';
-import OpinionList from '@/components/OptionList';
 import EditorialBoard from '@/components/EditorialBoard';
 import NewsText from '@/components/NewsText';
 import LottoCard from '@/components/LottoCard';
-import LetsPlaySection from '@/components/LetsPlay';
 import BusinessData from '../../public/data/business.json';
 import HealthData from '../../public/data/health.json';
 import ScienceData from '../../public/data/science.json';
 import PoliticsData from '../../public/data/politics.json';
 import SportsData from '../../public/data/sports.json';
 import TechnologyData from '../../public/data/technology.json';
-import CategoryFirstSection from '@/components/CategoryFirstSection';
-import MostpopularData from '../../public/data/mostpopular.json';
 import DailyPuzzlesData from '../../public/data/puzzles.json';
-import OpinionData from '../../public/data/opinion.json'
 import ColumnsFromPastData from '../../public/data/columnsfrompast.json'
 
 
@@ -39,13 +30,11 @@ export default function Home() {
 
       <NavigationSection />
       <div className="d-flex justify-content-center mt-2">
-        {/* <TrendingNav items={trendingNavItems} /> */}
       </div>
 
 
       <main className="container px-3 px-lg-5 mt-4 content">
         <div className="mb-5">
-          {/* <FirstHomeSection businessData={BusinessData.slice(0, 3)} /> */}
           <FirstHomeSection data={[PoliticsData[0], HealthData[0], SportsData[0]]} />
 
           <hr
@@ -56,10 +45,7 @@ export default function Home() {
             }}
           />
           <FirstHomeSection data={[ScienceData[0], BusinessData[0], TechnologyData[0]]} />
-
         </div>
-
-
         <div className="row">
           <div className="col-md-9">
             <SecondHomeSection data={[ScienceData[1], PoliticsData[1], TechnologyData[1], BusinessData[1], HealthData[1], SportsData[1]]} />
@@ -69,20 +55,12 @@ export default function Home() {
             </div>
             <div className="mb-5">
               <ThirdHomeSection data={[HealthData[2], SportsData[2], ScienceData[3], PoliticsData[3], TechnologyData[3]]} />
-
             </div>
-            {/* <div className="mb-5">
-                <Signup />
-              </div> */}
           </div>
 
           <div className="col-md-3">
             <DailyPuzzles data={DailyPuzzlesData} />
             <MostPopularList data={[PoliticsData[4], TechnologyData[4], HealthData[3], SportsData[3], ScienceData[4]]} />
-
-
-            {/* add another any data */}
-            {/* <OpinionList title="Opinion" articles={OpinionData} /> */}
           </div>
         </div>
 

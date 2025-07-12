@@ -19,5 +19,5 @@ export function getArticleBySlug(slug: string) {
 }
 
 export function getAllSlugs() {
-  return allArticles.map((article) => ({ slug: article.slug }));
+  return allArticles.map((article) => ({ slug: article.slug,category:article.category }));
 }

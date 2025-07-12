@@ -1,14 +1,24 @@
-    import fs from 'fs/promises';
-    import path from 'path';
-    import CategoryContent from '@/components/CategoryContent';
-    import NavigationSection from '@/components/NavigationSection';
-    import styles from './page.module.css';
+import fs from 'fs/promises';
+import path from 'path';
+import CategoryContent from '@/components/CategoryContent';
+import NavigationSection from '@/components/NavigationSection';
+import styles from './page.module.css';
 
-    export default async function CategoryPage({
+export async function generateStaticParams() {
+    return [
+        { category: "politics" },
+        { category: "business" },
+        { category: "technology" },
+        { category: "sports" },
+        { category: "science" },
+        { category: "health" },
+    ];
+}
+export default async function CategoryPage({
     params,
-    }: {
+}: {
     params: Promise<{ category: string }>;
-    }) {
+}) {
 
     const { category } = await params;
 
@@ -18,19 +28,19 @@
 
     return (
         <>
-        <NavigationSection />
-        <main className={styles.content}>
-            <div className={`container-fluid ${styles.noGutter}`}>
-            <CategoryContent activeMain={category} data={jsonData} />
-            </div>
-        </main>
+            <NavigationSection />
+            <main className={styles.content}>
+                <div className={`container-fluid ${styles.noGutter}`}>
+                    <CategoryContent activeMain={category} data={jsonData} />
+                </div>
+            </main>
 
         </>
     );
-    }
+}
 
-    export async function generateStaticParams() {
-    const categories = ['business', 'health', 'politics', 'science', 'technology'];
-    return categories.map((slug) => ({ slug }));
-    }
+// export async function generateStaticParams() {
+// const categories = ['business', 'health', 'politics', 'science', 'technology','sports'];
+// return categories.map((slug) => ({ slug }));
+// }
 
