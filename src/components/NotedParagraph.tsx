@@ -1,6 +1,6 @@
 import React from "react";
 import ArticleWrapper from "./ArticleWrapper";
-import { parseUnderlinedText } from "@/lib/paresedUnderlineText";
+import { parseRichText } from "@/lib/paresedUnderlineText";
 
 interface NotedParagraphProps {
   text: string;
@@ -24,7 +24,7 @@ const NotedParagraph: React.FC<NotedParagraphProps> = ({ text }) => {
           wordBreak: "break-word",
         }}
       >
-         {parseUnderlinedText(text)}
+         {parseRichText(text)}
       </p>
     </ArticleWrapper>
   );
