@@ -28,7 +28,7 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
     <div style={{ marginBottom: '3rem' }}>
       <div className="row">
         <div className="col-md-6 border-end">
-            <Link href={`/details/${main.slug}`} className='text-decoration-none'>
+            <Link href={`/${main.category}/${main.slug}`} className='text-decoration-none'>
 
           <div>
               <img
@@ -75,7 +75,7 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
 
         <div className="col-md-6">
           {side?.[0] && (
-            <Link href={`/details/${side[0].slug}`} className='text-decoration-none'>
+            <Link href={`/${side[0].category}/${side[0].slug}`} className='text-decoration-none'>
 
             <div className="mb-3">
               <h5 className="fw-bold mb-2"
@@ -110,7 +110,7 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
           )}
 
           {side?.[1] && (
-            <Link href={`/details/${side[0].slug}`} className='text-decoration-none'>
+            <Link href={`/${side[1].category}/${side[1].slug}`} className='text-decoration-none'>
 
             <div>
               <img
@@ -153,7 +153,7 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
         <div className="col-md-6 border-end pe-md-4"> 
           <div className="row">
             {bottomCards?.slice(0, 2).map((item, index) => (
-            <Link href={`/details/${item.slug}`} key={`${item.slug}-${index}`} className='text-decoration-none'>
+            <Link href={`/${item.category}/${item.slug}`} key={`${item.slug}-${index}`} className='text-decoration-none'>
 
               <div className="col-12 py-3 px-2" key={index}>
                 <div className="row g-2 align-items-center">
@@ -220,7 +220,7 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
         <div className="col-md-6 ps-md-4"> 
           <div className="row">
             {bottomCards?.slice(2, 4).map((item, index) => (
-            <Link href={`/details/${item.slug}`}  key={`${item.slug}-${index}`} className='text-decoration-none'>
+            <Link href={`/${item.category}/${item.slug}`}  key={`${item.slug}-${index}`} className='text-decoration-none'>
 
               <div className="col-12 py-3 px-2" key={index + 2}>
                 <div className="row g-2 align-items-center">

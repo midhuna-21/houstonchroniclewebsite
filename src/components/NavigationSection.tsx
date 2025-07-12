@@ -37,7 +37,7 @@ export default function NavigationSection() {
         {NavItems.map((item) => (
           <Link
             key={item.slug}
-            href={`/category/${slugify(item.slug)}`}
+            href={`/${slugify(item.slug)}`}
             className="text-dark text-decoration-none"
             style={{
               whiteSpace: 'nowrap',

@@ -109,7 +109,8 @@ export default function Home() {
                   title: article.title,
                   description: article.shortdescription,
                   slug: article.slug,
-                  date:article.date
+                  date:article.date,
+                  category:article.category
                 })),
               }}
             />
@@ -144,7 +145,8 @@ export default function Home() {
                   title: article.title,
                   description: article.shortdescription,
                   slug: article.slug,
-                  date:article.date
+                  date:article.date,
+                  category:article.category
                 })),
               }}
             />

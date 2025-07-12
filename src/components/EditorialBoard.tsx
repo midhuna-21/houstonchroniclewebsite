@@ -10,7 +10,8 @@ interface EditorialItem {
   title: string;
   image: string;
   slug: string;
-     date:string;
+  date: string;
+  category: string;
 }
 
 interface EditorialBoardProps {
@@ -22,7 +23,7 @@ const EditorialBoard: React.FC<EditorialBoardProps> = ({ sectionTitle, data }) =
   return (
     <SectionWrapper title={sectionTitle}>
       {data.map((item) => (
-        <Link href={`/details/${item.slug}`} key={item.slug} className="text-decoration-none">
+        <Link href={`/${item.category}/${item.slug}`} key={item.slug} className="text-decoration-none">
           <div
             className="d-flex flex-row align-items-start border-bottom pb-3 mb-3"
             style={{
@@ -44,18 +45,18 @@ const EditorialBoard: React.FC<EditorialBoardProps> = ({ sectionTitle, data }) =
               >
                 {item.title}
               </p>
-                 <div
-                                                  className="d-flex align-items-center mt-1"
-                                                  style={{
-                                                    fontSize: '10px',          
-                                                    fontWeight: 200,              
-                                                    fontFamily: "'Rubik', Arial, sans-serif",
-                                                  }}
-                                                >
-                                                  <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
-                                                  <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-                                                  <span style={{ color: '#aaa', marginLeft: '4px' }}>{item.date}</span>
-                                                </div>
+              <div
+                className="d-flex align-items-center mt-1"
+                style={{
+                  fontSize: '10px',
+                  fontWeight: 200,
+                  fontFamily: "'Rubik', Arial, sans-serif",
+                }}
+              >
+                <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+                <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+                <span style={{ color: '#aaa', marginLeft: '4px' }}>{item.date}</span>
+              </div>
             </div>
 
             <div style={{ flexShrink: 0 }}>
@@ -72,7 +73,7 @@ const EditorialBoard: React.FC<EditorialBoardProps> = ({ sectionTitle, data }) =
               />
             </div>
           </div>
-          
+
         </Link>
       ))}
     </SectionWrapper>

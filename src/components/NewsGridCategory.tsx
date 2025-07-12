@@ -26,7 +26,7 @@ const NewsGrid: React.FC<NewsGridProps> = ({ data }) => {
       <div className="row g-4">
 
         <div className="col-md-6" style={{ borderRight: '1px solid #ddd' }}>
-            <Link href={`/details/${main.slug}`} className='text-decoration-none'>
+            <Link href={`/${main.category}/${main.slug}`} className='text-decoration-none'>
 
           <div style={{ position: 'relative' }}>
             <Image
@@ -114,7 +114,7 @@ const NewsGrid: React.FC<NewsGridProps> = ({ data }) => {
   <div className="row g-4">
     {right.map((item, index) => (
       <div className="col-6" key={index}>
-        <Link href={`/details/${item.slug}`} className="text-decoration-none">
+        <Link href={`/${main.category}/${item.slug}`} className="text-decoration-none">
           <div style={{ width: '100%', height: '180px', position: 'relative', marginBottom: '8px' }}>
             <Image
               src={item.image}

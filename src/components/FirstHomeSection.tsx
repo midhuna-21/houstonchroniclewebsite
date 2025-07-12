@@ -10,7 +10,7 @@ interface Article {
   shortdescription: string;
   image: string;
   slug: string;
-     date:string;
+  date: string;
 }
 
 interface LatestHomeSectionProps {
@@ -25,59 +25,59 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
   return (
     <section>
       <div className="row g-4 align-items-stretch flex-column flex-md-row">
-  <div className="col-md-3 text-start order-1 order-md-0 d-flex flex-column justify-content-between">
-  <Link href={`/details/${main.slug}`} className="text-decoration-none">
-    <div>
-      <p
-        style={{
-          color: "#B50021",
-          fontWeight: 700,
-          textTransform: 'uppercase',
-          fontSize: '14.224px',
-          fontFamily: "'Rubik', Arial, sans-serif",
-        }}
-      >
-        {main.category}
-      </p>
+        <div className="col-md-3 text-start order-1 order-md-0 d-flex flex-column justify-content-between">
+          <Link href={`/${main.category}/${main.slug}`} className="text-decoration-none">
+            <div>
+              <p
+                style={{
+                  color: "#B50021",
+                  fontWeight: 700,
+                  textTransform: 'uppercase',
+                  fontSize: '14.224px',
+                  fontFamily: "'Rubik', Arial, sans-serif",
+                }}
+              >
+                {main.category}
+              </p>
 
-      <h2
-        style={{
-          color: '#111111',
-          fontSize: '22.784px',
-          fontFamily: "'Archivo', Arial, sans-serif",
-          fontWeight: 700
-        }}
-      >
-        {main.title}
-      </h2>
+              <h2
+                style={{
+                  color: '#111111',
+                  fontSize: '22.784px',
+                  fontFamily: "'Archivo', Arial, sans-serif",
+                  fontWeight: 700
+                }}
+              >
+                {main.title}
+              </h2>
 
-      <p
-        className="text-muted mb-3"
-        style={{
-          color: '#444444',
-          fontSize: '16px',
-          fontFamily: "'Rubik', Arial, sans-serif",
-          fontWeight: 400
-        }}
-      >
-        {main.shortdescription}
-      </p>
+              <p
+                className="text-muted mb-3"
+                style={{
+                  color: '#444444',
+                  fontSize: '16px',
+                  fontFamily: "'Rubik', Arial, sans-serif",
+                  fontWeight: 400
+                }}
+              >
+                {main.shortdescription}
+              </p>
 
-     <div
-  className="d-flex align-items-center mt-1"
-  style={{
-    fontSize: '10px',          
-    fontWeight: 200,              
-    fontFamily: "'Rubik', Arial, sans-serif",
-  }}
->
-  <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
-  <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-  <span style={{ color: '#aaa', marginLeft: '4px' }}>{main.date}</span>
-</div>
-    </div>
-  </Link>
-</div>
+              <div
+                className="d-flex align-items-center mt-1"
+                style={{
+                  fontSize: '10px',
+                  fontWeight: 200,
+                  fontFamily: "'Rubik', Arial, sans-serif",
+                }}
+              >
+                <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+                <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+                <span style={{ color: '#aaa', marginLeft: '4px' }}>{main.date}</span>
+              </div>
+            </div>
+          </Link>
+        </div>
 
 
 
@@ -91,132 +91,132 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
                 position: 'relative',
               }}
             >
-              <Link href={`/details/${main.slug}`} className='text-decoration-none'>
+              <Link href={`/${main.category}/${main.slug}`} className='text-decoration-none'>
 
-              <Image
-                src={main.image}
-                alt=""
-                width={1000}
-                height={400}
-                className="img-fluid"
-                style={{
-                  width: '100%',
-                  height: '400px',
-                  objectFit: 'cover',
-                }}
-              />
+                <Image
+                  src={main.image}
+                  alt=""
+                  width={1000}
+                  height={400}
+                  className="img-fluid"
+                  style={{
+                    width: '100%',
+                    height: '400px',
+                    objectFit: 'cover',
+                  }}
+                />
               </Link>
             </div>
           </div>
         )}
 
         {/* Right Section*/}
-   <div className="col-md-3 ps-3 text-start order-2">
-  {/* Right Item 1 */}
-  <Link href={`/details/${right1.slug}`} className='text-decoration-none'>
-    <div style={{ marginBottom: '14px' }}> 
-      {right1.image && (
-        <img
-          src={right1.image}
-          alt=""
-          className="img-fluid mb-2"
-          style={{
-            width: '100%',
-            height: 'auto',
-            objectFit: 'cover',
-          }}
-        />
-      )}
+        <div className="col-md-3 ps-3 text-start order-2">
+          {/* Right Item 1 */}
+          <Link href={`/${right1.category}/${right1.slug}`} className='text-decoration-none'>
+            <div style={{ marginBottom: '14px' }}>
+              {right1.image && (
+                <img
+                  src={right1.image}
+                  alt=""
+                  className="img-fluid mb-2"
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    objectFit: 'cover',
+                  }}
+                />
+              )}
 
-      <p
-        className="fw-bold mb-1"
-        style={{
-          color: "#B50021",
-          textTransform: 'uppercase',
-          fontSize: '14.224px',
-          fontFamily: "'Rubik', Arial, sans-serif",
-          lineHeight: '1.2',
-        }}
-      >
-        {right1.category}
-      </p>
+              <p
+                className="fw-bold mb-1"
+                style={{
+                  color: "#B50021",
+                  textTransform: 'uppercase',
+                  fontSize: '14.224px',
+                  fontFamily: "'Rubik', Arial, sans-serif",
+                  lineHeight: '1.2',
+                }}
+              >
+                {right1.category}
+              </p>
 
-      <p
-        className="fw-bold text-black mb-1"
-        style={{
-          color: '#111111',
-          fontSize: '19px',
-          fontFamily: "'Archivo', Arial, sans-serif",
-          fontWeight: 700,
-          lineHeight: '1.2',
-        }}
-      >
-        {right1.title}
-      </p>
-     
+              <p
+                className="fw-bold text-black mb-1"
+                style={{
+                  color: '#111111',
+                  fontSize: '19px',
+                  fontFamily: "'Archivo', Arial, sans-serif",
+                  fontWeight: 700,
+                  lineHeight: '1.2',
+                }}
+              >
+                {right1.title}
+              </p>
 
-<div
-  className="d-flex align-items-center mt-1"
-  style={{
-    fontSize: '10px',          
-    fontWeight: 200,              
-    fontFamily: "'Rubik', Arial, sans-serif",
-  }}
->
-  <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
-  <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-  <span style={{ color: '#aaa', marginLeft: '4px' }}>{main.date}</span>
-</div>
 
-    </div>
-  </Link>
+              <div
+                className="d-flex align-items-center mt-1"
+                style={{
+                  fontSize: '10px',
+                  fontWeight: 200,
+                  fontFamily: "'Rubik', Arial, sans-serif",
+                }}
+              >
+                <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+                <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+                <span style={{ color: '#aaa', marginLeft: '4px' }}>{main.date}</span>
+              </div>
 
-  {/* Right Item 2 */}
-  <Link href={`/details/${right2.slug}`} className='text-decoration-none'>
-    <div>
-      <p
-        className="fw-bold mb-1"
-        style={{
-          color: "#B50021",
-          textTransform: 'uppercase',
-          fontSize: '14.224px',
-          fontFamily: "'Rubik', Arial, sans-serif",
-          lineHeight: '1.2',
-        }}
-      >
-        {right2.category}
-      </p>
+            </div>
+          </Link>
 
-      <p
-        className="fw-bold text-black mb-1"
-        style={{
-          color: '#111111',
-          fontSize: '20px',
-          fontFamily: "'Archivo', Arial, sans-serif",
-          fontWeight: 700,
-          lineHeight: '1.2',
-        }}
-      >
-        {right2.title}
-      </p>
-      <div
-  className="d-flex align-items-center mt-1"
-  style={{
-    fontSize: '10px',          
-    fontWeight: 200,              
-    fontFamily: "'Rubik', Arial, sans-serif",
-  }}
->
-  <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
-  <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-  <span style={{ color: '#aaa', marginLeft: '4px' }}>{main.date}</span>
-</div>
-    </div>
-  </Link>
-</div>
+          {/* Right Item 2 */}
+          <Link href={`/${right2.category}/${right2.slug}`} className='text-decoration-none'>
+            <div>
+              <p
+                className="fw-bold mb-1"
+                style={{
+                  color: "#B50021",
+                  textTransform: 'uppercase',
+                  fontSize: '14.224px',
+                  fontFamily: "'Rubik', Arial, sans-serif",
+                  lineHeight: '1.2',
+                }}
+              >
+                {right2.category}
+              </p>
+
+              <p
+                className="fw-bold text-black mb-1"
+                style={{
+                  color: '#111111',
+                  fontSize: '20px',
+                  fontFamily: "'Archivo', Arial, sans-serif",
+                  fontWeight: 700,
+                  lineHeight: '1.2',
+                }}
+              >
+                {right2.title}
+              </p>
+              <div
+                className="d-flex align-items-center mt-1"
+                style={{
+                  fontSize: '10px',
+                  fontWeight: 200,
+                  fontFamily: "'Rubik', Arial, sans-serif",
+                }}
+              >
+                <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+                <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+                <span style={{ color: '#aaa', marginLeft: '4px' }}>{main.date}</span>
+              </div>
+            </div>
+          </Link>
+        </div>
 
       </div>
-    
+
     </section>
   );
 }

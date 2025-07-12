@@ -10,7 +10,8 @@ interface FeatureArticle {
   description?: string;
   shortdescription?: string;
   image?: string;
-     date:string;
+  date: string;
+  category: string;
 }
 
 interface FeatureItem {
@@ -42,7 +43,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
               key={index}
               className={`pb-3 mb-3 ${index !== leftItems.length - 1 ? 'border-bottom' : ''}`}
             >
-              <Link href={`/details/${item.slug}`} className='text-decoration-none'>
+              <Link href={`/${item.category}/${item.slug}`} className='text-decoration-none'>
                 <h6
                   style={{
                     color: '#111111',
@@ -73,7 +74,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
 
         <div className="col-md-4 text-center">
           {mainItem.image && (
-            <Link href={`/details/${mainItem.slug}`} className='text-decoration-none'>
+            <Link href={`/${mainItem.category}/${mainItem.slug}`} className='text-decoration-none'>
 
               <img
                 src={mainItem.image}
@@ -86,7 +87,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
         </div>
 
         <div className="col-md-5">
-          <Link href={`/details/${mainItem.slug}`} className='text-decoration-none'>
+          <Link href={`/${mainItem.category}/${mainItem.slug}`} className='text-decoration-none'>
 
             <h4 style={{
               color: '#111111',
@@ -103,17 +104,17 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
 
             >{mainItem.shortdescription}</p>}
             <div
-                                      className="d-flex align-items-center mt-1"
-                                      style={{
-                                        fontSize: '10px',          
-                                        fontWeight: 200,              
-                                        fontFamily: "'Rubik', Arial, sans-serif",
-                                      }}
-                                    >
-                                      <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
-                                      <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-                                      <span style={{ color: '#aaa', marginLeft: '4px' }}>{mainItem.date}</span>
-                                    </div>
+              className="d-flex align-items-center mt-1"
+              style={{
+                fontSize: '10px',
+                fontWeight: 200,
+                fontFamily: "'Rubik', Arial, sans-serif",
+              }}
+            >
+              <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+              <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+              <span style={{ color: '#aaa', marginLeft: '4px' }}>{mainItem.date}</span>
+            </div>
           </Link>
         </div>
 
@@ -126,7 +127,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
             key={idx}
             className={`col-md-6 ${idx === 0 ? 'border-end' : ''}`}
           >
-            <Link href={`/details/${item.slug}`} className='text-decoration-none'>
+            <Link href={`/${item.category}/${item.slug}`} className='text-decoration-none'>
               <h6 style={{
                 color: "#111111",
                 fontSize: '18px',
@@ -135,17 +136,17 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
               }}
               >{item.title}</h6>
               <div
-                                        className="d-flex align-items-center mt-1"
-                                        style={{
-                                          fontSize: '10px',          
-                                          fontWeight: 200,              
-                                          fontFamily: "'Rubik', Arial, sans-serif",
-                                        }}
-                                      >
-                                        <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
-                                        <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-                                        <span style={{ color: '#aaa', marginLeft: '4px' }}>{item.date}</span>
-                                      </div>
+                className="d-flex align-items-center mt-1"
+                style={{
+                  fontSize: '10px',
+                  fontWeight: 200,
+                  fontFamily: "'Rubik', Arial, sans-serif",
+                }}
+              >
+                <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+                <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+                <span style={{ color: '#aaa', marginLeft: '4px' }}>{item.date}</span>
+              </div>
             </Link>
           </div>
         ))}

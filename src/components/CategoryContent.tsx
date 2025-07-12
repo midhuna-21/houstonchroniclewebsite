@@ -34,9 +34,9 @@ interface Props {
 
 export default function CategoryContent({ activeMain, data }: Props) {
   function capitalizeFirstLetterOnly(text: string) {
-  if (!text) return '';
-  return text.charAt(0).toUpperCase() + text.slice(1);
-}
+    if (!text) return '';
+    return text.charAt(0).toUpperCase() + text.slice(1);
+  }
 
 
   return (
@@ -50,7 +50,7 @@ export default function CategoryContent({ activeMain, data }: Props) {
             fontWeight: 900
           }}
         >
-        {capitalizeFirstLetterOnly(activeMain)}
+          {capitalizeFirstLetterOnly(activeMain)}
         </h1>
 
         <hr style={{ borderTop: '1px solid #4444' }} />
@@ -102,7 +102,8 @@ export default function CategoryContent({ activeMain, data }: Props) {
                 title: article.title,
                 description: article.shortdescription,
                 slug: article.slug,
-                date:article.date
+                date: article.date,
+                category: article.category
               })),
             }}
           />
@@ -122,12 +123,8 @@ export default function CategoryContent({ activeMain, data }: Props) {
 
           </SectionWrapper>
 
-
-
         </div>
         <div className="col-md-3">
-
-
 
         </div>
       </div>

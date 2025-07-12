@@ -6,7 +6,8 @@ import { BiCalendar } from 'react-icons/bi';
 interface Article {
   title: string;
   slug: string;
-     date:string;
+  date: string;
+  category: string
 }
 
 interface MostPopularListProps {
@@ -18,7 +19,7 @@ const MostPopularList: React.FC<MostPopularListProps> = ({ data }) => {
     <SectionWrapper title="Most Popular">
       {data.map((article, index) => (
         <div key={index} className="mb-3 pb-3 border-bottom">
-          <Link href={`/details/${article.slug}`} className="text-decoration-none">
+          <Link href={`/${article.category}/${article.slug}`} className="text-decoration-none">
             <div className="d-flex align-items-start">
               <div className="fw-bold text-danger me-2">{index + 1}.</div>
               <div
@@ -33,17 +34,17 @@ const MostPopularList: React.FC<MostPopularListProps> = ({ data }) => {
               >
                 {article.title}
                 <div
-                                          className="d-flex align-items-center mt-1"
-                                          style={{
-                                            fontSize: '10px',          
-                                            fontWeight: 200,              
-                                            fontFamily: "'Rubik', Arial, sans-serif",
-                                          }}
-                                        >
-                                          <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
-                                          <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-                                          <span style={{ color: '#aaa', marginLeft: '4px' }}>{article.date}</span>
-                                        </div>
+                  className="d-flex align-items-center mt-1"
+                  style={{
+                    fontSize: '10px',
+                    fontWeight: 200,
+                    fontFamily: "'Rubik', Arial, sans-serif",
+                  }}
+                >
+                  <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+                  <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+                  <span style={{ color: '#aaa', marginLeft: '4px' }}>{article.date}</span>
+                </div>
               </div>
             </div>
           </Link>

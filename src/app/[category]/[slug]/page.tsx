@@ -24,10 +24,8 @@ interface PageProps {
 export default async function DetailPage({ params }: PageProps) {
   const article = getArticleBySlug(decodeURIComponent((await params).slug));
 
-  console.log((await params).slug)
 
   if ((await params).slug == 'wanda-vazquez-charges-dropped') {
-    console.log((await params).slug)
     return (
       <main className={`container ${styles.content}`}>
         <StaticComponent />
