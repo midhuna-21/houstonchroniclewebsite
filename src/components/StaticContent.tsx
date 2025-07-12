@@ -68,8 +68,6 @@ const StaticComponent = () => {
                 date="July 12, 2025"
                 name="Cameron Ellis"
                 role="Founding Editor"
-                bio="Cameron Ellis is a seasoned political journalist and editorial leader with more than a decade of experience reporting on American governance, media reform, and public policy. As the founding editor of ^^Houston Chronicle^^, he champions fact-first, reader-focused journalism that holds power to account and elevates underrepresented voices — all without paywalls, partisanship, or clickbait."
-                image="/images/cameron-ellis-author.webp"
             />
 
         <EditorsPicksSection data={EditorsData} />

@@ -5,21 +5,18 @@ import { FaXTwitter, FaBug, FaEnvelope } from 'react-icons/fa6';
 import React from 'react';
 import ArticleWrapper from './ArticleWrapper';
 import { parseRichText } from '@/lib/paresedUnderlineText';
+import Link from 'next/link';
 
 interface AuthorInfoProps {
   date: string;
   name: string;
   role: string;
-  bio: string;
-  image: string;
 }
 
 const AuthorInfo: React.FC<AuthorInfoProps> = ({
   date,
   name,
   role,
-  bio,
-  image,
 }) => {
   return (
     <ArticleWrapper>
@@ -29,14 +26,9 @@ const AuthorInfo: React.FC<AuthorInfoProps> = ({
 
       <div className="d-flex justify-content-between align-items-start flex-wrap gap-2">
         <div className="d-flex align-items-center gap-3">
-          <Image
-            src={image}
-            alt={name}
-            width={50}
-            height={50}
-            className="rounded-circle"
-          />
+        
           <div>
+               <Link href="/about-houston-chronicle">
             <div
               className="fw-bold text-dark"
               style={{
@@ -49,6 +41,7 @@ const AuthorInfo: React.FC<AuthorInfoProps> = ({
             >
               {name}
             </div>
+               </Link>
             <div
               className="text-uppercase"
               style={{
@@ -77,7 +70,7 @@ const AuthorInfo: React.FC<AuthorInfoProps> = ({
       </div>
 
       {/* Bio Section */}
-    <div
+    {/* <div
   className="mt-4"
   style={{
     backgroundColor: '#F8F9FA', 
@@ -98,7 +91,7 @@ const AuthorInfo: React.FC<AuthorInfoProps> = ({
   >
     {parseRichText(bio)}
   </span>
-</div>
+</div> */}
 
     </ArticleWrapper>
   );
