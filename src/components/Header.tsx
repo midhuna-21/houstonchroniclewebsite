@@ -188,9 +188,9 @@ export default function Header() {
                   onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
                 >
                   <Link
-                    href={`/category/${slugify(item.slug)}`}
+                    href={`/${slugify(item.slug)}`}
                     className="text-white text-decoration-none fw-bold w-100"
-                    onClick={() => setExpanded(false)} // close menu on click
+                    onClick={() => setExpanded(false)} 
                   >
                     {item.label}
                   </Link>

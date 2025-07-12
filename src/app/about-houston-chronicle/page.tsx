@@ -14,7 +14,9 @@ export default function AboutHoustonChroniclePage() {
             <main className="container" style={{ paddingTop: '60px', paddingBottom: '60px' }}>
                 <div className="row justify-content-center">
                     <div className="col-lg-10">
+ <div style={{ textAlign: 'justify', textJustify: 'inter-word' }}>
 
+ 
                         <section style={{ marginTop: '40px' }}>
                             <h2
                                 style={{
@@ -195,6 +197,7 @@ export default function AboutHoustonChroniclePage() {
                             </p>
                         </section>
                     </div>
+               </div>
                 </div>
             </main>
 
