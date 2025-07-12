@@ -1,6 +1,5 @@
 import fs from 'fs/promises';
 import path from 'path';
-import { slugToKeyMap } from '@/data/navData';
 import CategoryContent from '@/components/CategoryContent';
 import NavigationSection from '@/components/NavigationSection';
 import styles from './page.module.css';

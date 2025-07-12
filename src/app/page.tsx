@@ -46,7 +46,7 @@ export default function Home() {
       <main className="container px-3 px-lg-5 mt-4 content">
         <div className="mb-5">
           {/* <FirstHomeSection businessData={BusinessData.slice(0, 3)} /> */}
-          <FirstHomeSection data={[BusinessData[0], HealthData[0], SportsData[0]]} />
+          <FirstHomeSection data={[PoliticsData[0], HealthData[0], SportsData[0]]} />
 
           <hr
             style={{
@@ -55,7 +55,7 @@ export default function Home() {
               margin: '2rem 0',
             }}
           />
-          <FirstHomeSection data={[ScienceData[0], PoliticsData[0], TechnologyData[0]]} />
+          <FirstHomeSection data={[ScienceData[0], BusinessData[0], TechnologyData[0]]} />
 
         </div>
 

@@ -1,6 +1,6 @@
 import React from "react";
 import ArticleWrapper from "./ArticleWrapper";
-import { parseUnderlinedText } from "@/lib/paresedUnderlineText";
+import { parseRichText } from "@/lib/paresedUnderlineText";
 
 interface SingleParagraphProps {
   text: string;
@@ -15,28 +15,33 @@ const SingleParagraph: React.FC<SingleParagraphProps> = ({ text }) => {
 
   const grouped: string[] = [];
   for (let i = 0; i < sentences.length; i += 3) {
-    grouped.push(sentences.slice(i, i + 3).join(' '));
+    const paragraph = sentences.slice(i, i + 3).join(' ').trim();
+    if (paragraph.length > 0) {
+      grouped.push(paragraph);
+    }
   }
 
   return (
     <ArticleWrapper>
       {grouped.map((paragraph, index) => (
-        <p
+        <div
           key={index}
           style={{
-            color: "#000000",
+              textAlign: 'justify',
+            color: "#1C1C1C",
             fontSize: '18px',
-            fontFamily: "'Mullish', Verdana, sans-serif",
+            fontFamily: "'Merriweather', serif",
             fontWeight: 400,
-            marginBottom: '1cm',
-            padding: index === 2 ? '12px 16px' : '0', 
-            borderLeft: index === 2 ? '4px solid #B50021' : undefined,
-            backgroundColor: index === 2 ? '#fdf1f2' : undefined,
+            lineHeight: '1.75',
+            marginBottom: '1.5rem',
+            padding: index === 2 ? '12px 16px' : '0',
+            borderLeft: index === 2 ? '4px solid #4C6375' : undefined, 
+            backgroundColor: index === 2 ? '#F1F4F7' : undefined, 
             borderRadius: index === 2 ? '6px' : undefined,
           }}
         >
-          {parseUnderlinedText(paragraph)}
-        </p>
+          {parseRichText(paragraph)}
+        </div>
       ))}
     </ArticleWrapper>
   );
