@@ -89,7 +89,7 @@ const Signup: React.FC = () => {
                 fontFamily: "'Rubik', Arial, sans-serif",
               }}
             >
-              Never miss a Houston story with news briefings throughout the day.
+              Never miss a Tangent Weekly story with news briefings throughout the day.
             </p>
           </div>
 

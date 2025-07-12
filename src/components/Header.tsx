@@ -123,7 +123,7 @@ export default function Header() {
                     lineHeight: 1,
                   }}
                 >
-                  HOUSTON <span style={{ color: '#ffc107', fontSize: '24px', margin: '0 2px' }}>★</span> CHRONICLE
+                  TANGENT WEEKLY
                 </h1>
               </Link>
             </div>
@@ -135,7 +135,7 @@ export default function Header() {
                 className="m-0 fw-bold text-white"
                 style={{ fontFamily: 'monospace', fontSize: '30px' }}
               >
-                HOUSTON<span style={{ color: '#ffc107', fontSize: '60px' }}>★</span>CHRONICLE
+                TANGENT WEEKLY
               </h1>
             </Link>
           </div>

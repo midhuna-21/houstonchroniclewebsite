@@ -28,7 +28,7 @@ const AuthorInfo: React.FC<AuthorInfoProps> = ({
         <div className="d-flex align-items-center gap-3">
         
           <div>
-               <Link href="/about-houston-chronicle">
+               <Link href="/about-tangent-weekly">
             <div
               className="fw-bold text-dark"
               style={{
