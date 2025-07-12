@@ -1,6 +1,6 @@
 import React from "react";
 import ArticleWrapper from "./ArticleWrapper";
-import { parseUnderlinedText } from "@/lib/paresedUnderlineText";
+import { parseRichText } from "@/lib/paresedUnderlineText";
 
 interface ImportantParagraphProps {
   label: string;
@@ -29,7 +29,7 @@ const ImportantParagraph: React.FC<ImportantParagraphProps> = ({ label, descript
           fontWeight: 400
           }}
         >
-           {parseUnderlinedText(description)}
+           {parseRichText(description)}
         </span>
       </p>
     </ArticleWrapper>
