@@ -26,16 +26,20 @@ export default function StaticFirstSection({
     width: '100%',
     maxWidth: '1280px', 
     overflow: 'hidden',
+    aspectRatio: '20 / 12.5' 
   }}
 >
+  <div className="relative w-full h-[300px] lg:h-[600px]">
   <Image
     src={image}
     alt={category}
-    width={1280}          
-    height={600}          
-    className="w-100"
-    style={{ objectFit: 'cover' }}
+    fill
+    className="object-cover"
+    sizes="(max-width: 1024px) 100vw, 1280px"
   />
+</div>
+
+
 </div>
 
 
