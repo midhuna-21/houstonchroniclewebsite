@@ -40,7 +40,7 @@ export default function Footer() {
         <div className="row pt-2 pb-2 align-items-stretch gx-2">
           <div className="col-md-2 mb-2 border-end  d-flex flex-column align-items-start px-2">
             <h1 className="m-0 fw-bold text-white" style={{ fontFamily: 'monospace', fontSize: '1.1rem' }}>
-              TANGENT <span style={{ color: '#ffc107' }}>★</span> WEEKLY
+              TANGENT WEEKLY
             </h1>
             <div className="d-flex gap-2 mt-2">
               {[FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn].map((Icon, i) => (
