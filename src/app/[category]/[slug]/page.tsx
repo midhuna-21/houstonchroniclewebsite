@@ -180,12 +180,11 @@ type Article = {
   date:string;
 };
 
+
 interface PageProps {
-  params: {
-    category: string;
-    slug: string;
-  };
+  params: Promise<{ category: string, slug: string }>;
 }
+
 
 export async function generateStaticParams() {
   const allData = [
@@ -205,8 +204,9 @@ export async function generateStaticParams() {
   );
 }
 
-export async function generateMetadata({ params }: { params: { category: string; slug: string } }): Promise<Metadata> {
-  const { category, slug } = params;
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { category, slug } = await params;
 
   const allDataMap: Record<string, Article[]> = {
     politics: politicsData,
@@ -322,7 +322,7 @@ export async function generateMetadata({ params }: { params: { category: string;
 }
 
 export default async function DetailPage({ params }: PageProps) {
-  const { category, slug } = params;
+  const { category, slug } = await params;
 
   const allDataMap: Record<string, Article[]> = {
     politics: politicsData,
