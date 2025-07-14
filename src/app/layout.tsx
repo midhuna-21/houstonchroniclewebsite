@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from '@/components/Header';
@@ -14,19 +15,55 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+
 export const metadata: Metadata = {
-  title: "TangentWeekly | Breaking News, Politics, Tech, and Science",
-  description: "Tangent Weekly brings you in-depth, fact-driven journalism on U.S. politics",
-  keywords: ["TangentWeekly", "best political news", "tech news", "science journalism", "independent media"],
+  metadataBase: new URL("https://www.tangentweekly.com/"),
+  title: "Breaking News, Politics, Tech, and Science",
+  description:
+    "Get the latest breaking news, in-depth business analysis, and expert financial insights covering market trends, investment strategies, and global updates.",
+  keywords:
+    "Latest business updates, political insights, global financial news, investment opportunities, 2025 market forecasts, private equity trends, venture capital insights, crypto market updates, blockchain innovations, AI and tech startups, green finance, ESG strategies, stock trading tips, smart investment planning",
   openGraph: {
-    title: "TangentWeekly | The Best U.S. Politics & Tech News Source",
-    description: "Get the latest, most reliable reporting from TangentWeekly on U.S. politics, technology, science, and more.",
-    url: "https://www.tangentweekly.com",
-    siteName: "TangentWeekly",
+    title: "Business,Politics,Technology,Health,Science,Sports",
+    description:
+      "Stay informed with the latest breaking news, global business trends, financial strategies, investment opportunities, and expert market analysis.",
+    url: "https://www.tangentweekly.com/",
+    siteName: "tangentweekly",
+    images: [
+      {
+        url: "https://www.tangentweekly.com/images/nyc-report-logo.webp",
+        width: 1024,
+        height: 1024,
+        alt: "tangentweekly Logo",
+      },
+    ],
     type: "website",
-    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Business,Politics,Technology,Health,Science,Sports",
+    description:
+      "Stay informed with the latest breaking news, global business trends, financial strategies, investment opportunities, and expert market analysis.",
+    images:
+      "https://www.tangentweekly.com/images/nyc-report-logo.webp",
+  },
+  alternates: {
+    canonical: "https://www.tangentweekly.com/",
+    languages: {
+      en: "https://www.tangentweekly.com/",
+      "x-default": "https://www.tangentweekly.com/",
+    },
+  },
+  other: {
+    author: "cameron ellis",
+  },
+  icons: {
+    icon: "/favicon.ico",
   },
 };
+
+
+
 
 export default function RootLayout({
   children,
@@ -35,12 +72,83 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+         <Script
+          id="structured-data-newsmediaorganization"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "NewsMediaOrganization",
+                "@id": "https://www.tangentweekly.com/#organization",
+                name: "Tangent Weekly",
+                url: "https://www.tangentweekly.com/",
+                logo: {
+                  "@type": "ImageObject",
+                  url: "https://www.tangentweekly.com/images/nyc-report-logo.webp",
+                  width: 1024,
+                  height: 1024,
+                },
+                contactPoint: {
+                  "@type": "ContactPoint",
+                  contactType: "Customer Service",
+                  areaServed: "US",
+                  availableLanguage: ["English"],
+                },
+               
+                sameAs: ["https://www.tangentweekly.com/"],
+              },
+              null,
+              2
+            ),
+          }}
+        />
+
+          <Script
+          id="structured-data-site-navigation"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "SiteNavigationElement",
+                name: [
+                  "Home",
+                  "Business",
+                  "Politics",
+                  "Technology",
+                  "Science",
+                  "Sports",
+                  "Health"
+                ],
+                url: [
+                  "https://www.tangentweekly.com/",
+                  "https://www.tangentweekly.com/business/",
+                  "https://www.tangentweekly.com/technology/",
+                  "https://www.tangentweekly.com/politics/",
+                  "https://www.tangentweekly.com/health/",
+                  "https://www.tangentweekly.com/science/",
+                  "https://www.tangentweekly.com/sports",
+                 
+                ],
+              },
+              null,
+              2
+            ),
+          }}
+        />
+         <meta name="robots" content="index, follow, max-image-preview:large" />
+        <meta name="googlebot" content="index, follow" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Header />
-      <div>
-  {children}
-</div>
-
+        <div>
+          {children}
+        </div>
         <Footer />
       </body>
     </html>
