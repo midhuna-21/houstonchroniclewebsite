@@ -2,12 +2,12 @@ import Link from 'next/link';
 import { slugify } from '../utils/slugify';
 
 const NavItems = [
-  { label: 'Business', slug: 'business' },
-  { label: 'Technology', slug: 'technology' },
-  { label: 'Sports', slug: 'sports' },
-  { label: 'Health', slug: 'health' },
-  { label: 'Science', slug: 'science' },
-  { label: 'Politics', slug: 'politics' },
+  { label: 'Business', category: 'business' },
+  { label: 'Technology', category: 'technology' },
+  { label: 'Sports', category: 'sports' },
+  { label: 'Health', category: 'health' },
+  { label: 'Science', category: 'science' },
+  { label: 'Politics', category: 'politics' },
 ];
 
 export default function NavigationSection() {
@@ -34,13 +34,10 @@ export default function NavigationSection() {
           gap: '3rem',
         }}
       >
-       {NavItems.map((item) => {
-                const href = `/sports`;
-                
-                return (
-                  <Link
-                    key={item.slug}
-                    href={href}
+        {NavItems.map((item) => (
+          <Link
+            key={item.category}
+            href={`/${item.category}`}
             className="text-dark text-decoration-none"
             style={{
               whiteSpace: 'nowrap',
@@ -49,7 +46,7 @@ export default function NavigationSection() {
           >
             {item.label}
           </Link>
-       )})}
+         ))}
       </div>
     </div>
   );

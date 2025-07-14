@@ -130,20 +130,21 @@ export default function Header() {
             </div>
           </div>
 
-          <div className="d-none d-lg-block position-absolute top-50 start-50 translate-middle">
-            <Link href="/" className="text-decoration-none d-inline-block">
-              <Image
-                src="/images/tangent-weekly-logo.webp"
-                alt="Tangent Weekly Logo"
-                width={300}
-                height={300}
-                style={{
-                  objectFit: "contain",
-                  display: "block",
-                }}
-              />
-            </Link>
-          </div>
+         <div className="d-none d-lg-block position-absolute top-50 start-50 translate-middle">
+  <Link href="/" className="text-decoration-none d-inline-block">
+    <Image
+      src="/images/tangent-weekly-logo.webp"
+      alt="Tangent Weekly Logo"
+      width={160}         // ✅ Set an appropriate width
+      height={40}         // ✅ Height proportional
+      style={{
+        objectFit: "contain",
+        display: "block",
+      }}
+    />
+  </Link>
+</div>
+
         </Container>
       </Navbar>
 
