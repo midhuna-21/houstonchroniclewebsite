@@ -3,6 +3,7 @@ import path from 'path';
 import CategoryContent from '@/components/CategoryContent';
 import NavigationSection from '@/components/NavigationSection';
 import styles from './page.module.css';
+import { notFound } from 'next/navigation';
 
 export async function generateStaticParams() {
     return [
@@ -25,6 +26,8 @@ export default async function CategoryPage({
     const filePath = path.join(process.cwd(), 'public', 'data', `${category}.json`);
     const fileContents = await fs.readFile(filePath, 'utf-8');
     const jsonData = JSON.parse(fileContents);
+
+    if (!jsonData) return notFound();
 
     return (
         <>

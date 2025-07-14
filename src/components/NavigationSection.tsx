@@ -34,10 +34,13 @@ export default function NavigationSection() {
           gap: '3rem',
         }}
       >
-        {NavItems.map((item) => (
-          <Link
-            key={item.slug}
-            href={`/${slugify(item.slug)}`}
+       {NavItems.map((item) => {
+                const href = `/sports`;
+                
+                return (
+                  <Link
+                    key={item.slug}
+                    href={href}
             className="text-dark text-decoration-none"
             style={{
               whiteSpace: 'nowrap',
@@ -46,7 +49,7 @@ export default function NavigationSection() {
           >
             {item.label}
           </Link>
-        ))}
+       )})}
       </div>
     </div>
   );
