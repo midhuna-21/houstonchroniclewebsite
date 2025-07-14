@@ -15,8 +15,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "tangentweekly",
+  title: "TangentWeekly | Breaking News, Politics, Tech, and Science",
   description: "Tangent Weekly brings you in-depth, fact-driven journalism on U.S. politics",
+  keywords: ["TangentWeekly", "best political news", "tech news", "science journalism", "independent media"],
+  openGraph: {
+    title: "TangentWeekly | The Best U.S. Politics & Tech News Source",
+    description: "Get the latest, most reliable reporting from TangentWeekly on U.S. politics, technology, science, and more.",
+    url: "https://www.tangentweekly.com",
+    siteName: "TangentWeekly",
+    type: "website",
+    locale: "en_US",
+  },
 };
 
 export default function RootLayout({
@@ -28,7 +37,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Header />
-    
       <div>
   {children}
 </div>
