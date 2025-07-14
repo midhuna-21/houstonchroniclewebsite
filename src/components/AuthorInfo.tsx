@@ -1,10 +1,8 @@
 'use client';
 
-import Image from 'next/image';
 import { FaXTwitter, FaBug, FaEnvelope } from 'react-icons/fa6';
 import React from 'react';
 import ArticleWrapper from './ArticleWrapper';
-import { parseRichText } from '@/lib/paresedUnderlineText';
 import Link from 'next/link';
 
 interface AuthorInfoProps {

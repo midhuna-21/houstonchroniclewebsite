@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import SectionWrapper from './SectionWrapper';
 import Link from 'next/link';
 import { BiCalendar } from 'react-icons/bi';

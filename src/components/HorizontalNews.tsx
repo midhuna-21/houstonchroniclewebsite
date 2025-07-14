@@ -20,7 +20,6 @@ const HorizontalNews: React.FC<HorizontalNewsProps> = ({ data }) => {
         {data.slice(0, 4).map((item, idx) => (
           <div key={idx} className="col-12 col-sm-6 col-lg-3">
             <Link href={`/${item.category}/${item.slug}`} className='text-decoration-none'>
-
               <div
                 className="h-100 text-start pe-3"
                 style={{

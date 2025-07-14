@@ -20,8 +20,6 @@ interface StaticHeaderProps {
 const StaticHeader: React.FC<StaticHeaderProps> = ({
     category,
     title,
-    author,
-    role,
     date,
 }) => {
     return (

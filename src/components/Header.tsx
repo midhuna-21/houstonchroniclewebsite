@@ -112,21 +112,6 @@ export default function Header() {
 
             {/* Mobile */}
             <div className="d-lg-none">
-              {/* <Link href="/" className="text-decoration-none">
-                <h1
-                  className="m-0 fw-bold text-white"
-                  style={{
-                    fontFamily: 'monospace',
-                    fontSize: '18px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    lineHeight: 1,
-                  }}
-                >
-                  TANGENT WEEKLY
-                </h1>
-              </Link> */}
-
               <Link href="/" className="text-decoration-none d-inline-block">
                 <Image
                   src=""
@@ -143,21 +128,19 @@ export default function Header() {
           </div>
 
           <div className="d-none d-lg-block position-absolute top-50 start-50 translate-middle">
-  <Link href="/" className="text-decoration-none d-inline-block">
-    <Image
-      src="" 
-      alt="Tangent Weekly Logo"
-      width={200} 
-      height={60} 
-      style={{
-        objectFit: "contain",
-        display: "block",
-      }}
-    />
-  </Link>
-</div>
-
-
+            <Link href="/" className="text-decoration-none d-inline-block">
+              <Image
+                src=""
+                alt="Tangent Weekly Logo"
+                width={200}
+                height={60}
+                style={{
+                  objectFit: "contain",
+                  display: "block",
+                }}
+              />
+            </Link>
+          </div>
         </Container>
       </Navbar>
 
@@ -184,14 +167,6 @@ export default function Header() {
                 }}
               />
             </div>
-
-            {/* <button
-        className="btn btn-danger w-100 fw-bold mb-3"
-        onClick={() => setExpanded(false)}
-      >
-        Subscribe
-      </button> */}
-
             <ul className="list-unstyled">
               {NavItems.map((item) => (
                 <li
@@ -214,7 +189,6 @@ export default function Header() {
                 </li>
               ))}
             </ul>
-
           </div>
 
           {/* 👇 Desktop-specific */}

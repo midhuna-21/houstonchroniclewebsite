@@ -1,5 +1,4 @@
 import React from "react";
-import SectionWrapper from "./SectionWrapper";
 import Link from "next/link";
 import { BiCalendar } from "react-icons/bi";
 import Image from "next/image";

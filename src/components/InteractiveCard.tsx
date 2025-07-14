@@ -10,8 +10,8 @@ interface InteractiveCardProps {
     title: string;
     shortdescription: string;
     image: string;
-    slug:string;
-       date:string;
+    slug: string;
+    date: string;
   };
 }
 
@@ -26,71 +26,70 @@ const InteractiveCard: React.FC<InteractiveCardProps> = ({ data }) => {
         backgroundColor: '#fff',
       }}
     >
-            <Link href={`/${data.category}/${data.slug}`} className='text-decoration-none'>
-
-      <div style={{ position: 'relative' }}>
-        <Image
-          src={data.image}
-          alt={data.title}
-          width={400}
-          height={240}
-          style={{ width: '100%', height: 'auto', display: 'block' }}
-        />
-        <div
-          style={{
-            position: 'absolute',
-            bottom: '-15px',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            backgroundColor: '#000',
-            color: '#fff',
-            padding: '6px 18px',
-            fontSize: '0.75rem',
-            fontWeight: 'bold',
-            letterSpacing: '2px',
-            textTransform: 'uppercase',
-          }}
-        >
-          {data.category}
-        </div>
-      </div>
-
-      <div style={{ padding: '2rem 1rem 1rem', textAlign: 'center' }}>
-        <h5 style={{ fontWeight: 'bold', marginBottom: '1rem',color:"#111111" }}>{data.title}</h5>
-        <hr
-          style={{
-            
-            width: '40px',
-            margin: '0 auto 1rem',
-            borderTop: '2px solid #ccc',
-          }}
-        />
-        <p
-          style={{
-            fontSize: '0.95rem',
-            color: '#333',
-            display: '-webkit-box',
-            WebkitLineClamp: 2,
-            WebkitBoxOrient: 'vertical',
-            overflow: 'hidden',
-            textOverflow: 'ellipsis',
-          }}
-        >
-          {data.shortdescription}
-        </p>
+      <Link href={`/${data.category}/${data.slug}`} className='text-decoration-none'>
+        <div style={{ position: 'relative' }}>
+          <Image
+            src={data.image}
+            alt={data.title}
+            width={400}
+            height={240}
+            style={{ width: '100%', height: 'auto', display: 'block' }}
+          />
           <div
-                                                  className="d-flex align-items-center mt-1"
-                                                  style={{
-                                                    fontSize: '10px',          
-                                                    fontWeight: 200,              
-                                                    fontFamily: "'Rubik', Arial, sans-serif",
-                                                  }}
-                                                >
-                                                  <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
-                                                  <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-                                                  <span style={{ color: '#aaa', marginLeft: '4px' }}>{data.date}</span>
-                                                </div>
-      </div>
+            style={{
+              position: 'absolute',
+              bottom: '-15px',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              backgroundColor: '#000',
+              color: '#fff',
+              padding: '6px 18px',
+              fontSize: '0.75rem',
+              fontWeight: 'bold',
+              letterSpacing: '2px',
+              textTransform: 'uppercase',
+            }}
+          >
+            {data.category}
+          </div>
+        </div>
+
+        <div style={{ padding: '2rem 1rem 1rem', textAlign: 'center' }}>
+          <h5 style={{ fontWeight: 'bold', marginBottom: '1rem', color: "#111111" }}>{data.title}</h5>
+          <hr
+            style={{
+
+              width: '40px',
+              margin: '0 auto 1rem',
+              borderTop: '2px solid #ccc',
+            }}
+          />
+          <p
+            style={{
+              fontSize: '0.95rem',
+              color: '#333',
+              display: '-webkit-box',
+              WebkitLineClamp: 2,
+              WebkitBoxOrient: 'vertical',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+            }}
+          >
+            {data.shortdescription}
+          </p>
+          <div
+            className="d-flex align-items-center mt-1"
+            style={{
+              fontSize: '10px',
+              fontWeight: 200,
+              fontFamily: "'Rubik', Arial, sans-serif",
+            }}
+          >
+            <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+            <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+            <span style={{ color: '#aaa', marginLeft: '4px' }}>{data.date}</span>
+          </div>
+        </div>
       </Link>
     </div>
   );

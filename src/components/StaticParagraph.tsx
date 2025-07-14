@@ -1,7 +1,6 @@
 'use client';
 
 import React from "react";
-import { motion } from "framer-motion";
 import ArticleWrapper from "./ArticleWrapper";
 import { parseRichText } from "@/lib/paresedUnderlineText";
 
@@ -31,7 +30,7 @@ const StaticParagraph: React.FC<StaticParagraphProps> = ({ data }) => {
           {data.subheading}
         </h2>
       )}
-  <div
+      <div
         style={{
           textAlign: 'justify',
           fontFamily: "'Merriweather', serif",
@@ -42,7 +41,7 @@ const StaticParagraph: React.FC<StaticParagraphProps> = ({ data }) => {
       >
         {parseRichText(data?.description)}
       </div>
-      </ArticleWrapper>
+    </ArticleWrapper>
   );
 };
 
