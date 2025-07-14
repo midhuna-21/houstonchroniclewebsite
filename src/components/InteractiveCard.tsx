@@ -55,7 +55,7 @@ const InteractiveCard: React.FC<InteractiveCardProps> = ({ data }) => {
         </div>
 
         <div style={{ padding: '2rem 1rem 1rem', textAlign: 'center' }}>
-          <h5 style={{ fontWeight: 'bold', marginBottom: '1rem', color: "#111111" }}>{data.title}</h5>
+          <h2 style={{ fontWeight: 'bold', marginBottom: '1rem', color: "#111111" }}>{data.title}</h2>
           <hr
             style={{
 

@@ -95,13 +95,13 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
         <div className="col-md-5">
           <Link href={`/${mainItem.category}/${mainItem.slug}`} className='text-decoration-none' title={`${mainItem.slug}`}>
 
-            <h4 style={{
+            <h5 style={{
               color: '#111111',
               fontSize: '18px',
               fontFamily: "'Archivo', Arial, sans-serif",
               fontWeight: 700
             }}
-            >{mainItem.title}</h4>
+            >{mainItem.title}</h5>
             {mainItem.shortdescription && <p style={{
               color: "#444444",
               fontSize: '16px',

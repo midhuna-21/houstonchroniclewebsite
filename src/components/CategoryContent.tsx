@@ -94,10 +94,8 @@ export default function CategoryContent({ activeMain, data }: Props) {
 
         </div>
         <div className="col-md-3">
-
         </div>
       </div>
-
     </div>
 
   );

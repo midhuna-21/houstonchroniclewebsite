@@ -26,7 +26,7 @@ const CategoryNewsCard: React.FC<CategoryNewsCardProps> = ({ data }) => {
 
         <div className="row align-items-start">
           <div className="col-12 col-md-9">
-            <h4
+            <h5
               style={{
                 fontSize: '22.784px',
                 fontWeight: 700,
@@ -36,7 +36,7 @@ const CategoryNewsCard: React.FC<CategoryNewsCardProps> = ({ data }) => {
               }}
             >
               {title}
-            </h4>
+            </h5>
             <p
               style={{
                 fontSize: '16px',

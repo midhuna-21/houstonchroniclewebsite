@@ -72,7 +72,6 @@ const StaticComponent = () => {
 
         <EditorsPicksSection data={EditorsData} />
 
-
         </div>
     );
 };

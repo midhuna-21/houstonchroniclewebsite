@@ -219,11 +219,8 @@ export default function Home() {
               <LottoCard data={ColumnsFromPastData[0]} />
             </div>
             <div className="col-md-3">
-
             </div>
           </div>
-
-
         </main>
 
         <div style={{ marginBottom: '1.5rem' }} />

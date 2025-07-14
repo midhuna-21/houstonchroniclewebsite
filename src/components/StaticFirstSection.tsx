@@ -19,29 +19,26 @@ export default function StaticFirstSection({
       <div className="col-md-10">
 
         <div
-  className="mt-4"
-  style={{
-    marginBottom: '20px',
-    position: 'relative',
-    width: '100%',
-    maxWidth: '1280px', 
-    overflow: 'hidden',
-    aspectRatio: '20 / 12.5' 
-  }}
->
-  <div className="relative w-full h-[300px] lg:h-[600px]">
-  <Image
-    src={image}
-    alt={category}
-    fill
-    className="object-cover"
-    sizes="(max-width: 1024px) 100vw, 1280px"
-  />
-</div>
-
-
-</div>
-
+          className="mt-4"
+          style={{
+            marginBottom: '20px',
+            position: 'relative',
+            width: '100%',
+            maxWidth: '1280px',
+            overflow: 'hidden',
+            aspectRatio: '20 / 12.5'
+          }}
+        >
+          <div className="relative w-full h-[300px] lg:h-[600px]">
+            <Image
+              src={image}
+              alt={category}
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 1280px"
+            />
+          </div>
+        </div>
 
         <div style={{ marginBottom: '48px' }}>
           <p

@@ -62,7 +62,7 @@ const NewsGrid: React.FC<NewsGridProps> = ({ data }) => {
               </div>
             </div>
 
-            <h3
+            <h2
               style={{
                 color: '#111111',
                 fontFamily: "'Archivo', Arial, sans-serif",
@@ -72,7 +72,7 @@ const NewsGrid: React.FC<NewsGridProps> = ({ data }) => {
               }}
             >
               {main.title}
-            </h3>
+            </h2>
 
             <hr
               style={{

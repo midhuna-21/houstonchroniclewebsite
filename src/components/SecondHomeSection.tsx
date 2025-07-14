@@ -45,8 +45,8 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
                   fontFamily: "'Rubik', Arial, sans-serif"
                 }}>{item1.category}</p>
 
-                <h5 style={{ fontSize: '22.784px', color: '#111111', fontWeight: 700, fontFamily: "'Archivo', Arial, sans-serif", }}
-                >{item1.title}</h5>
+                <h1 style={{ fontSize: '22.784px', color: '#111111', fontWeight: 700, fontFamily: "'Archivo', Arial, sans-serif", }}
+                >{item1.title}</h1>
 
                 <div
                   className="d-flex align-items-center mt-1"
@@ -74,8 +74,8 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
                   fontFamily: "'Rubik', Arial, sans-serif"
                 }}
                 >{item2.category}</p>
-                <h5 style={{ fontSize: '22.784px', color: '#111111', fontWeight: 700, fontFamily: "'Archivo', Arial, sans-serif", }}
-                >{item2.title}</h5>
+                <h2 style={{ fontSize: '22.784px', color: '#111111', fontWeight: 700, fontFamily: "'Archivo', Arial, sans-serif", }}
+                >{item2.title}</h2>
                 <p style={{ fontSize: '16px', color: '#444444', fontWeight: 400, fontFamily: "'Rubik', Arial, sans-serif" }}
                 >{item2.shortdescription}</p>
                 <div
@@ -117,8 +117,8 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
                   fontFamily: "'Rubik', Arial, sans-serif"
                 }}
                 >{item3.category}</p>
-                <h5 style={{ fontSize: '22.784px', color: '#111111', fontWeight: 700, fontFamily: "'Archivo', Arial, sans-serif", }}
-                >{item3.title}</h5>
+                <h2 style={{ fontSize: '22.784px', color: '#111111', fontWeight: 700, fontFamily: "'Archivo', Arial, sans-serif", }}
+                >{item3.title}</h2>
                 <Image
                   src={item3.image}
                   alt={item3.title}
@@ -151,8 +151,8 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
                     fontWeight: 700,
                     fontFamily: "'Rubik', Arial, sans-serif"
                   }}>{item4.category}</p>
-                <h5 style={{ fontSize: '22.784px', color: '#111111', fontWeight: 700, fontFamily: "'Archivo', Arial, sans-serif", }}
-                >{item4.title}</h5>
+                <h2 style={{ fontSize: '22.784px', color: '#111111', fontWeight: 700, fontFamily: "'Archivo', Arial, sans-serif", }}
+                >{item4.title}</h2>
                 <p style={{ fontSize: '16px', color: '#444444', fontWeight: 400, fontFamily: "'Rubik', Arial, sans-serif" }}
                 >{item4.shortdescription}</p>
                 <div

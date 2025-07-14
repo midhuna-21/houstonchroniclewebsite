@@ -40,7 +40,7 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
                 {main.category}
               </p>
 
-              <h1
+              <span
                 style={{
                   color: '#111111',
                   fontSize: '22.784px',
@@ -49,7 +49,7 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
                 }}
               >
                 {main.title}
-              </h1>
+              </span>
 
               <p
                 className="text-muted mb-3"
@@ -113,7 +113,7 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
         {/* Right Section*/}
         <div className="col-md-3 ps-3 text-start order-2">
           {/* Right Item 1 */}
-          <Link href={`/${right1.category}/${right1.slug}`} className='text-decoration-none'>
+          <Link href={`/${right1.category}/${right1.slug}`} className='text-decoration-none' title={`${right1.slug}`}>
             <div style={{ marginBottom: '14px' }}>
               {right1.image && (
                 <Image
