@@ -95,7 +95,7 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
 
                 <Image
                   src={main.image}
-                  alt=""
+                  alt={main.category}
                   width={1000}
                   height={400}
                   className="img-fluid"

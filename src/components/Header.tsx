@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Navbar, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { slugify } from '../utils/slugify';
-
+import Image from "next/image";
 
 const NavItems = [
   { label: 'Business', slug: 'business' },
@@ -34,35 +34,35 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
- const toggleIcon = expanded ? (
-  <span
-    style={{
-      fontSize: '24px',
-      color: '#fff',
-      fontWeight: 'bold',
-      display: 'inline-block',
-      lineHeight: 1,
-      transition: 'transform 0.3s ease',
-    }}
-  >
-    ×
-  </span>
-) : (
-  <span
-    style={{
-      backgroundImage:
-        "url(\"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E\")",
-      filter: isHovered ? 'brightness(70%)' : 'brightness(100%)',
-      width: '18px',
-      height: '18px',
-      display: 'inline-block',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-      backgroundSize: '100%',
-      transition: 'filter 0.3s ease',
-    }}
-  />
-);
+  const toggleIcon = expanded ? (
+    <span
+      style={{
+        fontSize: '24px',
+        color: '#fff',
+        fontWeight: 'bold',
+        display: 'inline-block',
+        lineHeight: 1,
+        transition: 'transform 0.3s ease',
+      }}
+    >
+      ×
+    </span>
+  ) : (
+    <span
+      style={{
+        backgroundImage:
+          "url(\"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E\")",
+        filter: isHovered ? 'brightness(70%)' : 'brightness(100%)',
+        width: '18px',
+        height: '18px',
+        display: 'inline-block',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        backgroundSize: '100%',
+        transition: 'filter 0.3s ease',
+      }}
+    />
+  );
 
 
   return (
@@ -112,7 +112,7 @@ export default function Header() {
 
             {/* Mobile */}
             <div className="d-lg-none">
-              <Link href="/" className="text-decoration-none">
+              {/* <Link href="/" className="text-decoration-none">
                 <h1
                   className="m-0 fw-bold text-white"
                   style={{
@@ -125,20 +125,37 @@ export default function Header() {
                 >
                   TANGENT WEEKLY
                 </h1>
+              </Link> */}
+
+              <Link href="/" className="text-decoration-none d-inline-block">
+                <Image
+                  src=""
+                  alt="Tangent Weekly Logo"
+                  width={140}
+                  height={40}
+                  style={{
+                    objectFit: "contain",
+                    display: "block",
+                  }}
+                />
               </Link>
             </div>
           </div>
 
           <div className="d-none d-lg-block position-absolute top-50 start-50 translate-middle">
-            <Link href="/" className="text-decoration-none">
-              <h1
-                className="m-0 fw-bold text-white"
-                style={{ fontFamily: 'monospace', fontSize: '30px' }}
-              >
-                TANGENT WEEKLY
-              </h1>
-            </Link>
-          </div>
+  <Link href="/" className="text-decoration-none d-inline-block">
+    <Image
+      src="" 
+      alt="Tangent Weekly Logo"
+      width={200} 
+      height={60} 
+      style={{
+        objectFit: "contain",
+        display: "block",
+      }}
+    />
+  </Link>
+</div>
 
 
         </Container>
@@ -190,7 +207,7 @@ export default function Header() {
                   <Link
                     href={`/${slugify(item.slug)}`}
                     className="text-white text-decoration-none fw-bold w-100"
-                    onClick={() => setExpanded(false)} 
+                    onClick={() => setExpanded(false)}
                   >
                     {item.label}
                   </Link>
