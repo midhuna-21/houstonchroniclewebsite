@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: "tangentweekly",
     images: [
       {
-        url: "https://www.tangentweekly.com/images/nyc-report-logo.webp",
+        url: "https://www.tangentweekly.com/images/tangent-weekly-logo.webp",
         width: 1024,
         height: 1024,
         alt: "tangentweekly Logo",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     description:
       "Stay informed with the latest breaking news, global business trends, financial strategies, investment opportunities, and expert market analysis.",
     images:
-      "https://www.tangentweekly.com/images/nyc-report-logo.webp",
+      "https://www.tangentweekly.com/images/tangent-weekly-logo.webp",
   },
   alternates: {
     canonical: "https://www.tangentweekly.com/",
@@ -73,7 +73,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-         <Script
+        <Script
           id="structured-data-newsmediaorganization"
           type="application/ld+json"
           strategy="afterInteractive"
@@ -87,7 +87,7 @@ export default function RootLayout({
                 url: "https://www.tangentweekly.com/",
                 logo: {
                   "@type": "ImageObject",
-                  url: "https://www.tangentweekly.com/images/nyc-report-logo.webp",
+                  url: "https://www.tangentweekly.com/images/tangent-weekly-logo.webp",
                   width: 1024,
                   height: 1024,
                 },
@@ -97,7 +97,7 @@ export default function RootLayout({
                   areaServed: "US",
                   availableLanguage: ["English"],
                 },
-               
+
                 sameAs: ["https://www.tangentweekly.com/"],
               },
               null,
@@ -106,7 +106,7 @@ export default function RootLayout({
           }}
         />
 
-          <Script
+        <Script
           id="structured-data-site-navigation"
           type="application/ld+json"
           strategy="afterInteractive"
@@ -132,7 +132,7 @@ export default function RootLayout({
                   "https://www.tangentweekly.com/health/",
                   "https://www.tangentweekly.com/science/",
                   "https://www.tangentweekly.com/sports",
-                 
+
                 ],
               },
               null,
@@ -140,7 +140,7 @@ export default function RootLayout({
             ),
           }}
         />
-         <meta name="robots" content="index, follow, max-image-preview:large" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
         <meta name="googlebot" content="index, follow" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       </head>

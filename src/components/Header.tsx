@@ -84,8 +84,7 @@ export default function Header() {
         className="text-white"
       >
         <Container fluid className="p-0 d-flex justify-content-between align-items-center position-relative">
-
-          <div className="d-flex align-items-center gap-3">
+          <div className="d-flex align-items-center" style={{ gap: '0.4rem' }}>
             {/* Toggle button */}
             <button
               onClick={() => setExpanded(!expanded)}
@@ -110,17 +109,21 @@ export default function Header() {
               {toggleIcon}
             </button>
 
-            {/* Mobile */}
-            <div className="d-lg-none">
-              <Link href="/" className="text-decoration-none d-inline-block">
+            {/* Mobile Logo */}
+            <div className="d-lg-none d-flex align-items-center" style={{ height: '100%' }}>
+              <Link href="/" className="text-decoration-none d-inline-block" style={{ height: '100%' }}>
                 <Image
-                  src=""
+                  src="/images/tangent-weekly-logo.webp"
                   alt="Tangent Weekly Logo"
-                  width={140}
-                  height={40}
+                  width={0}
+                  height={0}
+                  sizes="auto"
                   style={{
-                    objectFit: "contain",
-                    display: "block",
+                    height: '100%',
+                    width: 'auto',
+                    maxHeight: '28px',
+                    objectFit: 'contain',
+                    display: 'block',
                   }}
                 />
               </Link>
@@ -130,10 +133,10 @@ export default function Header() {
           <div className="d-none d-lg-block position-absolute top-50 start-50 translate-middle">
             <Link href="/" className="text-decoration-none d-inline-block">
               <Image
-                src=""
+                src="/images/tangent-weekly-logo.webp"
                 alt="Tangent Weekly Logo"
-                width={200}
-                height={60}
+                width={300}
+                height={300}
                 style={{
                   objectFit: "contain",
                   display: "block",

@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import Link from 'next/link';
 import { slugify } from '../utils/slugify';
+import Image from 'next/image';
 
 export default function Footer() {
   useEffect(() => {
@@ -39,9 +40,15 @@ export default function Footer() {
       <div className="container-fluid px-4 pt-3 pt-md-4">
         <div className="row pt-2 pb-2 align-items-stretch gx-2">
           <div className="col-md-2 mb-2 border-end  d-flex flex-column align-items-start px-2">
-            <h1 className="m-0 fw-bold text-white" style={{ fontFamily: 'monospace', fontSize: '1.1rem' }}>
-              TANGENT WEEKLY
-            </h1>
+            <Link href="/" className="text-decoration-none">
+              <Image
+                src="/images/tangent-weekly-logo.webp"
+                alt="Tangent Weekly Logo"
+                width={150}
+                height={30}
+                priority
+              />
+            </Link>
             <div className="d-flex gap-2 mt-2">
               {[FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn].map((Icon, i) => (
                 <div

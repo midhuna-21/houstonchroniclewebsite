@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://tangentweekly.com/
+
+# Sitemaps
+Sitemap: https://tangentweekly.com/sitemap.xml
