@@ -28,7 +28,7 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
     <div style={{ marginBottom: '3rem' }}>
       <div className="row">
         <div className="col-md-6 border-end">
-          <Link href={`/${main.category}/${main.slug}`} className='text-decoration-none'>
+          <Link href={`/${main.category}/${main.slug}`} className='text-decoration-none' title={`${main.slug}`}>
 
             <div>
               <Image
@@ -78,17 +78,17 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
 
         <div className="col-md-6">
           {side?.[0] && (
-            <Link href={`/${side[0].category}/${side[0].slug}`} className='text-decoration-none'>
+            <Link href={`/${side[0].category}/${side[0].slug}`} className='text-decoration-none' title={`${side[0].slug}`}>
 
               <div className="mb-3">
-                <h5 className="fw-bold mb-2"
+                <h6 className="fw-bold mb-2"
                   style={{
                     color: "#111111",
                     fontSize: '18px',
                     fontFamily: "'Archivo', Arial, sans-serif",
                     fontWeight: 700
                   }}
-                >{side[0].title}</h5>
+                >{side[0].title}</h6>
                 <p className="text-muted small"
                   style={{
                     fontSize: '16px',
@@ -113,7 +113,7 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
           )}
 
           {side?.[1] && (
-            <Link href={`/${side[1].category}/${side[1].slug}`} className='text-decoration-none'>
+            <Link href={`/${side[1].category}/${side[1].slug}`} className='text-decoration-none' title={`${side[1].slug}`}>
 
               <div>
 
@@ -161,7 +161,7 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
         <div className="col-md-6 border-end pe-md-4">
           <div className="row">
             {bottomCards?.slice(0, 2).map((item, index) => (
-              <Link href={`/${item.category}/${item.slug}`} key={`${item.slug}-${index}`} className='text-decoration-none'>
+              <Link href={`/${item.category}/${item.slug}`} key={`${item.slug}-${index}`} className='text-decoration-none' title={`${item.slug}`}>
 
                 <div className="col-12 py-3 px-2" key={index}>
                   <div className="row g-2 align-items-center">
@@ -230,7 +230,7 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
         <div className="col-md-6 ps-md-4">
           <div className="row">
             {bottomCards?.slice(2, 4).map((item, index) => (
-              <Link href={`/${item.category}/${item.slug}`} key={`${item.slug}-${index}`} className='text-decoration-none'>
+              <Link href={`/${item.category}/${item.slug}`} key={`${item.slug}-${index}`} className='text-decoration-none' title={`${item.slug}`}>
 
                 <div className="col-12 py-3 px-2" key={index + 2}>
                   <div className="row g-2 align-items-center">

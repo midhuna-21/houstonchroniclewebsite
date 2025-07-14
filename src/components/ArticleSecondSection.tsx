@@ -12,7 +12,7 @@ const ArticleSecondSection = () => {
       <p>
         Rux, like many in Central Texas, had to seek shelter after devastating floods claimed
         the lives of at least 24 and left many unaccounted for in{" "}
-        <a href="#" style={{ color: "#065fd4", textDecoration: "underline" }}>
+        <a href="#" style={{ color: "#065fd4", textDecoration: "underline" }} title="kerr country on friday">
           Kerr County on Friday
         </a>.
       </p>
@@ -45,6 +45,7 @@ const ArticleSecondSection = () => {
         MISSING GIRLS:{" "}
         <a
           href="#"
+          title="missing girls"
           style={{
             color: "#065fd4",
             textDecoration: "underline",

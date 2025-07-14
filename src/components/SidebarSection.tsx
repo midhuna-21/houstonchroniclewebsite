@@ -10,7 +10,7 @@ interface SidebarSectionProps {
 const SidebarSection: React.FC<SidebarSectionProps> = ({ title, headline, image }) => {
   return (
     <div className="border-bottom pb-3">
-      <h6 className="fw-bold text-uppercase mb-2">{title}</h6>
+      <span className="fw-bold text-uppercase mb-2">{title}</span>
       <div className="d-flex">
         <div className="flex-grow-1 pe-2">
           <p className="fw-bold mb-0" style={{ fontSize: "1rem", lineHeight: "1.2" }}>

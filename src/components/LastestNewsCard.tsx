@@ -22,7 +22,7 @@ const LatestNewsCard: React.FC<LatestNewsCardProps> = ({ data }) => {
     <SectionWrapper title="Latest Local News">
       {data.map((item) => (
         <div key={item.slug}>
-          <Link href={`/details/${item.slug}`} className='text-decoration-none'>
+          <Link href={`/details/${item.slug}`} className='text-decoration-none' title={`${item.slug}`}>
             <div
               className="d-flex flex-row align-items-start border-bottom pb-3 mb-3"
 

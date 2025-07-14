@@ -16,7 +16,7 @@ const OpinionList: React.FC<OpinionListProps> = ({ title, articles }) => {
   return (
     <SectionWrapper title='Opinion'>
       {articles.map((article, index) => (
-        <Link href={`/details/${article.slug}`}  key={article.slug} className='text-decoration-none'>
+        <Link href={`/details/${article.slug}`}  key={article.slug} className='text-decoration-none' title={`${article.slug}`}>
         
         <div key={article.slug} className="pb-3 mb-3 border-bottom">
           <div className="fw-semibold"

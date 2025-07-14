@@ -26,7 +26,7 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
     <section>
       <div className="row g-4 align-items-stretch flex-column flex-md-row">
         <div className="col-md-3 text-start order-1 order-md-0 d-flex flex-column justify-content-between">
-          <Link href={`/${main.category}/${main.slug}`} className="text-decoration-none">
+          <Link href={`/${main.category}/${main.slug}`} className="text-decoration-none" title={`${main.slug}`}>
             <div>
               <p
                 style={{
@@ -40,7 +40,7 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
                 {main.category}
               </p>
 
-              <h2
+              <h1
                 style={{
                   color: '#111111',
                   fontSize: '22.784px',
@@ -49,7 +49,7 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
                 }}
               >
                 {main.title}
-              </h2>
+              </h1>
 
               <p
                 className="text-muted mb-3"
@@ -91,7 +91,7 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
                 position: 'relative',
               }}
             >
-              <Link href={`/${main.category}/${main.slug}`} className='text-decoration-none'>
+              <Link href={`/${main.category}/${main.slug}`} className='text-decoration-none' title={`${main.slug}`}>
 
                 <Image
                   src={main.image}
@@ -174,7 +174,7 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
           </Link>
 
           {/* Right Item 2 */}
-          <Link href={`/${right2.category}/${right2.slug}`} className='text-decoration-none'>
+          <Link href={`/${right2.category}/${right2.slug}`} className='text-decoration-none' title={`${right2.slug}`}>
             <div>
               <p
                 className="fw-bold mb-1"

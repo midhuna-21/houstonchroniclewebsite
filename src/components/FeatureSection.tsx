@@ -43,8 +43,8 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
               key={index}
               className={`pb-3 mb-3 ${index !== leftItems.length - 1 ? 'border-bottom' : ''}`}
             >
-              <Link href={`/${item.category}/${item.slug}`} className='text-decoration-none'>
-                <h6
+              <Link href={`/${item.category}/${item.slug}`} className='text-decoration-none' title={`${item.slug}`}>
+                <h5
                   style={{
                     color: '#111111',
                     fontSize: '18px',
@@ -53,7 +53,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
                   }}
                 >
                   {item.title}
-                </h6>
+                </h5>
                 <div
                   className="d-flex align-items-center mt-1"
                   style={{
@@ -74,7 +74,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
 
         <div className="col-md-4 text-center">
           {mainItem.image && (
-            <Link href={`/${mainItem.category}/${mainItem.slug}`} className='text-decoration-none'>
+            <Link href={`/${mainItem.category}/${mainItem.slug}`} className='text-decoration-none' title={`${mainItem.slug}`}>
 
               <Image
                 src={mainItem.image || ""}
@@ -93,7 +93,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
         </div>
 
         <div className="col-md-5">
-          <Link href={`/${mainItem.category}/${mainItem.slug}`} className='text-decoration-none'>
+          <Link href={`/${mainItem.category}/${mainItem.slug}`} className='text-decoration-none' title={`${mainItem.slug}`}>
 
             <h4 style={{
               color: '#111111',
@@ -133,14 +133,14 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
             key={idx}
             className={`col-md-6 ${idx === 0 ? 'border-end' : ''}`}
           >
-            <Link href={`/${item.category}/${item.slug}`} className='text-decoration-none'>
-              <h6 style={{
+            <Link href={`/${item.category}/${item.slug}`} className='text-decoration-none' title={`${item.slug}`}>
+              <h5 style={{
                 color: "#111111",
                 fontSize: '18px',
                 fontFamily: "'Archivo', Arial, sans-serif",
                 fontWeight: 700
               }}
-              >{item.title}</h6>
+              >{item.title}</h5>
               <div
                 className="d-flex align-items-center mt-1"
                 style={{

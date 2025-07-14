@@ -16,7 +16,7 @@ const HorizontalNewsCard: React.FC<HorizontalNewsCardProps> = ({ title, image })
         maxWidth: '700px',
       }}
     >
-      <h6 style={{ fontWeight: 'bold', flex: 1, marginRight: '10px' }}>{title}</h6>
+      <h5 style={{ fontWeight: 'bold', flex: 1, marginRight: '10px' }}>{title}</h5>
       <Image
         src={image || ""}
         alt={title}

@@ -23,7 +23,7 @@ const EditorialBoard: React.FC<EditorialBoardProps> = ({ sectionTitle, data }) =
   return (
     <SectionWrapper title={sectionTitle}>
       {data.map((item) => (
-        <Link href={`/${item.category}/${item.slug}`} key={item.slug} className="text-decoration-none">
+        <Link href={`/${item.category}/${item.slug}`} key={item.slug} className="text-decoration-none" title={`${item.slug}`}>
           <div
             className="d-flex flex-row align-items-start border-bottom pb-3 mb-3"
             style={{

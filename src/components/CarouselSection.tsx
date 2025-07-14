@@ -39,8 +39,7 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({ data }) => {
 
   return (
     <div style={{ width: '100%', padding: '90px 0', boxSizing: 'border-box' }}>
-      <Link href={`/${data[currentIndex].category}/${data[currentIndex].slug}`} className='text-decoration-none'>
-
+      <Link title={`${data[currentIndex].category}`} href={`/${data[currentIndex].category}/${data[currentIndex].slug}`} className='text-decoration-none'>
         <div
           style={{
             display: 'flex',

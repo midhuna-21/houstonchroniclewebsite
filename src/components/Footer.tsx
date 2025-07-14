@@ -40,7 +40,7 @@ export default function Footer() {
       <div className="container-fluid px-4 pt-3 pt-md-4">
         <div className="row pt-2 pb-2 align-items-stretch gx-2">
           <div className="col-md-2 mb-2 border-end  d-flex flex-column align-items-start px-2">
-            <Link href="/" className="text-decoration-none">
+            <Link href="/" className="text-decoration-none" title='index'>
               <Image
                 src="/images/tangent-weekly-logo.webp"
                 alt="Tangent Weekly Logo"
@@ -73,27 +73,29 @@ export default function Footer() {
             <div className="d-flex align-items-start gap-4">
               <div className="d-flex flex-column pe-3 ps-4 ">
                 {['Business', 'Health', 'Science', 'Technology', 'Sports'].map((title, i) => (
-                  <Link
-                    key={title}
-                    href={`/${slugify(title)}`}
-                    className="text-dark text-decoration-none"
-                    style={{
-                      whiteSpace: 'nowrap',
-                      flex: '0 0 auto',
-                    }}
-                  >
-                    <h6
-                      key={i}
-                      className="mb-2 fw-bold text-white"
+                  <div key={title} style={{ marginBottom: '0.75rem' }}>
+                    <Link
+                      title={`${title}`}
+                      href={`/${slugify(title)}`}
+                      className="text-dark text-decoration-none"
                       style={{
-                        fontSize: '14.224px',
-                        fontFamily: "'Rubik', Arial, sans-serif",
-                        fontWeight: 700
+                        whiteSpace: 'nowrap',
+                        flex: '0 0 auto',
                       }}
                     >
-                      {title}
-                    </h6>
-                  </Link>
+                      <span
+                        className="fw-bold text-white"
+                        style={{
+                          fontSize: '14.224px',
+                          fontFamily: "'Rubik', Arial, sans-serif",
+                          fontWeight: 700
+                        }}
+                      >
+                        {title}
+                      </span>
+                    </Link>
+                  </div>
+
                 ))}
               </div>
               <div
@@ -107,17 +109,19 @@ export default function Footer() {
               ></div>
 
               <div className="ps-3">
-                <h6
-                  className="mb-2 fw-bold text-white"
+                <span
+                  className="fw-bold text-white"
                   style={{
                     fontSize: '14.224px',
                     fontFamily: "'Rubik', Arial, sans-serif",
-                    fontWeight: 700
+                    fontWeight: 700,
+                    marginBottom: '0.5rem',
+                    display: 'inline-block'
                   }}
                 >
                   About
-                </h6>
-                <ul className="list-unstyled mb-0">
+                </span>
+                <ul className="list-unstyled mb-0" style={{ marginTop: '0.5rem' }}>
 
                   {[
                     'Our Company',
@@ -127,6 +131,7 @@ export default function Footer() {
                   ].map((link, idx) => (
                     <li key={idx} style={{ marginBottom: '0.8rem' }}>
                       <Link
+                        title='about-tangent-weekly'
                         href="/about-tangent-weekly"
                         className="text-white text-decoration-none"
                         style={{
@@ -156,6 +161,7 @@ export default function Footer() {
                   }}
                 >
                   <Link
+                    title={`${title}`}
                     key={title}
                     href={`/${slugify(title)}`}
                     className="text-dark text-decoration-none"
@@ -216,7 +222,7 @@ export default function Footer() {
                         'Editorial Standards & Ethics'
                       ].map((link, i) => (
                         <li className="mb-2" key={i}>
-                          <Link href="/about-tangent-weekly" className="text-white text-decoration-none">{link}</Link>
+                          <Link href="/about-tangent-weekly" className="text-white text-decoration-none" title='about-tangent-weekly'>{link}</Link>
                         </li>
                       ))}
                     </ul>

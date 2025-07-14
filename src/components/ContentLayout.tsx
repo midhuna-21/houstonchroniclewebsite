@@ -29,7 +29,7 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
       <SectionWrapper title={main.category || ""}>
         <div className="row">
           <div className="col-md-6">
-            <Link href={`/${main.category}/${main.slug}`} className='text-decoration-none'>
+            <Link href={`/${main.category}/${main.slug}`} className='text-decoration-none' title={`${main.slug}`}>
 
               <div>
 
@@ -79,7 +79,7 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
 
           <div className="col-md-6">
             {side?.[0] && (
-              <Link href={`/${side[0].category}/${side[0].slug}`} className='text-decoration-none'>
+              <Link href={`/${side[0].category}/${side[0].slug}`} className='text-decoration-none' title={`${side[0].slug}`}>
 
                 <div className="mb-3">
                   <h5 className="fw-bold mb-2"
@@ -116,7 +116,7 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
             )}
 
             {side?.[1] && (
-              <Link href={`/${side[1].category}/${side[1].slug}`} className='text-decoration-none'>
+              <Link href={`/${side[1].category}/${side[1].slug}`} className='text-decoration-none' title={`${side[1].slug}`}>
 
                 <div>
                   <Image
@@ -162,7 +162,7 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
             <div className="row">
               {bottomCards?.slice(0, 2).map((item, index) => (
                 <div className="col-12 py-3 px-2" key={index}>
-                  <Link href={`/${item.category}/${item.slug}`} className='text-decoration-none'>
+                  <Link href={`/${item.category}/${item.slug}`} className='text-decoration-none' title={`${item.slug}`}>
                     <div className="row g-2 align-items-center">
 
                       <div className="col-9">
@@ -231,7 +231,7 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
             <div className="row">
               {bottomCards?.slice(2, 4).map((item, index) => (
                 <div className="col-12 py-3 px-2" key={index + 2}>
-                  <Link href={`/${item.category}/${item.slug}`} className='text-decoration-none'>
+                  <Link href={`/${item.category}/${item.slug}`} className='text-decoration-none' title={`${item.slug}`}>
                     <div className="row g-2 align-items-center">
 
                       <div className="col-9">

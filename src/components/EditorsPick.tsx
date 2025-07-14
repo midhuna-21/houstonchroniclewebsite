@@ -21,7 +21,7 @@ const EditorsPicksSection: React.FC<EditorsPicksSectionProps> = ({ data }) => {
         {data.slice(0, 4).map((item, idx) => (
 
           <div key={idx} className="col-12 col-sm-6 col-lg-3">
-            <Link href={`/${item.category}/${item.slug}`} className='text-decoration-none'>
+            <Link href={`/${item.category}/${item.slug}`} className='text-decoration-none' title={`${item.slug}`}>
               <div
                 className="h-100 text-start pe-3"
                 style={{
@@ -55,7 +55,7 @@ const EditorsPicksSection: React.FC<EditorsPicksSectionProps> = ({ data }) => {
                   {item.category}
                 </p>
 
-                <h6
+                <h5
                   className="fw-bold mb-0"
                   style={{
                     color: '#111111',
@@ -65,7 +65,7 @@ const EditorsPicksSection: React.FC<EditorsPicksSectionProps> = ({ data }) => {
                   }}
                 >
                   {item.title}
-                </h6>
+                </h5>
                 <div
                   className="d-flex align-items-center mt-1"
                   style={{

@@ -73,7 +73,7 @@ const Signup: React.FC = () => {
         <div style={logoStyle}>HC</div>
         <div className="row align-items-center mt-4">
           <div className="col-md-6 mb-4 mb-md-0">
-            <h6
+            <span
               style={{
                 fontWeight: 600,
                 fontSize: '16px',
@@ -81,7 +81,7 @@ const Signup: React.FC = () => {
               }}
             >
               Sign up for The 713
-            </h6>
+            </span>
             <p
               style={{
                 fontWeight: 400,

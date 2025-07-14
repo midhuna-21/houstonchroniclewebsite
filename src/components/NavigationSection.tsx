@@ -38,6 +38,7 @@ export default function NavigationSection() {
           <Link
             key={item.category}
             href={`/${item.category}`}
+            title={item.category}
             className="text-dark text-decoration-none"
             style={{
               whiteSpace: 'nowrap',

@@ -49,7 +49,7 @@ const ThirdHomeSection: React.FC<Props> = ({ data }) => {
     <SectionWrapper title="Latest">
       <div className="row">
         <div className="col-12 col-md-4 order-2 order-md-1 mb-4 border-end">
-          <Link href={`/${first.category}/${first.slug}`} className='text-decoration-none'>
+          <Link href={`/${first.category}/${first.slug}`} className='text-decoration-none' title={`${first.slug}`}>
 
             <div className="mb-4">
               <div style={categoryStyle}>{first.category}</div>
@@ -69,7 +69,7 @@ const ThirdHomeSection: React.FC<Props> = ({ data }) => {
               </div>
             </div>
           </Link>
-          <Link href={`/${second.category}/${second.slug}`} className='text-decoration-none'>
+          <Link href={`/${second.category}/${second.slug}`} className='text-decoration-none' title={`${second.slug}`}>
 
             <div>
               <div style={categoryStyle}>{second.category}</div>
@@ -91,7 +91,7 @@ const ThirdHomeSection: React.FC<Props> = ({ data }) => {
         </div>
 
         <div className="col-12 col-md-8 order-1 order-md-2 mb-4">
-          <Link href={`/${main.category}/${main.slug}`} className='text-decoration-none'>
+          <Link href={`/${main.category}/${main.slug}`} className='text-decoration-none' title={`${main.slug}`}>
             <div className="row">
 
               <div className="col-md-5 mb-3 mb-md-0">
@@ -131,7 +131,7 @@ const ThirdHomeSection: React.FC<Props> = ({ data }) => {
           <div className="row">
 
             <div className="col-md-6 mb-3 border-end pe-md-4">
-              <Link href={`/${fourth.category}/${fourth.slug}`} className='text-decoration-none'>
+              <Link href={`/${fourth.category}/${fourth.slug}`} className='text-decoration-none' title={`${fourth.slug}`}>
                 <div style={categoryStyle}>{fourth.category}</div>
                 <h5 style={titleStyle}>{fourth.title}</h5>
                 <div
@@ -150,7 +150,7 @@ const ThirdHomeSection: React.FC<Props> = ({ data }) => {
             </div>
 
             <div className="col-md-6 mb-3 ps-md-4">
-              <Link href={`/${fifth.category}/${fifth.slug}`} className='text-decoration-none'>
+              <Link href={`/${fifth.category}/${fifth.slug}`} className='text-decoration-none' title={`${fifth.slug}`}>
                 <div style={categoryStyle}>{fifth.category}</div>
                 <h5 style={titleStyle}>{fifth.title}</h5>
                 <div

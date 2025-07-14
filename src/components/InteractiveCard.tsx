@@ -26,7 +26,7 @@ const InteractiveCard: React.FC<InteractiveCardProps> = ({ data }) => {
         backgroundColor: '#fff',
       }}
     >
-      <Link href={`/${data.category}/${data.slug}`} className='text-decoration-none'>
+      <Link href={`/${data.category}/${data.slug}`} className='text-decoration-none' title={`${data.slug}`}>
         <div style={{ position: 'relative' }}>
           <Image
             src={data.image}

@@ -24,13 +24,13 @@ interface TrendingCardProps {
 
 const TrendingCard: React.FC<TrendingCardProps> = ({ data }) => {
   return (
-    <SectionWrapper title={data.section}>
+    <SectionWrapper title="">
       {data.items.map((item, idx) => (
 
         <div key={idx} className="mb-4">
-          <Link href={`/${item.category}/${item.slug}`} className='text-decoration-none'>
+          <Link href={`/${item.category}/${item.slug}`} className='text-decoration-none' title={`${item.slug}`}>
             <div className="d-flex align-items-center justify-content-between mb-2">
-              <h6
+              <span
                 className="fw-bold mb-0"
                 style={{
                   color: '#111111',
@@ -42,7 +42,7 @@ const TrendingCard: React.FC<TrendingCardProps> = ({ data }) => {
                 }}
               >
                 {item.title}
-              </h6>
+              </span>
 
               <Image
                 src={item.image || ""}

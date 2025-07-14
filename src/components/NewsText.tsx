@@ -20,7 +20,7 @@ const NewsText: React.FC<NewsTextProps> = ({ data }) => {
   return (
     <SectionWrapper title="Columns from the past">
       {data.map((item, index) => (
-        <Link href={`/${item.category}/${item.slug}`} key={item.slug} className='text-decoration-none'>
+        <Link href={`/${item.category}/${item.slug}`} key={item.slug} className='text-decoration-none' title={`${item.slug}`}>
 
           <div
             key={index}

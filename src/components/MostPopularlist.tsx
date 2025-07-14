@@ -19,7 +19,7 @@ const MostPopularList: React.FC<MostPopularListProps> = ({ data }) => {
     <SectionWrapper title="Most Popular">
       {data.map((article, index) => (
         <div key={index} className="mb-3 pb-3 border-bottom">
-          <Link href={`/${article.category}/${article.slug}`} className="text-decoration-none">
+          <Link href={`/${article.category}/${article.slug}`} className="text-decoration-none" title={`${article.slug}`}>
             <div className="d-flex align-items-start">
               <div className="fw-bold text-danger me-2">{index + 1}.</div>
               <div

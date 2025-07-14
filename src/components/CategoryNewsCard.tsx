@@ -22,7 +22,7 @@ const CategoryNewsCard: React.FC<CategoryNewsCardProps> = ({ data }) => {
   return (
 
     <div className="border-bottom mb-4 ">
-      <Link href={`/${category}/${slug}`} className='text-decoration-none'>
+      <Link href={`/${category}/${slug}`} className='text-decoration-none' title={`${slug}`}>
 
         <div className="row align-items-start">
           <div className="col-12 col-md-9">

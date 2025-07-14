@@ -22,7 +22,7 @@ interface LottoCardProps {
 const LottoCard: React.FC<LottoCardProps> = ({ data }) => {
   return (
     <div className="container">
-      <Link href={`/${data.category}/${data.slug}`} className='text-decoration-none'>
+      <Link href={`/${data.category}/${data.slug}`} className='text-decoration-none' title={`${data.slug}`}>
 
         <div
           className="my-md-0 my-4"
