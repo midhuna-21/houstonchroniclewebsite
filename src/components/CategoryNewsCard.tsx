@@ -1,7 +1,7 @@
 import React from 'react';
-import SectionWrapper from './SectionWrapper';
 import Link from 'next/link';
 import { BiCalendar } from 'react-icons/bi';
+import Image from "next/image";
 
 interface CategoryNewsCardProps {
   data: {
@@ -64,9 +64,11 @@ const CategoryNewsCard: React.FC<CategoryNewsCardProps> = ({ data }) => {
           </div>
 
           <div className="col-12 col-md-3">
-            <img
-              src={image}
-              alt={title}
+            <Image
+              src={image || "/placeholder.jpg"}
+              alt={title || "Image"}
+              width={400}
+              height={150}
               className="img-fluid"
               style={{
                 width: '100%',
@@ -74,6 +76,7 @@ const CategoryNewsCard: React.FC<CategoryNewsCardProps> = ({ data }) => {
                 objectFit: 'cover',
               }}
             />
+
           </div>
           <div
             className="d-flex align-items-center mt-1"

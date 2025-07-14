@@ -2,6 +2,7 @@ import React from "react";
 import SectionWrapper from "./SectionWrapper";
 import Link from "next/link";
 import { BiCalendar } from "react-icons/bi";
+import Image from "next/image";
 
 interface NewsItem {
   slug: string;
@@ -32,14 +33,16 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
 
               <div>
 
-                <img
-                  src={main.image}
+                <Image
+                  src={main.image || ""}
                   alt={main.title}
+                  width={800}
+                  height={300}
                   className="img-fluid mb-2"
                   style={{
                     objectFit: "cover",
                     width: "100%",
-                    height: "300px"
+                    height: "300px",
                   }}
                 />
                 <h4 className=" mb-2"
@@ -116,14 +119,16 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
               <Link href={`/${side[1].category}/${side[1].slug}`} className='text-decoration-none'>
 
                 <div>
-                  <img
-                    src={side[1].image}
-                    alt={side[1].title}
+                  <Image
+                    src={side[1]?.image || ""}
+                    alt={side[1]?.title}
+                    width={800}
+                    height={300}
                     className="img-fluid mb-2"
                     style={{
                       objectFit: "cover",
                       width: "100%",
-                      height: "300px"
+                      height: "300px",
                     }}
                   />
                   <h5 className="mb-2 fw-bold"
@@ -186,9 +191,11 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
 
                       <div className="col-3">
                         {item.image && (
-                          <img
-                            src={item.image}
+                          <Image
+                            src={item.image || ""}
                             alt={item.title}
+                            width={400}
+                            height={70}
                             className="img-fluid"
                             style={{
                               width: "100%",
@@ -254,9 +261,11 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
 
                       <div className="col-3">
                         {item.image && (
-                          <img
-                            src={item.image}
+                          <Image
+                            src={item.image || ""}
                             alt={item.title}
+                            width={400}
+                            height={70}
                             className="img-fluid"
                             style={{
                               width: "100%",

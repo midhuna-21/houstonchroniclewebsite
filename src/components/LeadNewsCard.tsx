@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from "next/image";
 
 type LeadNewsCardProps = {
   title: string;
@@ -16,9 +17,11 @@ const LeadNewsCard: React.FC<LeadNewsCardProps> = ({ title, description, image }
       }}
       className="mb-4"
     >
-      <img
-        src={image}
+      <Image
+        src={image || ""}
         alt={title}
+        width={800}
+        height={500}
         style={{
           width: '100%',
           height: 'auto',

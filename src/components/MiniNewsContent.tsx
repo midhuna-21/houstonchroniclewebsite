@@ -1,5 +1,6 @@
 import React from 'react';
 import { BiCalendar } from 'react-icons/bi';
+import Image from "next/image";
 
 interface MiniNewsCardProps {
   category: string;
@@ -15,11 +16,18 @@ const MiniNewsCard: React.FC<MiniNewsCardProps> = ({ category, title, image, dat
       style={{ gap: '1rem' }}
     >
       <div>
-        <img
-          src={image}
+        <Image
+          src={image || ""}
           alt={title}
+          width={80}
+          height={60}
           className="section-new-image"
-          style={{ width: '80px', height: 'auto', objectFit: 'cover', flexShrink: 0 }}
+          style={{
+            width: '80px',
+            height: 'auto',
+            objectFit: 'cover',
+            flexShrink: 0,
+          }}
         />
       </div>
 

@@ -2,6 +2,7 @@ import React from 'react';
 import SectionWrapper from './SectionWrapper';
 import Link from 'next/link';
 import { BiCalendar } from 'react-icons/bi';
+import Image from "next/image";
 
 interface EditorsPicksSectionProps {
   data: {
@@ -27,9 +28,11 @@ const EditorsPicksSection: React.FC<EditorsPicksSectionProps> = ({ data }) => {
                   borderRight: '0.5px solid rgba(14, 14, 14, 0.15)',
                 }}
               >
-                <img
-                  src={item.image}
+                <Image
+                  src={item.image || ""}
                   alt={item.title}
+                  width={800}
+                  height={160}
                   className="img-fluid mb-2"
                   style={{
                     width: '100%',
@@ -38,7 +41,6 @@ const EditorsPicksSection: React.FC<EditorsPicksSectionProps> = ({ data }) => {
                     display: 'block',
                   }}
                 />
-
 
                 <p
                   style={{

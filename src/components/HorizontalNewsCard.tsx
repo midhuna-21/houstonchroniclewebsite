@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from "next/image";
 
 interface HorizontalNewsCardProps {
   title: string;
@@ -16,12 +17,12 @@ const HorizontalNewsCard: React.FC<HorizontalNewsCardProps> = ({ title, image })
       }}
     >
       <h6 style={{ fontWeight: 'bold', flex: 1, marginRight: '10px' }}>{title}</h6>
-      <img
-        src={image}
-        alt="thumbnail"
+      <Image
+        src={image || ""}
+        alt={title}
+        width={80}
+        height={60}
         style={{
-          width: '80px',
-          height: '60px',
           objectFit: 'cover',
           borderRadius: '4px',
         }}

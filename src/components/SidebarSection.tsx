@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 interface SidebarSectionProps {
   title: string;
@@ -17,15 +18,17 @@ const SidebarSection: React.FC<SidebarSectionProps> = ({ title, headline, image 
           </p>
         </div>
         <div style={{ width: "80px", flexShrink: 0 }}>
-          <img
-            src={image}
-            alt="Editorial thumbnail"
+          <Image
+            src={image || ""}
+            alt={title}
+            width={400}
+            height={60}
             className="img-fluid"
             style={{
               objectFit: "cover",
               height: "60px",
               width: "100%",
-              borderRadius: "4px"
+              borderRadius: "4px",
             }}
           />
         </div>

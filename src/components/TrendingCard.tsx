@@ -2,6 +2,7 @@ import React from 'react';
 import SectionWrapper from './SectionWrapper';
 import Link from 'next/link';
 import { BiCalendar } from 'react-icons/bi';
+import Image from "next/image";
 
 interface TrendingItem {
   image: string;
@@ -43,12 +44,12 @@ const TrendingCard: React.FC<TrendingCardProps> = ({ data }) => {
                 {item.title}
               </h6>
 
-              <img
-                src={item.image}
+              <Image
+                src={item.image || ""}
                 alt={item.title}
+                width={60}
+                height={60}
                 style={{
-                  width: '60px',
-                  height: '60px',
                   objectFit: 'cover',
                   borderRadius: '50%',
                 }}

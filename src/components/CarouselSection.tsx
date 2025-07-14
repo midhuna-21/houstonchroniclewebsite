@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { BiCalendar } from 'react-icons/bi';
+import Image from 'next/image';
+
 
 interface CarouselItem {
   category: string;
@@ -62,9 +64,11 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({ data }) => {
           >
 
             <div style={{ flex: 1 }}>
-              <img
+              <Image
                 src={data[currentIndex].image}
                 alt={data[currentIndex].title}
+                width={isMobile ? 400 : 800}
+                height={isMobile ? 220 : 500}
                 style={{
                   width: '100%',
                   height: isMobile ? '220px' : '100%',
@@ -73,9 +77,9 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({ data }) => {
                   borderBottom: isMobile ? '2px solid black' : 'none',
                   display: 'block',
                 }}
+                priority
               />
             </div>
-
             <div
               style={{
                 flex: 1,

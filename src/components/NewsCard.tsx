@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from "next/image";
 
 type NewsItem = {
   image?: string;
@@ -15,9 +16,11 @@ export default function NewsCard({ data }: NewsCardProps) {
   return (
     <div className="d-flex flex-column h-100 text-start">
       {data.image && data.image.trim() !== '/' && (
-        <img
-          src={data.image}
-          alt=""
+        <Image
+          src={data.image || ""}
+          alt={data.subcategory}
+          width={800}
+          height={240}
           className="img-fluid mb-2"
           style={{
             objectFit: 'cover',
@@ -28,7 +31,6 @@ export default function NewsCard({ data }: NewsCardProps) {
       )}
       <p
         className="fw-bold mb-1"
-
         style={{
           color: '#B10021',
           textTransform: 'uppercase',

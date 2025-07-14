@@ -116,9 +116,11 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
           <Link href={`/${right1.category}/${right1.slug}`} className='text-decoration-none'>
             <div style={{ marginBottom: '14px' }}>
               {right1.image && (
-                <img
-                  src={right1.image}
-                  alt=""
+                <Image
+                  src={right1.image || ""}
+                  alt={right1.image}
+                  width={800}
+                  height={500}
                   className="img-fluid mb-2"
                   style={{
                     width: '100%',

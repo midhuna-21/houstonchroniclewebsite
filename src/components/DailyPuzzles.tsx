@@ -2,6 +2,7 @@
 
 import React from 'react';
 import SectionWrapper from './SectionWrapper';
+import Image from "next/image";
 
 type Puzzle = {
   title: string;
@@ -36,17 +37,17 @@ const DailyPuzzles: React.FC<DailyPuzzlesProps> = ({ data }) => {
               fontSize: '11.232px', color: '#444444', fontWeight: 400, fontFamily: "'Rubik', Arial, sans-serif"
             }}>{item.description}</p>
           </div>
-          <img
-            src={item.image}
-            alt={item.title}
-            style={{
-              width: 60,
-              height: 60,
-              objectFit: 'contain',
-              borderRadius: 8,
-              backgroundColor: item.bgColor || '#f8f9fa',
-            }}
-          />
+        <Image
+  src={item.image || ""}
+  alt={item.title}
+  width={60}
+  height={60}
+  style={{
+    objectFit: 'contain',
+    borderRadius: 8,
+    backgroundColor: item.bgColor || '#f8f9fa',
+  }}
+/>
         </div>
       ))}
     </SectionWrapper>

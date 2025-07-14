@@ -1,8 +1,8 @@
 import React from 'react';
 import SectionWrapper from './SectionWrapper';
-import { Linden_Hill } from 'next/font/google';
 import Link from 'next/link';
 import { BiCalendar } from 'react-icons/bi';
+import Image from "next/image";
 
 interface FeatureArticle {
   slug: string;
@@ -76,11 +76,17 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
           {mainItem.image && (
             <Link href={`/${mainItem.category}/${mainItem.slug}`} className='text-decoration-none'>
 
-              <img
-                src={mainItem.image}
+              <Image
+                src={mainItem.image || ""}
                 alt={mainItem.title}
+                width={800}
+                height={200}
                 className="img-fluid mb-2"
-                style={{ objectFit: 'cover', maxHeight: '200px', width: '100%' }}
+                style={{
+                  objectFit: 'cover',
+                  maxHeight: '200px',
+                  width: '100%',
+                }}
               />
             </Link>
           )}
