@@ -87,7 +87,6 @@ export function parseRichText(text?: string): React.ReactNode[] {
       style={{
         color: "#2D2D2D",
         fontWeight: 400,
-        lineHeight: '1.75',
         marginBottom: '2rem',
       }}
     >

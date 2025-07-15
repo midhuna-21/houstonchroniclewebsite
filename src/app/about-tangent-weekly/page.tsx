@@ -49,7 +49,7 @@ export default function AboutTangentWeeklyPage() {
 
                             {/* Section 1 */}
                             <section>
-                                <h3
+                                <h2
                                     style={{
                                         fontSize: '1.75rem',
                                         fontWeight: 700,
@@ -60,7 +60,7 @@ export default function AboutTangentWeeklyPage() {
                                     }}
                                 >
                                     Our Editorial Approach
-                                </h3>
+                                </h2>
                                 <p style={{ fontSize: '1.15rem', lineHeight: 1.85 }}>
                                     We cover the full sweep of American news: national politics, business and the economy, science and technology, culture, social movements, and more. We aim to explain not just what’s happening — but why it matters.
                                 </p>
@@ -74,7 +74,7 @@ export default function AboutTangentWeeklyPage() {
 
                             {/* Section Heading */}
                             <section>
-                                <h3
+                                <h2
                                     style={{
                                         fontSize: '1.75rem',
                                         fontWeight: 700,
@@ -85,7 +85,7 @@ export default function AboutTangentWeeklyPage() {
                                     }}
                                 >
                                     We Focus On:
-                                </h3>
+                                </h2>
                                 <ul style={{ fontSize: '1.15rem', lineHeight: 1.85, paddingLeft: '24px', marginBottom: '12px' }}>
                                     <li>Daily news and in-depth coverage of U.S. politics, policy, and governance</li>
                                     <li>Investigative journalism on issues affecting American communities and institutions</li>
@@ -103,7 +103,7 @@ export default function AboutTangentWeeklyPage() {
 
                             {/* Section 2 */}
                             <section>
-                                <h3
+                                <h2
                                     style={{
                                         fontSize: '1.75rem',
                                         fontWeight: 700,
@@ -114,7 +114,7 @@ export default function AboutTangentWeeklyPage() {
                                     }}
                                 >
                                     Editorial Standards & Ethics
-                                </h3>
+                                </h2>
                                 <p style={{ fontSize: '1.15rem', lineHeight: 1.85 }}>
                                     <strong> Chronicle</strong> operates independently and is editorially neutral. We are not affiliated with corporate, political, or special interest groups.
                                 </p>
@@ -129,7 +129,7 @@ export default function AboutTangentWeeklyPage() {
 
                             {/* Section 3 */}
                             <section>
-                                <h3
+                                <h2
                                     style={{
                                         fontSize: '1.75rem',
                                         fontWeight: 700,
@@ -140,7 +140,7 @@ export default function AboutTangentWeeklyPage() {
                                     }}
                                 >
                                     Who We Serve
-                                </h3>
+                                </h2>
                                 <p style={{ fontSize: '1.15rem', lineHeight: 1.85 }}>
                                     We write for Americans — and anyone seeking a deeper understanding of the U.S. today. Our readers include professionals, educators, civic leaders, students, and citizens who want journalism that respects both their intelligence and their time.
                                 </p>
@@ -153,7 +153,7 @@ export default function AboutTangentWeeklyPage() {
 
                             {/* Section 4 */}
                             <section>
-                                <h3
+                                <h2
                                     style={{
                                         fontSize: '1.75rem',
                                         fontWeight: 700,
@@ -164,7 +164,7 @@ export default function AboutTangentWeeklyPage() {
                                     }}
                                 >
                                     Our Mission
-                                </h3>
+                                </h2>
                                 <p style={{ fontSize: '1.15rem', lineHeight: 1.85 }}>
                                     To inform the public with independent, trustworthy U.S. reporting.
                                 </p>
@@ -181,9 +181,9 @@ export default function AboutTangentWeeklyPage() {
                             {/* Author  */}
                             <section>
 
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '20px' }}>
+                                <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '20px' }}>
                                     Editorial Leadership
-                                </h3>
+                                </h2>
                                 <p style={{ fontSize: '1.15rem', lineHeight: 1.85 }}>
                                     <strong>Written by</strong>
                                 </p>

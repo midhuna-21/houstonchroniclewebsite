@@ -105,7 +105,7 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({ data }) => {
                 {data[currentIndex].category}
               </div>
 
-              <h4
+              <span
                 style={{
                   fontSize: '32.432px',
                   fontWeight: 700,
@@ -115,7 +115,7 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({ data }) => {
                 }}
               >
                 {data[currentIndex].title}
-              </h4>
+              </span>
 
               <div
                 style={{

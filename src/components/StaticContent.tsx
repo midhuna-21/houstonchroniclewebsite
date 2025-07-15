@@ -12,7 +12,7 @@ const StaticComponent = () => {
     const title = "Charges Dropped for Wanda Vázquez Amid Claims of Political Targeting";
     const slug = "wanda-vazquez-charges-dropped";
     const category = "Politics";
-    const date = "July 5, 2025";
+    const date = "05/07/2025";
     const shortdescription = "All federal charges against former Puerto Rico Governor Wanda Vázquez have been dropped, with prosecutors replacing them with a minor campaign finance violation — ending a three-year legal battle without a corruption conviction.";
     const image = '/images/wanda-vazquez-political-targeting.webp'
 
@@ -76,7 +76,6 @@ const StaticComponent = () => {
 
 {/* h2 */}
         <EditorsPicksSection data={EditorsData} />
-
         </div>
     );
 };

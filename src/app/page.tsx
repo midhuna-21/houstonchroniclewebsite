@@ -117,13 +117,14 @@ export default function Home() {
           </div>
 
           <div>
-{/* 
-            h4 */}
+
+            {/*  h4 */}
             <CarouselSection data={[ScienceData[5], TechnologyData[5], HealthData[4]]} />
           </div>
 
           <div className="row">
             <div className="col-md-9">
+
 
               {/* h4 */}
               <ContentLayout

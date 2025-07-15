@@ -23,7 +23,7 @@ const StaticHeader: React.FC<StaticHeaderProps> = ({
     date,
 }) => {
     return (
-        <div style={{ padding: '2rem 0', borderBottom: '2px solid #000' }}>
+        <div style={{ padding: '1   rem 0', borderBottom: '2px solid #000' }}>
             <div style={{ marginBottom: '1.2rem' }}>
                 <h1
                     className="text-uppercase fw-bold"
@@ -57,9 +57,7 @@ const StaticHeader: React.FC<StaticHeaderProps> = ({
                     />
                 </h1>
             </div>
-
-
-            <h2
+            <h1
                 className="fw-bold mb-3 fst-italic"
                 style={{
                     fontSize: 'clamp(28px, 5vw, 42px)',
@@ -71,93 +69,75 @@ const StaticHeader: React.FC<StaticHeaderProps> = ({
                 }}
             >
                 {title}
-            </h2>
+            </h1>
 
-            <div className="d-flex flex-wrap justify-content-between align-items-center gap-3 mt-2">
-
-                <div className="d-flex align-items-center gap-2">
-
-
-
-                    <div className="text-muted small" style={{ fontFamily: "'Rubik', sans-serif", fontSize: '13.5px' }}>
-
-
-                        <div
-                            className="d-flex align-items-center mt-1"
-                            style={{
-                                fontSize: '10px',
-                                fontWeight: 200,
-                                fontFamily: "'Rubik', Arial, sans-serif",
-                            }}
-                        >
-                            <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
-                            <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-                            <span style={{ color: '#aaa', marginLeft: '4px' }}>{date}</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="d-flex gap-2">
-
-                    <button
-                        className="btn btn-outline-dark rounded-circle d-flex justify-content-center align-items-center"
-                        style={{
-                            width: '38px',
-                            height: '38px',
-                            fontSize: '14px',
-                            border: '1px solid #ccc',
-                            transition: 'all 0.3s ease',
-                        }}
-                        aria-label="Share on Facebook"
-                        title="Share on Facebook"
-                    >
-                        <FaFacebookF />
-                    </button>
-                    <button
-                        className="btn btn-outline-dark rounded-circle d-flex justify-content-center align-items-center"
-                        style={{
-                            width: '38px',
-                            height: '38px',
-                            fontSize: '14px',
-                            border: '1px solid #ccc',
-                            transition: 'all 0.3s ease',
-                        }}
-                        aria-label="Share on Twitter"
-                        title="Share on Twitter"
-                    >
-                        <FaXTwitter />
-                    </button>
-                    <button
-                        className="btn btn-outline-dark rounded-circle d-flex justify-content-center align-items-center"
-                        style={{
-                            width: '38px',
-                            height: '38px',
-                            fontSize: '14px',
-                            border: '1px solid #ccc',
-                            transition: 'all 0.3s ease',
-                        }}
-                        aria-label="Share"
-                        title="Share"
-                    >
-                        <PiButterflyBold />
-                    </button>
-                    <button
-                        className="btn btn-outline-dark rounded-circle d-flex justify-content-center align-items-center"
-                        style={{
-                            width: '38px',
-                            height: '38px',
-                            fontSize: '14px',
-                            border: '1px solid #ccc',
-                            transition: 'all 0.3s ease',
-                        }}
-                        aria-label="Email"
-                        title="Email"
-                    >
-                        <HiOutlineMail />
-                    </button>
-                </div>
-            </div>
-
+            <div
+                 className="d-flex justify-content-between align-items-center flex-nowrap w-100 mt-2"
+                 style={{ gap: '1rem', flexWrap: 'nowrap' }}
+               >
+                 <div
+                   className="d-flex align-items-center"
+                   style={{
+                     fontSize: '10px',
+                     fontWeight: 200,
+                     fontFamily: "'Rubik', Arial, sans-serif",
+                     whiteSpace: 'nowrap',
+                     overflow: 'hidden',
+                     textOverflow: 'ellipsis',
+                   }}
+                 >
+                   <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+                   <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+                   <span style={{ color: '#aaa', marginLeft: '4px' }}>{date}</span>
+                 </div>
+         
+                 <div className="d-flex gap-2 flex-shrink-0">
+                   <button
+                     className="btn btn-outline-dark rounded-circle d-flex justify-content-center align-items-center social-icon-btn"
+                     style={{
+                       width: '38px',
+                       height: '38px',
+                       fontSize: '14px',
+                       border: '1px solid #ccc',
+                       transition: 'all 0.3s ease',
+                     }}
+                   >   <FaFacebookF />
+                   </button>
+                   <button
+                     className="btn btn-outline-dark rounded-circle d-flex justify-content-center align-items-center social-icon-btn"
+                     style={{
+                       width: '38px',
+                       height: '38px',
+                       fontSize: '14px',
+                       border: '1px solid #ccc',
+                       transition: 'all 0.3s ease',
+                     }}
+                   >   <FaXTwitter />
+                   </button>
+                   <button
+                     className="btn btn-outline-dark rounded-circle d-flex justify-content-center align-items-center social-icon-btn"
+                     style={{
+                       width: '38px',
+                       height: '38px',
+                       fontSize: '14px',
+                       border: '1px solid #ccc',
+                       transition: 'all 0.3s ease',
+                     }}
+                   >    <PiButterflyBold />
+                   </button>
+                   <button
+                     className="btn btn-outline-dark rounded-circle d-flex justify-content-center align-items-center social-icon-btn"
+                     style={{
+                       width: '38px',
+                       height: '38px',
+                       fontSize: '14px',
+                       border: '1px solid #ccc',
+                       transition: 'all 0.3s ease',
+                     }}
+                   >    <HiOutlineMail />
+                   </button>
+                 </div>
+               </div>
         </div>
     );
 };

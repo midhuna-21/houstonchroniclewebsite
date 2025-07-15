@@ -74,5 +74,11 @@ a {
     padding-right: 7rem !important;
   }
 }
-
+@media (max-width: 576px) {
+  .social-icon-btn {
+    width: 35px !important;
+    height: 35px !important;
+    font-size: 14px !important;
+  }
+}
 }

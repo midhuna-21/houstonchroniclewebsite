@@ -45,14 +45,14 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
                     height: "300px",
                   }}
                 />
-                <h4 className=" mb-2"
+                <span className=" mb-2"
                   style={{
                     color: '#111111',
                     fontSize: '22.784px',
                     fontFamily: "'Archivo', Arial, sans-serif",
                     fontWeight: 700
                   }}
-                >{main.title}</h4>
+                >{main.title}</span>
                 <p className="text-muted small"
                   style={{
                     color: "#444444",
@@ -82,14 +82,14 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
               <Link href={`/${side[0].category}/${side[0].slug}`} className='text-decoration-none' title={`${side[0].slug}`}>
 
                 <div className="mb-3">
-                  <h4 className="fw-bold mb-2"
+                  <span className="fw-bold mb-2"
                     style={{
                       color: '#111111',
                       fontSize: '22.784px',
                       fontFamily: "'Archivo', Arial, sans-serif",
                       fontWeight: 700
                     }}
-                  >{side[0].title}</h4>
+                  >{side[0].title}</span>
                   <p className="text-muted small"
                     style={{
                       color: "#444444",
@@ -131,14 +131,14 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
                       height: "300px",
                     }}
                   />
-                  <h4 className="mb-2 fw-bold"
+                  <span className="mb-2 fw-bold"
                     style={{
                       color: '#111111',
                       fontSize: '22.784px',
                       fontFamily: "'Archivo', Arial, sans-serif",
                       fontWeight: 700
                     }}
-                  >{side[1].title}</h4>
+                  >{side[1].title}</span>
                   <div
                     className="d-flex align-items-center mt-1"
                     style={{

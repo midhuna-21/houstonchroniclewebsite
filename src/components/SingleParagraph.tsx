@@ -27,12 +27,11 @@ const SingleParagraph: React.FC<SingleParagraphProps> = ({ text }) => {
         <div
           key={index}
           style={{
-              textAlign: 'justify',
+            textAlign: 'justify',
             color: "#1C1C1C",
             fontSize: '18px',
             fontFamily: "'Merriweather', serif",
             fontWeight: 400,
-            lineHeight: '1.75',
             marginBottom: '1.5rem',
             padding: index === 2 ? '12px 16px' : '0',
             borderLeft: index === 2 ? '4px solid #4C6375' : undefined, 

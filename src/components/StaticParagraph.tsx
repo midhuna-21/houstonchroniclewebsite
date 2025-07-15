@@ -15,12 +15,11 @@ const StaticParagraph: React.FC<StaticParagraphProps> = ({ data }) => {
   return (
     <ArticleWrapper>
       {data?.subheading && (
-        <h2
+        <span
           style={{
             fontSize: '24px',
             fontWeight: 700,
             fontFamily: "'Georgia', serif",
-            lineHeight: '1.4',
             marginBottom: '12px',
             color: '#222',
             borderLeft: '4px solid #B50021',
@@ -28,14 +27,13 @@ const StaticParagraph: React.FC<StaticParagraphProps> = ({ data }) => {
           }}
         >
           {data.subheading}
-        </h2>
+        </span>
       )}
       <div
         style={{
           textAlign: 'justify',
           fontFamily: "'Merriweather', serif",
           fontSize: '18px',
-          lineHeight: '1.75',
           color: '#2D2D2D',
         }}
       >

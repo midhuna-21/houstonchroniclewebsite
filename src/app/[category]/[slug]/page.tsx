@@ -207,7 +207,6 @@ export default async function DetailPage({ params }: PageProps) {
           category={article.category}
           title={article.title}
           date={article.date}
-          image={AuthorData.image}
         />
         <DetailFirstSection
           category={article.category}

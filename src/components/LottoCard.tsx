@@ -49,7 +49,7 @@ const LottoCard: React.FC<LottoCardProps> = ({ data }) => {
           </div>
 
           <div className="p-3 bg-white">
-            <h5
+            <span
               className="mb-2"
               style={{
                 color: '#111111',
@@ -59,7 +59,7 @@ const LottoCard: React.FC<LottoCardProps> = ({ data }) => {
               }}
             >
               {data.title}
-            </h5>
+            </span>
             <hr style={{ margin: '0.5rem 0' }} />
             <p
               style={{

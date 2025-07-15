@@ -53,7 +53,7 @@ const ThirdHomeSection: React.FC<Props> = ({ data }) => {
 
             <div className="mb-4">
               <div style={categoryStyle}>{first.category}</div>
-              <h3 style={titleStyle}>{first.title}</h3>
+              <span style={titleStyle}>{first.title}</span>
               <hr style={{ borderTop: '1px solid #ccc', margin: '1rem 0' }} />
               <div
                 className="d-flex align-items-center mt-1"
@@ -73,7 +73,7 @@ const ThirdHomeSection: React.FC<Props> = ({ data }) => {
 
             <div>
               <div style={categoryStyle}>{second.category}</div>
-              <h3 style={titleStyle}>{second.title}</h3>
+              <span style={titleStyle}>{second.title}</span>
               <div
                 className="d-flex align-items-center mt-1"
                 style={{
@@ -108,7 +108,7 @@ const ThirdHomeSection: React.FC<Props> = ({ data }) => {
 
               <div className="col-md-7">
                 <div style={categoryStyle}>{main.category}</div>
-                <h3 style={titleStyle}>{main.title}</h3>
+                <span style={titleStyle}>{main.title}</span>
                 {main.description && <p style={descriptionStyle}>{main.shortdescription}</p>}
                 <div
                   className="d-flex align-items-center mt-1"
@@ -133,7 +133,7 @@ const ThirdHomeSection: React.FC<Props> = ({ data }) => {
             <div className="col-md-6 mb-3 border-end pe-md-4">
               <Link href={`/${fourth.category}/${fourth.slug}`} className='text-decoration-none' title={`${fourth.slug}`}>
                 <div style={categoryStyle}>{fourth.category}</div>
-                <h3 style={titleStyle}>{fourth.title}</h3>
+                <span style={titleStyle}>{fourth.title}</span>
                 <div
                   className="d-flex align-items-center mt-1"
                   style={{
@@ -152,7 +152,7 @@ const ThirdHomeSection: React.FC<Props> = ({ data }) => {
             <div className="col-md-6 mb-3 ps-md-4">
               <Link href={`/${fifth.category}/${fifth.slug}`} className='text-decoration-none' title={`${fifth.slug}`}>
                 <div style={categoryStyle}>{fifth.category}</div>
-                <h3 style={titleStyle}>{fifth.title}</h3>
+                <span style={titleStyle}>{fifth.title}</span>
                 <div
                   className="d-flex align-items-center mt-1"
                   style={{

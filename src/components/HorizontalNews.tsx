@@ -53,7 +53,7 @@ const HorizontalNews: React.FC<HorizontalNewsProps> = ({ data }) => {
                   {/* {item.category} */}
                 </p>
 
-                <h4
+                <span
                   className="fw-bold mb-0"
                   style={{
                     color: '#111111',
@@ -63,7 +63,7 @@ const HorizontalNews: React.FC<HorizontalNewsProps> = ({ data }) => {
                   }}
                 >
                   {item.title}
-                </h4>
+                </span>
                 <div
                   className="d-flex align-items-center mt-1"
                   style={{

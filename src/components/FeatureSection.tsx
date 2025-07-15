@@ -44,7 +44,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
               className={`pb-3 mb-3 ${index !== leftItems.length - 1 ? 'border-bottom' : ''}`}
             >
               <Link href={`/${item.category}/${item.slug}`} className='text-decoration-none' title={`${item.slug}`}>
-                <h4
+                <span
                   style={{
                     color: '#111111',
                     fontSize: '18px',
@@ -53,7 +53,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
                   }}
                 >
                   {item.title}
-                </h4>
+                </span>
                 <div
                   className="d-flex align-items-center mt-1"
                   style={{
@@ -95,13 +95,13 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
         <div className="col-md-5">
           <Link href={`/${mainItem.category}/${mainItem.slug}`} className='text-decoration-none' title={`${mainItem.slug}`}>
 
-            <h4 style={{
+            <span style={{
               color: '#111111',
               fontSize: '18px',
               fontFamily: "'Archivo', Arial, sans-serif",
               fontWeight: 700
             }}
-            >{mainItem.title}</h4>
+            >{mainItem.title}</span>
             {mainItem.shortdescription && <p style={{
               color: "#444444",
               fontSize: '16px',
@@ -134,13 +134,13 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
             className={`col-md-6 ${idx === 0 ? 'border-end' : ''}`}
           >
             <Link href={`/${item.category}/${item.slug}`} className='text-decoration-none' title={`${item.slug}`}>
-              <h4 style={{
+              <span style={{
                 color: "#111111",
                 fontSize: '18px',
                 fontFamily: "'Archivo', Arial, sans-serif",
                 fontWeight: 700
               }}
-              >{item.title}</h4>
+              >{item.title}</span>
               <div
                 className="d-flex align-items-center mt-1"
                 style={{

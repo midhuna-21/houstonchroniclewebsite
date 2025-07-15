@@ -29,7 +29,7 @@ const LeadNewsCard: React.FC<LeadNewsCardProps> = ({ title, description, image }
         }}
       />
       <div style={{ padding: '16px' }}>
-        <h4 style={{ fontWeight: 'bold' }}>{title}</h4>
+        <span style={{ fontWeight: 'bold' }}>{title}</span>
         <p>{description}</p>
       </div>
     </div>

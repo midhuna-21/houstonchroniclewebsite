@@ -33,7 +33,7 @@ export default function RightSidebarHighlight({
         />
       </div>
 
-      <h5 className="fw-bold mb-2" style={{ fontSize: '1.2rem' }}>{heading}</h5>
+      <span className="fw-bold mb-2" style={{ fontSize: '1.2rem' }}>{heading}</span>
       <hr style={{ borderTop: '1px solid #aaa', width: '40px', marginTop: '4px', marginBottom: '10px' }} />
       <p className="text-secondary mb-0" style={{ fontSize: '0.95rem' }}>{description}</p>
     </div>

@@ -18,13 +18,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.tangentweekly.com/"),
-  title: "Breaking News, Politics, Tech, and Science",
-  description:
-    "Get the latest breaking news, in-depth business analysis, and expert financial insights covering market trends, investment strategies, and global updates.",
-  keywords:
-    "Latest business updates, political insights, global financial news, investment opportunities, 2025 market forecasts, private equity trends, venture capital insights, crypto market updates, blockchain innovations, AI and tech startups, green finance, ESG strategies, stock trading tips, smart investment planning",
+  title: "Politics,Business,Technology,Health,Science,Sports",
+  description: "Stay informed with the latest updates in politics, business, technology, health, science, and sports — from global news and innovations to expert analysis and breaking stories.",
+  keywords: "politics news, business analysis, technology trends, health updates, science discoveries, sports highlights, breaking news, global headlines, expert insights, market trends, tech innovations, medical research, scientific breakthroughs, sports events",
   openGraph: {
-    title: "Business,Politics,Technology,Health,Science,Sports",
+    title: "Politics,Business,Technology,Health,Science,Sports",
     description:
       "Stay informed with the latest breaking news, global business trends, financial strategies, investment opportunities, and expert market analysis.",
     url: "https://www.tangentweekly.com/",

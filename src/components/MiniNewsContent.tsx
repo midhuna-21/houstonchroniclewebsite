@@ -44,7 +44,7 @@ const MiniNewsCard: React.FC<MiniNewsCardProps> = ({ category, title, image, dat
         >
           {category}
         </p>
-        <h5
+        <span
           className="fw-bold mb-0"
           style={{
             fontFamily: "'Archivo', Arial, sans-serif",
@@ -54,7 +54,7 @@ const MiniNewsCard: React.FC<MiniNewsCardProps> = ({ category, title, image, dat
           }}
         >
           {title}
-        </h5>
+        </span>
         <div
           className="d-flex align-items-center mt-1"
           style={{

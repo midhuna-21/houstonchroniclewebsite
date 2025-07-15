@@ -41,12 +41,12 @@ export default function NewsCard({ data }: NewsCardProps) {
       >
         {data.subcategory}
       </p>
-      <h5
+      <span
         className="mb-2"
         style={{ fontSize: '22.784px', color: '#111111', fontWeight: 700, fontFamily: "'Archivo', Arial, sans-serif", }}
       >
         {data.title}
-      </h5>
+      </span>
       {data.description && (
         <p
           className="text-muted mb-0"

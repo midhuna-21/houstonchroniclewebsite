@@ -170,7 +170,7 @@ export default function Footer() {
                       flex: '0 0 auto',
                     }}
                   >
-                    <h6
+                    <h3
                       className="text-white fw-bold mb-2"
                       style={{
                         fontSize: '0.85rem',
@@ -178,7 +178,7 @@ export default function Footer() {
                       }}
                     >
                       {title}
-                    </h6>
+                    </h3>
                   </Link>
                   <hr
                     className="border-white d-block d-md-none"
@@ -192,7 +192,7 @@ export default function Footer() {
               ))}
 
               <div className="bg-transparent border-0">
-                <h6 className="mb-1">
+                <h3 className="mb-1">
                   <button
                     className="accordion-button collapsed bg-transparent px-0 d-flex align-items-center"
                     type="button"
@@ -211,7 +211,7 @@ export default function Footer() {
                   >
                     About
                   </button>
-                </h6>
+                </h3>
                 <div id="collapseAbout" className="accordion-collapse collapse">
                   <div className="accordion-body px-0 pt-1 pb-1" style={{ marginBottom: '1%' }}>
                     <ul className="list-unstyled small mb-1">
