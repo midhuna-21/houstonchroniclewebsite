@@ -34,14 +34,15 @@
     ]
   },
   {
-    "category": "politics",
-    "title": "France Embraces Power Struggle with Washington as Trade War Escalates",
-    "shortdescription": "France embraces a growing power struggle with Washington as the trade war escalates over U.S. green subsidies and European industrial interests.",
-    "description": "In the ongoing trade tensions between the United States and the European Union, French leaders are adopting a more assertive tone. France’s Economy Minister Bruno Le Maire called on Europe to defend its interests as forcefully as the U.S. does, criticizing the Inflation Reduction Act (IRA) for drawing investment away from European industries. The IRA, which heavily subsidizes American-made green technologies, is seen in Paris as a strategic threat to Europe’s industrial base. France is advocating for a 'Buy European Act' and urging the European Commission to respond with its own industrial policy. The call reflects a broader push for European strategic autonomy amid global economic rivalry, particularly with the U.S. and China. Despite internal EU divisions, France, led by President Macron, is pushing for a doctrine focused on industrial resilience and economic sovereignty. Critics warn of rising protectionism, but French leaders argue that Europe must stop playing by outdated rules in a world of economic power plays. The message from Paris: cooperation without fairness is no longer enough — and Europe must be ready to push back.",
-    "date": "04/06/2025",
-    "image": "/images/trade-war-france-us-embrace-power-struggle-washington.webp",
-    "slug": "trade-war-france-us-embrace-power-struggle-washington"
-  },
+  "category": "politics",
+  "title": "France Embraces Power Struggle with Washington as Trade War Escalates",
+  "slug": "france-embraces-struggle-with-washington-trade-war-escalates",
+  "date": "04/06/2025",
+  "image": "/images/trade-war-france-us-embrace-power-struggle-washington.webp",
+  "shortdescription": "France embraces a power struggle with Washington as tensions rise over U.S. green subsidies and European industrial policy.",
+  "description": "In the escalating trade war between the United States and the European Union, France is openly embracing a power struggle with Washington over economic influence and green subsidies. French leaders, including Economy Minister Bruno Le Maire, are taking a more assertive tone, urging Europe to match the U.S. in defending its industrial interests. At the heart of the tension is the Inflation Reduction Act (IRA), a sweeping policy that subsidizes American-made green technologies and is viewed in Paris as a threat to European industry. In response, France is pushing for a \"Buy European Act\" and calling on the European Commission to adopt a bold industrial strategy. The move signals a broader effort to establish European strategic autonomy amid growing global competition with both Washington and Beijing. Despite differing opinions within the EU, President Emmanuel Macron has doubled down on economic sovereignty and resilience. While critics caution against rising protectionism, French officials insist that in today’s power-driven economy, Europe can no longer avoid hard choices — and France is ready to escalate the struggle if Washington won’t compromise."
+}
+,
   {
     "category": "politics",
     "title": "Drones, Military Aircraft, and Airbus Orders: A Very 'Khaki' Outcome for the 2025 Paris Air Show",
