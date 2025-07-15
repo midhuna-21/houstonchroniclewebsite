@@ -80,7 +80,7 @@ export default function Home() {
         <NavigationSection />
         <div className="d-flex justify-content-center mt-2">
         </div>
-        <main className="container px-3 px-lg-5 mt-4 content">
+        <div className="container px-3 px-lg-5 mt-4 content">
           <div className="mb-5">
             <FirstHomeSection data={[PoliticsData[0], HealthData[0], SportsData[0]]} />
             <hr
@@ -232,7 +232,7 @@ export default function Home() {
             <div className="col-md-3">
             </div>
           </div>
-        </main>
+        </div>
 
         <div style={{ marginBottom: '1.5rem' }} />
         <style jsx>{`

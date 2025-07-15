@@ -37,11 +37,7 @@ export default function DetailFirstSection({
               sizes="(max-width: 1024px) 100vw, 1280px"
             />
           </div>
-
-
         </div>
-
-
 
         <div style={{ marginBottom: '24px' }}>
           <p

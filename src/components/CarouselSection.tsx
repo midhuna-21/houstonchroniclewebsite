@@ -154,8 +154,13 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({ data }) => {
           </div>
           {!isMobile && (
             <div style={{ marginLeft: '30px' }}>
-              <button
+              <div
                 onClick={nextSlide}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') nextSlide();
+                }}
                 style={{
                   width: '60px',
                   height: '60px',
@@ -165,15 +170,20 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({ data }) => {
                   color: 'black',
                   fontSize: '28px',
                   cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  userSelect: 'none',
                 }}
               >
                 →
-              </button>
+              </div>
             </div>
           )}
-        </div>
 
+        </div>
       </Link>
+
       <div
         style={{
           marginTop: '25px',

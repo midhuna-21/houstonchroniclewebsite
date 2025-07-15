@@ -102,7 +102,6 @@ export default function Header() {
                 height: '32px',
               }}
               aria-label="Toggle navigation"
-              aria-controls="basic-navbar-nav"
               aria-expanded={expanded}
               type="button"
             >
