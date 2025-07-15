@@ -45,8 +45,8 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
                   fontFamily: "'Rubik', Arial, sans-serif"
                 }}>{item1.category}</span>
 
-                <h1 style={{ fontSize: '22.784px', color: '#111111', fontWeight: 700, fontFamily: "'Archivo', Arial, sans-serif", }}
-                >{item1.title}</h1>
+                <span style={{ fontSize: '22.784px', color: '#111111', fontWeight: 700, fontFamily: "'Archivo', Arial, sans-serif", }}
+                >{item1.title}</span>
 
                 <div
                   className="d-flex align-items-center mt-1"
@@ -74,8 +74,8 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
                   fontFamily: "'Rubik', Arial, sans-serif"
                 }}
                 >{item2.category}</p>
-                <h2 style={{ fontSize: '22.784px', color: '#111111', fontWeight: 700, fontFamily: "'Archivo', Arial, sans-serif", }}
-                >{item2.title}</h2>
+                <h1 style={{ fontSize: '22.784px', color: '#111111', fontWeight: 700, fontFamily: "'Archivo', Arial, sans-serif", }}
+                >{item2.title}</h1>
                 <p style={{ fontSize: '16px', color: '#444444', fontWeight: 400, fontFamily: "'Rubik', Arial, sans-serif" }}
                 >{item2.shortdescription}</p>
                 <div
