@@ -60,7 +60,7 @@ const ArticleHeader: React.FC<ArticleHeaderProps> = ({
           />
         </div>
       </div>
-      <h1
+      <h2
         className="fw-bold mb-3 fst-italic"
         style={{
           fontSize: 'clamp(28px, 5vw, 42px)',
@@ -72,7 +72,7 @@ const ArticleHeader: React.FC<ArticleHeaderProps> = ({
         }}
       >
         {title}
-      </h1>
+      </h2>
 
 
       {/* Author info */}

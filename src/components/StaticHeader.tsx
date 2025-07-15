@@ -25,7 +25,7 @@ const StaticHeader: React.FC<StaticHeaderProps> = ({
     return (
         <div style={{ padding: '2rem 0', borderBottom: '2px solid #000' }}>
             <div style={{ marginBottom: '1.2rem' }}>
-                <div
+                <h1
                     className="text-uppercase fw-bold"
                     style={{
                         color: '#B50021',
@@ -55,11 +55,11 @@ const StaticHeader: React.FC<StaticHeaderProps> = ({
                             borderRadius: '1px',
                         }}
                     />
-                </div>
+                </h1>
             </div>
 
 
-            <h1
+            <h2
                 className="fw-bold mb-3 fst-italic"
                 style={{
                     fontSize: 'clamp(28px, 5vw, 42px)',
@@ -71,7 +71,7 @@ const StaticHeader: React.FC<StaticHeaderProps> = ({
                 }}
             >
                 {title}
-            </h1>
+            </h2>
 
             <div className="d-flex flex-wrap justify-content-between align-items-center gap-3 mt-2">
 
