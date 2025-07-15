@@ -9,15 +9,16 @@
     "slug": "mailed-self-sample-kits-boost-cervical-cancer-screening"
   },
 
-  {
-    "category": "science",
-    "title": "Bacteria Turn Plastic Waste Into Pain Relievers",
-    "shortdescription": "Scientists have engineered bacteria that can break down plastic waste and convert it into salicylic acid, the key ingredient in aspirin, offering a promising solution to both pollution and pharmaceutical production.",
-    "description": "In a remarkable breakthrough blending biotechnology, environmental science, and pharmaceutical innovation, researchers have successfully engineered genetically modified bacteria capable of breaking down plastic waste and converting it into salicylic acid, the active ingredient in aspirin. Focusing on PET plastics commonly found in bottles and packaging, the team used enzymes to depolymerize the plastic into terephthalic acid, which was then metabolized by genetically modified E. coli through a multi-step pathway to produce salicylic acid. The result was a pharmaceutical-grade product matching industry standards, offering a sustainable alternative to traditional, petrochemical-heavy production. This innovation not only addresses the plastic pollution crisis but also creates a low-carbon path to medicine manufacturing. Experts have lauded the development as a key step in circular economy practices, turning waste into value while reducing industrial emissions. The technique, still in the lab phase, is being optimized for yield and scalability, with plans for pilot programs and mobile bioconversion units in high-waste or low-resource areas. The approach could revolutionize how we deal with both environmental waste and pharmaceutical supply, with future applications potentially expanding into producing other medicines, biofuels, or chemicals. Regulatory agencies have shown interest, and early public response has been positive, though researchers acknowledge the need for thorough biosafety and ethical evaluations. As plastic production surpasses 400 million tons annually and climate pressures demand greener industrial processes, this breakthrough exemplifies how synthetic biology can transform global sustainability efforts by converting pollution into life-saving solutions.",
-    "image": "/images/modified-bacteria-convert-plastic-into-pain-reliever.webp",
-   "date":"6/06/2025",
-    "slug": "modified-bacteria-convert-plastic-into-pain-reliever"
-  },
+{
+  "category": "science",
+  "title": "Bacteria Turn Plastic Waste Into Pain Relievers",
+  "shortdescription": "Genetically engineered bacteria can turn plastic waste into pain relievers like salicylic acid, offering a sustainable solution for pollution and pharmaceutical production.",
+  "description": "In a remarkable breakthrough blending biotechnology, environmental science, and pharmaceutical innovation, researchers have successfully engineered genetically modified bacteria capable of breaking down plastic waste and converting it into salicylic acid, the active ingredient in aspirin. Focusing on PET plastics commonly found in bottles and packaging, the team used enzymes to depolymerize the plastic into terephthalic acid, which was then metabolized by genetically modified E. coli through a multi-step pathway to produce salicylic acid. The result was a pharmaceutical-grade product matching industry standards, offering a sustainable alternative to traditional, petrochemical-heavy production. This innovation not only addresses the plastic pollution crisis but also creates a low-carbon path to medicine manufacturing. Experts have lauded the development as a key step in circular economy practices, turning waste into value while reducing industrial emissions. The technique, still in the lab phase, is being optimized for yield and scalability, with plans for pilot programs and mobile bioconversion units in high-waste or low-resource areas. The approach could revolutionize how we deal with both environmental waste and pharmaceutical supply, with future applications potentially expanding into producing other medicines, biofuels, or chemicals. Regulatory agencies have shown interest, and early public response has been positive, though researchers acknowledge the need for thorough biosafety and ethical evaluations. As plastic production surpasses 400 million tons annually and climate pressures demand greener industrial processes, this breakthrough exemplifies how synthetic biology can transform global sustainability efforts by converting pollution into life-saving solutions.",
+  "image": "/images/modified-bacteria-convert-plastic-into-pain-reliever.webp",
+  "date": "6/06/2025",
+  "slug": "modified-bacteria-convert-plastic-into-pain-reliever"
+}
+,
   {
     "category": "science",
     "title": "Japanese Company Attributes Second Moon Crash to Faulty Laser Altimeter",

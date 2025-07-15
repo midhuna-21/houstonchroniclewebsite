@@ -41,9 +41,12 @@ export default function CategoryContent({ activeMain, data }: Props) {
       </div>
       <div className="row">
         <div className="col-md-9">
+{/* 
+          h2 */}
           <NewsGrid data={[data[0], data[1], data[2], data[3], data[4]]} />
         </div>
         <div className="col-md-3">
+          {/* h2 */}
           <InteractiveCard data={data[5]} />
         </div>
       </div>
@@ -51,6 +54,7 @@ export default function CategoryContent({ activeMain, data }: Props) {
       <div className="row">
         <div className="col-md-9">
 
+{/* h3 */}
 
           <CategoryFirstSection
             data={{
@@ -61,11 +65,13 @@ export default function CategoryContent({ activeMain, data }: Props) {
           />
 
 
+{/* h4 */}
           <HorizontalNews data={[data[13], data[14], data[15], data[16]]} />
 
         </div>
         <div className="col-md-3">
 
+{/* h4 */}
           <DailyPuzzles data={DailyPuzzlesData} />
           <TrendingCard
             data={{
@@ -89,6 +95,8 @@ export default function CategoryContent({ activeMain, data }: Props) {
           <SectionWrapper title={`More ${data[0]?.category || ''}`}>
 
             {data.slice(21).map((item, index) => (
+
+              // h5
               <CategoryNewsCard key={index + 17} data={item} />
             ))}
 

@@ -45,6 +45,8 @@ const StaticComponent = () => {
 
     return (
         <div className="max-w-4xl mx-auto px-4 py-8">
+
+            {/* h1 and h2 */}
             <StaticHeader
                 category={category}
                 title={title}
@@ -56,6 +58,8 @@ const StaticComponent = () => {
                 image={image}
                 shortdescription={shortdescription}
             />
+
+            {/* h2 */}
             <StaticParagraph data={sub[0]} />
             <StaticParagraph data={sub[1]} />
             <StaticParagraph data={sub[2]} />
@@ -70,6 +74,7 @@ const StaticComponent = () => {
                 role="Founding Editor"
             />
 
+{/* h2 */}
         <EditorsPicksSection data={EditorsData} />
 
         </div>

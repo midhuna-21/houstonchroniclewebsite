@@ -81,14 +81,14 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
             <Link href={`/${side[0].category}/${side[0].slug}`} className='text-decoration-none' title={`${side[0].slug}`}>
 
               <div className="mb-3">
-                <h4 className="fw-bold mb-2"
+                <h3 className="fw-bold mb-2"
                   style={{
                     color: "#111111",
                     fontSize: '18px',
                     fontFamily: "'Archivo', Arial, sans-serif",
                     fontWeight: 700
                   }}
-                >{side[0].title}</h4>
+                >{side[0].title}</h3>
                 <p className="text-muted small"
                   style={{
                     fontSize: '16px',
@@ -131,14 +131,14 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
                   }}
                 />
 
-                <h4 className="mb-2 fw-bold"
+                <h3 className="mb-2 fw-bold"
                   style={{
                     color: "#111111",
                     fontSize: '22.784px',
                     fontFamily: "'Archivo', Arial, sans-serif",
                     fontWeight: 700
                   }}
-                >{side[1].title}</h4>
+                >{side[1].title}</h3>
                 <div
                   className="d-flex align-items-center mt-1"
                   style={{

@@ -201,6 +201,8 @@ export default async function DetailPage({ params }: PageProps) {
   return (
     <main className={`container ${styles.content}`}>
       <div className={`container-fluid ${styles.noGutter}`}>
+
+        {/* h1 */}
         <ArticleHeader
           category={article.category}
           title={article.title}
@@ -221,6 +223,8 @@ export default async function DetailPage({ params }: PageProps) {
             <LatestNewsCard data={MostpopularData} />
           </div>
         </div>
+
+        {/* h2 */}
         <EditorsPicksSection data={EditorsData} />
       </div>
     </main>
