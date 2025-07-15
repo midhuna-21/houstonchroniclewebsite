@@ -55,7 +55,7 @@ const EditorsPicksSection: React.FC<EditorsPicksSectionProps> = ({ data }) => {
                   {item.category}
                 </p>
 
-                <h3
+                <h2
                   className="fw-bold mb-0"
                   style={{
                     color: '#111111',
@@ -65,7 +65,7 @@ const EditorsPicksSection: React.FC<EditorsPicksSectionProps> = ({ data }) => {
                   }}
                 >
                   {item.title}
-                </h3>
+                </h2>
                 <div
                   className="d-flex align-items-center mt-1"
                   style={{

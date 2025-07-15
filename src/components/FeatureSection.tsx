@@ -44,7 +44,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
               className={`pb-3 mb-3 ${index !== leftItems.length - 1 ? 'border-bottom' : ''}`}
             >
               <Link href={`/${item.category}/${item.slug}`} className='text-decoration-none' title={`${item.slug}`}>
-                <h5
+                <h4
                   style={{
                     color: '#111111',
                     fontSize: '18px',
@@ -53,7 +53,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
                   }}
                 >
                   {item.title}
-                </h5>
+                </h4>
                 <div
                   className="d-flex align-items-center mt-1"
                   style={{
@@ -95,13 +95,13 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
         <div className="col-md-5">
           <Link href={`/${mainItem.category}/${mainItem.slug}`} className='text-decoration-none' title={`${mainItem.slug}`}>
 
-            <h5 style={{
+            <h4 style={{
               color: '#111111',
               fontSize: '18px',
               fontFamily: "'Archivo', Arial, sans-serif",
               fontWeight: 700
             }}
-            >{mainItem.title}</h5>
+            >{mainItem.title}</h4>
             {mainItem.shortdescription && <p style={{
               color: "#444444",
               fontSize: '16px',
@@ -134,13 +134,13 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
             className={`col-md-6 ${idx === 0 ? 'border-end' : ''}`}
           >
             <Link href={`/${item.category}/${item.slug}`} className='text-decoration-none' title={`${item.slug}`}>
-              <h5 style={{
+              <h4 style={{
                 color: "#111111",
                 fontSize: '18px',
                 fontFamily: "'Archivo', Arial, sans-serif",
                 fontWeight: 700
               }}
-              >{item.title}</h5>
+              >{item.title}</h4>
               <div
                 className="d-flex align-items-center mt-1"
                 style={{

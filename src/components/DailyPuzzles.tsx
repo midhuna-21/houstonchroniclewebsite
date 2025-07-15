@@ -28,10 +28,10 @@ const DailyPuzzles: React.FC<DailyPuzzlesProps> = ({ data }) => {
           style={{ minHeight: '90px' }}
         >
           <div>
-            <h5 className="fw-bold mb-1" style={{
+            <h4 className="fw-bold mb-1" style={{
               fontSize: '16px', color: '#111111', fontWeight: 700, fontFamily: "'Rubik', Arial, sans-serif"
 
-            }}>{item.title}</h5>
+            }}>{item.title}</h4>
             <p className="mb-0 text-muted small" style={{
               fontSize: '11.232px', color: '#444444', fontWeight: 400, fontFamily: "'Rubik', Arial, sans-serif"
             }}>{item.description}</p>

@@ -105,6 +105,8 @@ export default function Home() {
             </div>
 
             <div className="col-md-3">
+
+              {/* h4 */}
               <DailyPuzzles data={DailyPuzzlesData} />
               <MostPopularList data={[PoliticsData[4], TechnologyData[4], HealthData[3], SportsData[3], ScienceData[4]]} />
             </div>
@@ -116,6 +118,8 @@ export default function Home() {
 
           <div className="row">
             <div className="col-md-9">
+
+              {/* h4 */}
               <ContentLayout
                 data={{
                   main: SportsData[4],
@@ -194,7 +198,6 @@ export default function Home() {
               />
             </div>
           </div>
-
 
           <div className="row">
             <div className="col-md-9">

@@ -60,7 +60,7 @@ const ArticleHeader: React.FC<ArticleHeaderProps> = ({
           />
         </div>
       </div>
-      <h2
+      <h1
         className="fw-bold mb-3 fst-italic"
         style={{
           fontSize: 'clamp(28px, 5vw, 42px)',
@@ -72,16 +72,12 @@ const ArticleHeader: React.FC<ArticleHeaderProps> = ({
         }}
       >
         {title}
-      </h2>
+      </h1>
 
 
       {/* Author info */}
       <div className="d-flex flex-wrap justify-content-between align-items-center gap-3 mt-2">
-
         <div className="d-flex align-items-center gap-2">
-
-
-
           <div className="text-muted small" style={{ fontFamily: "'Rubik', sans-serif", fontSize: '13.5px' }}>
             <div
               className="d-flex align-items-center mt-1"

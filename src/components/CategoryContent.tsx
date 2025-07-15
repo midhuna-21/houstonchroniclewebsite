@@ -51,6 +51,7 @@ export default function CategoryContent({ activeMain, data }: Props) {
       <div className="row">
         <div className="col-md-9">
 
+
           <CategoryFirstSection
             data={{
               main: data[6],
@@ -58,6 +59,7 @@ export default function CategoryContent({ activeMain, data }: Props) {
               bottomCards: [data[9], data[10], data[11], data[12]],
             }}
           />
+
 
           <HorizontalNews data={[data[13], data[14], data[15], data[16]]} />
 
