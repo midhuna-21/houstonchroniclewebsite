@@ -37,13 +37,13 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
                   height={400}
                   style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
                 />
-                <h1 className="text-uppercase mt-2" style={{
+                <h2 className="text-uppercase mt-2" style={{
                   color: '#B10021',
                   textTransform: 'uppercase',
                   fontSize: '14.224px',
                   fontWeight: 700,
                   fontFamily: "'Rubik', Arial, sans-serif"
-                }}>{item1.category}</h1>
+                }}>{item1.category}</h2>
 
                 <h2 style={{ fontSize: '22.784px', color: '#111111', fontWeight: 700, fontFamily: "'Archivo', Arial, sans-serif", }}
                 >{item1.title}</h2>
