@@ -23,7 +23,7 @@ const StaticHeader: React.FC<StaticHeaderProps> = ({
     date,
 }) => {
     return (
-        <div style={{ padding: '1   rem 0', borderBottom: '2px solid #000' }}>
+        <div style={{ padding: '1rem 0', borderBottom: '2px solid #000' }}>
             <div style={{ marginBottom: '1.2rem' }}>
                 <h1
                     className="text-uppercase fw-bold"
