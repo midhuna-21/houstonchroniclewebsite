@@ -39,18 +39,22 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({ data }) => {
 
   return (
     <div style={{ width: '100%', padding: '90px 0', boxSizing: 'border-box' }}>
-      <Link title={`${data[currentIndex].category}`} href={`/${data[currentIndex].category}/${data[currentIndex].slug}`} className='text-decoration-none'>
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'flex-start',
-            maxWidth: '100%',
-            overflow: 'hidden',
-            flexDirection: isMobile ? 'column' : 'row',
-          }}
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'flex-start',
+          maxWidth: '100%',
+          overflow: 'hidden',
+          flexDirection: isMobile ? 'column' : 'row',
+        }}
+      >
+        <Link
+          title={`${data[currentIndex].category}`}
+          href={`/${data[currentIndex].category}/${data[currentIndex].slug}`}
+          className='text-decoration-none'
+          style={{ display: 'flex', width: '100%', textDecoration: 'none' }}
         >
-
           <div
             style={{
               width: isMobile ? '100%' : '1200px',
@@ -61,7 +65,6 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({ data }) => {
               border: '2px solid black',
             }}
           >
-
             <div style={{ flex: 1 }}>
               <Image
                 src={data[currentIndex].image}
@@ -138,6 +141,7 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({ data }) => {
               >
                 {data[currentIndex].shortdescription}
               </p>
+
               <div
                 className="d-flex align-items-center mt-1"
                 style={{
@@ -152,38 +156,37 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({ data }) => {
               </div>
             </div>
           </div>
-          {!isMobile && (
-            <div style={{ marginLeft: '30px' }}>
-              <div
-                onClick={nextSlide}
-                role="button"
-                tabIndex={0}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') nextSlide();
-                }}
-                style={{
-                  width: '60px',
-                  height: '60px',
-                  borderRadius: '50%',
-                  border: '1px solid black',
-                  backgroundColor: 'transparent',
-                  color: 'black',
-                  fontSize: '28px',
-                  cursor: 'pointer',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  userSelect: 'none',
-                }}
-              >
-                →
-              </div>
+        </Link>
+
+        {!isMobile && (
+          <div style={{ marginLeft: '30px' }}>
+            <div
+              onClick={nextSlide}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') nextSlide();
+              }}
+              style={{
+                width: '60px',
+                height: '60px',
+                borderRadius: '50%',
+                border: '1px solid black',
+                backgroundColor: 'transparent',
+                color: 'black',
+                fontSize: '28px',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                userSelect: 'none',
+              }}
+            >
+              →
             </div>
-          )}
-
-        </div>
-      </Link>
-
+          </div>
+        )}
+      </div>
       <div
         style={{
           marginTop: '25px',
@@ -206,6 +209,7 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({ data }) => {
         ))}
       </div>
     </div>
+
   );
 };
 

@@ -15,7 +15,7 @@ export default function AboutTangentWeeklyPage() {
                 <div className="row justify-content-center">
                     <div className="col-lg-10">
                         <div style={{ textAlign: 'justify', textJustify: 'inter-word' }}>
-                            <section style={{ marginTop: '40px' }}>
+                            <div style={{ marginTop: '40px' }}>
                                 <h2
                                     style={{
                                         fontSize: '2.4rem',
@@ -42,13 +42,13 @@ export default function AboutTangentWeeklyPage() {
                                 <p style={{ fontSize: '1.15rem', lineHeight: 1.85 }}>
                                     We believe in fact-first reporting, public accountability, and thoughtful analysis that respects the reader's time. In a fast-moving media landscape, we prioritize what matters — not what trends.
                                 </p>
-                            </section>
+                            </div>
 
                             <hr style={{ margin: '50px 0', borderTop: '1px solid #000' }} />
 
 
                             {/* Section 1 */}
-                            <section>
+                            <div>
                                 <h2
                                     style={{
                                         fontSize: '1.75rem',
@@ -67,13 +67,13 @@ export default function AboutTangentWeeklyPage() {
                                 <p style={{ fontSize: '1.15rem', lineHeight: 1.85 }}>
                                     Our newsroom follows a simple principle: context over chaos. Whether we’re reporting on legislation, climate impact, civil rights, or community issues, we strive to cut through noise with reporting that’s honest, direct, and relevant.
                                 </p>
-                            </section>
+                            </div>
 
                             <hr style={{ margin: '50px 0', borderTop: '1px solid #000' }} />
 
 
                             {/* Section Heading */}
-                            <section>
+                            <div>
                                 <h2
                                     style={{
                                         fontSize: '1.75rem',
@@ -96,13 +96,13 @@ export default function AboutTangentWeeklyPage() {
                                 <p style={{ fontSize: '1.15rem', marginTop: '10px' }}>
                                     Our editorial model is reader-first: no paywalls, no clickbait, and no hidden sponsors.
                                 </p>
-                            </section>
+                            </div>
 
                             <hr style={{ margin: '50px 0', borderTop: '1px solid #000' }} />
 
 
                             {/* Section 2 */}
-                            <section>
+                            <div>
                                 <h2
                                     style={{
                                         fontSize: '1.75rem',
@@ -124,11 +124,11 @@ export default function AboutTangentWeeklyPage() {
                                 <p style={{ fontSize: '1.15rem', lineHeight: 1.85 }}>
                                     We stand for truth over spin, depth over speed, and service over spectacle.
                                 </p>
-                            </section>
+                            </div>
                             <hr style={{ margin: '50px 0', borderTop: '1px solid #000' }} />
 
                             {/* Section 3 */}
-                            <section>
+                            <div>
                                 <h2
                                     style={{
                                         fontSize: '1.75rem',
@@ -147,12 +147,12 @@ export default function AboutTangentWeeklyPage() {
                                 <p style={{ fontSize: '1.15rem', lineHeight: 1.85 }}>
                                     Whether you live in a small town, a major city, or somewhere in between, we aim to serve you with news that informs, not inflames.
                                 </p>
-                            </section>
+                            </div>
 
                             <hr style={{ margin: '50px 0', borderTop: '1px solid #000' }} />
 
                             {/* Section 4 */}
-                            <section>
+                            <div>
                                 <h2
                                     style={{
                                         fontSize: '1.75rem',
@@ -174,12 +174,12 @@ export default function AboutTangentWeeklyPage() {
                                 <p style={{ fontSize: '1.15rem', lineHeight: 1.85 }}>
                                     To practice journalism that is fearless, fair, and accountable to no one but our readers.
                                 </p>
-                            </section>
+                            </div>
 
                             <hr style={{ margin: '50px 0', borderTop: '1px solid #000' }} />
 
                             {/* Author  */}
-                            <section>
+                            <div>
 
                                 <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '20px' }}>
                                     Editorial Leadership
@@ -193,7 +193,7 @@ export default function AboutTangentWeeklyPage() {
                                 <p style={{ fontSize: '1.15rem', lineHeight: 1.85 }}>
                                     Cameron is a veteran political reporter and newsroom leader with over a decade of experience covering U.S. governance, public policy, and media reform. He launched <em>Tangent Weekly</em>to restore faith in journalism that puts facts and public interest above clicks and partisanship.
                                 </p>
-                            </section>
+                            </div>
                         </div>
                     </div>
                 </div>

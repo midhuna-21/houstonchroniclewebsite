@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
@@ -16,80 +17,16 @@ const geistMono = Geist_Mono({
 });
 
 
-// export const metadata: Metadata = {
-//   metadataBase: new URL("https://www.tangentweekly.com/"),
-//   title: "Tangent Weekly | Politics, Business, Tech, Health, Science & Sports",
-//   description:
-//     "Get the latest updates and expert analysis on politics, business, technology, health, science, and sports from Tangent Weekly. Stay informed with global insights and breaking stories.",
-//   keywords: [
-//     "politics news",
-//     "business analysis",
-//     "technology trends",
-//     "health updates",
-//     "science discoveries",
-//     "sports highlights",
-//     "breaking news",
-//     "global headlines",
-//     "expert insights",
-//     "market trends",
-//     "tech innovations",
-//     "medical research",
-//     "scientific breakthroughs",
-//     "sports events"
-//   ],
-//   openGraph: {
-//     title: "Tangent Weekly | Politics, Business, Tech, Health, Science & Sports",
-//     description:
-//       "Get the latest updates and expert analysis on politics, business, technology, health, science, and sports from Tangent Weekly. Stay informed with global insights and breaking stories.",
-//     url: "https://www.tangentweekly.com/",
-//     siteName: "Tangent Weekly",
-//     images: [
-//       {
-//         url: "https://www.tangentweekly.com/images/tangent-weekly-logo.webp",
-//         width: 1024,
-//         height: 1024,
-//         alt: "tangentweekly Logo",
-//       },
-//     ],
-//     type: "website",
-//   },
-//   twitter: {
-//     card: "summary_large_image",
-//     title: "Business,Politics,Technology,Health,Science,Sports",
-//     description:
-//       "Stay informed with the latest breaking news, global business trends, financial strategies, investment opportunities, and expert market analysis.",
-//     images:
-//       "https://www.tangentweekly.com/images/tangent-weekly-logo.webp",
-//   },
-//   alternates: {
-//     canonical: "https://www.tangentweekly.com/",
-//     languages: {
-//       en: "https://www.tangentweekly.com/",
-//       "x-default": "https://www.tangentweekly.com/",
-//     },
-//   },
-//   other: {
-//     author: "cameron ellis",
-//   },
-//   icons: {
-//     icon: "/favicon.ico",
-//   },
-// };
-
-
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://tangentweekly.com/"),
-  
-  // OPTIMIZED TITLE (50-60 characters) - More compelling and keyword-rich
+
   title: "Tangent Weekly - Breaking News, Politics & Business Analysis",
-  
-  // OPTIMIZED DESCRIPTION (140-155 characters) - More action-oriented and compelling
   description: "Breaking news and expert analysis on politics, business, tech, health, science & sports. Stay ahead with daily global insights and trending stories.",
-  
+
   keywords: [
     "breaking news",
-    "politics news", 
+    "politics news",
     "business analysis",
     "technology trends",
     "health updates",
@@ -103,7 +40,7 @@ export const metadata: Metadata = {
     "scientific breakthroughs",
     "sports events"
   ],
-  
+
   openGraph: {
     title: "Tangent Weekly - Breaking News, Politics & Business Analysis",
     description: "Breaking news and expert analysis on politics, business, tech, health, science & sports. Stay ahead with daily global insights and trending stories.",
@@ -119,14 +56,14 @@ export const metadata: Metadata = {
     ],
     type: "website",
   },
-  
+
   twitter: {
     card: "summary_large_image",
     title: "Breaking News, Politics & Business Analysis - Tangent Weekly",
     description: "Stay ahead with breaking news and expert analysis on politics, business, technology, health, science & sports.",
     images: "https://tangentweekly.com/images/tangent-weekly-logo.webp",
   },
-  
+
   alternates: {
     canonical: "https://tangentweekly.com/",
     languages: {
@@ -134,9 +71,9 @@ export const metadata: Metadata = {
       "x-default": "https://tangentweekly.com/",
     },
   },
-  
+
   authors: [{ name: "Cameron Ellis" }],
-  
+
   icons: {
     icon: "/favicon.ico",
   },
@@ -151,6 +88,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link
+          rel="preload"
+          as="image"
+          href="https://tangentweekly.com/images/wanda-vazquez-political-targeting.webp"
+          fetchPriority="high"
+          type="image/webp"
+        />
         <Script
           id="structured-data-newsmediaorganization"
           type="application/ld+json"

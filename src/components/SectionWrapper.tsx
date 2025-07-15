@@ -9,7 +9,7 @@ interface SectionWrapperProps {
 
 export default function SectionWrapper({ title, children }: SectionWrapperProps) {
   return (
-    <section className="bg-white ">
+    <div className="bg-white ">
       <div className="container-fluid px-0">
         <div
           className="flex-grow-1"
@@ -28,6 +28,6 @@ export default function SectionWrapper({ title, children }: SectionWrapperProps)
           {children}
         </div>
       </div>
-    </section>
+    </div>
   );
 }

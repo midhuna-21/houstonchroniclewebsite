@@ -23,7 +23,7 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
   const right2 = data[2];
 
   return (
-    <section>
+    <div>
       <div className="row g-4 align-items-stretch flex-column flex-md-row">
         <div className="col-md-3 text-start order-1 order-md-0 d-flex flex-column justify-content-between">
           <Link href={`/${main.category}/${main.slug}`} className="text-decoration-none" title={`${main.slug}`}>
@@ -104,6 +104,8 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
                     height: '400px',
                     objectFit: 'cover',
                   }}
+                  priority
+                  fetchPriority="high"
                 />
               </Link>
             </div>
@@ -219,6 +221,6 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
 
       </div>
 
-    </section>
+    </div>
   );
 }
