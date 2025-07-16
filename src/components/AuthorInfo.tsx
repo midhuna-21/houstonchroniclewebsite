@@ -4,6 +4,7 @@ import { FaXTwitter, FaBug, FaEnvelope } from 'react-icons/fa6';
 import React from 'react';
 import ArticleWrapper from './ArticleWrapper';
 import Link from 'next/link';
+import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 
 interface AuthorInfoProps {
   date: string;
@@ -24,22 +25,22 @@ const AuthorInfo: React.FC<AuthorInfoProps> = ({
 
       <div className="d-flex justify-content-between align-items-start flex-wrap gap-2">
         <div className="d-flex align-items-center gap-3">
-        
+
           <div>
-               <Link title='about-tangent-weekly' href="/about-tangent-weekly">
-            <div
-              className="fw-bold text-dark"
-              style={{
-                fontSize: '18px',
-                fontFamily: "'Archivo', Arial, sans-serif",
-                fontWeight: 700,
-                textDecoration: 'underline',
-                color: '#000000',
-              }}
-            >
-              {name}
-            </div>
-               </Link>
+            <Link title='about-tangent-weekly' href="/about-tangent-weekly">
+              <div
+                className="fw-bold text-dark"
+                style={{
+                  fontSize: '18px',
+                  fontFamily: "'Archivo', Arial, sans-serif",
+                  fontWeight: 700,
+                  textDecoration: 'underline',
+                  color: '#000000',
+                }}
+              >
+                {name}
+              </div>
+            </Link>
             <div
               className="text-uppercase"
               style={{
@@ -55,41 +56,33 @@ const AuthorInfo: React.FC<AuthorInfoProps> = ({
         </div>
 
         <div className="d-flex align-items-center gap-2">
-          {[FaXTwitter, FaBug, FaEnvelope].map((Icon, i) => (
-            <div
-              key={i}
-              className="rounded-circle border p-2 d-flex align-items-center justify-content-center"
-              style={{ width: 32, height: 32 }}
-            >
-              <Icon size={14} />
-            </div>
-          ))}
+          {[FaFacebookF, FaXTwitter, FaInstagram].map((Icon, i) => {
+            const urls = [
+              "#",
+              "https://x.com/TangentWeekly",
+              "https://www.instagram.com/tangentweekly/",
+            ];
+
+            return (
+              <a
+                key={i}
+                href={urls[i]}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-decoration-none"
+                style={{ color: 'inherit', textDecoration: 'none' }}
+              >
+                <div
+                  className="rounded-circle border p-2 d-flex align-items-center justify-content-center"
+                  style={{ width: 32, height: 32 }}
+                >
+                  <Icon size={14} />
+                </div>
+              </a>
+            );
+          })}
         </div>
       </div>
-
-      {/* Bio Section */}
-    {/* <div
-  className="mt-4"
-  style={{
-    backgroundColor: '#F8F9FA', 
-    borderLeft: '3px solid #CED4DA',
-    padding: '16px 20px',
-    borderRadius: '6px',
-    maxWidth: '100%',
-  }}
->
-  <span
-    style={{
-      lineHeight: '1.65',
-      color: '#333333',
-      fontWeight: 300,
-      fontSize: '14.2px',
-      fontFamily: "'IBM Plex Sans', 'Segoe UI', Roboto, sans-serif",
-    }}
-  >
-    {parseRichText(bio)}
-  </span>
-</div> */}
 
     </ArticleWrapper>
   );

@@ -134,8 +134,8 @@ export default function Header() {
               <Image
                 src="/images/tangent-weekly-logo.webp"
                 alt="Tangent Weekly Logo"
-                width={160}
-                height={40}
+                width={260}
+                height={200}
                 style={{
                   objectFit: "contain",
                   display: "block",

@@ -2,10 +2,9 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaFacebookF } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { PiButterflyBold } from 'react-icons/pi';
-import { HiOutlineMail } from 'react-icons/hi';
 import { BiCalendar } from 'react-icons/bi';
 
 interface ArticleHeaderProps {
@@ -100,7 +99,10 @@ const ArticleHeader: React.FC<ArticleHeaderProps> = ({
               border: '1px solid #ccc',
               transition: 'all 0.3s ease',
             }}
-          >   <FaFacebookF />
+          >
+            <a href="#" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
+              <FaFacebookF />
+            </a>
           </button>
           <button
             className="btn btn-outline-dark rounded-circle d-flex justify-content-center align-items-center social-icon-btn"
@@ -111,7 +113,10 @@ const ArticleHeader: React.FC<ArticleHeaderProps> = ({
               border: '1px solid #ccc',
               transition: 'all 0.3s ease',
             }}
-          >   <FaXTwitter />
+          >
+            <a href="https://x.com/TangentWeekly" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
+              <FaXTwitter />
+            </a>
           </button>
           <button
             className="btn btn-outline-dark rounded-circle d-flex justify-content-center align-items-center social-icon-btn"
@@ -122,18 +127,11 @@ const ArticleHeader: React.FC<ArticleHeaderProps> = ({
               border: '1px solid #ccc',
               transition: 'all 0.3s ease',
             }}
-          >    <PiButterflyBold />
-          </button>
-          <button
-            className="btn btn-outline-dark rounded-circle d-flex justify-content-center align-items-center social-icon-btn"
-            style={{
-              width: '38px',
-              height: '38px',
-              fontSize: '14px',
-              border: '1px solid #ccc',
-              transition: 'all 0.3s ease',
-            }}
-          >    <HiOutlineMail />
+
+
+          >
+            <a href="https://www.instagram.com/tangentweekly/" target="_blank" rel="noopener noreferrer">
+              <FaInstagram /></a>
           </button>
         </div>
       </div>

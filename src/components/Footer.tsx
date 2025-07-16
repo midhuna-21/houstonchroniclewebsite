@@ -50,22 +50,44 @@ export default function Footer() {
               />
             </Link>
             <div className="d-flex gap-2 mt-2">
-              {[FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn].map((Icon, i) => (
-                <div
-                  key={i}
-                  style={{
-                    border: '1px solid white',
-                    borderRadius: '50%',
-                    width: '28px',
-                    height: '28px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                  }}
-                >
-                  <Icon size={14} color="#ffffff" />
-                </div>
-              ))}
+              <div className="d-flex gap-2 mt-2">
+                {[
+                  FaFacebookF,
+                  FaTwitter,
+                  FaInstagram,
+                ].map((Icon, i) => {
+                  const urls = [
+                    "#",
+                    "https://x.com/TangentWeekly",
+                    "https://www.instagram.com/tangentweekly/"
+                  ];
+
+                  return (
+                    <a
+                      key={i}
+                      href={urls[i]}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ textDecoration: 'none' }}
+                    >
+                      <div
+                        style={{
+                          border: '1px solid white',
+                          borderRadius: '50%',
+                          width: '28px',
+                          height: '28px',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center'
+                        }}
+                      >
+                        <Icon size={14} color="#ffffff" />
+                      </div>
+                    </a>
+                  );
+                })}
+              </div>
+
             </div>
           </div>
 
