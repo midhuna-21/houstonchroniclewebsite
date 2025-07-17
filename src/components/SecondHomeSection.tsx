@@ -37,16 +37,32 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
                   height={400}
                   style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
                 />
-                <span className="text-uppercase mt-2" style={{
-                  color: '#B10021',
-                  textTransform: 'uppercase',
-                  fontSize: '14.224px',
-                  fontWeight: 700,
-                  fontFamily: "'Rubik', Arial, sans-serif"
-                }}>{item1.category}</span>
+                <div>
+                  <span
+                    className="text-uppercase mt-2"
+                    style={{
+                      color: '#B10021',
+                      fontSize: '14.224px',
+                      fontWeight: 700,
+                      fontFamily: "'Rubik', Arial, sans-serif",
+                    }}
+                  >
+                    {item1.category}
+                  </span>
 
-                <span style={{ fontSize: '22.784px', color: '#111111', fontWeight: 700, fontFamily: "'Archivo', Arial, sans-serif", }}
-                >{item1.title}</span>
+                  <br />
+                  <span
+                    style={{
+                      fontSize: '22.784px',
+                      color: '#111111',
+                      fontWeight: 700,
+                      fontFamily: "'Archivo', Arial, sans-serif",
+                    }}
+                  >
+                    {item1.title}
+                  </span>
+                </div>
+
 
                 <div
                   className="d-flex align-items-center mt-1"

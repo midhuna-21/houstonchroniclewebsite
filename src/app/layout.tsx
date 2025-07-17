@@ -95,6 +95,7 @@ export default function RootLayout({
           fetchPriority="high"
           type="image/webp"
         />
+        
         <Script
           id="structured-data-newsmediaorganization"
           type="application/ld+json"

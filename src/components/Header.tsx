@@ -1,9 +1,9 @@
 'use client';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Navbar, Container } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { slugify } from '../utils/slugify';
 import Image from "next/image";
 
@@ -134,11 +134,11 @@ export default function Header() {
               <Image
                 src="/images/tangent-weekly-logo.webp"
                 alt="Tangent Weekly Logo"
-                width={260}
-                height={200}
+                height={0}
+                width={0}
                 style={{
-                  objectFit: "contain",
-                  display: "block",
+                  width:'auto',
+                  height:'40px'
                 }}
               />
             </Link>
