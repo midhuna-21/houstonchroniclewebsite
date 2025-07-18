@@ -10,7 +10,6 @@ import EditorsData from '../../public/data/editorspick.json';
 
 const StaticComponent = () => {
     const title = "Charges Dropped for Wanda Vázquez Amid Claims of Political Targeting";
-    const slug = "wanda-vazquez-charges-dropped";
     const category = "Politics";
     const date = "05/07/2025";
     const shortdescription = "All federal charges against former Puerto Rico Governor Wanda Vázquez have been dropped, with prosecutors replacing them with a minor campaign finance violation — ending a three-year legal battle without a corruption conviction.";
@@ -45,8 +44,6 @@ const StaticComponent = () => {
 
     return (
         <div className="max-w-4xl mx-auto px-4 py-8">
-
-            {/* h1 and h2 */}
             <StaticHeader
                 category={category}
                 title={title}
@@ -58,8 +55,6 @@ const StaticComponent = () => {
                 image={image}
                 shortdescription={shortdescription}
             />
-
-            {/* h2 */}
             <StaticParagraph data={sub[0]} />
             <StaticParagraph data={sub[1]} />
             <StaticParagraph data={sub[2]} />
@@ -73,8 +68,6 @@ const StaticComponent = () => {
                 name="Cameron Ellis"
                 role="Founding Editor"
             />
-
-{/* h2 */}
         <EditorsPicksSection data={EditorsData} />
         </div>
     );

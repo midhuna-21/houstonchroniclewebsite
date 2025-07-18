@@ -37,13 +37,7 @@ export default async function CategoryPage({
                     <CategoryContent activeMain={category} data={jsonData} />
                 </div>
             </main>
-
         </>
     );
 }
-
-// export async function generateStaticParams() {
-// const categories = ['business', 'health', 'politics', 'science', 'technology','sports'];
-// return categories.map((slug) => ({ slug }));
-// }
 

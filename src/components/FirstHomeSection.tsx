@@ -79,8 +79,6 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
           </Link>
         </div>
 
-
-
         {main.image && (
           <div className="col-md-6 order-0 order-md-1 d-flex align-items-stretch border-end">
             <div
@@ -92,7 +90,6 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
               }}
             >
               <Link href={`/${main.category}/${main.slug}`} className='text-decoration-none' title={`${main.slug}`}>
-
                 <Image
                   src={main.image}
                   alt={main.category}
@@ -111,8 +108,6 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
             </div>
           </div>
         )}
-
-        {/* Right Section*/}
         <div className="col-md-3 ps-3 text-start order-2">
           {/* Right Item 1 */}
           <Link href={`/${right1.category}/${right1.slug}`} className='text-decoration-none' title={`${right1.slug}`}>

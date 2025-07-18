@@ -28,7 +28,6 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
         <div className="row g-0 position-relative">
           <div className="col-12 col-md-6 pe-md-2">
             <Link href={`/${item1.category}/${item1.slug}`} className='text-decoration-none' title={`${item1.slug}`}>
-
               <div style={{ borderBottom: '1px solid #eee', paddingBottom: '15px' }}>
                 <Image
                   src={item1.image}
@@ -49,7 +48,6 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
                   >
                     {item1.category}
                   </span>
-
                   <br />
                   <span
                     style={{
@@ -62,8 +60,6 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
                     {item1.title}
                   </span>
                 </div>
-
-
                 <div
                   className="d-flex align-items-center mt-1"
                   style={{
@@ -189,7 +185,6 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
         </div>
 
         <hr style={{ borderTop: '1px solid #ccc', marginTop: '30px' }} />
-
         <div
           className="section-new d-flex justify-content-between"
           style={{ maxWidth: '1150px', margin: '30px auto' }}
@@ -207,9 +202,7 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
               date={item5.date}
             />
           </Link>
-
           <div style={{ width: '1px', backgroundColor: '#ccc', margin: '0 10px' }}></div>
-
           <Link href={`/${item6.category}/${item6.slug}`} className="text-decoration-none" style={{ flex: '0 0 49.2%' }} title={`${item6.slug}`}>
             <MiniNewsCard
               category={item6.category}

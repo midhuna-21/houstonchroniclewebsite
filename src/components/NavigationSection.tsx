@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { slugify } from '../utils/slugify';
 
 const NavItems = [
   { label: 'Business', category: 'business' },

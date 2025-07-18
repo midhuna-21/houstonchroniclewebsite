@@ -166,7 +166,6 @@ export default function DetailFirstSection({
             </div>
           </div>
         </div>
-
       </div>
     </div>
   );

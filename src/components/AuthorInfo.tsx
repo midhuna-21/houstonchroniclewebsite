@@ -1,6 +1,6 @@
 'use client';
 
-import { FaXTwitter, FaBug, FaEnvelope } from 'react-icons/fa6';
+import { FaXTwitter } from 'react-icons/fa6';
 import React from 'react';
 import ArticleWrapper from './ArticleWrapper';
 import Link from 'next/link';

@@ -39,20 +39,6 @@ const HorizontalNews: React.FC<HorizontalNewsProps> = ({ data }) => {
                     display: 'block',
                   }}
                 />
-
-                <p
-                  style={{
-                    fontSize: '14.224px',
-                    fontWeight: 700,
-                    color: '#b50021',
-                    marginBottom: '4px',
-                    textTransform: 'uppercase',
-                    fontFamily: "'Rubik', Arial, sans-serif",
-                  }}
-                >
-                  {/* {item.category} */}
-                </p>
-
                 <span
                   className="fw-bold mb-0"
                   style={{

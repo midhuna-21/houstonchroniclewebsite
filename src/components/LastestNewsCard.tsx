@@ -58,7 +58,6 @@ const LatestNewsCard: React.FC<LatestNewsCardProps> = ({ data }) => {
                   <span style={{ color: '#aaa', marginLeft: '4px' }}>{item.date}</span>
                 </div>
               </div>
-
               <div style={{ flexShrink: 0 }}>
                 <Image
                   src={item.image}

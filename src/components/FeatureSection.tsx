@@ -36,9 +36,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
     <SectionWrapper title={section}>
       <div className="row border-bottom pb-4">
         <div className="col-md-3 border-end">
-
           {leftItems.map((item, index) => (
-
             <div
               key={index}
               className={`pb-3 mb-3 ${index !== leftItems.length - 1 ? 'border-bottom' : ''}`}
@@ -69,13 +67,10 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
               </Link>
             </div>
           ))}
-
         </div>
-
         <div className="col-md-4 text-center">
           {mainItem.image && (
             <Link href={`/${mainItem.category}/${mainItem.slug}`} className='text-decoration-none' title={`${mainItem.slug}`}>
-
               <Image
                 src={mainItem.image || ""}
                 alt={mainItem.title}

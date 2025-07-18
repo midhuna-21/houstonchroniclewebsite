@@ -26,7 +26,6 @@ const TrendingCard: React.FC<TrendingCardProps> = ({ data }) => {
   return (
     <SectionWrapper title="">
       {data.items.map((item, idx) => (
-
         <div key={idx} className="mb-4">
           <Link href={`/${item.category}/${item.slug}`} className='text-decoration-none' title={`${item.slug}`}>
             <div className="d-flex align-items-center justify-content-between mb-2">
@@ -43,7 +42,6 @@ const TrendingCard: React.FC<TrendingCardProps> = ({ data }) => {
               >
                 {item.title}
               </span>
-
               <Image
                 src={item.image || ""}
                 alt={item.title}
@@ -55,7 +53,6 @@ const TrendingCard: React.FC<TrendingCardProps> = ({ data }) => {
                 }}
               />
             </div>
-
             <p
               style={{
                 color: '#444444',

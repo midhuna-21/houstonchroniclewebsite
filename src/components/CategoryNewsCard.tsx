@@ -17,7 +17,7 @@ interface CategoryNewsCardProps {
 }
 
 const CategoryNewsCard: React.FC<CategoryNewsCardProps> = ({ data }) => {
-  const { title, description, shortdescription, image, author, slug, date, category } = data;
+  const { title, shortdescription, image, author, slug, date, category } = data;
 
   return (
 

@@ -4,7 +4,6 @@ import technologyData from '../../../../public/data/technology.json';
 import sportsData from '../../../../public/data/sports.json';
 import scienceData from '../../../../public/data/science.json';
 import healthData from '../../../../public/data/health.json';
-
 import ArticleHeader from '@/components/ArticleHeader';
 import DetailFirstSection from '@/components/DetailFirstSection';
 import MostPopularList from '@/components/MostPopularlist';
@@ -12,8 +11,6 @@ import LatestNewsCard from '@/components/LastestNewsCard';
 import SingleParagraph from '@/components/SingleParagraph';
 import EditorsPicksSection from '@/components/EditorsPick';
 import StaticComponent from '@/components/StaticContent';
-
-import AuthorData from '../../../../public/data/authour.json';
 import EditorsData from '../../../../public/data/editorspick.json';
 import MostpopularData from '../../../../public/data/mostpopular.json';
 
@@ -85,7 +82,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return {
       title: 'Charges Dropped for Wanda Vázquez Amid Claims of Political Targeting',
       description: 'All federal charges against former Puerto Rico Governor Wanda Vázquez have been dropped...',
-      keywords: 'Wanda Vázquez charges dropped, Puerto Rico governor, DOJ, corruption case, campaign finance violation',
+      keywords: 'Wanda Vázquez Garced charges dropped, Puerto Rico governor, DOJ, corruption case, campaign finance violation',
       authors: [{ name: 'Cameron Ellis' }],
       openGraph: {
         title: 'Charges Dropped for Wanda Vázquez Amid Claims of Political Targeting',
@@ -133,7 +130,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           image: imageUrl,
           url: currentUrl,
           articleBody: article.description?.slice(0, 160),
-          keywords: 'Wanda Vázquez, Puerto Rico, DOJ',
+          keywords: 'Wanda Vázquez Garced, Puerto Rico, DOJ',
         }),
       },
     };
@@ -142,7 +139,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: article.title,
     description: article.shortdescription,
-    keywords: `${article.category}, news, ${article.title}`,
+    keywords: `Wanda Vázquez Garced, news, ${article.title}`,
     authors: [{ name: 'Staff Writer' }],
     openGraph: {
       title: article.title,
@@ -201,8 +198,6 @@ export default async function DetailPage({ params }: PageProps) {
   return (
     <main className={`container ${styles.content}`}>
       <div className={`container-fluid ${styles.noGutter}`}>
-
-        {/* h1 */}
         <ArticleHeader
           category={article.category}
           title={article.title}
@@ -223,7 +218,6 @@ export default async function DetailPage({ params }: PageProps) {
           </div>
         </div>
 
-        {/* h2 */}
         <EditorsPicksSection data={EditorsData} />
       </div>
     </main>

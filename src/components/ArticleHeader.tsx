@@ -4,7 +4,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
-import { PiButterflyBold } from 'react-icons/pi';
 import { BiCalendar } from 'react-icons/bi';
 
 interface ArticleHeaderProps {
@@ -66,8 +65,6 @@ const ArticleHeader: React.FC<ArticleHeaderProps> = ({
       >
         {title}
       </h1>
-
-
       {/* Author info */}
       <div
         className="d-flex justify-content-between align-items-center flex-nowrap w-100 mt-2"
@@ -127,8 +124,6 @@ const ArticleHeader: React.FC<ArticleHeaderProps> = ({
               border: '1px solid #ccc',
               transition: 'all 0.3s ease',
             }}
-
-
           >
             <a href="https://www.instagram.com/tangentweekly/" target="_blank" rel="noopener noreferrer">
               <FaInstagram /></a>

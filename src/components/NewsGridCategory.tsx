@@ -125,19 +125,6 @@ const NewsGrid: React.FC<NewsGridProps> = ({ data }) => {
                       }}
                     />
                   </div>
-
-                  <div
-                    style={{
-                      color: '#B50021',
-                      fontWeight: 700,
-                      fontSize: '14.224px',
-                      textTransform: 'uppercase',
-                      marginBottom: '5px',
-                    }}
-                  >
-                    {/* {item.category} */}
-                  </div>
-
                   <div
                     style={{
                       color: '#111111',

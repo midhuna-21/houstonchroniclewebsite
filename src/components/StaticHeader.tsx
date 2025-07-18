@@ -4,7 +4,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
-import { PiButterflyBold } from 'react-icons/pi';
 import { BiCalendar } from 'react-icons/bi';
 
 

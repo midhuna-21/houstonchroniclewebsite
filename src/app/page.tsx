@@ -94,39 +94,28 @@ export default function Home() {
           </div>
           <div className="row">
             <div className="col-md-9">
-
-              {/* h1 and h2 */}
               <SecondHomeSection data={[ScienceData[1], PoliticsData[1], TechnologyData[1], BusinessData[1], HealthData[1], SportsData[1]]} />
 
               <div className="mb-5">
-                {/* h2 */}
                 <EditorsPicksSection data={[ScienceData[2], PoliticsData[2], TechnologyData[2], BusinessData[2]]} />
               </div>
               <div className="mb-5">
-                {/* h3 */}
                 <ThirdHomeSection data={[HealthData[2], SportsData[2], ScienceData[3], PoliticsData[3], TechnologyData[3]]} />
               </div>
             </div>
 
             <div className="col-md-3">
-
-              {/* h4 */}
               <DailyPuzzles data={DailyPuzzlesData} />
               <MostPopularList data={[PoliticsData[4], TechnologyData[4], HealthData[3], SportsData[3], ScienceData[4]]} />
             </div>
           </div>
 
           <div>
-
-            {/*  h4 */}
             <CarouselSection data={[ScienceData[5], TechnologyData[5], HealthData[4]]} />
           </div>
 
           <div className="row">
             <div className="col-md-9">
-
-
-              {/* h4 */}
               <ContentLayout
                 data={{
                   main: SportsData[4],
@@ -163,7 +152,6 @@ export default function Home() {
               />
 
               <div className="mt-4">
-                {/* h4 */}
                 <FeatureSection
                   data={{
                     section: 'Science',

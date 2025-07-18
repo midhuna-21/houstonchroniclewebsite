@@ -21,7 +21,6 @@ const DailyPuzzles: React.FC<DailyPuzzlesProps> = ({ data }) => {
   return (
     <SectionWrapper title="Your Daily Puzzles">
       {data.map((item, index) => (
-
         <div
           key={index}
           className="border px-3 py-4 mb-3 d-flex justify-content-between align-items-center"

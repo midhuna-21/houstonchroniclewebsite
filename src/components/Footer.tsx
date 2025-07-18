@@ -1,6 +1,6 @@
 "use client";
 import { useEffect } from 'react';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 import Link from 'next/link';
 import { slugify } from '../utils/slugify';
 import Image from 'next/image';
@@ -173,7 +173,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Mobile */}
+          {/* Mobile Specific*/}
           <div className="d-block d-md-none px-2">
             <div className="accordion" id="footerAccordion">
               {['Business', 'Technology', 'Sports', 'Health', 'Science', 'Politics'].map((title, index) => (

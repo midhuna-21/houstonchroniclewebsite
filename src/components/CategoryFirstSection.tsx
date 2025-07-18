@@ -114,10 +114,7 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
 
           {side?.[1] && (
             <Link href={`/${side[1].category}/${side[1].slug}`} className='text-decoration-none' title={`${side[1].slug}`}>
-
               <div>
-
-
                 <Image
                   src={side[1]?.image || ""}
                   alt={side[1]?.title}
@@ -162,7 +159,6 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
           <div className="row">
             {bottomCards?.slice(0, 2).map((item, index) => (
               <Link href={`/${item.category}/${item.slug}`} key={`${item.slug}-${index}`} className='text-decoration-none' title={`${item.slug}`}>
-
                 <div className="col-12 py-3 px-2" key={index}>
                   <div className="row g-2 align-items-center">
                     <div className="col-9">
@@ -175,9 +171,7 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
                       >
                         {item.title}
                       </p>
-
                     </div>
-
                     <div className="col-3">
                       {item.image && (
                         <Image
@@ -231,7 +225,6 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
           <div className="row">
             {bottomCards?.slice(2, 4).map((item, index) => (
               <Link href={`/${item.category}/${item.slug}`} key={`${item.slug}-${index}`} className='text-decoration-none' title={`${item.slug}`}>
-
                 <div className="col-12 py-3 px-2" key={index + 2}>
                   <div className="row g-2 align-items-center">
                     <div className="col-9">

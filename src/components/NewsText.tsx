@@ -21,7 +21,6 @@ const NewsText: React.FC<NewsTextProps> = ({ data }) => {
     <SectionWrapper title="Columns from the past">
       {data.map((item, index) => (
         <Link href={`/${item.category}/${item.slug}`} key={item.slug} className='text-decoration-none' title={`${item.slug}`}>
-
           <div
             key={index}
             className="d-flex flex-column flex-md-row align-items-start border-bottom pb-3 mb-3"
@@ -37,9 +36,6 @@ const NewsText: React.FC<NewsTextProps> = ({ data }) => {
                   fontFamily: "'Archivo', Arial, sans-serif",
                 }}
               >
-                {/* <span style={{ color: "#B10021", fontSize: '14px', textTransform: 'uppercase' }}>
-                {item.category}
-              </span><br /> */}
                 {item.title.split(' ').map((word, i) => (
                   <React.Fragment key={i}>
                     {word}{' '}

@@ -85,7 +85,6 @@ export default function Header() {
       >
         <Container fluid className="p-0 d-flex justify-content-between align-items-center position-relative">
           <div className="d-flex align-items-center" style={{ gap: '0.4rem' }}>
-            {/* Toggle button */}
             <button
               onClick={() => setExpanded(!expanded)}
               onMouseEnter={() => setIsHovered(true)}
@@ -137,13 +136,12 @@ export default function Header() {
                 height={0}
                 width={0}
                 style={{
-                  width:'auto',
-                  height:'40px'
+                  width: 'auto',
+                  height: '40px'
                 }}
               />
             </Link>
           </div>
-
         </Container>
       </Navbar>
 
@@ -183,7 +181,7 @@ export default function Header() {
                   onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
                 >
                   <Link
-                  title={`${item.slug}`}
+                    title={`${item.slug}`}
                     href={`/${slugify(item.slug)}`}
                     className="text-white text-decoration-none fw-bold w-100"
                     onClick={() => setExpanded(false)}
