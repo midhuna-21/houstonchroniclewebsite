@@ -73,7 +73,7 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
               >
                 <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
                 <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-                <span style={{ color: '#aaa', marginLeft: '4px' }}>{main.date}</span>
+                <span style={{ color: '#555', marginLeft: '4px' }}>{main.date}</span>
               </div>
             </div>
           </Link>
@@ -164,7 +164,7 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
               >
                 <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
                 <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-                <span style={{ color: '#aaa', marginLeft: '4px' }}>{main.date}</span>
+                <span style={{ color: '#555', marginLeft: '4px' }}>{main.date}</span>
               </div>
 
             </div>
@@ -208,7 +208,7 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
               >
                 <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
                 <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-                <span style={{ color: '#aaa', marginLeft: '4px' }}>{main.date}</span>
+                <span style={{ color: '#555', marginLeft: '4px' }}>{main.date}</span>
               </div>
             </div>
           </Link>

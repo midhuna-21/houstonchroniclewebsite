@@ -5,6 +5,25 @@ import Link from 'next/link';
 import { slugify } from '../utils/slugify';
 import Image from 'next/image';
 
+
+const socialLinks = [
+  {
+    icon: FaFacebookF,
+    url: '#',
+    label: 'Visit our Facebook page',
+  },
+  {
+    icon: FaTwitter,
+    url: 'https://x.com/TangentWeekly',
+    label: 'Visit our Twitter page',
+  },
+  {
+    icon: FaInstagram,
+    url: 'https://www.instagram.com/tangentweekly/',
+    label: 'Visit our Instagram page',
+  },
+];
+
 export default function Footer() {
   useEffect(() => {
     const buttons = document.querySelectorAll('.accordion-button');
@@ -45,47 +64,36 @@ export default function Footer() {
                 src="/images/tangent-weekly-logo.webp"
                 alt="Tangent Weekly Logo"
                 width={150}
-                height={30}
+                height={28}
                 priority
               />
             </Link>
             <div className="d-flex gap-2 mt-2">
               <div className="d-flex gap-2 mt-2">
-                {[
-                  FaFacebookF,
-                  FaTwitter,
-                  FaInstagram,
-                ].map((Icon, i) => {
-                  const urls = [
-                    "#",
-                    "https://x.com/TangentWeekly",
-                    "https://www.instagram.com/tangentweekly/"
-                  ];
-
-                  return (
-                    <a
-                      key={i}
-                      href={urls[i]}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ textDecoration: 'none' }}
+                {socialLinks.map(({ icon: Icon, url, label }, i) => (
+                  <a
+                    key={i}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <div
+                      style={{
+                        border: '1px solid white',
+                        borderRadius: '50%',
+                        width: '28px',
+                        height: '28px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                      }}
                     >
-                      <div
-                        style={{
-                          border: '1px solid white',
-                          borderRadius: '50%',
-                          width: '28px',
-                          height: '28px',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center'
-                        }}
-                      >
-                        <Icon size={14} color="#ffffff" />
-                      </div>
-                    </a>
-                  );
-                })}
+                      <Icon size={14} color="#ffffff" />
+                    </div>
+                  </a>
+                ))}
               </div>
 
             </div>

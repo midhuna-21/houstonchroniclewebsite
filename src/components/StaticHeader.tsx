@@ -86,7 +86,7 @@ const StaticHeader: React.FC<StaticHeaderProps> = ({
         >
           <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
           <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-          <span style={{ color: '#aaa', marginLeft: '4px' }}>{date}</span>
+          <span style={{ color: '#555', marginLeft: '4px' }}>{date}</span>
         </div>
 
         <div className="d-flex gap-2 flex-shrink-0">
@@ -100,7 +100,9 @@ const StaticHeader: React.FC<StaticHeaderProps> = ({
               transition: 'all 0.3s ease',
             }}
           >
-            <a href="#" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page" style={{ color: 'inherit', textDecoration: 'none' ,
+              
+            }}>
               <FaFacebookF />
             </a>
           </button>
@@ -114,7 +116,7 @@ const StaticHeader: React.FC<StaticHeaderProps> = ({
               transition: 'all 0.3s ease',
             }}
           >
-            <a href="https://x.com/TangentWeekly" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
+            <a href="https://x.com/TangentWeekly" target="_blank" rel="noopener noreferrer"  aria-label="Visit our Twitter page" style={{ color: 'inherit', textDecoration: 'none' }}>
               <FaXTwitter />
             </a>
           </button>
@@ -128,8 +130,9 @@ const StaticHeader: React.FC<StaticHeaderProps> = ({
               transition: 'all 0.3s ease',
             }}
           >
-            <a href="https://www.instagram.com/tangentweekly/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
-              <FaInstagram /></a>
+            <a href="https://www.instagram.com/tangentweekly/" target="_blank"  aria-label="Visit our Instagram page" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
+              <FaInstagram />
+              </a>
           </button>
         </div>
       </div>

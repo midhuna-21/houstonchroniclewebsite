@@ -70,7 +70,7 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
               >
                 <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
                 <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-                <span style={{ color: '#aaa', marginLeft: '4px' }}>{main.date}</span>
+                <span style={{ color: '#555', marginLeft: '4px' }}>{main.date}</span>
               </div>
             </div>
           </Link>
@@ -105,7 +105,7 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
                 >
                   <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
                   <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-                  <span style={{ color: '#aaa', marginLeft: '4px' }}>{side[0].date}</span>
+                  <span style={{ color: '#555', marginLeft: '4px' }}>{side[0].date}</span>
                 </div>
                 <hr />
               </div>
@@ -146,7 +146,7 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
                 >
                   <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
                   <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-                  <span style={{ color: '#aaa', marginLeft: '4px' }}>{side[1].date}</span>
+                  <span style={{ color: '#555', marginLeft: '4px' }}>{side[1].date}</span>
                 </div>
               </div>
             </Link>
@@ -199,7 +199,7 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
                     >
                       <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
                       <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-                      <span style={{ color: '#aaa', marginLeft: '4px' }}>{item.date}</span>
+                      <span style={{ color: '#555', marginLeft: '4px' }}>{item.date}</span>
                     </div>
                   </div>
 
@@ -266,7 +266,7 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
                     >
                       <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
                       <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-                      <span style={{ color: '#aaa', marginLeft: '4px' }}>{item.date}</span>
+                      <span style={{ color: '#555', marginLeft: '4px' }}>{item.date}</span>
                     </div>
                   </div>
 

@@ -6,6 +6,25 @@ import ArticleWrapper from './ArticleWrapper';
 import Link from 'next/link';
 import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 
+
+const socialLinks = [
+  {
+    icon: FaFacebookF,
+    url: '#',
+    label: 'Visit our Facebook page',
+  },
+  {
+    icon: FaXTwitter,
+    url: 'https://x.com/TangentWeekly',
+    label: 'Visit our Twitter (X) page',
+  },
+  {
+    icon: FaInstagram,
+    url: 'https://www.instagram.com/tangentweekly/',
+    label: 'Visit our Instagram page',
+  },
+];
+
 interface AuthorInfoProps {
   date: string;
   name: string;
@@ -56,31 +75,25 @@ const AuthorInfo: React.FC<AuthorInfoProps> = ({
         </div>
 
         <div className="d-flex align-items-center gap-2">
-          {[FaFacebookF, FaXTwitter, FaInstagram].map((Icon, i) => {
-            const urls = [
-              "#",
-              "https://x.com/TangentWeekly",
-              "https://www.instagram.com/tangentweekly/",
-            ];
-
-            return (
-              <a
-                key={i}
-                href={urls[i]}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-decoration-none"
-                style={{ color: 'inherit', textDecoration: 'none' }}
+          {socialLinks.map(({ icon: Icon, url, label }, i) => (
+            <a
+              key={i}
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className="text-decoration-none"
+              style={{ color: 'inherit' }}
+            >
+              <div
+                className="rounded-circle border p-2 d-flex align-items-center justify-content-center"
+                style={{ width: 32, height: 32 }}
               >
-                <div
-                  className="rounded-circle border p-2 d-flex align-items-center justify-content-center"
-                  style={{ width: 32, height: 32 }}
-                >
-                  <Icon size={14} />
-                </div>
-              </a>
-            );
-          })}
+                <Icon size={14} />
+              </div>
+            </a>
+
+          ))}
         </div>
       </div>
 

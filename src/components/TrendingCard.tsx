@@ -80,7 +80,7 @@ const TrendingCard: React.FC<TrendingCardProps> = ({ data }) => {
             >
               <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
               <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-              <span style={{ color: '#aaa', marginLeft: '4px' }}>{item.date}</span>
+              <span style={{ color: '#555', marginLeft: '4px' }}>{item.date}</span>
             </div>
             {idx !== data.items.length - 1 && (
               <hr style={{ borderColor: '#666' }} />

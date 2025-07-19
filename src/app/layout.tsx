@@ -87,13 +87,35 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="preload"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          as="style"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="https://tangentweekly.com/images/wanda-vazquez-political-targeting.webp"
+          fetchPriority="high"
+          type="image/webp"
+        />
+
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <meta name="googlebot" content="index, follow" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Header />
         <div>
           {children}
         </div>
         <Footer />
-            <Script
+        <Script
           id="structured-data-newsmediaorganization"
           type="application/ld+json"
           strategy="afterInteractive"

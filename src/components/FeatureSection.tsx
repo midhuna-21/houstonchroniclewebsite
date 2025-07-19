@@ -62,7 +62,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
                 >
                   <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
                   <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-                  <span style={{ color: '#aaa', marginLeft: '4px' }}>{item.date}</span>
+                  <span style={{ color: '#555', marginLeft: '4px' }}>{item.date}</span>
                 </div>
               </Link>
             </div>
@@ -114,7 +114,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
             >
               <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
               <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-              <span style={{ color: '#aaa', marginLeft: '4px' }}>{mainItem.date}</span>
+              <span style={{ color: '#555', marginLeft: '4px' }}>{mainItem.date}</span>
             </div>
           </Link>
         </div>
@@ -146,7 +146,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
               >
                 <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
                 <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-                <span style={{ color: '#aaa', marginLeft: '4px' }}>{item.date}</span>
+                <span style={{ color: '#555', marginLeft: '4px' }}>{item.date}</span>
               </div>
             </Link>
           </div>

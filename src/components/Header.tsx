@@ -1,6 +1,5 @@
 'use client';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Navbar, Container } from 'react-bootstrap';
@@ -113,33 +112,33 @@ export default function Header() {
                 <Image
                   src="/images/tangent-weekly-logo.webp"
                   alt="Tangent Weekly Logo"
-                  width={0}
-                  height={0}
-                  sizes="auto"
+                  width={150}
+                  height={28}
+                  priority
                   style={{
-                    height: '100%',
+                    height: 'auto',
                     width: 'auto',
                     maxHeight: '28px',
                     objectFit: 'contain',
                     display: 'block',
                   }}
                 />
+
               </Link>
             </div>
           </div>
 
           <div className="d-none d-lg-block position-absolute top-50 start-50 translate-middle">
             <Link href="/" className="text-decoration-none d-inline-block" title='index'>
+
               <Image
                 src="/images/tangent-weekly-logo.webp"
                 alt="Tangent Weekly Logo"
-                height={0}
-                width={0}
-                style={{
-                  width: 'auto',
-                  height: '40px'
-                }}
+                width={216}
+                height={40}
+                priority
               />
+
             </Link>
           </div>
         </Container>

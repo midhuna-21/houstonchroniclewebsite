@@ -105,7 +105,7 @@ const NewsGrid: React.FC<NewsGridProps> = ({ data }) => {
             >
               <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
               <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-              <span style={{ color: '#aaa', marginLeft: '4px' }}>{main.date}</span>
+              <span style={{ color: '#555', marginLeft: '4px' }}>{main.date}</span>
             </div>
           </Link>
         </div>
@@ -113,47 +113,46 @@ const NewsGrid: React.FC<NewsGridProps> = ({ data }) => {
         <div className="col-md-6">
           <div className="row g-4">
             {right.map((item, index) => (
-              <div className="col-6" key={index}>
+              <div className="col-12 col-sm-6" key={index}>
                 <Link href={`/${main.category}/${item.slug}`} className="text-decoration-none" title={`${item.slug}`}>
-                  <div style={{ width: '100%', height: '180px', position: 'relative', marginBottom: '8px' }}>
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
+                  <div className="d-flex flex-column">
+                    <div style={{ width: '100%', height: '180px', position: 'relative', marginBottom: '8px' }}>
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        style={{ objectFit: 'cover' }}
+                      />
+                    </div>
+                    <div
                       style={{
-                        objectFit: 'cover',
+                        color: '#111111',
+                        fontWeight: 700,
+                        fontSize: '18px',
+                        lineHeight: 1.3,
+                        fontFamily: "'Archivo', Arial, sans-serif",
                       }}
-                    />
-                  </div>
-                  <div
-                    style={{
-                      color: '#111111',
-                      fontWeight: 700,
-                      fontSize: '18px',
-                      lineHeight: 1.3,
-                      fontFamily: "'Archivo', Arial, sans-serif",
-                    }}
-                  >
-                    {item.title}
-                  </div>
-                  <div
-                    className="d-flex align-items-center mt-1"
-                    style={{
-                      fontSize: '10px',
-                      fontWeight: 200,
-                      fontFamily: "'Rubik', Arial, sans-serif",
-                    }}
-                  >
-                    <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
-                    <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-                    <span style={{ color: '#aaa', marginLeft: '4px' }}>{item.date}</span>
+                    >
+                      {item.title}
+                    </div>
+                    <div
+                      className="d-flex align-items-center mt-1"
+                      style={{
+                        fontSize: '10px',
+                        fontWeight: 200,
+                        fontFamily: "'Rubik', Arial, sans-serif",
+                      }}
+                    >
+                      <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+                      <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+                      <span style={{ color: '#555', marginLeft: '4px' }}>{item.date}</span>
+                    </div>
                   </div>
                 </Link>
               </div>
             ))}
           </div>
         </div>
-
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { BiCalendar } from 'react-icons/bi';
+import { BiCalendar, BiChevronRight } from 'react-icons/bi';
 import Image from 'next/image';
 
 
@@ -38,7 +38,7 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({ data }) => {
   };
 
   return (
-    <div style={{ width: '100%', padding: '90px 0', boxSizing: 'border-box' }}>
+    <div style={{ width: '100%', padding: '90px 0', boxSizing: 'border-box', position: 'relative' }}>
       <div
         style={{
           display: 'flex',
@@ -50,7 +50,7 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({ data }) => {
         }}
       >
         <Link
-          title={`${data[currentIndex].category}`}
+          title={`${data[currentIndex].slug}`}
           href={`/${data[currentIndex].category}/${data[currentIndex].slug}`}
           className='text-decoration-none'
           style={{ display: 'flex', width: '100%', textDecoration: 'none' }}
@@ -63,6 +63,7 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({ data }) => {
               flexDirection: isMobile ? 'column' : 'row',
               boxShadow: '0 4px 15px rgba(0,0,0,0.1)',
               border: '2px solid black',
+              position: 'relative',
             }}
           >
             <div style={{ flex: 1 }}>
@@ -82,6 +83,7 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({ data }) => {
                 priority
               />
             </div>
+
             <div
               style={{
                 flex: 1,
@@ -152,41 +154,13 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({ data }) => {
               >
                 <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
                 <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-                <span style={{ color: '#aaa', marginLeft: '4px' }}>{data[currentIndex].date}</span>
+                <span style={{ color: '#555', marginLeft: '4px' }}>{data[currentIndex].date}</span>
               </div>
             </div>
           </div>
         </Link>
-
-        {!isMobile && (
-          <div style={{ marginLeft: '30px' }}>
-            <div
-              onClick={nextSlide}
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') nextSlide();
-              }}
-              style={{
-                width: '60px',
-                height: '60px',
-                borderRadius: '50%',
-                border: '1px solid black',
-                backgroundColor: 'transparent',
-                color: 'black',
-                fontSize: '28px',
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                userSelect: 'none',
-              }}
-            >
-              →
-            </div>
-          </div>
-        )}
       </div>
+
       <div
         style={{
           marginTop: '25px',
@@ -208,6 +182,31 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({ data }) => {
           ></div>
         ))}
       </div>
+
+      {!isMobile && (
+        <button
+          onClick={() => setCurrentIndex((prev) => (prev + 1) % data.length)}
+          style={{
+            position: 'absolute',
+            top: '50%',
+            right: '-60px',
+            transform: 'translateY(-50%)',
+            backgroundColor: 'transparent',
+            border: '2px solid black',
+            borderRadius: '50%',
+            width: '50px',
+            height: '50px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer',
+            zIndex: 2,
+          }}
+          aria-label="Next Slide"
+        >
+          <BiChevronRight color="black" size={26} />
+        </button>
+      )}
     </div>
 
   );

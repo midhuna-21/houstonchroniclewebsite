@@ -65,7 +65,7 @@ const ThirdHomeSection: React.FC<Props> = ({ data }) => {
               >
                 <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
                 <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-                <span style={{ color: '#aaa', marginLeft: '4px' }}>{first.date}</span>
+                <span style={{ color: '#555', marginLeft: '4px' }}>{first.date}</span>
               </div>
             </div>
           </Link>
@@ -84,7 +84,7 @@ const ThirdHomeSection: React.FC<Props> = ({ data }) => {
               >
                 <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
                 <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-                <span style={{ color: '#aaa', marginLeft: '4px' }}>{second.date}</span>
+                <span style={{ color: '#555', marginLeft: '4px' }}>{second.date}</span>
               </div>
             </div>
           </Link>
@@ -120,7 +120,7 @@ const ThirdHomeSection: React.FC<Props> = ({ data }) => {
                 >
                   <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
                   <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-                  <span style={{ color: '#aaa', marginLeft: '4px' }}>{main.date}</span>
+                  <span style={{ color: '#555', marginLeft: '4px' }}>{main.date}</span>
                 </div>
               </div>
             </div>
@@ -144,7 +144,7 @@ const ThirdHomeSection: React.FC<Props> = ({ data }) => {
                 >
                   <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
                   <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-                  <span style={{ color: '#aaa', marginLeft: '4px' }}>{fourth.date}</span>
+                  <span style={{ color: '#555', marginLeft: '4px' }}>{fourth.date}</span>
                 </div>
               </Link>
             </div>
@@ -163,7 +163,7 @@ const ThirdHomeSection: React.FC<Props> = ({ data }) => {
                 >
                   <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
                   <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-                  <span style={{ color: '#aaa', marginLeft: '4px' }}>{fifth.date}</span>
+                  <span style={{ color: '#555', marginLeft: '4px' }}>{fifth.date}</span>
                 </div>
               </Link>
             </div>
