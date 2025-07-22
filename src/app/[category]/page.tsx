@@ -15,13 +15,13 @@ export async function generateStaticParams() {
         { category: "health" },
     ];
 }
-export default async function CategoryPage({
-    params,
-}: {
-    params: Promise<{ category: string }>;
-}) {
+    export default async function CategoryPage({
+        params,
+    }: {
+        params: Promise<{ category: string }>;
+    }) {
 
-    const { category } = await params;
+        const { category } = await params;
 
     const filePath = path.join(process.cwd(), 'public', 'data', `${category}.json`);
     const fileContents = await fs.readFile(filePath, 'utf-8');

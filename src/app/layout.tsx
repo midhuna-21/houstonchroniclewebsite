@@ -21,30 +21,14 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://tangentweekly.com/"),
 
-  title: "Tangent Weekly - Breaking News, Politics & Business Analysis",
-  description: "Breaking news and expert analysis on politics, business, tech, health, science & sports. Stay ahead with daily global insights and trending stories.",
-
-  keywords: [
-    "breaking news",
-    "politics news",
-    "business analysis",
-    "technology trends",
-    "health updates",
-    "science discoveries",
-    "sports highlights",
-    "global headlines",
-    "expert insights",
-    "market trends",
-    "tech innovations",
-    "medical research",
-    "scientific breakthroughs",
-    "sports events"
-  ],
-
-  openGraph: {
+  title: "Tangent Weekly – Expert Political Analysis, Market Trends & Emerging Tech Insights",
+description: "Explore expert insights on political targeting, Supreme Court rulings, AI-powered robotaxis, NBA prospects like Cooper Flagg, youth mental health, and breakthrough cancer screening. Tangent Weekly delivers trusted analysis in politics, business, technology, health, and sports.",
+keywords:
+"social media liability laws 2025, Brazil Supreme Court tech rulings, platform accountability regulations, Uber Waymo robotaxi launch Atlanta, self-driving cars in Georgia, Cooper Flagg NBA draft 2025, top NBA prospects after LeBron, youth mental health and smartphone addiction, screen time vs addictive app use, cervical cancer screening with self-sample kits, mailed HPV test effectiveness, political targeting case, Puerto Rico politics and legal system",
+ openGraph: {
     title: "Tangent Weekly - Breaking News, Politics & Business Analysis",
-    description: "Breaking news and expert analysis on politics, business, tech, health, science & sports. Stay ahead with daily global insights and trending stories.",
-    url: "https://tangentweekly.com/",
+ description: "Explore expert insights on political targeting, Supreme Court rulings, AI-powered robotaxis, NBA prospects like Cooper Flagg, youth mental health, and breakthrough cancer screening. Tangent Weekly delivers trusted analysis in politics, business, technology, health, and sports.",
+ url: "https://tangentweekly.com/",
     siteName: "Tangent Weekly",
     images: [
       {
@@ -59,9 +43,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Breaking News, Politics & Business Analysis - Tangent Weekly",
-    description: "Stay ahead with breaking news and expert analysis on politics, business, technology, health, science & sports.",
-    images: "https://tangentweekly.com/images/tangent-weekly-logo.webp",
+    title: "Tangent Weekly – Expert Political Analysis, Market Trends & Emerging Tech Insights",
+  description: "Explore expert insights on political targeting, Supreme Court rulings, AI-powered robotaxis, NBA prospects like Cooper Flagg, youth mental health, and breakthrough cancer screening. Tangent Weekly delivers trusted analysis in politics, business, technology, health, and sports.",
+   images: "https://tangentweekly.com/images/tangent-weekly-logo.webp",
   },
 
   alternates: {
