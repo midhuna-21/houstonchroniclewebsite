@@ -30,14 +30,14 @@ export async function generateStaticParams() {
     if (!jsonData) return notFound();
 
     return (
-        <>
+        <main>
             <NavigationSection />
-            <main className={styles.content}>
+            <div className={styles.content}>
                 <div className={`container-fluid ${styles.noGutter}`}>
                     <CategoryContent activeMain={category} data={jsonData} />
                 </div>
-            </main>
-        </>
+            </div>
+        </main>
     );
 }
 

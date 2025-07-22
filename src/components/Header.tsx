@@ -21,9 +21,9 @@ export default function Header() {
   const [isFixed, setIsFixed] = useState(false);
 
   useEffect(() => {
-    if (typeof document !== 'undefined') {
-      require('bootstrap/dist/js/bootstrap.bundle.min');
-    }
+    // if (typeof document !== 'undefined') {
+    //   require('bootstrap/dist/js/bootstrap.bundle.min');
+    // }
 
     const handleScroll = () => {
       setIsFixed(window.scrollY > 0);
@@ -65,7 +65,7 @@ export default function Header() {
 
 
   return (
-    <>
+    <header>
       <Navbar
         expand="lg"
         expanded={expanded}
@@ -203,6 +203,6 @@ export default function Header() {
         </div>
       )}
 
-    </>
+    </header>
   );
 }
