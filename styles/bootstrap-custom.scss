@@ -1,16 +1,38 @@
 
 
+// @import "bootstrap/scss/functions";
+
+// @import "bootstrap/scss/variables";
+
+// @import "bootstrap/scss/maps";
+
+// @import "bootstrap/scss/mixins";
+
+// @import "bootstrap/scss/grid";
+// @import "bootstrap/scss/navbar";
+// @import "bootstrap/scss/forms";
+// @import "bootstrap/scss/utilities";
+// @import "bootstrap/scss/helpers";
+
+
+
+// /styles/bootstrap-custom.scss
+
+// Required core
 @import "bootstrap/scss/functions";
-
 @import "bootstrap/scss/variables";
-
 @import "bootstrap/scss/maps";
-
 @import "bootstrap/scss/mixins";
 
+// Optional utilities & components used
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/containers";
 @import "bootstrap/scss/grid";
 @import "bootstrap/scss/navbar";
 @import "bootstrap/scss/forms";
-@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/buttons";
 @import "bootstrap/scss/helpers";
+@import "bootstrap/scss/utilities"; // 🔥 Needed for text-white, borders, spacing
 

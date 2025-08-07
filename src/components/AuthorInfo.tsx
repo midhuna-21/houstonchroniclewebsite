@@ -8,11 +8,11 @@ import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 
 
 const socialLinks = [
-  {
-    icon: FaFacebookF,
-    url: '#',
-    label: 'Visit our Facebook page',
-  },
+  // {
+  //   icon: FaFacebookF,
+  //   url: '#',
+  //   label: 'Visit our Facebook page',
+  // },
   {
     icon: FaXTwitter,
     url: 'https://x.com/TangentWeekly',
@@ -46,7 +46,7 @@ const AuthorInfo: React.FC<AuthorInfoProps> = ({
         <div className="d-flex align-items-center gap-3">
 
           <div>
-            <Link title='about-tangent-weekly' href="/about-tangent-weekly">
+            <Link title='about' href="/about">
               <div
                 className="fw-bold text-dark"
                 style={{

@@ -82,7 +82,7 @@ const ArticleHeader: React.FC<ArticleHeaderProps> = ({
           }}
         >
           <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
-          <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+          <span style={{ color: '#' }}>Published on</span>
           <span style={{ color: '#555', marginLeft: '4px' }}>{date}</span>
         </div>
 
@@ -97,9 +97,9 @@ const ArticleHeader: React.FC<ArticleHeaderProps> = ({
               transition: 'all 0.3s ease',
             }}
           >
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page" style={{ color: 'inherit', textDecoration: 'none' }}>
+            {/* <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page" style={{ color: 'inherit', textDecoration: 'none' }}>
               <FaFacebookF />
-            </a>
+            </a> */}
           </button>
           <button
             className="btn btn-outline-dark rounded-circle d-flex justify-content-center align-items-center social-icon-btn"

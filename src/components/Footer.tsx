@@ -1,17 +1,18 @@
 "use client";
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 import Link from 'next/link';
 import { slugify } from '../utils/slugify';
 import Image from 'next/image';
 
+import { FaChevronUp } from 'react-icons/fa';
 
 const socialLinks = [
-  {
-    icon: FaFacebookF,
-    url: '#',
-    label: 'Visit our Facebook page',
-  },
+  // {
+  //   icon: FaFacebookF,
+  //   url: '#',
+  //   label: 'Visit our Facebook page',
+  // },
   {
     icon: FaTwitter,
     url: 'https://x.com/TangentWeekly',
@@ -25,24 +26,12 @@ const socialLinks = [
 ];
 
 export default function Footer() {
-  useEffect(() => {
-    const buttons = document.querySelectorAll('.accordion-button');
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const arrow = btn.querySelector('.arrow-icon') as HTMLElement | null;
-        const isCollapsed = btn.classList.contains('collapsed');
-        if (arrow) {
-          arrow.style.transform = isCollapsed ? 'rotate(-45deg)' : 'rotate(135deg)';
-        }
-      });
-    });
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
 
-    return () => {
-      buttons.forEach(btn => {
-        btn.removeEventListener('click', () => { });
-      });
-    };
-  }, []);
+  const toggleAccordion = () => {
+    setIsAboutOpen(prev => !prev);
+  };
+
 
   return (
     <footer
@@ -58,7 +47,7 @@ export default function Footer() {
     >
       <div className="container-fluid px-4 pt-3 pt-md-4">
         <div className="row pt-2 pb-2 align-items-stretch gx-2">
-          <div className="col-md-2 mb-2 border-end  d-flex flex-column align-items-start px-2">
+          <div className="col-md-2 mb-2 d-flex flex-column align-items-start px-2">
             <Link href="/" className="text-decoration-none" title='index'>
               <Image
                 src="/images/tangent-weekly-logo.webp"
@@ -154,28 +143,30 @@ export default function Footer() {
                 <ul className="list-unstyled mb-0" style={{ marginTop: '0.5rem' }}>
 
                   {[
-                    'Our Company',
-                    'Our Editorial Approach',
-                    'Our Mission',
-                    'Editorial Standards & Ethics'
+                    { label: 'Our Company', href: '/about' },
+                    { label: 'Contact', href: '/contact' },
+                    { label: 'Our Team', href: '/team' },
+                    { label: 'Editorial Policy', href: '/editorial-policy' },
+                    { label: 'Correction Policy', href: '/correction-policy' },
                   ].map((link, idx) => (
                     <li key={idx} style={{ marginBottom: '0.8rem' }}>
                       <Link
-                        title='about-tangent-weekly'
-                        href="/about-tangent-weekly"
+                        title={link.label}
+                        href={link.href}
                         className="text-white text-decoration-none"
                         style={{
                           fontSize: '14.224px',
                           whiteSpace: 'nowrap',
                           maxWidth: '100%',
                           fontFamily: "'Rubik', Arial, sans-serif",
-                          fontWeight: 400
+                          fontWeight: 400,
                         }}
                       >
-                        {link}
+                        {link.label}
                       </Link>
                     </li>
                   ))}
+
                 </ul>
               </div>
             </div>
@@ -224,11 +215,11 @@ export default function Footer() {
               <div className="bg-transparent border-0">
                 <h3 className="mb-1">
                   <button
-                    className="accordion-button collapsed bg-transparent px-0 d-flex align-items-center"
+                    className={`accordion-button bg-transparent px-0 d-flex align-items-center justify-content-between w-100 ${isAboutOpen ? '' : 'collapsed'}`}
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseAbout"
-                    aria-expanded="false"
+                    aria-expanded={isAboutOpen ? 'true' : 'false'}
                     aria-controls="collapseAbout"
                     style={{
                       color: 'white',
@@ -238,26 +229,34 @@ export default function Footer() {
                       boxShadow: 'none',
                       padding: 0,
                     }}
+                    onClick={toggleAccordion}
                   >
                     About
+
                   </button>
                 </h3>
-                <div id="collapseAbout" className="accordion-collapse collapse">
+
+                <div id="collapseAbout" className={`accordion-collapse collapse ${isAboutOpen ? 'show' : ''}`}>
                   <div className="accordion-body px-0 pt-1 pb-1" style={{ marginBottom: '1%' }}>
                     <ul className="list-unstyled small mb-1">
                       {[
-                        'Our Company',
-                        'Our Editorial Approach',
-                        'Our Mission',
-                        'Editorial Standards & Ethics'
-                      ].map((link, i) => (
+                        { label: 'Our Company', href: '/about' },
+                        { label: 'Contact', href: '/contact' },
+                        { label: 'Our Team', href: '/team' },
+                        { label: 'Editorial Policy', href: '/editorial-policy' },
+                        { label: 'Correction Policy', href: '/correction-policy' },
+                      ].map((item, i) => (
                         <li className="mb-2" key={i}>
-                          <Link href="/about-tangent-weekly" className="text-white text-decoration-none" title='about-tangent-weekly'>{link}</Link>
+                          <Link href={item.href} className="text-white text-decoration-none" title={item.label}>
+                            {item.label}
+                          </Link>
                         </li>
                       ))}
                     </ul>
                   </div>
                 </div>
+
+
                 <hr
                   className="border-white d-block d-md-none"
                   style={{
@@ -267,6 +266,8 @@ export default function Footer() {
                   }}
                 />
               </div>
+
+
             </div>
           </div>
         </div>

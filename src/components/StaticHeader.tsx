@@ -90,7 +90,7 @@ const StaticHeader: React.FC<StaticHeaderProps> = ({
         </div>
 
         <div className="d-flex gap-2 flex-shrink-0">
-          <button
+          {/* <button
             className="btn btn-outline-dark rounded-circle d-flex justify-content-center align-items-center social-icon-btn"
             style={{
               width: '38px',
@@ -105,7 +105,7 @@ const StaticHeader: React.FC<StaticHeaderProps> = ({
             }}>
               <FaFacebookF />
             </a>
-          </button>
+          </button> */}
           <button
             className="btn btn-outline-dark rounded-circle d-flex justify-content-center align-items-center social-icon-btn"
             style={{

@@ -23,6 +23,8 @@ import TechnologyData from '../../public/data/technology.json';
 import DailyPuzzlesData from '../../public/data/puzzles.json';
 import ColumnsFromPastData from '../../public/data/columnsfrompast.json'
 import Script from "next/script";
+import '../../styles/bootstrap-custom.scss';
+
 
 export default function Home() {
   return (

@@ -71,7 +71,7 @@ const formatText = (text: string): React.ReactNode[] => {
 };
 
 /**
- * Splits text into paragraphs using "@@".
+ * Splits text into paragraphs using "c".
  */
 export function parseRichText(text?: string): React.ReactNode[] {
   if (!text) return [];
