@@ -28,7 +28,7 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
     <div style={{ marginBottom: '3rem' }}>
       <div className="row">
         <div className="col-md-6 border-end">
-          <Link href={`/${main.category}/${main.slug}`} className='text-decoration-none' title={`${main.slug}`}>
+            <Link href={`/${main.category}/${main.slug}`} className='text-decoration-none' title={`${main.slug}`}>
 
             <div>
               <Image

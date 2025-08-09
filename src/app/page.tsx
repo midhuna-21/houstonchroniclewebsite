@@ -41,7 +41,7 @@ export default function Home() {
               name: "Business,Politics, Technology,Health,Science,Sports",
               description:
                 "Stay informed with the latest breaking news, global business trends, financial strategies, investment opportunities, and expert market analysis.",
-              url: "https://tangentweekly.com/",
+              url: "https://www.tangentweekly.com/",
               speakable: {
                 "@type": "SpeakableSpecification",
                 cssSelector: ["h1"],
@@ -62,12 +62,12 @@ export default function Home() {
             {
               "@context": "https://schema.org",
               "@type": "ItemList",
-              url: "https://tangentweekly.com/",
+              url: "https://www.tangentweekly.com/",
               numberOfItems: 5,
               itemListOrder: "http://schema.org/ItemListOrderAscending",
               mainEntityOfPage: {
                 "@type": "WebPage",
-                "@id": "https://tangentweekly.com/",
+                "@id": "https://www.tangentweekly.com/",
               },
 
 

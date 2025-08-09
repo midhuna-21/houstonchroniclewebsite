@@ -78,8 +78,6 @@ function renderCard(item: {
             objectFit: 'cover',
           }}
         />
-
-
         <p
           style={{
             fontSize: '14.224px',

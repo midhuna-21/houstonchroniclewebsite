@@ -67,7 +67,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const articles = allDataMap[category] || [];
   const article = articles.find((a) => a.slug === slug);
 
-  const siteUrl = 'https://tangentweekly.com';
+  const siteUrl = 'https://www.tangentweekly.com/';
   const currentUrl = `${siteUrl}/${category}/${slug}`;
   const imageUrl = article?.image?.startsWith('http') ? article.image : `${siteUrl}${article?.image}`;
 
@@ -84,6 +84,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: 'All federal charges against former Puerto Rico Governor Wanda Vázquez have been dropped...',
       keywords: 'Wanda Vázquez Garced charges dropped, Puerto Rico governor, DOJ, corruption case, campaign finance violation',
       authors: [{ name: 'Cameron Ellis' }],
+       alternates: { canonical: "https://www.tangentweekly.com/politics/charges-dropped-wanda-vazquez-political-targeting/" },
+
       openGraph: {
         title: 'Charges Dropped for Wanda Vázquez Amid Claims of Political Targeting',
         description: 'All federal charges against former Puerto Rico Governor Wanda Vázquez have been dropped...',
@@ -128,6 +130,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             },
           },
           image: imageUrl,
+           alternates: { canonical: "https://www.tangentweekly.com/politics/charges-dropped-wanda-vazquez-political-targeting/" },
+          
           url: currentUrl,
           articleBody: article.description?.slice(0, 160),
           keywords: 'Wanda Vázquez Garced, Puerto Rico, DOJ',
