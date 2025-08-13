@@ -82,6 +82,13 @@ export default function Home() {
         <NavigationSection />
         <div className="d-flex justify-content-center mt-2">
         </div>
+
+          <div className="container px-3 px-lg-5 mt-4">
+          <header className="homepage-header mb-4">
+            <h1 className="visually-hidden">Tangent Weekly - Unfiltered News and Analysis</h1>
+          </header>
+        </div>
+
         <div className="container px-3 px-lg-5 mt-4 content">
           <div className="mb-5">
             <FirstHomeSection data={[PoliticsData[0], HealthData[0], SportsData[0]]} />

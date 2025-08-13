@@ -24,9 +24,10 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
 
   return (
     <div>
-      <div className="row g-4 align-items-stretch flex-column flex-md-row">
-        <div className="col-md-3 text-start order-1 order-md-0 d-flex flex-column justify-content-between">
-          <Link href={`/${main.category}/${main.slug}`} className="text-decoration-none" title={`${main.slug}`}>
+      <div className="row g-4 align-items-stretch flex-column flex-lg-row">
+        {/* Left Column */}
+        <div className="col-lg-3 text-start order-1 order-lg-0 d-flex flex-column justify-content-between">
+          <Link href={`/${main.category}/${main.slug}`} className="text-decoration-none" title={main.slug}>
             <div>
               <p
                 style={{
@@ -79,8 +80,9 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
           </Link>
         </div>
 
+        {/* Middle Column - Main Image */}
         {main.image && (
-          <div className="col-md-6 order-0 order-md-1 d-flex align-items-stretch border-end">
+          <div className="col-lg-6 order-0 order-lg-1 d-flex align-items-stretch border-end">
             <div
               style={{
                 width: '100%',
@@ -89,7 +91,7 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
                 position: 'relative',
               }}
             >
-              <Link href={`/${main.category}/${main.slug}`} className='text-decoration-none' title={`${main.slug}`}>
+              <Link href={`/${main.category}/${main.slug}`} className="text-decoration-none" title={main.slug}>
                 <Image
                   src={main.image}
                   alt={main.category}
@@ -108,9 +110,11 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
             </div>
           </div>
         )}
-        <div className="col-md-3 ps-3 text-start order-2">
+
+        {/* Right Column */}
+        <div className="col-lg-3 ps-lg-3 text-start order-2">
           {/* Right Item 1 */}
-          <Link href={`/${right1.category}/${right1.slug}`} className='text-decoration-none' title={`${right1.slug}`}>
+          <Link href={`/${right1.category}/${right1.slug}`} className="text-decoration-none" title={right1.slug}>
             <div style={{ marginBottom: '14px' }}>
               {right1.image && (
                 <Image
@@ -153,7 +157,6 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
                 {right1.title}
               </p>
 
-
               <div
                 className="d-flex align-items-center mt-1"
                 style={{
@@ -164,14 +167,13 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
               >
                 <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
                 <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-                <span style={{ color: '#555', marginLeft: '4px' }}>{main.date}</span>
+                <span style={{ color: '#555', marginLeft: '4px' }}>{right1.date}</span>
               </div>
-
             </div>
           </Link>
 
           {/* Right Item 2 */}
-          <Link href={`/${right2.category}/${right2.slug}`} className='text-decoration-none' title={`${right2.slug}`}>
+          <Link href={`/${right2.category}/${right2.slug}`} className="text-decoration-none" title={right2.slug}>
             <div>
               <p
                 className="fw-bold mb-1"
@@ -208,14 +210,12 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
               >
                 <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
                 <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-                <span style={{ color: '#555', marginLeft: '4px' }}>{main.date}</span>
+                <span style={{ color: '#555', marginLeft: '4px' }}>{right2.date}</span>
               </div>
             </div>
           </Link>
         </div>
-
       </div>
-
     </div>
   );
 }

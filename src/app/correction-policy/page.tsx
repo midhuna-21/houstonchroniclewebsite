@@ -34,9 +34,9 @@ export default function CorrectionPolicy() {
 
                                 {/* Spotted a Mistake */}
                                 <div className="bg-light rounded p-4 mb-5">
-                                    <h5 className="fw-bold mb-3" style={{ color: '#0d1a26' }}>
+                                    <p className="fw-bold mb-3" style={{ color: '#0d1a26' }}>
                                         Spotted a Mistake?
-                                    </h5>
+                                    </p>
                                     <p className="fs-6 text-secondary mb-3">
                                         If you see something in one of our articles that doesn’t seem right, please tell us.
                                         The best way to do that is to send a quick email to our editor's desk:
@@ -57,9 +57,9 @@ export default function CorrectionPolicy() {
 
                                 {/* What Happens Next */}
                                 <div className="p-4 border rounded shadow-sm bg-white mb-4">
-                                    <h5 className="fw-bold mb-3" style={{ color: '#0d1a26' }}>
+                                    <p className="fw-bold mb-3" style={{ color: '#0d1a26' }}>
                                         What Happens Next?
-                                    </h5>
+                                    </p>
                                     <p className="fs-6 text-secondary mb-3">
                                         We read every single email that comes in.
                                     </p>

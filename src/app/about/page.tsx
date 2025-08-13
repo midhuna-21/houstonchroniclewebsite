@@ -38,9 +38,9 @@ export default function About() {
 
                                 {/* What is Tangent Weekly? */}
                                 <div className="bg-light rounded p-4 mb-5">
-                                    <h5 className="fw-bold mb-3" style={{ color: '#0d1a26' }}>
+                                    <p className="fw-bold mb-3" style={{ color: '#0d1a26' }}>
                                         What is Tangent Weekly?
-                                    </h5>
+                                    </p>
                                     <p className="fs-6 text-secondary mb-0">
                                         Think of us as an independent workshop, not a giant factory. We're a small team dedicated to one simple idea: <strong>context matters.</strong> We focus on the stories that shape American life, and we take the time to explain not just <em>what</em> happened, but <em>why</em> it's important.
                                     </p>
@@ -51,32 +51,32 @@ export default function About() {
                                 </p>
 
                                 {/* Our Promise */}
-                                <h5 className="fw-bold mb-3" style={{ color: '#0d1a26' }}>
+                                <p className="fw-bold mb-3" style={{ color: '#0d1a26' }}>
                                     Our Promise to You
-                                </h5>
+                                </p>
 
                                 <div className="p-4 border rounded bg-white mb-4">
-                                    <h6 className="fw-semibold mb-2" style={{ color: '#1c2146' }}>
+                                    <p className="fw-semibold mb-2" style={{ color: '#1c2146' }}>
                                         Honest Reporting, No Hidden Agenda
-                                    </h6>
+                                    </p>
                                     <p className="fs-6 text-secondary mb-0">
                                         We follow the facts, wherever they lead. Our only goal is to give you a clear picture of what's happening, so you can make up your own mind.
                                     </p>
                                 </div>
 
                                 <div className="p-4 border rounded bg-white mb-4">
-                                    <h6 className="fw-semibold mb-2" style={{ color: '#1c2146' }}>
+                                    <p className="fw-semibold mb-2" style={{ color: '#1c2146' }}>
                                         Journalism, Not Clickbait
-                                    </h6>
+                                    </p>
                                     <p className="fs-6 text-secondary mb-0">
                                         You won't find outrage-for-profit here. We write stories that are important, not just stories that are loud.
                                     </p>
                                 </div>
 
                                 <div className="p-4 border rounded bg-white mb-5">
-                                    <h6 className="fw-semibold mb-2" style={{ color: '#1c2146' }}>
+                                    <p className="fw-semibold mb-2" style={{ color: '#1c2146' }}>
                                         A Commitment to Getting It Right
-                                    </h6>
+                                    </p>
                                     <p className="fs-6 text-secondary mb-0">
                                         We're human. When we make a mistake, we'll own it, fix it, and be transparent about it. That's a promise.
                                     </p>
@@ -95,9 +95,9 @@ export default function About() {
 
                                 {/* CTA Links */}
                                 <div className="p-4 border rounded shadow-sm bg-white">
-                                    <h5 className="fw-bold mb-3 text-center" style={{ color: '#0d1a26' }}>
+                                    <p className="fw-bold mb-3 text-center" style={{ color: '#0d1a26' }}>
                                         Get to Know Us Better
-                                    </h5>
+                                    </p>
                                     <p className="fs-6 text-secondary mb-3">
                                         This is our story. The people who write it every day are the heart of what we do — you can{' '}
                                         <a href="/team" className="fw-semibold text-decoration-underline text-dark">

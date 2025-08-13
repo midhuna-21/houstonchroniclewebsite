@@ -34,9 +34,9 @@ export default function EditorialPolicy() {
                                 </p>
 
                                 {/* Bullet Promises */}
-                                <h5 className="fw-semibold mb-4" style={{ color: '#0d1a26' }}>
+                                <p className="fw-semibold mb-4" style={{ color: '#0d1a26' }}>
                                     Here's what you can expect from us:
-                                </h5>
+                                </p>
 
                                 <div className="d-grid gap-4 mb-5">
                                     {[
@@ -67,10 +67,10 @@ export default function EditorialPolicy() {
                                         }
                                     ].map((item, idx) => (
                                         <div key={idx} className="bg-white p-4 border rounded shadow-sm">
-                                            <h6 className="fw-bold d-flex align-items-center mb-2" style={{ color: '#0d1a26' }}>
+                                            <p className="fw-bold d-flex align-items-center mb-2" style={{ color: '#0d1a26' }}>
                                                 {item.icon}
                                                 <span dangerouslySetInnerHTML={{ __html: item.title }} />
-                                            </h6>
+                                            </p>
                                             <p className="text-secondary fs-6 mb-0" dangerouslySetInnerHTML={{ __html: item.description }} />
                                         </div>
                                     ))}
@@ -78,7 +78,7 @@ export default function EditorialPolicy() {
 
                                 {/* Note Block */}
                                 <div className="p-4 rounded mb-5" style={{ backgroundColor: '#f1f5f9' }}>
-                                    <h6 className="fw-bold mb-2" style={{ color: '#0d1a26' }}>A Quick Note on Our Work:</h6>
+                                    <p className="fw-bold mb-2" style={{ color: '#0d1a26' }}>A Quick Note on Our Work:</p>
                                     <p className="fs-6 text-secondary mb-2">
                                         We'll always tell you where our information comes from. No secrets. And we’ll make it super clear when a piece is a news report (just the facts) versus an opinion piece (a specific viewpoint).
                                     </p>

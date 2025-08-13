@@ -37,9 +37,9 @@ export default function ContactUs() {
                                 </p>
 
                                 {/* Department Contacts */}
-                                <h5 className="fw-semibold mb-4" style={{ color: '#0d1a26' }}>
+                                <p className="fw-semibold mb-4" style={{ color: '#0d1a26' }}>
                                     Department Contacts
-                                </h5>
+                                </p>
 
                                 <p className="text-secondary fs-6 mb-4">
                                     To make sure your message gets to the right place quickly, please choose from the options below.
@@ -48,7 +48,7 @@ export default function ContactUs() {
                                 <div className="d-grid gap-4 mb-5">
                                     {/* News Tips */}
                                     <div className="bg-white border rounded shadow-sm p-4">
-                                        <h6 className="fw-bold mb-2" style={{ color: '#0d1a26' }}>For News Tips & Press Releases</h6>
+                                        <p className="fw-bold mb-2" style={{ color: '#0d1a26' }}>For News Tips & Press Releases</p>
                                         <p className="text-secondary fs-6 mb-3">
                                             Have a confidential tip or a story you think we should be covering? This is the best place to send it.
                                         </p>
@@ -59,7 +59,7 @@ export default function ContactUs() {
 
                                     {/* Corrections */}
                                     <div className="bg-white border rounded shadow-sm p-4">
-                                        <h6 className="fw-bold mb-2" style={{ color: '#0d1a26' }}>To Report a Correction</h6>
+                                        <p className="fw-bold mb-2" style={{ color: '#0d1a26' }}>To Report a Correction</p>
                                         <p className="text-secondary fs-6 mb-3">
                                             If you believe one of our articles contains a factual error, please let our editors know. We take accuracy seriously. You can read our full policy{' '}
                                             <a
@@ -77,7 +77,7 @@ export default function ContactUs() {
 
                                     {/* General Feedback */}
                                     <div className="bg-white border rounded shadow-sm p-4">
-                                        <h6 className="fw-bold mb-2" style={{ color: '#0d1a26' }}>For General Questions & Feedback</h6>
+                                        <p className="fw-bold mb-2" style={{ color: '#0d1a26' }}>For General Questions & Feedback</p>
                                         <p className="text-secondary fs-6 mb-3">
                                             Have a question about the site or want to share your thoughts on our work? We read everything.
                                         </p>
@@ -88,7 +88,7 @@ export default function ContactUs() {
 
                                     {/* Partnerships */}
                                     <div className="bg-white border rounded shadow-sm p-4">
-                                        <h6 className="fw-bold mb-2" style={{ color: '#0d1a26' }}>For Advertising & Partnerships</h6>
+                                        <p className="fw-bold mb-2" style={{ color: '#0d1a26' }}>For Advertising & Partnerships</p>
                                         <p className="text-secondary fs-6 mb-3">
                                             If you're interested in advertising opportunities or other business partnerships, please contact our business desk.
                                         </p>
@@ -124,9 +124,9 @@ export default function ContactUs() {
 
 
                                 {/* Social Links */}
-                                <h5 className="fw-bold mb-3 mt-5" style={{ color: '#0d1a26', fontSize: '1.25rem' }}>
+                                <p className="fw-bold mb-3 mt-5" style={{ color: '#0d1a26', fontSize: '1.25rem' }}>
                                     Connect with Us
-                                </h5>
+                                </p>
                                 <p className="text-secondary fs-6 mb-4">
                                     You can also find us on social media</p>
 

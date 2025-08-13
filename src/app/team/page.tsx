@@ -30,9 +30,9 @@ export default function OurTeam() {
 
                                 {/* Founder */}
                                 <div className="mb-5 pb-4 border-bottom">
-                                    <h5 className="fw-bold mb-2" style={{ color: '#0d1a26' }}>
+                                    <p className="fw-bold mb-2" style={{ color: '#0d1a26' }}>
                                         Founder & Editor-in-Chief
-                                    </h5>
+                                    </p>
                                     <p className="fw-semibold mb-1">Stephen M. Knowles</p>
                                     <p className="fs-6 text-secondary mb-2">
                                         Stephen started Tangent Weekly because he was fed up with the noise. After years working in media, he saw a need for a place that wasn't chasing clicks or pushing a secret agenda.
@@ -93,9 +93,9 @@ export default function OurTeam() {
 
                                 {/* Editorial Desk */}
                                 <div className="mb-5">
-                                    <h5 className="fw-bold mb-2" style={{ color: '#0d1a26' }}>
+                                    <p className="fw-bold mb-2" style={{ color: '#0d1a26' }}>
                                         Our Editorial Desk
-                                    </h5>
+                                    </p>
                                     <p className="fw-semibold mb-1">By Tangent Weekly Staff</p>
                                     <p className="fs-6 text-secondary mb-2">
                                         Sometimes, a story is a team effort. You’ll see the "Tangent Weekly Staff" byline on two types of articles:

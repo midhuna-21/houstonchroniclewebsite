@@ -65,7 +65,7 @@ const ArticleHeader: React.FC<ArticleHeaderProps> = ({
       >
         {title}
       </h1>
-      {/* Author info */}
+
       <div
         className="d-flex justify-content-between align-items-center flex-nowrap w-100 mt-2"
         style={{ gap: '1rem', flexWrap: 'nowrap' }}

@@ -23,7 +23,7 @@ const StaticHeader: React.FC<StaticHeaderProps> = ({
   return (
     <div style={{ padding: '1rem 0', borderBottom: '2px solid #000' }}>
       <div style={{ marginBottom: '1.2rem' }}>
-        <h1
+        <span
           className="text-uppercase fw-bold"
           style={{
             color: '#B50021',
@@ -53,7 +53,7 @@ const StaticHeader: React.FC<StaticHeaderProps> = ({
               borderRadius: '1px',
             }}
           />
-        </h1>
+        </span>
       </div>
       <h1
         className="fw-bold mb-3 fst-italic"

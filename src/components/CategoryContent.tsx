@@ -24,7 +24,7 @@ export default function CategoryContent({ activeMain, data }: Props) {
   return (
     <div className="w-100 container">
       <div>
-        <h2
+        <h1
           className="text-black mb-2"
           style={{
             fontSize: '36.496px',
@@ -33,10 +33,8 @@ export default function CategoryContent({ activeMain, data }: Props) {
           }}
         >
           {capitalizeFirstLetterOnly(activeMain)}
-        </h2>
-
+        </h1>
         <hr style={{ borderTop: '1px solid #4444' }} />
-
 
       </div>
       <div className="row">
