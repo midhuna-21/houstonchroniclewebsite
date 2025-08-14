@@ -46,7 +46,7 @@ const NewsGrid: React.FC<NewsGridProps> = ({ data }) => {
                 style={{
                   position: 'absolute',
                   left: '15px',
-                  bottom: '-14px',
+                  bottom: '-5px',
                   backgroundColor: '#000',
                   color: '#fff',
                   padding: '10px 26px',
@@ -69,6 +69,8 @@ const NewsGrid: React.FC<NewsGridProps> = ({ data }) => {
                 fontSize: '32.432px',
                 fontWeight: 700,
                 marginTop: '1rem',
+                lineHeight: 1.1,
+                display: 'inline-block',
               }}
             >
               {main.title}
@@ -116,7 +118,7 @@ const NewsGrid: React.FC<NewsGridProps> = ({ data }) => {
               <div className="col-12 col-sm-6" key={index}>
                 <Link href={`/${main.category}/${item.slug}`} className="text-decoration-none" title={`${item.slug}`}>
                   <div className="d-flex flex-column">
-                    <div style={{ width: '100%', height: '180px', position: 'relative', marginBottom: '8px' }}>
+                    <div style={{ width: '100%', height: '140px', position: 'relative', marginBottom: '8px' }}>
                       <Image
                         src={item.image}
                         alt={item.title}

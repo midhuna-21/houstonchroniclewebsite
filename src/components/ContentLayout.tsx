@@ -28,11 +28,9 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
     <div style={{ marginBottom: '3rem' }}>
       <SectionWrapper title={main.category || ""}>
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-12 col-lg-6" style={{ marginBottom: '1rem' }}>
             <Link href={`/${main.category}/${main.slug}`} className='text-decoration-none' title={`${main.slug}`}>
-
               <div>
-
                 <Image
                   src={main.image || ""}
                   alt={main.title}
@@ -77,10 +75,9 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
             </Link>
           </div>
 
-          <div className="col-md-6">
+          <div className="col-12 col-lg-6">
             {side?.[0] && (
               <Link href={`/${side[0].category}/${side[0].slug}`} className='text-decoration-none' title={`${side[0].slug}`}>
-
                 <div className="mb-3">
                   <span className="fw-bold mb-2"
                     style={{
@@ -117,7 +114,6 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
 
             {side?.[1] && (
               <Link href={`/${side[1].category}/${side[1].slug}`} className='text-decoration-none' title={`${side[1].slug}`}>
-
                 <div>
                   <Image
                     src={side[1]?.image || ""}
@@ -156,9 +152,10 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
             )}
           </div>
         </div>
+
         <hr className="my-4" />
         <div className="row">
-          <div className="col-md-6 border-end pe-md-4">
+          <div className="col-12 col-lg-6 border-end pe-lg-4">
             <div className="row">
               {bottomCards?.slice(0, 2).map((item, index) => (
                 <div className="col-12 py-3 px-2" key={index}>
@@ -205,7 +202,6 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
                             }}
                           />
                         )}
-
                       </div>
                     </div>
                   </Link>
@@ -227,7 +223,7 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
             </div>
           </div>
 
-          <div className="col-md-6 ps-md-4">
+          <div className="col-12 col-lg-6 ps-lg-4">
             <div className="row">
               {bottomCards?.slice(2, 4).map((item, index) => (
                 <div className="col-12 py-3 px-2" key={index + 2}>
@@ -296,6 +292,7 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
             </div>
           </div>
         </div>
+
       </SectionWrapper>
     </div>
   );

@@ -13,6 +13,9 @@ export async function generateStaticParams() {
         { category: "sports" },
         { category: "science" },
         { category: "health" },
+        { category: "education" },
+        { category: "entertainment" },
+
     ];
 }
     export default async function CategoryPage({

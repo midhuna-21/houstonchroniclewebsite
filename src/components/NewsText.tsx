@@ -19,11 +19,15 @@ interface NewsTextProps {
 const NewsText: React.FC<NewsTextProps> = ({ data }) => {
   return (
     <SectionWrapper title="Columns from the past">
-      {data.map((item, index) => (
-        <Link href={`/${item.category}/${item.slug}`} key={item.slug} className='text-decoration-none' title={`${item.slug}`}>
+      {data.slice(0, 3).map((item, index) => (
+        <Link
+          href={`/${item.category}/${item.slug}`}
+          key={item.slug}
+          className='text-decoration-none'
+          title={`${item.slug}`}
+        >
           <div
-            key={index}
-            className="d-flex flex-column flex-md-row align-items-start border-bottom pb-3 mb-3"
+            className="d-flex flex-column flex-lg-row align-items-start border-bottom pb-3 mb-3"
             style={{ gap: '1rem' }}
           >
             <div className="flex-grow-1">
@@ -39,7 +43,7 @@ const NewsText: React.FC<NewsTextProps> = ({ data }) => {
                 {item.title.split(' ').map((word, i) => (
                   <React.Fragment key={i}>
                     {word}{' '}
-                    {(i + 1) % 5 === 0 && <br className="d-none d-md-block" />}
+                    {(i + 1) % 5 === 0 && <br className="d-none d-lg-block" />}
                   </React.Fragment>
                 ))}
               </p>

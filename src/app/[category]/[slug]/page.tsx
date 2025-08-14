@@ -4,6 +4,8 @@ import technologyData from '../../../../public/data/technology.json';
 import sportsData from '../../../../public/data/sports.json';
 import scienceData from '../../../../public/data/science.json';
 import healthData from '../../../../public/data/health.json';
+import educationData from '../../../../public/data/education.json';
+import entertainmentData from '../../../../public/data/entertainment.json';
 import ArticleHeader from '@/components/ArticleHeader';
 import DetailFirstSection from '@/components/DetailFirstSection';
 import MostPopularList from '@/components/MostPopularlist';
@@ -11,8 +13,6 @@ import LatestNewsCard from '@/components/LastestNewsCard';
 import SingleParagraph from '@/components/SingleParagraph';
 import EditorsPicksSection from '@/components/EditorsPick';
 import StaticComponent from '@/components/StaticContent';
-import EditorsData from '../../../../public/data/editorspick.json';
-import MostpopularData from '../../../../public/data/mostpopular.json';
 
 import styles from './page.module.css';
 import { Metadata } from 'next';
@@ -41,6 +41,9 @@ export async function generateStaticParams() {
     { category: 'sports', articles: sportsData },
     { category: 'science', articles: scienceData },
     { category: 'health', articles: healthData },
+    { category: 'education', articles: healthData },
+    { category: 'entertainment', articles: healthData },
+
   ];
 
   return allData.flatMap(({ category, articles }) =>
@@ -62,6 +65,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     sports: sportsData,
     science: scienceData,
     health: healthData,
+    eduction: educationData,
+    entertainment: entertainmentData,
   };
 
   const articles = allDataMap[category] || [];
@@ -240,12 +245,12 @@ export default async function DetailPage({ params }: PageProps) {
             <SingleParagraph text={article.description ?? ''} />
           </div>
           <div className="col-md-4">
-            <MostPopularList data={MostpopularData} />
-            <LatestNewsCard data={MostpopularData} />
+            <MostPopularList data={educationData} />
+            <LatestNewsCard data={educationData} />
           </div>
         </div>
 
-        <EditorsPicksSection data={EditorsData} />
+        <EditorsPicksSection data={educationData} />
       </div>
     </main>
   );

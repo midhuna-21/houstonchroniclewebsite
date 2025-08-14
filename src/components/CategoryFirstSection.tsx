@@ -28,7 +28,7 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
     <div style={{ marginBottom: '3rem' }}>
       <div className="row">
         <div className="col-md-6 border-end">
-            <Link href={`/${main.category}/${main.slug}`} className='text-decoration-none' title={`${main.slug}`}>
+          <Link href={`/${main.category}/${main.slug}`} className='text-decoration-none' title={`${main.slug}`}>
 
             <div>
               <Image
@@ -49,7 +49,9 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
                   color: "#111111",
                   fontSize: '22.784px',
                   fontFamily: "'Archivo', Arial, sans-serif",
-                  fontWeight: 700
+                  fontWeight: 700,
+                  lineHeight: 1.2,
+                  display: 'inline-block',
                 }}
               >{main.title}</span>
               <p className="text-muted small"
@@ -84,9 +86,11 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
                 <span className="fw-bold mb-2"
                   style={{
                     color: "#111111",
-                    fontSize: '18px',
+                    fontSize: '22.784px',
                     fontFamily: "'Archivo', Arial, sans-serif",
-                    fontWeight: 700
+                    fontWeight: 700,
+                    lineHeight: 1.2,
+                    display: 'inline-block',
                   }}
                 >{side[0].title}</span>
                 <p className="text-muted small"
@@ -133,7 +137,9 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
                     color: "#111111",
                     fontSize: '22.784px',
                     fontFamily: "'Archivo', Arial, sans-serif",
-                    fontWeight: 700
+                    fontWeight: 700,
+                    lineHeight: 1.2,
+                    display: 'inline-block',
                   }}
                 >{side[1].title}</span>
                 <div

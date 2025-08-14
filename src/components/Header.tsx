@@ -21,10 +21,6 @@ export default function Header() {
   const [isFixed, setIsFixed] = useState(false);
 
   useEffect(() => {
-    // if (typeof document !== 'undefined') {
-    //   require('bootstrap/dist/js/bootstrap.bundle.min');
-    // }
-
     const handleScroll = () => {
       setIsFixed(window.scrollY > 0);
     };
@@ -62,7 +58,6 @@ export default function Header() {
       }}
     />
   );
-
 
   return (
     <header>
@@ -107,8 +102,8 @@ export default function Header() {
             </button>
 
             {/* Mobile Logo */}
-            <div className="d-lg-none d-flex align-items-center" style={{ height: '100%' }}>
-              <Link href="/" className="text-decoration-none d-inline-block" style={{ height: '100%' }} title='index'>
+            <div className="d-lg-none d-flex flex-column" style={{ height: '100%' }}>
+              <Link href="/" className="text-decoration-none d-inline-block" style={{ height: 'auto' }} title='index'>
                 <Image
                   src="/images/tangent-weekly-logo.webp"
                   alt="Tangent Weekly Logo"
@@ -118,19 +113,30 @@ export default function Header() {
                   style={{
                     height: 'auto',
                     width: 'auto',
-                    maxHeight: '28px',
+                    maxHeight: '20px',
                     objectFit: 'contain',
                     display: 'block',
                   }}
                 />
-
               </Link>
+
+              {/* H1 below the image */}
+              <h1 style={{
+                color: '#b8c4d9',
+                fontSize: '10px',
+                fontWeight: '400',
+                margin: '4px 0 0 0',
+                textAlign: 'center',
+                letterSpacing: '0.3px',
+              }}>
+                Tangent Weekly - Unfiltered News and Analysis
+              </h1>
             </div>
+
           </div>
 
-          <div className="d-none d-lg-block position-absolute top-50 start-50 translate-middle">
+          <div className="d-none d-lg-block position-absolute top-50 start-50 translate-middle text-center">
             <Link href="/" className="text-decoration-none d-inline-block" title='index'>
-
               <Image
                 src="/images/tangent-weekly-logo.webp"
                 alt="Tangent Weekly Logo"
@@ -138,8 +144,16 @@ export default function Header() {
                 height={40}
                 priority
               />
-
             </Link>
+            <h1 style={{
+              color: '#b8c4d9',
+              fontSize: '12px',
+              fontWeight: '400',
+              margin: '2px 0 0 0',
+              letterSpacing: '0.3px',
+            }}>
+              Tangent Weekly - Unfiltered News and Analysis
+            </h1>
           </div>
         </Container>
       </Navbar>
@@ -192,17 +206,15 @@ export default function Header() {
             </ul>
           </div>
 
-          {/* 👇 Desktop-specific */}
           <style jsx>{`
-      @media (min-width: 992px) {
-        div.position-fixed {
-          width: 25% !important;
-        }
-      }
-    `}</style>
+            @media (min-width: 992px) {
+              div.position-fixed {
+                width: 25% !important;
+              }
+            }
+          `}</style>
         </div>
       )}
-
     </header>
   );
 }

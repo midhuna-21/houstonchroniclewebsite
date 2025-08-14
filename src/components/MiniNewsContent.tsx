@@ -19,16 +19,16 @@ const MiniNewsCard: React.FC<MiniNewsCardProps> = ({ category, title, image, dat
         <Image
           src={image || ""}
           alt={title}
-          width={80}
-          height={60}
-          className="section-new-image"
+          width={110}
+          height={75}
           style={{
-            width: '80px',
-            height: 'auto',
+            width: '110px',
+            height: '95px',
             objectFit: 'cover',
             flexShrink: 0,
           }}
         />
+
       </div>
 
       <div style={{ flex: 1 }}>
@@ -38,7 +38,7 @@ const MiniNewsCard: React.FC<MiniNewsCardProps> = ({ category, title, image, dat
             color: '#B10021',
             textTransform: 'uppercase',
             fontSize: '14.224px',
-            fontWeight: 700,
+            fontWeight: 900,
             fontFamily: "'Rubik', Arial, sans-serif",
           }}
         >
@@ -50,7 +50,9 @@ const MiniNewsCard: React.FC<MiniNewsCardProps> = ({ category, title, image, dat
             fontFamily: "'Archivo', Arial, sans-serif",
             fontWeight: 700,
             color: '#111111',
-            fontSize: '18px',
+            fontSize: '20px',
+            lineHeight: '1.3 !important',
+    display: 'inline-block',
           }}
         >
           {title}

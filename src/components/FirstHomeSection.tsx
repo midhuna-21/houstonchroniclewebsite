@@ -32,10 +32,11 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
               <p
                 style={{
                   color: "#B50021",
-                  fontWeight: 700,
+                  fontWeight: 900,
                   textTransform: 'uppercase',
                   fontSize: '14.224px',
                   fontFamily: "'Rubik', Arial, sans-serif",
+                  marginBottom: '4px'
                 }}
               >
                 {main.category}
@@ -46,7 +47,9 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
                   color: '#111111',
                   fontSize: '22.784px',
                   fontFamily: "'Archivo', Arial, sans-serif",
-                  fontWeight: 700
+                  fontWeight: 700,
+                  lineHeight: '1.3 !important',
+    display: 'inline-block',
                 }}
               >
                 {main.title}
@@ -83,6 +86,7 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
         {/* Middle Column - Main Image */}
         {main.image && (
           <div className="col-lg-6 order-0 order-lg-1 d-flex align-items-stretch border-end">
+
             <div
               style={{
                 width: '100%',
@@ -125,20 +129,21 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
                   className="img-fluid mb-2"
                   style={{
                     width: '100%',
-                    height: 'auto',
+                    height: '200px', 
                     objectFit: 'cover',
                   }}
                 />
               )}
 
               <p
-                className="fw-bold mb-1"
+                className=" mb-1"
                 style={{
                   color: "#B50021",
                   textTransform: 'uppercase',
                   fontSize: '14.224px',
                   fontFamily: "'Rubik', Arial, sans-serif",
                   lineHeight: '1.2',
+                  fontWeight:900
                 }}
               >
                 {right1.category}
@@ -176,13 +181,14 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
           <Link href={`/${right2.category}/${right2.slug}`} className="text-decoration-none" title={right2.slug}>
             <div>
               <p
-                className="fw-bold mb-1"
+                className="mb-1"
                 style={{
                   color: "#B50021",
                   textTransform: 'uppercase',
                   fontSize: '14.224px',
                   fontFamily: "'Rubik', Arial, sans-serif",
                   lineHeight: '1.2',
+                  fontWeight:900
                 }}
               >
                 {right2.category}

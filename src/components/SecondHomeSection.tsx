@@ -42,7 +42,7 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
                     style={{
                       color: '#B10021',
                       fontSize: '14.224px',
-                      fontWeight: 700,
+                      fontWeight: 900,
                       fontFamily: "'Rubik', Arial, sans-serif",
                     }}
                   >
@@ -55,6 +55,8 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
                       color: '#111111',
                       fontWeight: 700,
                       fontFamily: "'Archivo', Arial, sans-serif",
+                      lineHeight: '1.3 !important',
+    display: 'inline-block',
                     }}
                   >
                     {item1.title}
@@ -76,14 +78,14 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
             </Link>
 
             <Link href={`/${item2.category}/${item2.slug}`} className="text-decoration-none" title={item2.slug}>
-              <div className="pt-3" style={{ borderBottom: '1px solid #eee' }}>
+              <div className="pt-3">
                 <span
                   className="text-uppercase"
                   style={{
                     color: '#B10021',
                     textTransform: 'uppercase',
                     fontSize: '14.224px',
-                    fontWeight: 700,
+                    fontWeight: 900,
                     fontFamily: "'Rubik', Arial, sans-serif",
                   }}
                 >
@@ -95,6 +97,9 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
                     color: '#111111',
                     fontWeight: 700,
                     fontFamily: "'Archivo', Arial, sans-serif",
+                    marginBottom:'1px',
+                    lineHeight: '1.3 !important',
+    display: 'inline-block',
                   }}
                 >
                   {item2.title}
@@ -148,8 +153,9 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
                     color: '#B10021',
                     textTransform: 'uppercase',
                     fontSize: '14.224px',
-                    fontWeight: 700,
+                    fontWeight: 900,
                     fontFamily: "'Rubik', Arial, sans-serif",
+                    marginBottom:'1px'
                   }}
                 >
                   {item3.category}
@@ -160,6 +166,8 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
                     color: '#111111',
                     fontWeight: 700,
                     fontFamily: "'Archivo', Arial, sans-serif",
+                    lineHeight: '1.3 !important',
+    display: 'inline-block',
                   }}
                 >
                   {item3.title}
@@ -194,8 +202,10 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
                     color: '#B10021',
                     textTransform: 'uppercase',
                     fontSize: '14.224px',
-                    fontWeight: 700,
+                    fontWeight: 900,
                     fontFamily: "'Rubik', Arial, sans-serif",
+                    marginBottom:'1px'
+
                   }}
                 >
                   {item4.category}
@@ -206,6 +216,9 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
                     color: '#111111',
                     fontWeight: 700,
                     fontFamily: "'Archivo', Arial, sans-serif",
+                    marginBottom:'1px',
+                    lineHeight: '1.3 !important',
+    display: 'inline-block',
                   }}
                 >
                   {item4.title}
@@ -247,7 +260,7 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
           <Link
             title={item5.slug}
             href={`/${item5.category}/${item5.slug}`}
-            className="text-decoration-none border-0 border-lg-end pe-0 pe-lg-3 mb-3 mb-lg-0"
+            className="text-decoration-none border-end border-lg-0 pe-0 pe-lg-3 mb-3 mb-lg-0"
             style={{ flex: '0 0 49.2%' }}
           >
             <MiniNewsCard category={item5.category} title={item5.title} image={item5.image} date={item5.date} />

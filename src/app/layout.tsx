@@ -21,20 +21,19 @@ const geistMono = Geist_Mono({
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tangentweekly.com/"),
-
-  title: "Tangent Weekly – Expert Political Analysis, Market Trends & Emerging Tech Insights",
-  description: "Explore expert insights on political targeting, Supreme Court rulings, AI-powered robotaxis, NBA prospects like Cooper Flagg, youth mental health, and breakthrough cancer screening. Tangent Weekly delivers trusted analysis in politics, business, technology, health, and sports.",
+  metadataBase: new URL("https://www.tangentweekly.com/"),
+  title: "Tangent Weekly - Breaking News, Politics & Business Analysis",
+  description: "Breaking news and expert analysis on politics, business, tech, health, science & sports. Stay ahead with daily global insights and trending stories.",
   keywords:
     "social media liability laws 2025, Brazil Supreme Court tech rulings, platform accountability regulations, Uber Waymo robotaxi launch Atlanta, self-driving cars in Georgia, Cooper Flagg NBA draft 2025, top NBA prospects after LeBron, youth mental health and smartphone addiction, screen time vs addictive app use, cervical cancer screening with self-sample kits, mailed HPV test effectiveness, political targeting case, Puerto Rico politics and legal system",
   openGraph: {
     title: "Tangent Weekly - Breaking News, Politics & Business Analysis",
-    description: "Explore expert insights on political targeting, Supreme Court rulings, AI-powered robotaxis, NBA prospects like Cooper Flagg, youth mental health, and breakthrough cancer screening. Tangent Weekly delivers trusted analysis in politics, business, technology, health, and sports.",
-    url: "https://tangentweekly.com/",
+    description: "Breaking news and expert analysis on politics, business, tech, health, science & sports. Stay ahead with daily global insights and trending stories.",
+    url: "https://www.tangentweekly.com/",
     siteName: "Tangent Weekly",
     images: [
       {
-        url: "https://tangentweekly.com/images/tangent-weekly-logo.webp",
+        url: "https://www.tangentweekly.com/images/tangent-weekly-logo.webp",
         width: 1200,
         height: 630,
         alt: "Tangent Weekly Logo",
@@ -45,16 +44,16 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Tangent Weekly – Expert Political Analysis, Market Trends & Emerging Tech Insights",
-    description: "Explore expert insights on political targeting, Supreme Court rulings, AI-powered robotaxis, NBA prospects like Cooper Flagg, youth mental health, and breakthrough cancer screening. Tangent Weekly delivers trusted analysis in politics, business, technology, health, and sports.",
-    images: "https://tangentweekly.com/images/tangent-weekly-logo.webp",
+    title: "Breaking News, Politics & Business Analysis - Tangent Weekly",
+    description: "Stay ahead with breaking news and expert analysis on politics, business, technology, health, science & sports.",
+    images: "https://www.tangentweekly.com/images/tangent-weekly-logo.webp",
   },
 
   alternates: {
-    canonical: "https://tangentweekly.com/",
+    canonical: "https://www.tangentweekly.com/",
     languages: {
-      en: "https://tangentweekly.com/",
-      "x-default": "https://tangentweekly.com/",
+      en: "https://www.tangentweekly.com/",
+      "x-default": "https://www.tangentweekly.com/",
     },
   },
 
@@ -86,7 +85,7 @@ export default function RootLayout({
         <link
           rel="preload"
           as="image"
-          href="https://tangentweekly.com/images/wanda-vazquez-political-targeting.webp"
+          href="https://www.tangentweekly.com/images/wanda-vazquez-political-targeting.webp"
           fetchPriority="high"
           type="image/webp"
         />

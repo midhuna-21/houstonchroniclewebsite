@@ -6,8 +6,9 @@ import NewsGrid from './NewsGridCategory';
 import CategoryNewsCard from './CategoryNewsCard';
 import CategoryFirstSection from './CategoryFirstSection';
 import SectionWrapper from './SectionWrapper';
-import DailyPuzzlesData from '../../public/data/puzzles.json';
+import EducationData from '../../public/data/education.json';
 import HorizontalNews from './HorizontalNews';
+import EditorsPicksSection from './EditorsPick';
 
 interface Props {
   activeMain: string;
@@ -55,11 +56,14 @@ export default function CategoryContent({ activeMain, data }: Props) {
               bottomCards: [data[9], data[10], data[11], data[12]],
             }}
           />
-          <HorizontalNews data={[data[13], data[14], data[15], data[16]]} />
+          <SectionWrapper title=" ">
+
+          <EditorsPicksSection data={[data[13], data[14], data[15]]} />
+          </SectionWrapper>
 
         </div>
         <div className="col-md-3">
-          <DailyPuzzles data={DailyPuzzlesData} />
+          {/* <DailyPuzzles data={EducationData} /> */}
           <TrendingCard
             data={{
               section: data[0].category,

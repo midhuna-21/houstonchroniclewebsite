@@ -32,14 +32,16 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
 
   if (!mainItem) return null;
 
+  const imageHeight = '250px';
+
   return (
     <SectionWrapper title={section}>
-      <div className="row border-bottom pb-4">
-        <div className="col-md-3 border-end">
+      <div className="row border-bottom">
+        <div className="col-12 col-lg-3 border-end">
           {leftItems.map((item, index) => (
             <div
               key={index}
-              className={`pb-3 mb-3 ${index !== leftItems.length - 1 ? 'border-bottom' : ''}`}
+              className={`pb-2 mb-3 ${index !== leftItems.length - 1 ? 'border-bottom' : ''}`}
             >
               <Link href={`/${item.category}/${item.slug}`} className='text-decoration-none' title={`${item.slug}`}>
                 <span
@@ -68,28 +70,24 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
             </div>
           ))}
         </div>
-        <div className="col-md-4 text-center">
+
+        <div className="col-12 col-lg-4 text-center">
           {mainItem.image && (
             <Link href={`/${mainItem.category}/${mainItem.slug}`} className='text-decoration-none' title={`${mainItem.slug}`}>
-              <Image
-                src={mainItem.image || ""}
-                alt={mainItem.title}
-                width={800}
-                height={200}
-                className="img-fluid mb-2"
-                style={{
-                  objectFit: 'cover',
-                  maxHeight: '200px',
-                  width: '100%',
-                }}
-              />
+              <div style={{ width: '100%', height: imageHeight, position: 'relative' }}>
+                <Image
+                  src={mainItem.image || ""}
+                  alt={mainItem.title}
+                  fill
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
             </Link>
           )}
         </div>
 
-        <div className="col-md-5">
+        <div className="col-12 col-lg-5">
           <Link href={`/${mainItem.category}/${mainItem.slug}`} className='text-decoration-none' title={`${mainItem.slug}`}>
-
             <span style={{
               color: '#111111',
               fontSize: '18px',
@@ -102,7 +100,6 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
               fontSize: '16px',
               fontFamily: "'Rubik', Arial, sans-serif", fontWeight: 400
             }}
-
             >{mainItem.shortdescription}</p>}
             <div
               className="d-flex align-items-center mt-1"
@@ -118,15 +115,13 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
             </div>
           </Link>
         </div>
-
       </div>
 
       <div className="row pt-3">
         {bottomItems.map((item, idx) => (
-
           <div
             key={idx}
-            className={`col-md-6 ${idx === 0 ? 'border-end' : ''}`}
+            className={`col-12 col-lg-6 ${idx === 0 ? 'border-end' : ''}`} // tablet stacked
           >
             <Link href={`/${item.category}/${item.slug}`} className='text-decoration-none' title={`${item.slug}`}>
               <span style={{
@@ -154,6 +149,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
       </div>
       <div className="mt-4" />
     </SectionWrapper>
+
   );
 };
 
