@@ -48,17 +48,19 @@ const LottoCard: React.FC<LottoCardProps> = ({ data }) => {
           </div>
 
           <div className="p-3 bg-white">
-            <span
+            <h2
               className="mb-2"
               style={{
                 color: '#111111',
                 fontSize: '20.256px',
                 fontFamily: "'Archivo', Arial, sans-serif",
                 fontWeight: 700,
+                    lineHeight: 1.2,
+              display: 'inline-block'
               }}
             >
               {data.title}
-            </span>
+            </h2>
             <hr style={{ margin: '0.5rem 0' }} />
             <p
               style={{

@@ -107,6 +107,8 @@ export default function EditorialPolicy() {
                         </div>
                     </div>
                 </section>
+        <div style={{ marginBottom: '3rem' }} />
+
             </main>
         </>
     );

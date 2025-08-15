@@ -20,7 +20,7 @@ interface LatestNewsCardProps {
 const LatestNewsCard: React.FC<LatestNewsCardProps> = ({ data }) => {
   return (
     <SectionWrapper title="Latest Local News">
-      {data.map((item) => (
+      {data.slice(0, 3).map((item, index) => (
         <div key={item.slug}>
           <Link href={`/details/${item.slug}`} className='text-decoration-none' title={`${item.slug}`}>
             <div

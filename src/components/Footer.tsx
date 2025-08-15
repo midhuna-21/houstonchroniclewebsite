@@ -91,7 +91,7 @@ export default function Footer() {
           <div className="col-md-8 mb-2 px-2 d-none d-md-block">
             <div className="d-flex align-items-start gap-4">
               <div className="d-flex flex-column pe-3 ps-4 ">
-                {['Business', 'Health', 'Science', 'Technology', 'Sports'].map((title, i) => (
+                {['Business', 'Health', 'Science', 'Technology', 'Sports','Education','Entertainment'].map((title, i) => (
                   <div key={title} style={{ marginBottom: '0.75rem' }}>
                     <Link
                       title={`${title}`}
@@ -103,12 +103,14 @@ export default function Footer() {
                       }}
                     >
                       <span
-                        className="fw-bold text-white"
-                        style={{
-                          fontSize: '14.224px',
-                          fontFamily: "'Rubik', Arial, sans-serif",
-                          fontWeight: 700
-                        }}
+                        className="text-white text-decoration-none"
+                          style={{
+                            fontSize: '14.224px',
+                            whiteSpace: 'nowrap',
+                            maxWidth: '100%',
+                            fontFamily: "'Rubik', Arial, sans-serif",
+                            fontWeight: 400,
+                          }}
                       >
                         {title}
                       </span>
@@ -140,42 +142,70 @@ export default function Footer() {
                 >
                   About
                 </span>
-                <ul className="list-unstyled mb-0" style={{ marginTop: '0.5rem' }}>
 
-                  {[
-                    { label: 'Our Company', href: '/about' },
-                    { label: 'Contact', href: '/contact' },
-                    { label: 'Our Team', href: '/team' },
-                    { label: 'Editorial Policy', href: '/editorial-policy' },
-                    { label: 'Correction Policy', href: '/correction-policy' },
-                  ].map((link, idx) => (
-                    <li key={idx} style={{ marginBottom: '0.8rem' }}>
-                      <Link
-                        title={link.label}
-                        href={link.href}
-                        className="text-white text-decoration-none"
-                        style={{
-                          fontSize: '14.224px',
-                          whiteSpace: 'nowrap',
-                          maxWidth: '100%',
-                          fontFamily: "'Rubik', Arial, sans-serif",
-                          fontWeight: 400,
-                        }}
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
+                <div className="d-flex">
+                  {/* Left Column (4 links) */}
+                  <ul className="list-unstyled mb-0 me-4" style={{ marginTop: '0.5rem' }}>
+                    {[
+                      { label: 'Our Company', href: '/about' },
+                      { label: 'Contact', href: '/contact' },
+                      { label: 'Our Team', href: '/team' },
+                      { label: 'Editorial Policy', href: '/editorial-policy' },
+                    ].map((link, idx) => (
+                      <li key={idx} style={{ marginBottom: '0.8rem' }}>
+                        <Link
+                          title={link.label}
+                          href={link.href}
+                          className="text-white text-decoration-none"
+                          style={{
+                            fontSize: '14.224px',
+                            whiteSpace: 'nowrap',
+                            maxWidth: '100%',
+                            fontFamily: "'Rubik', Arial, sans-serif",
+                            fontWeight: 400,
+                          }}
+                        >
+                          {link.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
 
-                </ul>
+                  {/* Right Column (3 links) */}
+                  <ul className="list-unstyled mb-0" style={{ marginTop: '0.5rem' }}>
+                    {[
+                      { label: 'Correction Policy', href: '/correction-policy' },
+                      { label: 'Privacy Policy', href: '/privacy-policy' },
+                      { label: 'Terms and Conditions', href: '/terms-and-conditions' },
+                    ].map((link, idx) => (
+                      <li key={idx} style={{ marginBottom: '0.8rem' }}>
+                        <Link
+                          title={link.label}
+                          href={link.href}
+                          className="text-white text-decoration-none"
+                          style={{
+                            fontSize: '14.224px',
+                            whiteSpace: 'nowrap',
+                            maxWidth: '100%',
+                            fontFamily: "'Rubik', Arial, sans-serif",
+                            fontWeight: 400,
+                          }}
+                        >
+                          {link.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
+
             </div>
           </div>
 
           {/* Mobile Specific*/}
           <div className="d-block d-md-none px-2">
             <div className="accordion" id="footerAccordion">
-              {['Business', 'Technology', 'Sports', 'Health', 'Science', 'Politics'].map((title, index) => (
+              {['Business', 'Technology', 'Sports', 'Health', 'Science', 'Politics','Education','Entertainment'].map((title, index) => (
                 <div className="bg-transparent border-0" key={index}
                   style={{
                     marginTop: index === 0 ? '0.75rem' : '0'
@@ -245,6 +275,9 @@ export default function Footer() {
                         { label: 'Our Team', href: '/team' },
                         { label: 'Editorial Policy', href: '/editorial-policy' },
                         { label: 'Correction Policy', href: '/correction-policy' },
+                        { label: 'Privacy Policy', href: '/privacy-policy' },
+                        { label: 'Terms and Conditions', href: '/terms-and-conditions' },
+
                       ].map((item, i) => (
                         <li className="mb-2" key={i}>
                           <Link href={item.href} className="text-white text-decoration-none" title={item.label}>

@@ -110,17 +110,19 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({ data }) => {
                 {data[currentIndex].category}
               </div>
 
-              <span
+              <h2
                 style={{
-                  fontSize: '32.432px',
+                  fontSize: isMobile ? '20px' : '32.432px',
                   fontWeight: 700,
                   fontFamily: "'Archivo', Arial, sans-serif",
                   color: '#111111',
                   marginBottom: '12px',
+                  lineHeight: 1.2,
                 }}
               >
                 {data[currentIndex].title}
-              </span>
+              </h2>
+
 
               <div
                 style={{
@@ -135,7 +137,7 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({ data }) => {
               <p
                 style={{
                   color: '#444444',
-                  fontSize: '17px',
+                  fontSize: isMobile ? '14px' : '17px',
                   lineHeight: '1.6',
                   fontFamily: "'Rubik', Arial, sans-serif",
                   fontWeight: 400,
@@ -143,6 +145,7 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({ data }) => {
               >
                 {data[currentIndex].shortdescription}
               </p>
+
 
               <div
                 className="d-flex align-items-center mt-1"

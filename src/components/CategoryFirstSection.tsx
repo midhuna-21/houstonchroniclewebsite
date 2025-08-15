@@ -27,24 +27,39 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
   return (
     <div style={{ marginBottom: '3rem' }}>
       <div className="row">
-        <div className="col-md-6 border-end">
+        <div className="col-lg-6 border-end" style={{ borderRight: '1px solid #ddd' }}>
           <Link href={`/${main.category}/${main.slug}`} className='text-decoration-none' title={`${main.slug}`}>
 
             <div>
-              <Image
-                src={main.image || ""}
-                alt={main.title}
-                width={800}
-                height={300}
-                className="img-fluid mb-2"
-                style={{
-                  objectFit: "cover",
-                  width: "100%",
-                  height: "300px"
-                }}
-              />
+              <>
+                <Image
+                  src={main.image || ""}
+                  alt={main.image || ""}
+                  width={800}
+                  height={500}
+                  className="img-fluid mb-2 d-xl-none"
+                  style={{
+                    width: '100%',
+                    height: '400px',
+                    objectFit: 'cover',
+                  }}
+                />
 
-              <span className=" mb-2"
+                <Image
+                  src={main.image || ""}
+                  alt={main.image || ""}
+                  width={800}
+                  height={500}
+                  className="img-fluid mb-2 d-none d-xl-block"
+                  style={{
+                    width: '100%',
+                    height: '300px',
+                    objectFit: 'cover',
+                  }}
+                />
+              </>
+
+              <h2 className=" mb-2"
                 style={{
                   color: "#111111",
                   fontSize: '22.784px',
@@ -53,7 +68,7 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
                   lineHeight: 1.2,
                   display: 'inline-block',
                 }}
-              >{main.title}</span>
+              >{main.title}</h2>
               <p className="text-muted small"
                 style={{
                   color: "#444444",
@@ -78,12 +93,12 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
           </Link>
         </div>
 
-        <div className="col-md-6">
+        <div className="col-lg-6">
           {side?.[0] && (
             <Link href={`/${side[0].category}/${side[0].slug}`} className='text-decoration-none' title={`${side[0].slug}`}>
 
               <div className="mb-3">
-                <span className="fw-bold mb-2"
+                <h2 className="fw-bold mb-2"
                   style={{
                     color: "#111111",
                     fontSize: '22.784px',
@@ -92,7 +107,7 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
                     lineHeight: 1.2,
                     display: 'inline-block',
                   }}
-                >{side[0].title}</span>
+                >{side[0].title}</h2>
                 <p className="text-muted small"
                   style={{
                     fontSize: '16px',
@@ -132,7 +147,7 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
                   }}
                 />
 
-                <span className="mb-2 fw-bold"
+                <h2 className="mb-2 fw-bold"
                   style={{
                     color: "#111111",
                     fontSize: '22.784px',
@@ -141,7 +156,7 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
                     lineHeight: 1.2,
                     display: 'inline-block',
                   }}
-                >{side[1].title}</span>
+                >{side[1].title}</h2>
                 <div
                   className="d-flex align-items-center mt-1"
                   style={{
@@ -161,22 +176,23 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
       </div>
       <hr className="my-4" />
       <div className="row">
-        <div className="col-md-6 border-end pe-md-4">
+        <div className="col-lg-6 border-end pe-lg-4">
           <div className="row">
             {bottomCards?.slice(0, 2).map((item, index) => (
               <Link href={`/${item.category}/${item.slug}`} key={`${item.slug}-${index}`} className='text-decoration-none' title={`${item.slug}`}>
                 <div className="col-12 py-3 px-2" key={index}>
                   <div className="row g-2 align-items-center">
                     <div className="col-9">
-                      <p className="fw-bold mb-1" style={{
+                      <h2 className="fw-bold mb-1" style={{
                         color: "#111111",
                         fontSize: '18px',
                         fontFamily: "'Archivo', Arial, sans-serif",
-                        fontWeight: 700
+                        fontWeight: 700,
+                        lineHeight: 1.2
                       }}
                       >
                         {item.title}
-                      </p>
+                      </h2>
                     </div>
                     <div className="col-3">
                       {item.image && (
@@ -227,22 +243,23 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
           </div>
         </div>
 
-        <div className="col-md-6 ps-md-4">
+        <div className="col-lg-6 ps-lg-4">
           <div className="row">
             {bottomCards?.slice(2, 4).map((item, index) => (
               <Link href={`/${item.category}/${item.slug}`} key={`${item.slug}-${index}`} className='text-decoration-none' title={`${item.slug}`}>
                 <div className="col-12 py-3 px-2" key={index + 2}>
                   <div className="row g-2 align-items-center">
                     <div className="col-9">
-                      <p className="fw-bold mb-1" style={{
+                      <h2 className="fw-bold mb-1" style={{
                         fontSize: '18px',
                         fontFamily: "'Archivo', Arial, sans-serif",
                         fontWeight: 700,
-                        color: "#111111"
+                        color: "#111111",
+                        lineHeight: 1.2
                       }}
                       >
                         {item.title}
-                      </p>
+                      </h2>
 
                     </div>
                     <div className="col-3">

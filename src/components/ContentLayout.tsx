@@ -31,7 +31,7 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
           <div className="col-12 col-lg-6" style={{ marginBottom: '1rem' }}>
             <Link href={`/${main.category}/${main.slug}`} className='text-decoration-none' title={`${main.slug}`}>
               <div>
-                <Image
+                {/* <Image
                   src={main.image || ""}
                   alt={main.title}
                   width={800}
@@ -42,15 +42,44 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
                     width: "100%",
                     height: "300px",
                   }}
-                />
-                <span className=" mb-2"
+                /> */}
+                   <>
+                                  <Image
+                                    src={main.image || ""}
+                                    alt={main.image || ""}
+                                    width={800}
+                                    height={500}
+                                    className="img-fluid mb-2 d-xl-none"
+                                    style={{
+                                      width: '100%',
+                                      height: '400px',
+                                      objectFit: 'cover',
+                                    }}
+                                  />
+                
+                                  <Image
+                                    src={main.image || ""}
+                                    alt={main.image || ""}
+                                    width={800}
+                                    height={500}
+                                    className="img-fluid mb-2 d-none d-xl-block"
+                                    style={{
+                                      width: '100%',
+                                      height: '300px',
+                                      objectFit: 'cover',
+                                    }}
+                                  />
+                                </>
+                <h2 className=" mb-2"
                   style={{
                     color: '#111111',
                     fontSize: '22.784px',
                     fontFamily: "'Archivo', Arial, sans-serif",
-                    fontWeight: 700
+                    fontWeight: 700,
+                    lineHeight: 1.2,
+
                   }}
-                >{main.title}</span>
+                >{main.title}</h2>
                 <p className="text-muted small"
                   style={{
                     color: "#444444",
@@ -79,14 +108,16 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
             {side?.[0] && (
               <Link href={`/${side[0].category}/${side[0].slug}`} className='text-decoration-none' title={`${side[0].slug}`}>
                 <div className="mb-3">
-                  <span className="fw-bold mb-2"
+                  <h2 className="fw-bold mb-2"
                     style={{
                       color: '#111111',
                       fontSize: '22.784px',
                       fontFamily: "'Archivo', Arial, sans-serif",
-                      fontWeight: 700
+                      fontWeight: 700,
+                      lineHeight: 1.2,
+
                     }}
-                  >{side[0].title}</span>
+                  >{side[0].title}</h2>
                   <p className="text-muted small"
                     style={{
                       color: "#444444",
@@ -115,7 +146,7 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
             {side?.[1] && (
               <Link href={`/${side[1].category}/${side[1].slug}`} className='text-decoration-none' title={`${side[1].slug}`}>
                 <div>
-                  <Image
+                  {/* <Image
                     src={side[1]?.image || ""}
                     alt={side[1]?.title}
                     width={800}
@@ -126,15 +157,44 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
                       width: "100%",
                       height: "300px",
                     }}
-                  />
-                  <span className="mb-2 fw-bold"
+                  /> */}
+                      <>
+                                  <Image
+                                    src={side[1].image || ""}
+                                    alt={side[1].image || ""}
+                                    width={800}
+                                    height={500}
+                                    className="img-fluid mb-2 d-xl-none"
+                                    style={{
+                                      width: '100%',
+                                      height: '400px',
+                                      objectFit: 'cover',
+                                    }}
+                                  />
+                
+                                  <Image
+                                    src={side[1].image || ""}
+                                    alt={side[1].image || ""}
+                                    width={800}
+                                    height={500}
+                                    className="img-fluid mb-2 d-none d-xl-block"
+                                    style={{
+                                      width: '100%',
+                                      height: '300px',
+                                      objectFit: 'cover',
+                                    }}
+                                  />
+                                </>
+                  <h2 className="mb-2 fw-bold"
                     style={{
                       color: '#111111',
                       fontSize: '22.784px',
                       fontFamily: "'Archivo', Arial, sans-serif",
-                      fontWeight: 700
+                      fontWeight: 700,
+                      lineHeight: 1.2,
+
                     }}
-                  >{side[1].title}</span>
+                  >{side[1].title}</h2>
                   <div
                     className="d-flex align-items-center mt-1"
                     style={{
@@ -155,7 +215,7 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
 
         <hr className="my-4" />
         <div className="row">
-          <div className="col-12 col-lg-6 border-end pe-lg-4">
+          <div className="col-12 col-lg-6 border-end d-none d-lg-flex pe-lg-4">
             <div className="row">
               {bottomCards?.slice(0, 2).map((item, index) => (
                 <div className="col-12 py-3 px-2" key={index}>
@@ -163,15 +223,87 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
                     <div className="row g-2 align-items-center">
 
                       <div className="col-9">
-                        <p className="fw-bold mb-1" style={{
+                        <h2 className="fw-bold mb-1" style={{
                           fontSize: '18px',
                           fontFamily: "'Archivo', Arial, sans-serif",
                           fontWeight: 700,
                           color: '#111111',
+                          lineHeight: 1.2,
+
                         }}
                         >
                           {item.title}
-                        </p>
+                        </h2>
+                        <div
+                          className="d-flex align-items-center mt-1"
+                          style={{
+                            fontSize: '10px',
+                            fontWeight: 200,
+                            fontFamily: "'Rubik', Arial, sans-serif",
+                          }}
+                        >
+                          <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
+                          <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
+                          <span style={{ color: '#555', marginLeft: '4px' }}>{item.date}</span>
+                        </div>
+                      </div>
+
+                      <div className="col-3">
+                        {item.image && (
+                          <Image
+                            src={item.image || ""}
+                            alt={item.title}
+                            width={400}
+                            height={70}
+                            className="img-fluid"
+                            style={{
+                              width: "100%",
+                              height: "70px",
+                              objectFit: "cover",
+                              borderRadius: "0px",
+                            }}
+                          />
+                        )}
+                      </div>
+                    </div>
+                  </Link>
+
+                  {index === 0 && (
+                    <hr
+                      style={{
+                        marginTop: "16px",
+                        marginBottom: "0px",
+                        width: "90%",
+                        marginLeft: "auto",
+                        marginRight: "auto",
+                        borderTop: "1px solid #666",
+                      }}
+                    />
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+            <div className="col-12 col-lg-6 d-flex d-lg-none pe-lg-4">
+            <div className="row">
+              {bottomCards?.slice(0, 2).map((item, index) => (
+                <div className="col-12 py-3 px-2" key={index}>
+                  <Link href={`/${item.category}/${item.slug}`} className='text-decoration-none' title={`${item.slug}`}>
+                    <div className="row g-2 align-items-center">
+
+                      <div className="col-9">
+                        <h2 className="fw-bold mb-1" style={{
+                          fontSize: '18px',
+                          fontFamily: "'Archivo', Arial, sans-serif",
+                          fontWeight: 700,
+                          color: '#111111',
+                          lineHeight: 1.2,
+
+                        }}
+                        >
+                          {item.title}
+                        </h2>
                         <div
                           className="d-flex align-items-center mt-1"
                           style={{
@@ -231,15 +363,17 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
                     <div className="row g-2 align-items-center">
 
                       <div className="col-9">
-                        <p className="fw-bold mb-1" style={{
+                        <h2 className="fw-bold mb-1" style={{
                           fontSize: '18px',
                           color: '#111111',
                           fontFamily: "'Archivo', Arial, sans-serif",
-                          fontWeight: 700
+                          fontWeight: 700,
+                          lineHeight: 1.2,
+
                         }}
                         >
                           {item.title}
-                        </p>
+                        </h2>
 
                         <div
                           className="d-flex align-items-center mt-1"

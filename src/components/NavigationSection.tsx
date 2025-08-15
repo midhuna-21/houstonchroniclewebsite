@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 const NavItems = [
+  { label: 'Home', category: '' },
   { label: 'Business', category: 'business' },
   { label: 'Technology', category: 'technology' },
   { label: 'Sports', category: 'sports' },

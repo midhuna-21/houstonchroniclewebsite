@@ -6,7 +6,7 @@ import StaticParagraph from './StaticParagraph';
 import StaticFirstSection from './StaticFirstSection';
 import AuthorInfo from './AuthorInfo';
 import EditorsPicksSection from './EditorsPick';
-import educationData from '../../public/data/education.json';
+import politicalData from '../../public/data/politics.json';
 
 const StaticComponent = () => {
     const title = "Charges Dropped for Wanda Vázquez Amid Claims of Political Targeting";
@@ -68,7 +68,7 @@ const StaticComponent = () => {
                 name="Cameron Ellis"
                 role="Founding Editor"
             />
-        <EditorsPicksSection data={educationData} />
+        {/* <EditorsPicksSection data={politicalData} /> */}
         </div>
     );
 };

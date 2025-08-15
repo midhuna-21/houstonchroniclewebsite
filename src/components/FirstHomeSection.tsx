@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { BiCalendar } from 'react-icons/bi';
@@ -42,18 +40,18 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
                 {main.category}
               </p>
 
-              <span
+              <h2
                 style={{
                   color: '#111111',
                   fontSize: '22.784px',
                   fontFamily: "'Archivo', Arial, sans-serif",
                   fontWeight: 700,
                   lineHeight: '1.3 !important',
-    display: 'inline-block',
+                  display: 'inline-block',
                 }}
               >
                 {main.title}
-              </span>
+              </h2>
 
               <p
                 className="text-muted mb-3"
@@ -85,34 +83,63 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
 
         {/* Middle Column - Main Image */}
         {main.image && (
-          <div className="col-lg-6 order-0 order-lg-1 d-flex align-items-stretch border-end">
-
-            <div
-              style={{
-                width: '100%',
-                height: '100%',
-                overflow: 'hidden',
-                position: 'relative',
-              }}
-            >
-              <Link href={`/${main.category}/${main.slug}`} className="text-decoration-none" title={main.slug}>
-                <Image
-                  src={main.image}
-                  alt={main.category}
-                  width={1000}
-                  height={400}
-                  className="img-fluid"
-                  style={{
-                    width: '100%',
-                    height: '400px',
-                    objectFit: 'cover',
-                  }}
-                  priority
-                  fetchPriority="high"
-                />
-              </Link>
+          <>
+            <div className="d-none d-lg-flex col-lg-6 order-lg-1 align-items-stretch border-end">
+              <div
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  overflow: 'hidden',
+                  position: 'relative',
+                }}
+              >
+                <Link href={`/${main.category}/${main.slug}`} className="text-decoration-none" title={main.slug}>
+                  <Image
+                    src={main.image}
+                    alt={main.category}
+                    width={1000}
+                    height={400}
+                    className="img-fluid"
+                    style={{
+                      width: '100%',
+                      height: '400px',
+                      objectFit: 'cover',
+                    }}
+                    priority
+                    fetchPriority="high"
+                  />
+                </Link>
+              </div>
             </div>
-          </div>
+
+            <div className="d-flex d-lg-none col-12 align-items-stretch">
+              <div
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  overflow: 'hidden',
+                  position: 'relative',
+                }}
+              >
+                <Link href={`/${main.category}/${main.slug}`} className="text-decoration-none" title={main.slug}>
+                  <Image
+                    src={main.image}
+                    alt={main.category}
+                    width={1000}
+                    height={400}
+                    className="img-fluid"
+                    style={{
+                      width: '100%',
+                      height: '400px',
+                      objectFit: 'cover',
+                    }}
+                    priority
+                    fetchPriority="high"
+                  />
+                </Link>
+              </div>
+            </div>
+          </>
         )}
 
         {/* Right Column */}
@@ -121,18 +148,33 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
           <Link href={`/${right1.category}/${right1.slug}`} className="text-decoration-none" title={right1.slug}>
             <div style={{ marginBottom: '14px' }}>
               {right1.image && (
-                <Image
-                  src={right1.image || ""}
-                  alt={right1.image}
-                  width={800}
-                  height={500}
-                  className="img-fluid mb-2"
-                  style={{
-                    width: '100%',
-                    height: '200px', 
-                    objectFit: 'cover',
-                  }}
-                />
+                <>
+                  <Image
+                    src={right1.image || ""}
+                    alt={right1.image}
+                    width={800}
+                    height={500}
+                    className="img-fluid mb-2 d-xl-none"
+                    style={{
+                      width: '100%',
+                      height: '400px',
+                      objectFit: 'cover',
+                    }}
+                  />
+
+                  <Image
+                    src={right1.image || ""}
+                    alt={right1.image}
+                    width={800}
+                    height={500}
+                    className="img-fluid mb-2 d-none d-xl-block"
+                    style={{
+                      width: '100%',
+                      height: '200px',
+                      objectFit: 'cover',
+                    }}
+                  />
+                </>
               )}
 
               <p
@@ -143,13 +185,13 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
                   fontSize: '14.224px',
                   fontFamily: "'Rubik', Arial, sans-serif",
                   lineHeight: '1.2',
-                  fontWeight:900
+                  fontWeight: 900
                 }}
               >
                 {right1.category}
               </p>
 
-              <p
+              <h2
                 className="fw-bold text-black mb-1"
                 style={{
                   color: '#111111',
@@ -160,7 +202,7 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
                 }}
               >
                 {right1.title}
-              </p>
+              </h2>
 
               <div
                 className="d-flex align-items-center mt-1"
@@ -188,13 +230,13 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
                   fontSize: '14.224px',
                   fontFamily: "'Rubik', Arial, sans-serif",
                   lineHeight: '1.2',
-                  fontWeight:900
+                  fontWeight: 900
                 }}
               >
                 {right2.category}
               </p>
 
-              <p
+              <h2
                 className="fw-bold text-black mb-1"
                 style={{
                   color: '#111111',
@@ -205,7 +247,7 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
                 }}
               >
                 {right2.title}
-              </p>
+              </h2>
               <div
                 className="d-flex align-items-center mt-1"
                 style={{

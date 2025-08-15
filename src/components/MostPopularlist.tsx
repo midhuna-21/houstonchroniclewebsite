@@ -17,7 +17,7 @@ interface MostPopularListProps {
 const MostPopularList: React.FC<MostPopularListProps> = ({ data }) => {
   return (
     <SectionWrapper title="Most Popular">
-      {data.map((article, index) => (
+   {data.slice(0, 4).map((article, index) => (
         <div key={index} className="mb-3 pb-3 border-bottom">
           <Link href={`/${article.category}/${article.slug}`} className="text-decoration-none" title={`${article.slug}`}>
             <div className="d-flex align-items-start">

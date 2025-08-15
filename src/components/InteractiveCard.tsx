@@ -55,10 +55,11 @@ const InteractiveCard: React.FC<InteractiveCardProps> = ({ data }) => {
         </div>
 
         <div style={{ padding: '2rem 1rem 1rem', textAlign: 'center' }}>
-          <span style={{
-            fontWeight: 'bold', marginBottom: '1rem', color: "#111111", lineHeight: 1.3,
+          <h2 style={{
+            fontSize: '18px',
+            fontWeight: 'bold', marginBottom: '1rem', color: "#111111", lineHeight: 1.2,
             display: 'inline-block',
-          }}>{data.title}</span>
+          }}>{data.title}</h2>
           <hr
             style={{
 

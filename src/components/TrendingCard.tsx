@@ -29,7 +29,7 @@ const TrendingCard: React.FC<TrendingCardProps> = ({ data }) => {
         <div key={idx} className="mb-4">
           <Link href={`/${item.category}/${item.slug}`} className='text-decoration-none' title={`${item.slug}`}>
             <div className="d-flex align-items-center justify-content-between mb-2">
-              <span
+              <h2
                 className="fw-bold mb-0"
                 style={{
                   color: '#111111',
@@ -38,10 +38,12 @@ const TrendingCard: React.FC<TrendingCardProps> = ({ data }) => {
                   fontFamily: "'Archivo', Arial, sans-serif",
                   flex: 1,
                   marginRight: '1rem',
+                  lineHeight: 1.2,
+
                 }}
               >
                 {item.title}
-              </span>
+              </h2>
               <Image
                 src={item.image || ""}
                 alt={item.title}

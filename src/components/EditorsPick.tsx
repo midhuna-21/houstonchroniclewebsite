@@ -27,6 +27,8 @@ const EditorsPicksSection: React.FC<EditorsPicksSectionProps> = ({ data }) => {
     return () => window.removeEventListener('resize', checkTablet);
   }, []);
 
+  console.log(data,'kjgkdhfg')
+
   return (
     <div>
       <div
@@ -47,7 +49,7 @@ const EditorsPicksSection: React.FC<EditorsPicksSectionProps> = ({ data }) => {
             key={idx}
             className="flex-shrink-0"
             style={{
-              width: '95vw', // take almost full width for mobile/tablet
+              width: '95vw',
               maxWidth: '95vw',
               scrollSnapAlign: 'start',
             }}
@@ -56,23 +58,18 @@ const EditorsPicksSection: React.FC<EditorsPicksSectionProps> = ({ data }) => {
           </div>
         ))}
       </div>
-
-      {/* --- DESKTOP GRID --- */}
       <div className="row gx-4 gy-4 d-none d-lg-flex mb-5">
 
-        {/* First item - with border */}
-        <div className="col-lg-4" style={{ borderRight: '0.5px solid rgba(14, 14, 14, 0.15)' }}>
-          {renderCard(data[0])}
-        </div>
-
-        {/* Second item - with border */}
         <div className="col-lg-4" style={{ borderRight: '0.5px solid rgba(14, 14, 14, 0.15)' }}>
           {renderCard(data[1])}
         </div>
 
-        {/* Third item - no border */}
-        <div className="col-lg-4">
+        <div className="col-lg-4" style={{ borderRight: '0.5px solid rgba(14, 14, 14, 0.15)' }}>
           {renderCard(data[2])}
+        </div>
+
+        <div className="col-lg-4">
+          {renderCard(data[6])}
         </div>
 
       </div>
@@ -88,6 +85,8 @@ function renderCard(item: {
   slug: string;
   date: string;
 }) {
+
+  console.log(item.category,'kjgkdhfg')
   return (
     <Link
       href={`/${item.category}/${item.slug}`}
@@ -98,7 +97,7 @@ function renderCard(item: {
         className="h-100 text-start"
 
       >
-        <Image
+        {/* <Image
           src={item.image || ''}
           alt={item.title}
           width={1000}
@@ -106,10 +105,38 @@ function renderCard(item: {
           className="img-fluid w-100"
           style={{
             width: '100%',
-            height: '250px', // increased from 200px
+            height: '250px', 
             objectFit: 'cover',
           }}
-        />
+        /> */}
+        <>
+          <Image
+            src={item.image || ""}
+            alt={item.image}
+            width={800}
+            height={500}
+            className="img-fluid mb-2 d-xl-none"
+            style={{
+              width: '100%',
+              height: '500px',
+              objectFit: 'cover',
+            }}
+          />
+
+          <Image
+            src={item.image || ''}
+            alt={item.title}
+            width={1000}
+            height={250}
+            className="img-fluid mb-2 d-none d-xl-block"
+            style={{
+              width: '100%',
+              height: '250px',
+              objectFit: 'cover',
+            }}
+          />
+
+        </>
 
         {/* <p
           style={{
@@ -124,19 +151,19 @@ function renderCard(item: {
           {item.category}
         </p> */}
 
-        <span
-          className="fw-bold mb-0"
+        <h2
+          className="fw-bold mt-2"
           style={{
             color: '#111111',
             fontSize: '18px',
             fontWeight: 700,
             fontFamily: "'Archivo', Arial, sans-serif",
-             lineHeight: '1.3 !important',
-    display: 'inline-block',
+            lineHeight: '1.2 !important',
+            display: 'inline-block',
           }}
         >
           {item.title}
-        </span>
+        </h2>
         <div
           className="d-flex align-items-center mt-1"
           style={{

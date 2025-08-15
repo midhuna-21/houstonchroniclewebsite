@@ -1,4 +1,3 @@
-'use client';
 import React from 'react';
 import Image from 'next/image';
 import Link from "next/link";
@@ -23,13 +22,13 @@ const NewsGrid: React.FC<NewsGridProps> = ({ data }) => {
 
   return (
     <div style={{ paddingBottom: '40px' }}>
-      <div className="row g-4">
+      <div className="row g-4 flex-column flex-lg-row">
 
-        <div className="col-md-6" style={{ borderRight: '1px solid #ddd' }}>
+        {/* Main Left Section */}
+        <div className="col-lg-6" style={{ borderRight: '1px solid #ddd' }}>
           <Link href={`/${main.category}/${main.slug}`} className='text-decoration-none' title={`${main.slug}`}>
-
             <div style={{ position: 'relative' }}>
-              <Image
+              {/* <Image
                 src={main.image}
                 alt={main.title}
                 width={600}
@@ -40,8 +39,34 @@ const NewsGrid: React.FC<NewsGridProps> = ({ data }) => {
                   objectFit: 'cover',
                   marginBottom: '8px',
                 }}
+              /> */}
+              <>
+                <Image
+                  src={main.image || ""}
+                  alt={main.image}
+                  width={800}
+                  height={500}
+                  className="img-fluid mb-2 d-xl-none"
+                  style={{
+                    width: '100%',
+                    height: '400px',
+                    objectFit: 'cover',
+                  }}
+                />
 
-              />
+                <Image
+                  src={main.image || ""}
+                  alt={main.image}
+                  width={800}
+                  height={500}
+                  className="img-fluid mb-2 d-none d-xl-block"
+                  style={{
+                    width: '100%',
+                    height: '300px',
+                    objectFit: 'cover',
+                  }}
+                />
+              </>
               <div
                 style={{
                   position: 'absolute',
@@ -62,19 +87,19 @@ const NewsGrid: React.FC<NewsGridProps> = ({ data }) => {
               </div>
             </div>
 
-            <span
+            <h2
               style={{
                 color: '#111111',
                 fontFamily: "'Archivo', Arial, sans-serif",
                 fontSize: '32.432px',
                 fontWeight: 700,
                 marginTop: '1rem',
-                lineHeight: 1.1,
+                lineHeight: 1.2,
                 display: 'inline-block',
               }}
             >
               {main.title}
-            </span>
+            </h2>
 
             <hr
               style={{
@@ -112,31 +137,64 @@ const NewsGrid: React.FC<NewsGridProps> = ({ data }) => {
           </Link>
         </div>
 
-        <div className="col-md-6">
+        {/* Right Section */}
+        <div className="col-lg-6">
           <div className="row g-4">
             {right.map((item, index) => (
               <div className="col-12 col-sm-6" key={index}>
                 <Link href={`/${main.category}/${item.slug}`} className="text-decoration-none" title={`${item.slug}`}>
                   <div className="d-flex flex-column">
-                    <div style={{ width: '100%', height: '140px', position: 'relative', marginBottom: '8px' }}>
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        fill
-                        style={{ objectFit: 'cover' }}
-                      />
+                    <div className="d-flex flex-column">
+
+                      {/* Small screens */}
+                      <div
+                        className="d-xl-none"
+                        style={{
+                          width: '100%',
+                          height: '400px',
+                          position: 'relative',
+                          marginBottom: '8px'
+                        }}
+                      >
+                        <Image
+                          src={item.image || ""}
+                          alt={item.image || "News image"}
+                          fill
+                          style={{ objectFit: 'cover' }}
+                        />
+                      </div>
+
+                      {/* Large screens */}
+                      <div
+                        className="d-none d-xl-block"
+                        style={{
+                          width: '100%',
+                          height: '170px',
+                          position: 'relative',
+                          marginBottom: '8px'
+                        }}
+                      >
+                        <Image
+                          src={item.image || ""}
+                          alt={item.image || "News image"}
+                          fill
+                          style={{ objectFit: 'cover' }}
+                        />
+                      </div>
+
                     </div>
-                    <div
+
+                    <h2
                       style={{
                         color: '#111111',
                         fontWeight: 700,
                         fontSize: '18px',
-                        lineHeight: 1.3,
+                        lineHeight: 1.2,
                         fontFamily: "'Archivo', Arial, sans-serif",
                       }}
                     >
                       {item.title}
-                    </div>
+                    </h2>
                     <div
                       className="d-flex align-items-center mt-1"
                       style={{

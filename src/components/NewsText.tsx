@@ -38,6 +38,8 @@ const NewsText: React.FC<NewsTextProps> = ({ data }) => {
                   fontWeight: 700,
                   fontSize: '18px',
                   fontFamily: "'Archivo', Arial, sans-serif",
+                  lineHeight: 1.2,
+                  display: 'inline-block'
                 }}
               >
                 {item.title.split(' ').map((word, i) => (

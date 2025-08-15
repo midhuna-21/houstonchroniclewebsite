@@ -22,7 +22,6 @@ import PoliticsData from '../../public/data/politics.json';
 import SportsData from '../../public/data/sports.json';
 import TechnologyData from '../../public/data/technology.json';
 import Script from "next/script";
-import '../../styles/bootstrap-custom.scss';
 import SectionWrapper from '@/components/SectionWrapper';
 
 
@@ -78,12 +77,20 @@ export default function Home() {
         }}
       />
 
-      <div className="bg-white" >
+      <div className="bg-white">
         <NavigationSection />
         <div className="d-flex justify-content-center mt-2">
         </div>
 
-        <div className="container px-3 px-lg-5 content" style={{ marginTop: '3rem !important' }}>
+        <div
+          className="container px-3 px-lg-5 content"
+          style={{
+            paddingLeft: 0,
+            paddingRight: 0,
+            marginTop: '4rem',
+          }}
+        >
+
           <div className="mb-5">
             <FirstHomeSection data={[PoliticsData[15], HealthData[12], SportsData[0]]} />
             <hr
@@ -99,11 +106,11 @@ export default function Home() {
             <div className="col-12 col-lg-9">
               <SecondHomeSection data={[PoliticsData[0], PoliticsData[1], SportsData[7], BusinessData[1], HealthData[1], SportsData[1]]} />
 
-              <div className="mb-5">
+              {/* <div className="mb-5">
                 <SectionWrapper title="Editor's Pick">
-                <EditorsPicksSection data={[EducationData[2], TechnologyData[5], ScienceData[5]]} />
+                  <EditorsPicksSection data={[EducationData[2], TechnologyData[5], ScienceData[5]]} />
                 </SectionWrapper>
-              </div>
+              </div> */}
               <div className="mb-5">
                 <ThirdHomeSection data={[HealthData[2], SportsData[2], ScienceData[6], PoliticsData[3], TechnologyData[3]]} />
               </div>
@@ -214,26 +221,24 @@ export default function Home() {
               />
               <div className="mt-4">
                 <FeatureSection
-                   data={{
+                  data={{
                     section: 'Technology',
                     articles: [EducationData[8], EducationData[7], EducationData[28], EducationData[9], EducationData[10]]
                   }}
                 />
               </div>
             </div>
-
             <div className="col-12 col-lg-3">
               <NewsText data={HealthData} />
               <LottoCard data={HealthData[25]} />
             </div>
-
             <div className="col-12 col-lg-3">
             </div>
           </div>
         </div>
 
-        <div style={{ marginBottom: '1.5rem' }} />
-        <style jsx>{`
+        <div style={{ marginBottom: '3rem' }} />
+        {/* <style jsx>{`
           .content {
             padding-left: 0;
             padding-right: 0;
@@ -245,7 +250,7 @@ export default function Home() {
               padding-right: 7rem;
             }
           }
-        `}</style>
+        `}</style> */}
       </div>
     </main>
 

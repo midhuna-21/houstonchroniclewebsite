@@ -49,18 +49,18 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
                     {item1.category}
                   </span>
                   <br />
-                  <span
+                  <h2
                     style={{
                       fontSize: '22.784px',
                       color: '#111111',
                       fontWeight: 700,
                       fontFamily: "'Archivo', Arial, sans-serif",
                       lineHeight: '1.3 !important',
-    display: 'inline-block',
+                      display: 'inline-block',
                     }}
                   >
                     {item1.title}
-                  </span>
+                  </h2>
                 </div>
                 <div
                   className="d-flex align-items-center mt-1"
@@ -91,19 +91,19 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
                 >
                   {item2.category}
                 </span>
-                <p
+                <h2
                   style={{
                     fontSize: '22.784px',
                     color: '#111111',
                     fontWeight: 700,
                     fontFamily: "'Archivo', Arial, sans-serif",
-                    marginBottom:'1px',
+                    marginBottom: '1px',
                     lineHeight: '1.3 !important',
-    display: 'inline-block',
+                    display: 'inline-block',
                   }}
                 >
                   {item2.title}
-                </p>
+                </h2>
                 <p
                   style={{
                     fontSize: '16px',
@@ -155,23 +155,23 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
                     fontSize: '14.224px',
                     fontWeight: 900,
                     fontFamily: "'Rubik', Arial, sans-serif",
-                    marginBottom:'1px'
+                    marginBottom: '1px'
                   }}
                 >
                   {item3.category}
                 </p>
-                <p
+                <h2
                   style={{
                     fontSize: '22.784px',
                     color: '#111111',
                     fontWeight: 700,
                     fontFamily: "'Archivo', Arial, sans-serif",
                     lineHeight: '1.3 !important',
-    display: 'inline-block',
+                    display: 'inline-block',
                   }}
                 >
                   {item3.title}
-                </p>
+                </h2>
                 <Image
                   src={item3.image}
                   alt={item3.title}
@@ -204,25 +204,25 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
                     fontSize: '14.224px',
                     fontWeight: 900,
                     fontFamily: "'Rubik', Arial, sans-serif",
-                    marginBottom:'1px'
+                    marginBottom: '1px'
 
                   }}
                 >
                   {item4.category}
                 </p>
-                <p
+                <h2
                   style={{
                     fontSize: '22.784px',
                     color: '#111111',
                     fontWeight: 700,
                     fontFamily: "'Archivo', Arial, sans-serif",
-                    marginBottom:'1px',
+                    marginBottom: '1px',
                     lineHeight: '1.3 !important',
-    display: 'inline-block',
+                    display: 'inline-block',
                   }}
                 >
                   {item4.title}
-                </p>
+                </h2>
                 <p
                   style={{
                     fontSize: '16px',
@@ -260,7 +260,15 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
           <Link
             title={item5.slug}
             href={`/${item5.category}/${item5.slug}`}
-            className="text-decoration-none border-end border-lg-0 pe-0 pe-lg-3 mb-3 mb-lg-0"
+            className="text-decoration-none d-none d-lg-flex border-end border-lg-0 pe-0 pe-lg-3 mb-3 mb-lg-0"
+            style={{ flex: '0 0 49.2%' }}
+          >
+            <MiniNewsCard category={item5.category} title={item5.title} image={item5.image} date={item5.date} />
+          </Link>
+            <Link
+            title={item5.slug}
+            href={`/${item5.category}/${item5.slug}`}
+            className="text-decoration-none d-flex d-lg-none pe-0 pe-lg-3 mb-3 mb-lg-0"
             style={{ flex: '0 0 49.2%' }}
           >
             <MiniNewsCard category={item5.category} title={item5.title} image={item5.image} date={item5.date} />

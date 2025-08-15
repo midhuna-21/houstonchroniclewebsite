@@ -34,17 +34,18 @@ const EditorialBoard: React.FC<EditorialBoardProps> = ({ sectionTitle, data }) =
             }}
           >
             <div className="flex-grow-1">
-              <p
+              <h2
                 className="mb-0"
                 style={{
                   color: "#111111",
                   fontWeight: 'bold',
                   fontSize: '1.1rem',
-                  lineHeight: '1.2',
+                    lineHeight: 1.2,
+              display: 'inline-block'
                 }}
               >
                 {item.title}
-              </p>
+              </h2>
               <div
                 className="d-flex align-items-center mt-1"
                 style={{

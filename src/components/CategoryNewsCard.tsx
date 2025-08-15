@@ -21,22 +21,24 @@ const CategoryNewsCard: React.FC<CategoryNewsCardProps> = ({ data }) => {
 
   return (
 
-    <div className="border-bottom mb-4 ">
-      <Link href={`/${category}/${slug}`} className='text-decoration-none' title={`${slug}`}>
-
+    <div className="border-bottom mb-4">
+      <Link href={`/${category}/${slug}`} className="text-decoration-none" title={`${slug}`}>
         <div className="row align-items-start">
-          <div className="col-12 col-md-9">
-            <span
+
+          {/* Text Column */}
+          <div className="col-12 col-lg-9 mb-2 mb-lg-0">
+            <h2
               style={{
                 fontSize: '22.784px',
                 fontWeight: 700,
                 fontFamily: "'Archivo', Arial, sans-serif",
                 marginBottom: '0.5rem',
                 color: '#111',
+                lineHeight: 1.2
               }}
             >
               {title}
-            </span>
+            </h2>
             <p
               style={{
                 fontSize: '16px',
@@ -63,27 +65,54 @@ const CategoryNewsCard: React.FC<CategoryNewsCardProps> = ({ data }) => {
             )}
           </div>
 
-          <div className="col-12 col-md-3">
+          {/* Image Column */}
+          <div className="col-12 col-lg-3">
+            {/* <Image
+          src={image || "/placeholder.jpg"}
+          alt={title || "Image"}
+          width={400}
+          height={150}
+          className="img-fluid"
+          style={{
+            width: '100%',
+            height: '150px',
+            objectFit: 'cover',
+          }}
+        /> */}
+
             <Image
-              src={image || "/placeholder.jpg"}
-              alt={title || "Image"}
-              width={400}
-              height={150}
-              className="img-fluid"
+              src={image}
+              alt={title}
+              width={800}
+              height={500}
+              className="img-fluid mb-2 d-xl-none"
+              style={{
+                width: '100%',
+                height: '400px',
+                objectFit: 'cover',
+              }}
+            />
+
+            <Image
+              src={image}
+              alt={title}
+              width={800}
+              height={500}
+              className="img-fluid mb-2 d-none d-xl-block"
               style={{
                 width: '100%',
                 height: '150px',
                 objectFit: 'cover',
               }}
             />
-
           </div>
+
           <div
             className="d-flex align-items-center mt-1"
             style={{
               fontSize: '10px',
               fontWeight: 200,
-              fontFamily: "'Rubik', Arial, sans-serif",
+              fontFamily: "'Rubik', Arial, sans-serif'"
             }}
           >
             <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
@@ -93,6 +122,7 @@ const CategoryNewsCard: React.FC<CategoryNewsCardProps> = ({ data }) => {
         </div>
       </Link>
     </div>
+
   );
 };
 

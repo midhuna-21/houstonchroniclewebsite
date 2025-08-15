@@ -39,16 +39,20 @@ export default function CategoryContent({ activeMain, data }: Props) {
 
       </div>
       <div className="row">
-        <div className="col-md-9">
+        {/* Left Column */}
+        <div className="col-lg-9 col-12 mb-3">
           <NewsGrid data={[data[0], data[1], data[2], data[3], data[4]]} />
         </div>
-        <div className="col-md-3">
+
+        {/* Right Column */}
+        <div className="col-lg-3 col-12 mb-md-3">
           <InteractiveCard data={data[5]} />
         </div>
       </div>
 
-      <div className="row">
-        <div className="col-md-9">
+
+      <div className="row mt-md-4 mt-3">
+        <div className="col-lg-9 col-12">
           <CategoryFirstSection
             data={{
               main: data[6],
@@ -56,14 +60,13 @@ export default function CategoryContent({ activeMain, data }: Props) {
               bottomCards: [data[9], data[10], data[11], data[12]],
             }}
           />
-          <SectionWrapper title=" ">
 
-          <EditorsPicksSection data={[data[13], data[14], data[15]]} />
-          </SectionWrapper>
-
+          {/* <div className='mb-4'><SectionWrapper title=" " >
+            <EditorsPicksSection data={[data[13], data[14], data[15]]} />
+          </SectionWrapper></div> */}
         </div>
-        <div className="col-md-3">
-          {/* <DailyPuzzles data={EducationData} /> */}
+
+        <div className="col-lg-3 col-12">
           <TrendingCard
             data={{
               section: data[0].category,
@@ -79,17 +82,19 @@ export default function CategoryContent({ activeMain, data }: Props) {
           />
         </div>
       </div>
-      <div className="row">
-        <div className="col-md-9">
+
+      <div className="row ">
+        <div className="col-lg-9 col-md-12 col-sm-12 mt-5 ">
           <SectionWrapper title={`More ${data[0]?.category || ''}`}>
             {data.slice(21).map((item, index) => (
               <CategoryNewsCard key={index + 17} data={item} />
             ))}
           </SectionWrapper>
         </div>
-        <div className="col-md-3">
-        </div>
+
+        <div className="col-lg-3 col-md-12 col-sm-12 d-none d-lg-block"></div>
       </div>
+
     </div>
 
   );

@@ -121,6 +121,8 @@ export default function About() {
                         </div>
                     </div>
                 </section>
+        <div style={{ marginBottom: '3rem' }} />
+
             </main>
         </>
     );

@@ -4,7 +4,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from '@/components/Header';
 import Footer from "@/components/Footer";
-import '../../styles/bootstrap-custom.scss';
 
 
 const geistSans = Geist({
@@ -33,7 +32,7 @@ export const metadata: Metadata = {
     siteName: "Tangent Weekly",
     images: [
       {
-        url: "https://www.tangentweekly.com/images/tangent-weekly-logo.webp",
+        url: "https://www.tangentweekly.com/images/tangent-logo.webp",
         width: 1200,
         height: 630,
         alt: "Tangent Weekly Logo",
@@ -46,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Breaking News, Politics & Business Analysis - Tangent Weekly",
     description: "Stay ahead with breaking news and expert analysis on politics, business, technology, health, science & sports.",
-    images: "https://www.tangentweekly.com/images/tangent-weekly-logo.webp",
+    images: "https://www.tangentweekly.com/images/tangent-logo.webp",
   },
 
   alternates: {
@@ -114,7 +113,7 @@ export default function RootLayout({
                 url: "https://www.tangentweekly.com/",
                 logo: {
                   "@type": "ImageObject",
-                  url: "https://www.tangentweekly.com/images/tangent-weekly-logo.webp",
+                  url: "https://www.tangentweekly.com/images/tangent-logo.webp",
                   width: 1024,
                   height: 1024,
                 },

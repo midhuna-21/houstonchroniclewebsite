@@ -7,12 +7,16 @@ import { slugify } from '../utils/slugify';
 import Image from "next/image";
 
 const NavItems = [
+  { label: 'Home', slug: '' },
   { label: 'Business', slug: 'business' },
   { label: 'Technology', slug: 'technology' },
   { label: 'Sports', slug: 'sports' },
   { label: 'Health', slug: 'health' },
   { label: 'Science', slug: 'science' },
   { label: 'Politics', slug: 'politics' },
+  { label: 'Education', slug: 'education' },
+  { label: 'Entertainment', slug: 'entertainment' },
+
 ];
 
 export default function Header() {

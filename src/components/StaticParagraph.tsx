@@ -15,7 +15,7 @@ const StaticParagraph: React.FC<StaticParagraphProps> = ({ data }) => {
   return (
     <ArticleWrapper>
       {data?.subheading && (
-        <span
+        <h2
           style={{
             fontSize: '24px',
             fontWeight: 700,
@@ -27,7 +27,7 @@ const StaticParagraph: React.FC<StaticParagraphProps> = ({ data }) => {
           }}
         >
           {data.subheading}
-        </span>
+        </h2>
       )}
       <div
         style={{
