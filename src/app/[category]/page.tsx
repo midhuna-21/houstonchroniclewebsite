@@ -137,7 +137,6 @@ export default async function CategoryPage({
     const filePath = path.join(process.cwd(), 'public', 'data', `${category}.json`);
     const fileContents = await fs.readFile(filePath, 'utf-8');
     const jsonData = JSON.parse(fileContents);
-    console.log(jsonData,'jsonddjhdfkhdskhgk')
 
     if (!jsonData) return notFound();
 

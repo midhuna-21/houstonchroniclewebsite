@@ -1,6 +1,5 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-import SectionWrapper from './SectionWrapper';
 import Link from 'next/link';
 import { BiCalendar } from 'react-icons/bi';
 import Image from 'next/image';
@@ -27,7 +26,6 @@ const EditorsPicksSection: React.FC<EditorsPicksSectionProps> = ({ data }) => {
     return () => window.removeEventListener('resize', checkTablet);
   }, []);
 
-  console.log(data,'kjgkdhfg')
 
   return (
     <div>
@@ -44,32 +42,35 @@ const EditorsPicksSection: React.FC<EditorsPicksSectionProps> = ({ data }) => {
             : {}),
         }}
       >
-        {data.slice(0, 3).map((item, idx) => (
-          <div
-            key={idx}
-            className="flex-shrink-0"
-            style={{
-              width: '95vw',
-              maxWidth: '95vw',
-              scrollSnapAlign: 'start',
-            }}
-          >
-            {renderCard(item)}
-          </div>
+        {[data[13], data[14], data[15]].map((item, idx) => (
+          item && (
+            <div
+              key={idx}
+              className="flex-shrink-0"
+              style={{
+                width: '95vw',
+                maxWidth: '95vw',
+                scrollSnapAlign: 'start',
+              }}
+            >
+              {renderCard(item)}
+            </div>
+          )
         ))}
+
       </div>
       <div className="row gx-4 gy-4 d-none d-lg-flex mb-5">
 
         <div className="col-lg-4" style={{ borderRight: '0.5px solid rgba(14, 14, 14, 0.15)' }}>
-          {renderCard(data[1])}
+          {renderCard(data[13])}
         </div>
 
         <div className="col-lg-4" style={{ borderRight: '0.5px solid rgba(14, 14, 14, 0.15)' }}>
-          {renderCard(data[2])}
+          {renderCard(data[14])}
         </div>
 
         <div className="col-lg-4">
-          {renderCard(data[6])}
+          {renderCard(data[15])}
         </div>
 
       </div>
@@ -86,7 +87,6 @@ function renderCard(item: {
   date: string;
 }) {
 
-  console.log(item.category,'kjgkdhfg')
   return (
     <Link
       href={`/${item.category}/${item.slug}`}

@@ -306,10 +306,10 @@ export default async function DetailPage({ params }: PageProps) {
           </div>
           <div className="col-12 col-lg-4">
             <MostPopularList data={relatedArticles} />
-            {/* <LatestNewsCard data={educationData} /> */}
+            {/* <LatestNewsCard data={relatedArticles} /> */}
           </div>
         </div>
-        {/* <EditorsPicksSection data={relatedArticles} /> */}
+        <EditorsPicksSection data={relatedArticles} />
       </div>
         <div style={{ marginBottom: '3rem' }} />
 

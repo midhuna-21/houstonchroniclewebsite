@@ -68,7 +68,7 @@ const StaticComponent = () => {
                 name="Cameron Ellis"
                 role="Founding Editor"
             />
-        {/* <EditorsPicksSection data={politicalData} /> */}
+        <EditorsPicksSection data={politicalData} />
         </div>
     );
 };

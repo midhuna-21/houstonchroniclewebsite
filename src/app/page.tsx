@@ -106,11 +106,11 @@ export default function Home() {
             <div className="col-12 col-lg-9">
               <SecondHomeSection data={[PoliticsData[0], PoliticsData[1], SportsData[7], BusinessData[1], HealthData[1], SportsData[1]]} />
 
-              {/* <div className="mb-5">
+              <div className="mb-5">
                 <SectionWrapper title="Editor's Pick">
-                  <EditorsPicksSection data={[EducationData[2], TechnologyData[5], ScienceData[5]]} />
+                  <EditorsPicksSection data={EducationData} />
                 </SectionWrapper>
-              </div> */}
+              </div>
               <div className="mb-5">
                 <ThirdHomeSection data={[HealthData[2], SportsData[2], ScienceData[6], PoliticsData[3], TechnologyData[3]]} />
               </div>

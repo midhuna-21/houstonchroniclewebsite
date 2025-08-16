@@ -61,9 +61,11 @@ export default function CategoryContent({ activeMain, data }: Props) {
             }}
           />
 
-          {/* <div className='mb-4'><SectionWrapper title=" " >
-            <EditorsPicksSection data={[data[13], data[14], data[15]]} />
-          </SectionWrapper></div> */}
+          <div className='mb-4'>
+            <SectionWrapper title=" " >
+            <EditorsPicksSection data={data} />
+          </SectionWrapper>
+          </div>
         </div>
 
         <div className="col-lg-3 col-12">
