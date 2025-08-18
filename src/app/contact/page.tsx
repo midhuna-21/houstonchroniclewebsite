@@ -1,18 +1,50 @@
+import SecondHeader from "@/components/SecondHeader";
+import type { Metadata } from "next";
 import Head from 'next/head';
 import { FaInstagram, FaMapMarkerAlt } from 'react-icons/fa';
 
 import { FaXTwitter, FaLinkedin, FaFacebook } from 'react-icons/fa6';
 
+export async function generateMetadata(): Promise<Metadata> {
+
+    const siteUrl = "https://www.tangentweekly.com";
+    const categoryUrl = `${siteUrl}/contact`;
+
+    return {
+        title: "Tangent Weekly – Contact Us",
+        description: "Contact Tangent Weekly for inquiries, feedback, or collaborations. Reach our editorial team covering politics, business, tech, health, science, and sports.",
+        alternates: { canonical: categoryUrl },
+        openGraph: {
+            title: "Tangent Weekly – Contact Us",
+            description: "Contact Tangent Weekly for inquiries, feedback, or collaborations. Reach our editorial team covering politics, business, tech, health, science, and sports.",
+            url: "https://www.tangentweekly.com/contact",
+            siteName: "Tangent Weekly",
+            images: [
+                {
+                    url: "https://www.tangentweekly.com/images/tangent-logo.webp",
+                    width: 1200,
+                    height: 630,
+                    alt: "Tangent Weekly Logo",
+                },
+            ],
+            type: "website",
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: "Tangent Weekly – Contact Us",
+            description: "Contact Tangent Weekly for inquiries, feedback, or collaborations. Reach our editorial team covering politics, business, tech, health, science, and sports.",
+            images: "https://www.tangentweekly.com/images/tangent-logo.webp",
+            site: '@TangentWeekly',
+            creator: 'Stephen M. Knowles',
+        },
+    };
+}
+
 export default function ContactUs() {
     return (
         <>
-            <Head>
-                <title>Contact – Tangent Weekly</title>
-                <meta
-                    name="description"
-                    content="We want to hear from you. Contact Tangent Weekly for news tips, corrections, general feedback, partnerships, and more."
-                />
-            </Head>
+            <SecondHeader />
+
 
             <main style={{ backgroundColor: '#ffffff', minHeight: '100vh' }}>
                 <section className="py-5">
@@ -37,9 +69,9 @@ export default function ContactUs() {
                                 </p>
 
                                 {/* Department Contacts */}
-                                <p className="fw-semibold mb-4" style={{ color: '#0d1a26' }}>
+                                <h2 className="fw-semibold mb-4" style={{ color: '#0d1a26' }}>
                                     Department Contacts
-                                </p>
+                                </h2>
 
                                 <p className="text-secondary fs-6 mb-4">
                                     To make sure your message gets to the right place quickly, please choose from the options below.
@@ -182,7 +214,7 @@ export default function ContactUs() {
                         </div>
                     </div>
                 </section>
-        <div style={{ marginBottom: '3rem' }} />
+                <div style={{ marginBottom: '3rem' }} />
 
             </main>
         </>

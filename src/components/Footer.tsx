@@ -50,6 +50,7 @@ export default function Footer() {
           <div className="col-md-2 mb-2 d-flex flex-column align-items-start px-2">
             <Link href="/" className="text-decoration-none" title='index'>
               <Image
+              title='Tangent Weekly'
                 src="/images/tangent-weekly-logo.webp"
                 alt="Tangent Weekly Logo"
                 width={150}
@@ -149,7 +150,7 @@ export default function Footer() {
                     {[
                       { label: 'Our Company', href: '/about' },
                       { label: 'Contact', href: '/contact' },
-                      { label: 'Our Team', href: '/team' },
+                      { label: 'Our Team', href: '/our-team' },
                       { label: 'Editorial Policy', href: '/editorial-policy' },
                     ].map((link, idx) => (
                       <li key={idx} style={{ marginBottom: '0.8rem' }}>
@@ -272,7 +273,7 @@ export default function Footer() {
                       {[
                         { label: 'Our Company', href: '/about' },
                         { label: 'Contact', href: '/contact' },
-                        { label: 'Our Team', href: '/team' },
+                        { label: 'Our Team', href: '/our-team' },
                         { label: 'Editorial Policy', href: '/editorial-policy' },
                         { label: 'Correction Policy', href: '/correction-policy' },
                         { label: 'Privacy Policy', href: '/privacy-policy' },

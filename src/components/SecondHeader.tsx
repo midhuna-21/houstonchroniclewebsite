@@ -19,7 +19,7 @@ const NavItems = [
 
 ];
 
-export default function Header() {
+export default function SecondHeader() {
   const [expanded, setExpanded] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [isFixed, setIsFixed] = useState(false);
@@ -125,17 +125,7 @@ export default function Header() {
                 />
               </Link>
 
-              {/* H1 below the image */}
-              <h1 style={{
-                color: '#b8c4d9',
-                fontSize: '10px',
-                fontWeight: '400',
-                margin: '4px 0 0 0',
-                textAlign: 'center',
-                letterSpacing: '0.3px',
-              }}>
-                Tangent Weekly - Unfiltered News and Analysis
-              </h1>
+             
             </div>
 
           </div>
@@ -151,15 +141,7 @@ export default function Header() {
                 priority
               />
             </Link>
-            <p style={{
-              color: '#b8c4d9',
-              fontSize: '12px',
-              fontWeight: '400',
-              margin: '2px 0 0 0',
-              letterSpacing: '0.3px',
-            }}>
-              Tangent Weekly - Unfiltered News and Analysis
-            </p>
+           
           </div>
         </Container>
       </Navbar>

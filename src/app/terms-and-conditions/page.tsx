@@ -1,16 +1,48 @@
+import type { Metadata } from "next";
 import Head from 'next/head';
 import { FileText, Share2, Ban, Scale, AlertTriangle, MessageCircle, Users } from 'lucide-react';
+import SecondHeader from "@/components/SecondHeader";
+
+export async function generateMetadata(): Promise<Metadata> {
+
+    const siteUrl = "https://www.tangentweekly.com";
+    const categoryUrl = `${siteUrl}/terms-and-conditions`;
+
+    return {
+        title: "Tangent Weekly – Terms & Conditions",
+        description: "Read Tangent Weekly’s terms and conditions to understand our user agreement and policies for accessing news and analysis responsibly.",
+        alternates: { canonical: categoryUrl },
+        openGraph: {
+            title: "Tangent Weekly – Terms & Conditions",
+            description: "Read Tangent Weekly’s terms and conditions to understand our user agreement and policies for accessing news and analysis responsibly.",
+            url: "https://www.tangentweekly.com/terms-and-conditions",
+            siteName: "Tangent Weekly",
+            images: [
+                {
+                    url: "https://www.tangentweekly.com/images/tangent-logo.webp",
+                    width: 1200,
+                    height: 630,
+                    alt: "Tangent Weekly Logo",
+                },
+            ],
+            type: "website",
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: "Tangent Weekly – Terms & Conditions",
+            description: "Read Tangent Weekly’s terms and conditions to understand our user agreement and policies for accessing news and analysis responsibly.",
+            images: "https://www.tangentweekly.com/images/tangent-logo.webp",
+            site: '@TangentWeekly',
+            creator: 'Stephen M. Knowles',
+        },
+    };
+}
 
 export default function TermsAndConditions() {
     return (
         <>
-            <Head>
-                <title>Terms and Conditions – Tangent Weekly</title>
-                <meta
-                    name="description"
-                    content="Tangent Weekly's Terms and Conditions, written in plain English for clarity and mutual respect."
-                />
-            </Head>
+            <SecondHeader />
+
 
             <main style={{ backgroundColor: '#ffffff', minHeight: '100vh' }}>
                 <section className="py-5">
@@ -38,9 +70,9 @@ export default function TermsAndConditions() {
 
                                 {/* On Using Our Work */}
                                 <div className="bg-white p-4 border rounded shadow-sm mb-5">
-                                    <p className="fw-bold d-flex align-items-center mb-2" style={{ color: '#0d1a26' }}>
+                                    <h2 className="fw-bold d-flex align-items-center mb-2" style={{ color: '#0d1a26' }}>
                                         <Share2 size={20} className="me-2 text-primary" /> On Using Our Work
-                                    </p>
+                                    </h2>
                                     <p className="text-secondary fs-6 mb-3">
                                         We pour everything we have into our reporting. We’re proud of it, and we want you to share it.
                                     </p>
@@ -54,9 +86,9 @@ export default function TermsAndConditions() {
 
                                 {/* Journalists, Not Advisors */}
                                 <div className="bg-white p-4 border rounded shadow-sm mb-5">
-                                    <p className="fw-bold d-flex align-items-center mb-2" style={{ color: '#0d1a26' }}>
+                                    <h2 className="fw-bold d-flex align-items-center mb-2" style={{ color: '#0d1a26' }}>
                                         <Scale size={20} className="me-2 text-success" /> We’re Journalists, Not Your Financial Advisor (or Lawyer)
-                                    </p>
+                                    </h2>
                                     <p className="text-secondary fs-6 mb-3">
                                         We are obsessive about getting our facts right and helping you understand the world. But our reporting is not a substitute for professional advice. We can tell you the story behind a new economic policy, but we can't tell you how you should invest your money. We can investigate the justice system, but we can't give you legal counsel.
                                     </p>
@@ -67,9 +99,9 @@ export default function TermsAndConditions() {
 
                                 {/* Mistakes */}
                                 <div className="bg-white p-4 border rounded shadow-sm mb-5">
-                                    <p className="fw-bold d-flex align-items-center mb-2" style={{ color: '#0d1a26' }}>
+                                    <h2 className="fw-bold d-flex align-items-center mb-2" style={{ color: '#0d1a26' }}>
                                         <AlertTriangle size={20} className="me-2 text-warning" /> On Mistakes
-                                    </p>
+                                    </h2>
                                     <p className="text-secondary fs-6 mb-0">
                                         We are human. We will make them.
                                     </p>
@@ -80,9 +112,9 @@ export default function TermsAndConditions() {
 
                                 {/* Comment Section */}
                                 <div className="bg-white p-4 border rounded shadow-sm mb-5">
-                                    <p className="fw-bold d-flex align-items-center mb-2" style={{ color: '#0d1a26' }}>
+                                    <h2 className="fw-bold d-flex align-items-center mb-2" style={{ color: '#0d1a26' }}>
                                         <MessageCircle size={20} className="me-2 text-info" /> If We Have a Comment Section
-                                    </p>
+                                    </h2>
                                     <p className="text-secondary fs-6 mb-3">
                                         The rule will be simple: respect each other. We’re here to discuss ideas, not attack people. We will have zero tolerance for hate, spam, or abuse. This is a place for curiosity, and we will protect that.
                                     </p>
@@ -104,7 +136,7 @@ export default function TermsAndConditions() {
                         </div>
                     </div>
                 </section>
-        <div style={{ marginBottom: '3rem' }} />
+                <div style={{ marginBottom: '3rem' }} />
 
             </main>
         </>

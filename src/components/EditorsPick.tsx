@@ -113,6 +113,7 @@ function renderCard(item: {
           <Image
             src={item.image || ""}
             alt={item.image}
+            title={item.title}
             width={800}
             height={500}
             className="img-fluid mb-2 d-xl-none"
@@ -126,6 +127,7 @@ function renderCard(item: {
           <Image
             src={item.image || ''}
             alt={item.title}
+            title={item.title}
             width={1000}
             height={250}
             className="img-fluid mb-2 d-none d-xl-block"

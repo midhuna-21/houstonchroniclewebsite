@@ -44,6 +44,7 @@ const NewsGrid: React.FC<NewsGridProps> = ({ data }) => {
                 <Image
                   src={main.image || ""}
                   alt={main.image}
+                  title={main.image}
                   width={800}
                   height={500}
                   className="img-fluid mb-2 d-xl-none"
@@ -57,6 +58,7 @@ const NewsGrid: React.FC<NewsGridProps> = ({ data }) => {
                 <Image
                   src={main.image || ""}
                   alt={main.image}
+                  title={main.image}
                   width={800}
                   height={500}
                   className="img-fluid mb-2 d-none d-xl-block"
@@ -158,7 +160,8 @@ const NewsGrid: React.FC<NewsGridProps> = ({ data }) => {
                       >
                         <Image
                           src={item.image || ""}
-                          alt={item.image || "News image"}
+                          alt={item.title}
+                          title={item.image}
                           fill
                           style={{ objectFit: 'cover' }}
                         />
@@ -176,7 +179,8 @@ const NewsGrid: React.FC<NewsGridProps> = ({ data }) => {
                       >
                         <Image
                           src={item.image || ""}
-                          alt={item.image || "News image"}
+                          alt={item.title}
+                          title={item.title}
                           fill
                           style={{ objectFit: 'cover' }}
                         />

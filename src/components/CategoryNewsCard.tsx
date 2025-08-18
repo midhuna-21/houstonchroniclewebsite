@@ -83,6 +83,7 @@ const CategoryNewsCard: React.FC<CategoryNewsCardProps> = ({ data }) => {
             <Image
               src={image}
               alt={title}
+              title={title}
               width={800}
               height={500}
               className="img-fluid mb-2 d-xl-none"
@@ -96,6 +97,7 @@ const CategoryNewsCard: React.FC<CategoryNewsCardProps> = ({ data }) => {
             <Image
               src={image}
               alt={title}
+              title={title}
               width={800}
               height={500}
               className="img-fluid mb-2 d-none d-xl-block"

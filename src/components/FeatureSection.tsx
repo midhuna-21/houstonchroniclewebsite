@@ -80,6 +80,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
                 <Image
                   src={mainItem.image || ""}
                   alt={mainItem.image || ""}
+                  title={mainItem.title || ""}
                   width={800}
                   height={500}
                   className="img-fluid mb-2 d-xl-none"
@@ -92,6 +93,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ data }) => {
                 <Image
                   src={mainItem.image || ""}
                   alt={mainItem.image || ""}
+                  title={mainItem.title || ""}
                   width={800}
                   height={500}
                   className="img-fluid mb-2 d-none d-xl-block"

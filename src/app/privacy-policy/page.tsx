@@ -1,16 +1,48 @@
+import type { Metadata } from "next";
 import Head from 'next/head';
 import { ShieldCheck, EyeOff, Mail, Lock, ExternalLink, AlertTriangle, HelpCircle } from 'lucide-react';
+import SecondHeader from "@/components/SecondHeader";
+
+export async function generateMetadata(): Promise<Metadata> {
+
+    const siteUrl = "https://www.tangentweekly.com";
+    const categoryUrl = `${siteUrl}/privacy-policy`;
+
+    return {
+        title: "Tangent Weekly – Privacy Policy",
+        description: "Learn how Tangent Weekly protects your data, ensures transparency, and safeguards your information while delivering trusted news.",
+        alternates: { canonical: categoryUrl },
+        openGraph: {
+            title: "Tangent Weekly – Privacy Policy",
+            description: "Learn how Tangent Weekly protects your data, ensures transparency, and safeguards your information while delivering trusted news.",
+            url: "https://www.tangentweekly.com/privacy-policy",
+            siteName: "Tangent Weekly",
+            images: [
+                {
+                    url: "https://www.tangentweekly.com/images/tangent-logo.webp",
+                    width: 1200,
+                    height: 630,
+                    alt: "Tangent Weekly Logo",
+                },
+            ],
+            type: "website",
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: "Tangent Weekly – Privacy Policy",
+            description: "Learn how Tangent Weekly protects your data, ensures transparency, and safeguards your information while delivering trusted news.",
+            images: "https://www.tangentweekly.com/images/tangent-logo.webp",
+            site: '@TangentWeekly',
+            creator: 'Stephen M. Knowles',
+        },
+    };
+}
 
 export default function PrivacyPolicy() {
     return (
         <>
-            <Head>
-                <title>Privacy Promise – Tangent Weekly</title>
-                <meta
-                    name="description"
-                    content="Our Privacy Promise: Tangent Weekly's clear, transparent approach to protecting your information and respecting your rights."
-                />
-            </Head>
+            <SecondHeader />
+
 
             <main style={{ backgroundColor: '#ffffff', minHeight: '100vh' }}>
                 <section className="py-5">
@@ -45,7 +77,7 @@ export default function PrivacyPolicy() {
                                 </div>
 
                                 {/* What information we collect */}
-                                <p className="fw-semibold mb-3" style={{ color: '#0d1a26' }}>What information do you actually collect?</p>
+                                <h2 className="fw-semibold mb-3" style={{ color: '#0d1a26' }}>What information do you actually collect?</h2>
                                 <div className="d-grid gap-4 mb-5">
                                     {[
                                         {
@@ -127,7 +159,7 @@ export default function PrivacyPolicy() {
                         </div>
                     </div>
                 </section>
-        <div style={{ marginBottom: '3rem' }} />
+                <div style={{ marginBottom: '3rem' }} />
 
             </main>
         </>

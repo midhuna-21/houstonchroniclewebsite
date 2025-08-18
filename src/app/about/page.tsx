@@ -1,15 +1,49 @@
+import SecondHeader from "@/components/SecondHeader";
+import type { Metadata } from "next";
 import Head from 'next/head';
 
+export async function generateMetadata(): Promise<Metadata> {
+
+    const siteUrl = "https://www.tangentweekly.com";
+    const categoryUrl = `${siteUrl}/about`;
+
+    return {
+        title: "About Tangent Weekly – What We Do",
+        description: "Discover Tangent Weekly’s mission and how we deliver trusted news and analysis across politics, business, tech, health, science, and sports.",
+        alternates: { canonical: categoryUrl },
+        openGraph: {
+            title: "About Tangent Weekly – What We Do",
+            description: "Discover Tangent Weekly’s mission and how we deliver trusted news and analysis across politics, business, tech, health, science, and sports.",
+            url: "https://www.tangentweekly.com/about",
+            siteName: "Tangent Weekly",
+            images: [
+                {
+                    url: "https://www.tangentweekly.com/images/tangent-logo.webp",
+                    width: 1200,
+                    height: 630,
+                    alt: "Tangent Weekly Logo",
+                },
+            ],
+            type: "website",
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: "About Tangent Weekly – What We Do",
+            description: "Discover Tangent Weekly’s mission and how we deliver trusted news and analysis across politics, business, tech, health, science, and sports.",
+            images: "https://www.tangentweekly.com/images/tangent-logo.webp",
+            site: '@TangentWeekly',
+            creator: 'Stephen M. Knowles',
+        },
+    };
+}
+
 export default function About() {
+
     return (
         <>
-            <Head>
-                <title>About Us – Tangent Weekly: Independent U.S. News & Journalism</title>
-                <meta
-                    name="description"
-                    content="Discover how Tangent Weekly delivers independent, fact-based journalism focused on U.S. politics, communities, and culture — with no paywalls or clickbait."
-                />
-            </Head>
+
+
+            <SecondHeader />
 
             <main style={{ backgroundColor: '#ffffff', minHeight: '100vh' }}>
                 <section className="py-5">
@@ -51,9 +85,9 @@ export default function About() {
                                 </p>
 
                                 {/* Our Promise */}
-                                <p className="fw-bold mb-3" style={{ color: '#0d1a26' }}>
+                                <h2 className="fw-bold mb-3" style={{ color: '#0d1a26' }}>
                                     Our Promise to You
-                                </p>
+                                </h2>
 
                                 <div className="p-4 border rounded bg-white mb-4">
                                     <p className="fw-semibold mb-2" style={{ color: '#1c2146' }}>
@@ -100,7 +134,7 @@ export default function About() {
                                     </p>
                                     <p className="fs-6 text-secondary mb-3">
                                         This is our story. The people who write it every day are the heart of what we do — you can{' '}
-                                        <a href="/team" className="fw-semibold text-decoration-underline text-dark">
+                                        <a href="/our-team" className="fw-semibold text-decoration-underline text-dark">
                                             meet our team here
                                         </a>.
                                     </p>
@@ -121,7 +155,7 @@ export default function About() {
                         </div>
                     </div>
                 </section>
-        <div style={{ marginBottom: '3rem' }} />
+                <div style={{ marginBottom: '3rem' }} />
 
             </main>
         </>

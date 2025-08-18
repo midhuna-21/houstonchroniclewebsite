@@ -31,6 +31,7 @@ const InteractiveCard: React.FC<InteractiveCardProps> = ({ data }) => {
           <Image
             src={data.image}
             alt={data.title}
+            title={data.title}
             width={400}
             height={240}
             style={{ width: '100%', height: 'auto', display: 'block' }}

@@ -109,7 +109,8 @@ const ThirdHomeSection: React.FC<Props> = ({ data }) => {
                   <>
                     <Image
                       src={main.image || ""}
-                      alt={main.image}
+                      alt={main.title}
+                      title={main.title}
                       width={800}
                       height={500}
                       className="img-fluid mb-2 d-xl-none"
@@ -122,7 +123,8 @@ const ThirdHomeSection: React.FC<Props> = ({ data }) => {
 
                     <Image
                       src={main.image || ""}
-                      alt={main.image}
+                      alt={main.title}
+                      title={main.title}
                       width={1000}
                       height={250}
                       className="img-fluid mb-2 d-none d-xl-block"
@@ -176,7 +178,8 @@ const ThirdHomeSection: React.FC<Props> = ({ data }) => {
                   <>
                     <Image
                       src={main.image || ""}
-                      alt={main.image}
+                      alt={main.title}
+                      title={main.title}
                       width={800}
                       height={500}
                       className="img-fluid mb-2 d-xl-none"
@@ -189,7 +192,8 @@ const ThirdHomeSection: React.FC<Props> = ({ data }) => {
 
                     <Image
                       src={main.image || ""}
-                      alt={main.image}
+                      alt={main.title}
+                      title={main.title}
                       width={1000}
                       height={250}
                       className="img-fluid mb-2 d-none d-xl-block"

@@ -19,6 +19,7 @@ const MiniNewsCard: React.FC<MiniNewsCardProps> = ({ category, title, image, dat
         <Image
           src={image || ""}
           alt={title}
+          title={title}
           width={110}
           height={75}
           style={{

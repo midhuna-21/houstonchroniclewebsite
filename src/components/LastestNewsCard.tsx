@@ -62,6 +62,7 @@ const LatestNewsCard: React.FC<LatestNewsCardProps> = ({ data }) => {
                 <Image
                   src={item.image}
                   alt="Editorial"
+                  title="Editorial"
                   width={80}
                   height={80}
                   style={{

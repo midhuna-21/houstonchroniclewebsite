@@ -18,6 +18,8 @@ import Script from "next/script";
 
 import styles from './page.module.css';
 import { Metadata } from 'next';
+import SecondHeader from '@/components/SecondHeader';
+import AuthorInfo from '@/components/AuthorInfo';
 
 type Article = {
   category: string;
@@ -27,6 +29,7 @@ type Article = {
   image: string;
   slug: string;
   date: string;
+  author:string;
 };
 
 
@@ -74,7 +77,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const articles = allDataMap[category] || [];
   const article = articles.find((a) => a.slug === slug);
 
-  const siteUrl = 'https://www.tangentweekly.com/';
+  const siteUrl = 'https://www.tangentweekly.com';
   const currentUrl = `${siteUrl}/${category}/${slug}`;
   const imageUrl = article?.image?.startsWith('http') ? article.image : `${siteUrl}${article?.image}`;
 
@@ -91,8 +94,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: 'Wanda Vázquez Cleared: Bribery Case Dismissed',
       description: 'Federal charges against ex-Governor Wanda Vázquez dropped, fueling claims of political targeting in Puerto Rico’s high-profile bribery case.',
       keywords: 'Wanda Vázquez Garced charges dropped, Puerto Rico governor, DOJ, corruption case, campaign finance violation',
-      authors: [{ name: 'Cameron Ellis' }],
-      alternates: {canonical:"https://www.tangentweekly.com/politics/wanda-vazquez-charges-dropped/"},
+      authors: [{ name: 'Stephen M. Knowles' }],
+      alternates: { canonical: "https://www.tangentweekly.com/politics/wanda-vazquez-charges-dropped/" },
       openGraph: {
         title: 'Charges Dropped for Wanda Vázquez Amid Claims of Political Targeting',
         description: 'Federal charges against former Puerto Rico Governor Wanda Vázquez are dropped. Learn the details of the dismissed bribery case and what this surprising reversal means for claims of political targeting.',
@@ -115,8 +118,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         title: article.title,
         description: article.shortdescription,
         images: [imageUrl],
-        site: '@tangentweekly',
-        creator: '@tangentweekly',
+        site: '@TangentWeekly',
+        creator: 'Stephen M. Knowles',
       },
       other: {
         'script:ld+json': JSON.stringify({
@@ -126,7 +129,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           datePublished: '2025-06-18',
           author: {
             '@type': 'Person',
-            name: 'Cameron Ellis',
+            name: 'Stephen M. Knowles',
           },
           publisher: {
             '@type': 'Organization',
@@ -137,7 +140,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             },
           },
           image: imageUrl,
-          alternates: {canonical:"https://www.tangentweekly.com/politics/wanda-vazquez-charges-dropped/"},
+          alternates: { canonical: "https://www.tangentweekly.com/politics/wanda-vazquez-charges-dropped/" },
           url: currentUrl,
           articleBody: article.description?.slice(0, 160),
           keywords: 'Wanda Vázquez Garced, Puerto Rico, DOJ',
@@ -151,6 +154,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: article.shortdescription,
     keywords: `${article.category}, news, ${article.title}`,
     authors: [{ name: 'Staff Writer' }],
+    alternates: { canonical: currentUrl },
     openGraph: {
       title: article.title,
       description: article.shortdescription,
@@ -172,8 +176,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: article.title,
       description: article.shortdescription,
       images: [imageUrl],
-      site: '@tangentweekly',
-      creator: '@tangentweekly',
+      site: '@TangentWeekly',
+      creator: 'Stephen M. Knowles',
     },
     other: {
       'script:ld+json': JSON.stringify({
@@ -228,8 +232,88 @@ export default async function DetailPage({ params }: PageProps) {
 
   if (slug === 'wanda-vazquez-charges-dropped') {
     return (
-      <main className={`container ${styles.content}`}>
-        <Script type="application/ld+json"
+      <>
+        <SecondHeader />
+        <main className={`container ${styles.content}`}>
+
+          <Script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify([
+                {
+                  "@context": "https://schema.org",
+                  "@type": "NewsArticle",
+                  "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "https://www.tangentweekly.com/politics/wanda-vazquez-charges-dropped/"
+                  },
+                  "headline": "Charges Dropped for Wanda Vázquez Amid Claims of Political Targeting",
+                  "description": "Federal charges against ex-Governor Wanda Vázquez dropped, fueling claims of political targeting in Puerto Rico’s high-profile bribery case.",
+                  "image": {
+                    "@type": "ImageObject",
+                    "url": "https://www.tangentweekly.com/images/wanda-vazquez-political-targeting.webp",
+                    "width": 601,
+                    "height": 400
+                  },
+                  "datePublished": "2025-05-07T17:30:00-05:00",
+                  "dateModified": "2025-08-14T00:00:00-05:00",
+                  "author": {
+                    "@type": "Person",
+                    "name": "Stephen M. Knowles",
+                    "url": "https://www.tangentweekly.com/our-team/"
+                  },
+                  "publisher": {
+                    "@type": "Organization",
+                    "name": "Tangent Weekly",
+                    "logo": {
+                      "@type": "ImageObject",
+                      "url": "https://www.tangentweekly.com/images/tangent-logo.webp",
+                      "width": 628,
+                      "height": 116
+                    }
+                  },
+                  "about": {
+                    "@type": "Person",
+                    "name": "Wanda Vázquez Garced",
+                    "jobTitle": "Former Governor of Puerto Rico",
+                    "description": "A Puerto Rican politician and attorney who served as the 13th governor of Puerto Rico from 2019 to 2021.",
+                    "sameAs": [
+                      "https://www.wikidata.org/wiki/Q56600071",
+                      "https://en.wikipedia.org/wiki/Wanda_V%C3%A1zquez_Garced"
+                    ]
+                  },
+                  "articleBody": "Former Puerto Rico Governor Wanda Vázquez Garced has seen all federal felony charges..."
+                },
+                {
+                  "@context": "https://schema.org",
+                  "@type": "BreadcrumbList",
+                  "itemListElement": [
+                    {
+                      "@type": "ListItem",
+                      "position": 1,
+                      "name": "Home",
+                      "item": "https://www.tangentweekly.com/"
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 2,
+                      "name": "Politics",
+                      "item": "https://www.tangentweekly.com/politics/"
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 3,
+                      "name": "Charges Dropped for Wanda Vázquez",
+                      "item": "https://www.tangentweekly.com/politics/wanda-vazquez-charges-dropped/"
+                    }
+                  ]
+                }
+              ])
+            }}
+          />
+
+
+          {/* <Script type="application/ld+json"
 
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -251,8 +335,8 @@ export default async function DetailPage({ params }: PageProps) {
               "dateModified": "2025-08-14T00:00:00-05:00",
               "author": {
                 "@type": "Person",
-                "name": "Cameron Ellis",
-                "url": "https://www.tangentweekly.com/about/"
+                "name": "Stephen M. Knowles",
+                "url": "https://www.tangentweekly.com/our-team/"
               },
               "publisher": {
                 "@type": "Organization",
@@ -278,41 +362,91 @@ export default async function DetailPage({ params }: PageProps) {
 
             }),
           }}
-        />
-        <StaticComponent />
-        <div style={{ marginBottom: '3rem' }} />
+        /> */}
 
-      </main>
+          <StaticComponent />
+          <div style={{ marginBottom: '3rem' }} />
+
+        </main>
+      </>
     );
   }
 
   return (
-    <main className={`container ${styles.content}`}>
+    <>
+      <SecondHeader />
+      <main className={`container ${styles.content}`}>
 
-      <div className={`container-fluid ${styles.noGutter}`}>
-        <ArticleHeader
-          category={article.category}
-          title={article.title}
-          date={article.date}
+        <Script type="application/ld+json"
+
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "NewsArticle",
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": `https://www.tangentweekly.com/${article.category}/${article.slug}`
+              },
+              "headline": `${article.title}`,
+              "description": `${article.shortdescription}`,
+              "image": {
+                "@type": "ImageObject",
+                "url": `https://www.tangentweekly.com/images/${article.image}`,
+                "width": 601,
+                "height": 400
+              },
+              "datePublished": "2025-05-07T17:30:00-05:00",
+              "dateModified": "2025-08-14T00:00:00-05:00",
+              "author": {
+                "@type": "Person",
+                "name": "Stephen M. Knowles",
+                "url": "https://www.tangentweekly.com/our-team/"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "Tangent Weekly",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://www.tangentweekly.com/images/tangent-logo.webp",
+                  "width": 628,
+                  "height": 116
+                }
+              },
+            }),
+          }}
         />
-        <DetailFirstSection
-          category={article.category}
-          image={article.image}
-          shortdescription={article.shortdescription}
-        />
-        <div className="row mt-4">
-          <div className="col-12 col-lg-8 mb-3 mb-lg-0">
-            <SingleParagraph text={article.description ?? ''} />
+
+        <div className={`container-fluid ${styles.noGutter}`}>
+          <ArticleHeader
+            category={article.category}
+            title={article.title}
+            date={article.date}
+          />
+          <DetailFirstSection
+            category={article.category}
+            title={article.title}
+            image={article.image}
+            shortdescription={article.shortdescription}
+          />
+          <div className="row mt-4">
+            <div className="col-12 col-lg-8 mb-3 mb-lg-0">
+              <SingleParagraph text={article.description ?? ''} />
+               <AuthorInfo
+                date={article.date}
+                name={article.author}
+                role="Founding Editor"
+            />
+            </div>
+            <div className="col-12 col-lg-4">
+              <MostPopularList data={relatedArticles} />
+              {/* <LatestNewsCard data={relatedArticles} /> */}
+            </div>
           </div>
-          <div className="col-12 col-lg-4">
-            <MostPopularList data={relatedArticles} />
-            {/* <LatestNewsCard data={relatedArticles} /> */}
-          </div>
+          <EditorsPicksSection data={relatedArticles} />
         </div>
-        <EditorsPicksSection data={relatedArticles} />
-      </div>
         <div style={{ marginBottom: '3rem' }} />
 
-    </main>
+      </main>
+    </>
   );
 }

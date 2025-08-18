@@ -6,6 +6,7 @@ import NavigationSection from '@/components/NavigationSection';
 import styles from './page.module.css';
 import { notFound } from 'next/navigation';
 import { json } from 'stream/consumers';
+import SecondHeader from '@/components/SecondHeader';
 
 export async function generateStaticParams() {
     return [
@@ -119,8 +120,8 @@ export async function generateMetadata({
             title: meta.title,
             description: meta.description,
             images: [firstArticleImage],
-            site: "@tangentweekly",
-            creator: "@tangentweekly",
+            site: "@TangentWeekly",
+            creator: "@Stephen M. Knowles",
         },
     };
 }
@@ -142,6 +143,7 @@ export default async function CategoryPage({
 
     return (
         <main>
+            <SecondHeader />
             <NavigationSection />
             <div className={styles.content}>
                 <div className={`container-fluid ${styles.noGutter}`}>

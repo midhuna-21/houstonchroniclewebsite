@@ -19,6 +19,7 @@ export default function NewsCard({ data }: NewsCardProps) {
         <Image
           src={data.image || ""}
           alt={data.subcategory}
+          title={data.subcategory}
           width={800}
           height={240}
           className="img-fluid mb-2"

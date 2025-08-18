@@ -23,28 +23,38 @@ import SportsData from '../../public/data/sports.json';
 import TechnologyData from '../../public/data/technology.json';
 import Script from "next/script";
 import SectionWrapper from '@/components/SectionWrapper';
+import Header from '@/components/Header';
 
 
 export default function Home() {
   return (
     <main>
       <Script
-        id="structured-data-webpage"
+        id="structured-data-newsmediaorganization"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             {
               "@context": "https://schema.org",
-              "@type": "WebPage",
-              name: "Business,Politics, Technology,Health,Science,Sports",
-              description:
-                "Stay informed with the latest breaking news, global business trends, financial strategies, investment opportunities, and expert market analysis.",
-              url: "https://www.tangentweekly.com/",
-              speakable: {
-                "@type": "SpeakableSpecification",
-                cssSelector: ["h1"],
+              "@type": "NewsMediaOrganization",
+              "@id": "https://www.tangentweekly.com/#organization",
+              name: "Tangent Weekly",
+              url: "https://www.tangentweekly.com",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://www.tangentweekly.com/images/tangent-logo.webp",
+                width: 1024,
+                height: 1024,
               },
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "Customer Service",
+                areaServed: "US",
+                availableLanguage: ["English"],
+              },
+
+              sameAs: ["https://www.tangentweekly.com"],
             },
             null,
             2
@@ -53,23 +63,35 @@ export default function Home() {
       />
 
       <Script
-        id="structured-data-itemlist"
+        id="structured-data-site-navigation"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             {
               "@context": "https://schema.org",
-              "@type": "ItemList",
-              url: "https://www.tangentweekly.com/",
-              numberOfItems: 5,
-              itemListOrder: "http://schema.org/ItemListOrderAscending",
-              mainEntityOfPage: {
-                "@type": "WebPage",
-                "@id": "https://www.tangentweekly.com/",
-              },
+              "@type": "SiteNavigationElement",
+              name: [
+                "Home",
+                "Business",
+                "Politics",
+                "Technology",
+                "Science",
+                "Sports",
+                "Health",
+                "Education",
+                "Entertainment"
+              ],
+              url: [
+                "https://www.tangentweekly.com",
+                "https://www.tangentweekly.com/business/",
+                "https://www.tangentweekly.com/technology/",
+                "https://www.tangentweekly.com/politics/",
+                "https://www.tangentweekly.com/health/",
+                "https://www.tangentweekly.com/science/",
+                "https://www.tangentweekly.com/sports",
 
-
+              ],
             },
             null,
             2
@@ -77,6 +99,7 @@ export default function Home() {
         }}
       />
 
+      <Header />
       <div className="bg-white">
         <NavigationSection />
         <div className="d-flex justify-content-center mt-2">

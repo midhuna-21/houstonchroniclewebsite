@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.tangentweekly.com/"),
+  metadataBase: new URL("https://www.tangentweekly.com"),
   title: "Tangent Weekly - Breaking News, Politics & Business Analysis",
   description: "Breaking news and expert analysis on politics, business, tech, health, science & sports. Stay ahead with daily global insights and trending stories.",
   keywords:
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tangent Weekly - Breaking News, Politics & Business Analysis",
     description: "Breaking news and expert analysis on politics, business, tech, health, science & sports. Stay ahead with daily global insights and trending stories.",
-    url: "https://www.tangentweekly.com/",
+    url: "https://www.tangentweekly.com",
     siteName: "Tangent Weekly",
     images: [
       {
@@ -49,14 +49,14 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://www.tangentweekly.com/",
+    canonical: "https://www.tangentweekly.com",
     languages: {
-      en: "https://www.tangentweekly.com/",
-      "x-default": "https://www.tangentweekly.com/",
+      en: "https://www.tangentweekly.com",
+      "x-default": "https://www.tangentweekly.com",
     },
   },
 
-  authors: [{ name: "Cameron Ellis" }],
+  authors: [{ name: "Stephen M. Knowles" }],
 
   icons: {
     icon: "/favicon.ico",
@@ -94,78 +94,12 @@ export default function RootLayout({
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Header />
+        {/* <Header /> */}
         <div>
           {children}
         </div>
         <Footer />
-        <Script
-          id="structured-data-newsmediaorganization"
-          type="application/ld+json"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(
-              {
-                "@context": "https://schema.org",
-                "@type": "NewsMediaOrganization",
-                "@id": "https://www.tangentweekly.com/#organization",
-                name: "Tangent Weekly",
-                url: "https://www.tangentweekly.com/",
-                logo: {
-                  "@type": "ImageObject",
-                  url: "https://www.tangentweekly.com/images/tangent-logo.webp",
-                  width: 1024,
-                  height: 1024,
-                },
-                contactPoint: {
-                  "@type": "ContactPoint",
-                  contactType: "Customer Service",
-                  areaServed: "US",
-                  availableLanguage: ["English"],
-                },
-
-                sameAs: ["https://www.tangentweekly.com/"],
-              },
-              null,
-              2
-            ),
-          }}
-        />
-
-        <Script
-          id="structured-data-site-navigation"
-          type="application/ld+json"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(
-              {
-                "@context": "https://schema.org",
-                "@type": "SiteNavigationElement",
-                name: [
-                  "Home",
-                  "Business",
-                  "Politics",
-                  "Technology",
-                  "Science",
-                  "Sports",
-                  "Health"
-                ],
-                url: [
-                  "https://www.tangentweekly.com/",
-                  "https://www.tangentweekly.com/business/",
-                  "https://www.tangentweekly.com/technology/",
-                  "https://www.tangentweekly.com/politics/",
-                  "https://www.tangentweekly.com/health/",
-                  "https://www.tangentweekly.com/science/",
-                  "https://www.tangentweekly.com/sports",
-
-                ],
-              },
-              null,
-              2
-            ),
-          }}
-        />
+      
       </body>
     </html>
   );

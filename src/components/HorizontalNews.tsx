@@ -29,6 +29,7 @@ const HorizontalNews: React.FC<HorizontalNewsProps> = ({ data }) => {
                 <Image
                   src={item.image || ""}
                   alt={item.title}
+                  title={item.title}
                   width={800}
                   height={160}
                   className="img-fluid mb-2"

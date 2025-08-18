@@ -32,6 +32,7 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
                 <Image
                   src={item1.image}
                   alt={item1.title}
+                  title={item1.title}
                   width={1000}
                   height={400}
                   style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
@@ -175,6 +176,7 @@ export default function SecondHomeSection({ data }: SecondHomeSectionProps) {
                 <Image
                   src={item3.image}
                   alt={item3.title}
+                  title={item3.title}
                   width={1000}
                   height={400}
                   style={{ width: '100%', height: 'auto', objectFit: 'cover' }}

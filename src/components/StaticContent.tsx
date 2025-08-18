@@ -65,7 +65,7 @@ const StaticComponent = () => {
 
             <AuthorInfo
                 date="July 12, 2025"
-                name="Cameron Ellis"
+                name="Stephen M. Knowles"
                 role="Founding Editor"
             />
         <EditorsPicksSection data={politicalData} />

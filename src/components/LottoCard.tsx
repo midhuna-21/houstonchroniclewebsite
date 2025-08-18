@@ -36,6 +36,7 @@ const LottoCard: React.FC<LottoCardProps> = ({ data }) => {
             <Image
               src={data.image}
               alt={data.title}
+              title={data.title}
               width={600}
               height={300}
               style={{

@@ -1,15 +1,47 @@
+import SecondHeader from "@/components/SecondHeader";
+import type { Metadata } from "next";
 import Head from 'next/head';
+
+export async function generateMetadata(): Promise<Metadata> {
+
+    const siteUrl = "https://www.tangentweekly.com";
+    const categoryUrl = `${siteUrl}/correction-policy`;
+
+    return {
+        title: "Tangent Weekly – Corrections Policy",
+        description: "Read Tangent Weekly’s corrections policy. We are committed to accuracy, transparency, and promptly fixing errors in our reporting across all topics.",
+        alternates: { canonical: categoryUrl },
+        openGraph: {
+            title: "Tangent Weekly – Corrections Policy",
+            description: "Read Tangent Weekly’s corrections policy. We are committed to accuracy, transparency, and promptly fixing errors in our reporting across all topics.",
+            url: "https://www.tangentweekly.com/correction-policy",
+            siteName: "Tangent Weekly",
+            images: [
+                {
+                    url: "https://www.tangentweekly.com/images/tangent-logo.webp",
+                    width: 1200,
+                    height: 630,
+                    alt: "Tangent Weekly Logo",
+                },
+            ],
+            type: "website",
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: "Tangent Weekly – Corrections Policy",
+            description: "Read Tangent Weekly’s corrections policy. We are committed to accuracy, transparency, and promptly fixing errors in our reporting across all topics.",
+            images: "https://www.tangentweekly.com/images/tangent-logo.webp",
+            site: '@TangentWeekly',
+            creator: 'Stephen M. Knowles',
+        },
+    };
+}
 
 export default function CorrectionPolicy() {
     return (
         <>
-            <Head>
-                <title>Correction Policy – Tangent Weekly</title>
-                <meta
-                    name="description"
-                    content="Read Tangent Weekly's Correction Policy — our process for fixing mistakes, updating articles, and ensuring transparency in journalism."
-                />
-            </Head>
+            <SecondHeader />
+
 
             <main style={{ backgroundColor: '#ffffff', minHeight: '100vh' }}>
                 <section className="py-5">
@@ -57,9 +89,9 @@ export default function CorrectionPolicy() {
 
                                 {/* What Happens Next */}
                                 <div className="p-4 border rounded shadow-sm bg-white mb-4">
-                                    <p className="fw-bold mb-3" style={{ color: '#0d1a26' }}>
+                                    <h2 className="fw-bold mb-3" style={{ color: '#0d1a26' }}>
                                         What Happens Next?
-                                    </p>
+                                    </h2>
                                     <p className="fs-6 text-secondary mb-3">
                                         We read every single email that comes in.
                                     </p>
@@ -82,7 +114,7 @@ export default function CorrectionPolicy() {
                         </div>
                     </div>
                 </section>
-        <div style={{ marginBottom: '3rem' }} />
+                <div style={{ marginBottom: '3rem' }} />
 
             </main>
         </>

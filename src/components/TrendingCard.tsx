@@ -47,6 +47,7 @@ const TrendingCard: React.FC<TrendingCardProps> = ({ data }) => {
               <Image
                 src={item.image || ""}
                 alt={item.title}
+                title={item.title}
                 width={60}
                 height={60}
                 style={{

@@ -1,16 +1,48 @@
+import type { Metadata } from "next";
 import Head from 'next/head';
-import { ShieldCheck, BookOpenText, Eye, RefreshCw } from 'lucide-react'; 
+import { ShieldCheck, BookOpenText, Eye, RefreshCw } from 'lucide-react';
+import SecondHeader from "@/components/SecondHeader";
+
+export async function generateMetadata(): Promise<Metadata> {
+
+    const siteUrl = "https://www.tangentweekly.com";
+    const categoryUrl = `${siteUrl}/editorial-policy`;
+
+    return {
+        title: "Tangent Weekly – Editorial Policy",
+        description: "Discover Tangent Weekly’s editorial policy, upholding independence, fairness, and accuracy in reporting across politics, business, tech, health, and science.",
+        alternates: { canonical: categoryUrl },
+        openGraph: {
+            title: "Tangent Weekly – Editorial Policy",
+            description: "Discover Tangent Weekly’s editorial policy, upholding independence, fairness, and accuracy in reporting across politics, business, tech, health, and science.",
+            url: "https://www.tangentweekly.com/editorial-policy",
+            siteName: "Tangent Weekly",
+            images: [
+                {
+                    url: "https://www.tangentweekly.com/images/tangent-logo.webp",
+                    width: 1200,
+                    height: 630,
+                    alt: "Tangent Weekly Logo",
+                },
+            ],
+            type: "website",
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: "Tangent Weekly – Editorial Policy",
+            description: "Discover Tangent Weekly’s editorial policy, upholding independence, fairness, and accuracy in reporting across politics, business, tech, health, and science.",
+            images: "https://www.tangentweekly.com/images/tangent-logo.webp",
+            site: '@TangentWeekly',
+            creator: 'Stephen M. Knowles',
+        },
+    };
+}
 
 export default function EditorialPolicy() {
     return (
         <>
-            <Head>
-                <title>Editorial Policy – Tangent Weekly</title>
-                <meta
-                    name="description"
-                    content="Our Editorial Promise: Learn how Tangent Weekly earns your trust through transparent, independent journalism and a clear code of conduct."
-                />
-            </Head>
+            <SecondHeader />
+
 
             <main style={{ backgroundColor: '#ffffff', minHeight: '100vh' }}>
                 <section className="py-5">
@@ -34,9 +66,9 @@ export default function EditorialPolicy() {
                                 </p>
 
                                 {/* Bullet Promises */}
-                                <p className="fw-semibold mb-4" style={{ color: '#0d1a26' }}>
+                                <h2 className="fw-semibold mb-4" style={{ color: '#0d1a26' }}>
                                     Here's what you can expect from us:
-                                </p>
+                                </h2>
 
                                 <div className="d-grid gap-4 mb-5">
                                     {[
@@ -107,7 +139,7 @@ export default function EditorialPolicy() {
                         </div>
                     </div>
                 </section>
-        <div style={{ marginBottom: '3rem' }} />
+                <div style={{ marginBottom: '3rem' }} />
 
             </main>
         </>

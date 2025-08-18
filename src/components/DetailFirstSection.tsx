@@ -6,12 +6,14 @@
   interface Props {
     category: string;
     image: string;
+    title:string;
     shortdescription: string;
   }
 
   export default function DetailFirstSection({
     category,
     image,
+    title,
     shortdescription,
   }: Props) {
     return (
@@ -32,6 +34,7 @@
               <Image
                 src={image}
                 alt={category}
+                title={title}
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 1280px"

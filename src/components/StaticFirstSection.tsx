@@ -33,6 +33,7 @@ export default function StaticFirstSection({
             <Image
               src={image}
               alt={category}
+              title={category}
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 1280px"

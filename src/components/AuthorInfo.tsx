@@ -46,7 +46,7 @@ const AuthorInfo: React.FC<AuthorInfoProps> = ({
         <div className="d-flex align-items-center gap-3">
 
           <div>
-            <Link title='about' href="/about">
+            <Link title='our-team' href="/our-team">
               <div
                 className="fw-bold text-dark"
                 style={{

@@ -64,6 +64,7 @@ const EditorialBoard: React.FC<EditorialBoardProps> = ({ sectionTitle, data }) =
               <Image
                 src={item.image}
                 alt={item.title}
+                title={item.title}
                 width={80}
                 height={80}
                 style={{

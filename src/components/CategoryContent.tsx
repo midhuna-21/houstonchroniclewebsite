@@ -46,7 +46,7 @@ export default function CategoryContent({ activeMain, data }: Props) {
 
         {/* Right Column */}
         <div className="col-lg-3 col-12 mb-md-3">
-          <InteractiveCard data={data[5]} />
+          <InteractiveCard data={data[18]} />
         </div>
       </div>
 
@@ -72,7 +72,7 @@ export default function CategoryContent({ activeMain, data }: Props) {
           <TrendingCard
             data={{
               section: data[0].category,
-              items: [data[17], data[18], data[19], data[20]].map(article => ({
+              items: [data[17], data[5], data[19], data[20]].map(article => ({
                 image: article.image,
                 title: article.title,
                 description: article.shortdescription,

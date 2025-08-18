@@ -70,6 +70,7 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({ data }) => {
               <Image
                 src={data[currentIndex].image}
                 alt={data[currentIndex].title}
+                title={data[currentIndex].title}
                 width={isMobile ? 400 : 800}
                 height={isMobile ? 220 : 500}
                 style={{

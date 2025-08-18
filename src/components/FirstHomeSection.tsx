@@ -97,6 +97,7 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
                   <Image
                     src={main.image}
                     alt={main.category}
+                    title={main.title}
                     width={1000}
                     height={400}
                     className="img-fluid"
@@ -125,6 +126,7 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
                   <Image
                     src={main.image}
                     alt={main.category}
+                    title={main.title}
                     width={1000}
                     height={400}
                     className="img-fluid"
@@ -152,6 +154,7 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
                   <Image
                     src={right1.image || ""}
                     alt={right1.image}
+                    title={right1.title}
                     width={800}
                     height={500}
                     className="img-fluid mb-2 d-xl-none"
@@ -165,6 +168,7 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
                   <Image
                     src={right1.image || ""}
                     alt={right1.image}
+                    title={right1.title}
                     width={800}
                     height={500}
                     className="img-fluid mb-2 d-none d-xl-block"

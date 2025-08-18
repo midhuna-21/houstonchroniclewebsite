@@ -1,15 +1,47 @@
+import SecondHeader from "@/components/SecondHeader";
+import type { Metadata } from "next";
 import Head from 'next/head';
+
+export async function generateMetadata(): Promise<Metadata> {
+
+    const siteUrl = "https://www.tangentweekly.com";
+    const categoryUrl = `${siteUrl}/our-team`;
+
+    return {
+        title: "Tangent Weekly – Our Team",
+        description: "Meet the Tangent Weekly team of journalists and editors delivering trusted reporting and analysis across politics, business, tech, health, and science.",
+        alternates: { canonical: categoryUrl },
+        openGraph: {
+            title: "Tangent Weekly – Our Team",
+            description: "Meet the Tangent Weekly team of journalists and editors delivering trusted reporting and analysis across politics, business, tech, health, and science.",
+            url: "https://www.tangentweekly.com/our-team",
+            siteName: "Tangent Weekly",
+            images: [
+                {
+                    url: "https://www.tangentweekly.com/images/tangent-logo.webp",
+                    width: 1200,
+                    height: 630,
+                    alt: "Tangent Weekly Logo",
+                },
+            ],
+            type: "website",
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: "Tangent Weekly – Our Team",
+            description: "Meet the Tangent Weekly team of journalists and editors delivering trusted reporting and analysis across politics, business, tech, health, and science.",
+            images: "https://www.tangentweekly.com/images/tangent-logo.webp",
+            site: '@TangentWeekly',
+            creator: 'Stephen M. Knowles',
+        },
+    };
+}
 
 export default function OurTeam() {
     return (
         <>
-            <Head>
-                <title>Our Team – Tangent Weekly</title>
-                <meta
-                    name="description"
-                    content="Meet the Tangent Weekly team — a group of independent journalists, editors, and investigators committed to honest reporting and real impact."
-                />
-            </Head> 
+            <SecondHeader />
+
 
             <main style={{ backgroundColor: '#ffffff', minHeight: '100vh' }}>
                 <section className="py-5">
@@ -30,16 +62,16 @@ export default function OurTeam() {
 
                                 {/* Founder */}
                                 <div className="mb-5 pb-4 border-bottom">
-                                    <p className="fw-bold mb-2" style={{ color: '#0d1a26' }}>
+                                    <h2 className="fw-bold mb-2" style={{ color: '#0d1a26' }}>
                                         Founder & Editor-in-Chief
-                                    </p>
+                                    </h2>
                                     <p className="fw-semibold mb-1">Stephen M. Knowles</p>
                                     <p className="fs-6 text-secondary mb-2">
                                         Stephen started Tangent Weekly because he was fed up with the noise. After years working in media, he saw a need for a place that wasn't chasing clicks or pushing a secret agenda.
                                         His mission is simple: to build a news source where honest, clear reporting always comes first.
                                     </p>
                                     <p className="fs-6">
-                                      <a href="https://x.com/Stephenmknowles" target="_blank" className="text-decoration-underline text-dark fw-semibold">Stephen M. Knowles</a>
+                                        <a href="https://x.com/Stephenmknowles" target="_blank" className="text-decoration-underline text-dark fw-semibold">Stephen M. Knowles</a>
                                     </p>
                                 </div>
 
@@ -63,7 +95,7 @@ export default function OurTeam() {
                                         He’s focused on the human side of the economy—how big trends affect jobs, families, and small businesses.
                                     </p>
                                     <p className="fs-6">
-                                       <a href="https://x.com/Da_niel_Smith" target="_blank" className="text-decoration-underline text-dark fw-semibold">Daniel C. Smith</a>
+                                        <a href="https://x.com/Da_niel_Smith" target="_blank" className="text-decoration-underline text-dark fw-semibold">Daniel C. Smith</a>
                                     </p>
                                 </div>
 
@@ -117,7 +149,7 @@ export default function OurTeam() {
                         </div>
                     </div>
                 </section>
-        <div style={{ marginBottom: '3rem' }} />
+                <div style={{ marginBottom: '3rem' }} />
 
             </main>
         </>

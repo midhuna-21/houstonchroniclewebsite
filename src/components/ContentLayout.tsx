@@ -47,6 +47,7 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
                                   <Image
                                     src={main.image || ""}
                                     alt={main.image || ""}
+                                    title={main.title || ""}
                                     width={800}
                                     height={500}
                                     className="img-fluid mb-2 d-xl-none"
@@ -60,6 +61,7 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
                                   <Image
                                     src={main.image || ""}
                                     alt={main.image || ""}
+                                    title={main.title || ""}
                                     width={800}
                                     height={500}
                                     className="img-fluid mb-2 d-none d-xl-block"
@@ -162,6 +164,7 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
                                   <Image
                                     src={side[1].image || ""}
                                     alt={side[1].image || ""}
+                                    title={side[1].title || ""}
                                     width={800}
                                     height={500}
                                     className="img-fluid mb-2 d-xl-none"
@@ -175,6 +178,7 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
                                   <Image
                                     src={side[1].image || ""}
                                     alt={side[1].image || ""}
+                                    title={side[1].title || ""}
                                     width={800}
                                     height={500}
                                     className="img-fluid mb-2 d-none d-xl-block"
@@ -253,6 +257,7 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
                           <Image
                             src={item.image || ""}
                             alt={item.title}
+                            title={item.title}
                             width={400}
                             height={70}
                             className="img-fluid"
@@ -323,6 +328,7 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
                           <Image
                             src={item.image || ""}
                             alt={item.title}
+                            title={item.title}
                             width={400}
                             height={70}
                             className="img-fluid"
@@ -394,6 +400,7 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ data }) => {
                           <Image
                             src={item.image || ""}
                             alt={item.title}
+                            title={item.title}
                             width={400}
                             height={70}
                             className="img-fluid"
