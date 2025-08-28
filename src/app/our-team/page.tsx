@@ -32,7 +32,6 @@ export async function generateMetadata(): Promise<Metadata> {
             description: "Meet the Tangent Weekly team of journalists and editors delivering trusted reporting and analysis across politics, business, tech, health, and science.",
             images: "https://www.tangentweekly.com/images/tangent-logo.webp",
             site: '@TangentWeekly',
-            creator: 'Stephen M. Knowles',
         },
     };
 }

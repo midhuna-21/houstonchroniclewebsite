@@ -121,7 +121,6 @@ export async function generateMetadata({
             description: meta.description,
             images: [firstArticleImage],
             site: "@TangentWeekly",
-            creator: "@Stephen M. Knowles",
         },
     };
 }

@@ -33,7 +33,6 @@ export async function generateMetadata(): Promise<Metadata> {
             description: "Learn how Tangent Weekly protects your data, ensures transparency, and safeguards your information while delivering trusted news.",
             images: "https://www.tangentweekly.com/images/tangent-logo.webp",
             site: '@TangentWeekly',
-            creator: 'Stephen M. Knowles',
         },
     };
 }

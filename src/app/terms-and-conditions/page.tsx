@@ -33,7 +33,6 @@ export async function generateMetadata(): Promise<Metadata> {
             description: "Read Tangent Weekly’s terms and conditions to understand our user agreement and policies for accessing news and analysis responsibly.",
             images: "https://www.tangentweekly.com/images/tangent-logo.webp",
             site: '@TangentWeekly',
-            creator: 'Stephen M. Knowles',
         },
     };
 }

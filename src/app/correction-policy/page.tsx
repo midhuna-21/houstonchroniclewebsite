@@ -32,7 +32,6 @@ export async function generateMetadata(): Promise<Metadata> {
             description: "Read Tangent Weekly’s corrections policy. We are committed to accuracy, transparency, and promptly fixing errors in our reporting across all topics.",
             images: "https://www.tangentweekly.com/images/tangent-logo.webp",
             site: '@TangentWeekly',
-            creator: 'Stephen M. Knowles',
         },
     };
 }

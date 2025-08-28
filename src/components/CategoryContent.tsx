@@ -41,7 +41,7 @@ export default function CategoryContent({ activeMain, data }: Props) {
       <div className="row">
         {/* Left Column */}
         <div className="col-lg-9 col-12 mb-3">
-          <NewsGrid data={[data[0], data[1], data[2], data[3], data[4]]} />
+          <NewsGrid data={[data[0], data[2], data[3], data[4], data[5]]} />
         </div>
 
         {/* Right Column */}

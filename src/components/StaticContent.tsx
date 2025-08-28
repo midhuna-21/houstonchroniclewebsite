@@ -67,6 +67,7 @@ const StaticComponent = () => {
                 date="July 12, 2025"
                 name="Stephen M. Knowles"
                 role="Founding Editor"
+                twitter="https://x.com/Stephenmknowles"
             />
         <EditorsPicksSection data={politicalData} />
         </div>

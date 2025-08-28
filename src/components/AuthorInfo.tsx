@@ -7,33 +7,19 @@ import Link from 'next/link';
 import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 
 
-const socialLinks = [
-  // {
-  //   icon: FaFacebookF,
-  //   url: '#',
-  //   label: 'Visit our Facebook page',
-  // },
-  {
-    icon: FaXTwitter,
-    url: 'https://x.com/TangentWeekly',
-    label: 'Visit our Twitter (X) page',
-  },
-  {
-    icon: FaInstagram,
-    url: 'https://www.instagram.com/tangentweekly/',
-    label: 'Visit our Instagram page',
-  },
-];
+
 
 interface AuthorInfoProps {
   date: string;
   name: string;
   role: string;
+  twitter:string;
 }
 
 const AuthorInfo: React.FC<AuthorInfoProps> = ({
   date,
   name,
+  twitter,
   role,
 }) => {
   return (
@@ -74,14 +60,13 @@ const AuthorInfo: React.FC<AuthorInfoProps> = ({
           </div>
         </div>
 
-        <div className="d-flex align-items-center gap-2">
-          {socialLinks.map(({ icon: Icon, url, label }, i) => (
+       <div className="d-flex align-items-center gap-2">
+          {twitter && (
             <a
-              key={i}
-              href={url}
+              href={twitter}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={label}
+              aria-label="Twitter profile"
               className="text-decoration-none"
               style={{ color: 'inherit' }}
             >
@@ -89,11 +74,10 @@ const AuthorInfo: React.FC<AuthorInfoProps> = ({
                 className="rounded-circle border p-2 d-flex align-items-center justify-content-center"
                 style={{ width: 32, height: 32 }}
               >
-                <Icon size={14} />
+                <FaXTwitter size={14} />
               </div>
             </a>
-
-          ))}
+          )}
         </div>
       </div>
 

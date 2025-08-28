@@ -33,7 +33,6 @@ export async function generateMetadata(): Promise<Metadata> {
             description: "Discover Tangent Weekly’s editorial policy, upholding independence, fairness, and accuracy in reporting across politics, business, tech, health, and science.",
             images: "https://www.tangentweekly.com/images/tangent-logo.webp",
             site: '@TangentWeekly',
-            creator: 'Stephen M. Knowles',
         },
     };
 }

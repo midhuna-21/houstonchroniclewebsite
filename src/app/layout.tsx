@@ -46,6 +46,7 @@ export const metadata: Metadata = {
     title: "Breaking News, Politics & Business Analysis - Tangent Weekly",
     description: "Stay ahead with breaking news and expert analysis on politics, business, technology, health, science & sports.",
     images: "https://www.tangentweekly.com/images/tangent-logo.webp",
+    site: '@TangentWeekly'
   },
 
   alternates: {

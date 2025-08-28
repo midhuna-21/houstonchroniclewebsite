@@ -35,7 +35,6 @@ export async function generateMetadata(): Promise<Metadata> {
             description: "Contact Tangent Weekly for inquiries, feedback, or collaborations. Reach our editorial team covering politics, business, tech, health, science, and sports.",
             images: "https://www.tangentweekly.com/images/tangent-logo.webp",
             site: '@TangentWeekly',
-            creator: 'Stephen M. Knowles',
         },
     };
 }

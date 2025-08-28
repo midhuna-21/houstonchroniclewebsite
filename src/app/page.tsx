@@ -127,7 +127,7 @@ export default function Home() {
           </div>
           <div className="row">
             <div className="col-12 col-lg-9">
-              <SecondHomeSection data={[PoliticsData[0], PoliticsData[1], SportsData[7], BusinessData[1], HealthData[1], SportsData[1]]} />
+              <SecondHomeSection data={[PoliticsData[0], PoliticsData[2], SportsData[7], BusinessData[1], HealthData[1], SportsData[1]]} />
 
               <div className="mb-5">
                 <SectionWrapper title="Editor's Pick">
