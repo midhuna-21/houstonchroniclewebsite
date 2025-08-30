@@ -110,3 +110,277 @@ a {
 }
 
 }
+
+
+
+
+
+
+
+
+.timeline-section {
+  min-height: 100vh;
+  /* background: linear-gradient(to bottom right, #f9fafb, #fff); */
+  padding: 60px 16px; /* smaller padding */
+}
+
+.timeline-header {
+  max-width: 800px; /* slightly smaller width */
+  margin: 0 auto 48px;
+  /* font-size: 2rem; */
+  /* text-align: center; */
+}
+
+.timeline-header h2 {
+  font-size: 2rem; /* was 2.5rem */
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.timeline-line {
+  width: 60px; /* smaller */
+  /* height: 3px; */
+  margin: 0 auto;
+  background: linear-gradient(to right, #475569, #1e3a8a);
+  border-radius: 3px;
+}
+
+.timeline-header p {
+  margin-top: 16px;
+  font-size: 1rem; /* was 1.125rem */
+  color: #4b5563;
+}
+
+/* Timeline container */
+.timeline-container {
+  max-width: 850px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 50px; /* reduced shift */
+}
+
+/* Vertical line on left */
+.timeline-center-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 28px;
+  width: 2px;
+  background: linear-gradient(to bottom, #94a3b8, #1e40af, #0f172a);
+}
+
+/* Timeline item */
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px; /* was 64px */
+}
+
+/* Dot */
+.timeline-dot {
+  position: absolute;
+  left: 20px;
+  width: 14px; /* smaller */
+  height: 14px;
+  background: linear-gradient(to bottom right, #334155, #1e3a8a);
+  border: 3px solid #fff; /* thinner border */
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+/* Content always on left side */
+.timeline-content {
+  margin-left: 32px; /* was 40px */
+}
+
+/* Year Badge */
+.year-badge span {
+  display: inline-block;
+  padding: 6px 14px; /* smaller padding */
+  background: linear-gradient(to right, #1e293b, #1e3a8a);
+  color: white;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.8rem; /* smaller text */
+  margin-bottom: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+/* Timeline card */
+.timeline-card {
+  background: white;
+  border: 1px solid #f3f4f6;
+  border-radius: 10px; /* slightly smaller */
+  padding: 18px; /* was 24px */
+  position: relative;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.timeline-card:hover {
+  transform: translateY(-3px);
+  border-color: #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card-top-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, #475569, #1e40af);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  opacity: 0.6;
+}
+
+.timeline-card p {
+  color: #374151;
+  line-height: 1.5; /* slightly tighter */
+  font-size: 0.95rem; /* smaller text */
+  font-weight: 500;
+}
+
+.card-bottom {
+  margin-top: 12px; /* less space */
+  padding-top: 10px;
+  border-top: 1px solid #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.7rem; /* smaller */
+  color: #9ca3af;
+}
+
+.card-accent {
+  width: 28px; /* smaller */
+  height: 2px;
+  background: linear-gradient(to right, #94a3b8, #2563eb);
+}
+
+/* Footer */
+.timeline-footer {
+  max-width: 800px;
+  margin: 60px auto 0;
+  text-align: center;
+}
+
+.footer-dot {
+  width: 40px; /* smaller */
+  height: 40px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, #334155, #1e3a8a);
+  opacity: 0.6;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.timeline-footer p {
+  margin-top: 12px;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+
+/* ============ Responsive ============ */
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .timeline-section {
+    padding: 40px 12px;
+  }
+
+  .timeline-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .timeline-container {
+    max-width: 700px;
+    padding-left: 40px;
+  }
+
+  .timeline-center-line {
+    left: 24px;
+  }
+
+  .timeline-dot {
+    left: 16px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .timeline-content {
+    margin-left: 28px;
+  }
+
+  .year-badge span {
+    font-size: 0.75rem;
+    padding: 5px 12px;
+  }
+
+  .timeline-card {
+    padding: 16px;
+  }
+
+  .timeline-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile (max-width: 640px) */
+@media (max-width: 640px) {
+  .timeline-section {
+    padding: 30px 10px;
+  }
+
+  .timeline-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .timeline-container {
+    max-width: 100%;
+    padding-left: 32px;
+  }
+
+  .timeline-center-line {
+    left: 18px;
+  }
+
+  .timeline-dot {
+    left: 10px;
+    width: 10px;
+    height: 10px;
+  }
+
+  .timeline-content {
+    margin-left: 24px;
+  }
+
+  .year-badge span {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+  }
+
+  .timeline-card {
+    padding: 14px;
+    border-radius: 8px;
+  }
+
+  .timeline-card p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .card-bottom {
+    font-size: 0.65rem;
+  }
+
+  .card-accent {
+    width: 20px;
+  }
+
+  .timeline-footer p {
+    font-size: 0.7rem;
+  }
+}

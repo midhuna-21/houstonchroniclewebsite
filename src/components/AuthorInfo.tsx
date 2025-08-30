@@ -1,7 +1,7 @@
 'use client';
 
-import { FaXTwitter } from 'react-icons/fa6';
 import React from 'react';
+import { FaXTwitter } from 'react-icons/fa6';
 import ArticleWrapper from './ArticleWrapper';
 import Link from 'next/link';
 import { FaFacebookF, FaInstagram } from 'react-icons/fa';
@@ -24,7 +24,7 @@ const AuthorInfo: React.FC<AuthorInfoProps> = ({
 }) => {
   return (
     <ArticleWrapper>
-      <p className="text-muted mb-3" style={{ fontSize: '0.95rem' }}>
+      <p className="text-muted mb-1" style={{ fontSize: '0.95rem' }}>
         {date}
       </p>
 

@@ -321,66 +321,48 @@ export default async function DetailPage({ params }: PageProps) {
         </main>
       </>
     );
-  } else if (slug === 'wanda-vazquez-campaign-law-violation') {
-  return(
-    <>
-      <SecondHeader />
-      <main className={`container ${styles.content}`}>
-        <Script type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "OpinionNewsArticle",
-              "headline": "A Traditional Reading of the Vázquez Plea—and What It Really Says",
-              "description": "An opinion piece explaining why the Wanda Vázquez plea is a FECA campaign finance violation, not a bribery conviction, with context on Julio Herrera Velutini, Mark Rossini, OCIF, and Bancrédito International Bank & Trust Corporation.",
-              "datePublished": "2025-08-28",
-              "dateModified": "2025-08-28",
-              "inLanguage": "en",
-              "isAccessibleForFree": "True",
-              "articleSection": "Opinion",
-              "author": {
-                "@type": "Organization",
-                "name": "Editorial Board"
-              },
-              "publisher": {
-                "@type": "Organization",
-                "name": "Journalism Society",
-                "logo": { "@type": "ImageObject", "url": "https://example.com/logo.png" }
-              },
-              "mainEntityOfPage": { "@type": "WebPage", "@id": "https://example.com/opinion/vazquez-feCA-plea" },
-              "about": [
-                { "@type": "Person", "name": "Wanda Vázquez" },
-                { "@type": "Person", "name": "Julio Herrera Velutini" },
-                { "@type": "Person", "name": "Mark Rossini" },
-                { "@type": "Organization", "name": "U.S. Department of Justice" },
-                { "@type": "Organization", "name": "Bancrédito International Bank & Trust Corporation" },
-                { "@type": "Organization", "name": "Puerto Rico Office of the Commissioner of Financial Institutions (OCIF)" }
-              ],
-              "keywords": [
-                "Julio Herrera Velutini",
-                "Wanda Vazquez",
-                "Wanda Vázquez",
-                "campaign finance violation",
-                "Federal Election Campaign Act (FECA)",
-                "foreign national donation",
-                "bribery scheme",
-                "political contributions",
-                "Bancrédito International Bank & Trust Corporation",
-                "Puerto Rico banking regulator (OCIF)",
-                "Mark Rossini",
-                "probation sentence",
-                "plea agreement",
-                "sentencing hearing Oct 15 2025",
-                "U.S. Department of Justice"
-              ]
-            }),
-          }}></Script>
+  } else if (slug === 'wanda-vazquez-campaign-finance-case-2025') {
+    return (
+      <>
+        <SecondHeader />
+        <main className={`container ${styles.content}`}>
+          <Script type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "NewsArticle",
+                "headline": "Wanda Vázquez: A Conservative Leader at the Crossroads",
+                "description": "An in-depth editorial feature on Wanda Vázquez, Puerto Rico’s former governor, her legacy, controversies, and enduring role in conservative politics.",
+                "datePublished": "2025-08-27T17:12:18-04:00",
+                "dateModified": "2025-08-28T00:01:15-04:00",
+                "author": {
+                  "@type": "Organization",
+                  "name": "Editorial Board"
+                },
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Conservative Business Journal",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.tangentweekly.com/images/tangent-logo.webp"
+                  }
+                },
+                "mainEntityOfPage": "https://www.tangentweekly.com/politics/wanda-vazquez-campaign-finance-case-2025/",
+                "wordCount": "2300",
+                "image": "https://www.tangentweekly.com/images/wanda-vazquez-campaign-law-plea.webpg"
+              }),
+            }}></Script>
 
-        <ClientS2 />
-      </main>
-    </>
-  )
-  } else {
+          <ClientS2 />
+        </main>
+      </>
+    )
+  }
+
+
+
+
+  else {
     return (
       <>
         <SecondHeader />

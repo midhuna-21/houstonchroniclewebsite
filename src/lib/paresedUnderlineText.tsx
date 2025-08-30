@@ -87,7 +87,7 @@ export function parseRichText(text?: string): React.ReactNode[] {
       style={{
         color: "#2D2D2D",
         fontWeight: 400,
-        marginBottom: '2rem',
+        marginBottom: '0rem',
       }}
     >
       {formatText(para)}
