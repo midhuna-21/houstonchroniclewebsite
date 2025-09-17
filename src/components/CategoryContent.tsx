@@ -18,8 +18,6 @@ interface Props {
 export default function CategoryContent({ activeMain, data }: Props) {
   const excludeSlugs = [
     "lawyers-switch-sides-bancredito-15-million-lesson",
-    "bancredito-15-million-fight-legal-counsel",
-    "bancredito-trusted-counsel-undoing",
   ];
 
   const filteredData = data.filter(item => !excludeSlugs.includes(item.slug));

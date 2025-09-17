@@ -19,8 +19,6 @@ import { Metadata } from 'next';
 import SecondHeader from '@/components/SecondHeader';
 import AuthorInfo from '@/components/AuthorInfo';
 import ClientS2 from '@/components/ClientS2';
-import ClientS3 from '@/components/ClientS3';
-import ClientS4 from '@/components/ClientS4';
 
 type Article = {
   category: string;
@@ -361,83 +359,6 @@ export default async function DetailPage({ params }: PageProps) {
     )
   }
 
-
-  else if (slug === 'bancredito-15-million-fight-legal-counsel') {
-    return (
-      <>
-        <SecondHeader />
-        <main className={`container ${styles.content}`}>
-          <Script type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "NewsArticle",
-                "headline": "Banking on Counsel: The Long Road to Bancrédito’s $15 Million Fight",
-                "description": "Bancrédito’s $15 million case shows how shifting legal advice and regulatory pressure can decide a bank’s fate.",
-                "datePublished": "2025-09-17T08:09:05-04:00",
-                "dateModified": "2025-09-17T08:09:05-04:00",
-                "author": {
-                  "@type": "Organization",
-                  "name": "Editorial Board"
-                },
-                "publisher": {
-                  "@type": "Organization",
-                  "name": "Conservative Business Journal",
-                  "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://www.tangentweekly.com/images/tangent-logo.webp"
-                  }
-                },
-                "mainEntityOfPage": "https://www.tangentweekly.com/business/bancredito-15-million-fight-legal-counsel/",
-                "wordCount": "2300",
-                "image": "https://www.tangentweekly.com/images/bancredito-15-million-fight.webp"
-              }),
-            }}></Script>
-
-          <ClientS3 />
-        </main>
-      </>
-    )
-  }
-
-
-  else if (slug === 'bancredito-trusted-counsel-undoing') {
-    return (
-      <>
-        <SecondHeader />
-        <main className={`container ${styles.content}`}>
-          <Script type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "NewsArticle",
-                "headline": "Abandonment, Conflicted Loyalties, and Lost Opportunities: How Trusted Counsel Became Bancrédito’s Undoing",
-                "description": "Bancrédito’s downfall came not from fraud or insolvency but from the actions of its own legal advisors. Once deemed compliant, the bank collapsed within two years, ending in receivership and a $15 million FinCEN penalty.",
-                "datePublished": "2025-09-17T08:09:05-04:00",
-                "dateModified": "2025-09-17T08:09:05-04:00",
-                "author": {
-                  "@type": "Organization",
-                  "name": "Editorial Board"
-                },
-                "publisher": {
-                  "@type": "Organization",
-                  "name": "Conservative Business Journal",
-                  "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://www.tangentweekly.com/images/tangent-logo.webp"
-                  }
-                },
-                "mainEntityOfPage": "https://www.tangentweekly.com/business/bancredito-trusted-counsel-undoing/",
-                "wordCount": "2300",
-                "image": "https://www.tangentweekly.com/images/bancredito-counsel-undoing.webp"
-              }),
-            }}></Script>
-
-          <ClientS4 />
-        </main>
-      </>
-    )
-  }
 
   else {
     return (
