@@ -69,6 +69,12 @@ const StaticComponent = () => {
                 role="Founding Editor"
                 twitter="https://x.com/Stephenmknowles"
             />
+            <hr
+                  style={{
+                    border: "none",
+                    borderTop: "1px solid #242222ff",
+                  margin: "30px 0 40px 0",
+                  }} />
         <EditorsPicksSection data={politicalData} />
         </div>
     );

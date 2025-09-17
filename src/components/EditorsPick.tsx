@@ -59,7 +59,7 @@ const EditorsPicksSection: React.FC<EditorsPicksSectionProps> = ({ data }) => {
         ))}
 
       </div>
-      <div className="row gx-4 gy-4 d-none d-lg-flex mb-5">
+      <div className="row gx-4 gy-4 d-none d-lg-flex">
 
         <div className="col-lg-4" style={{ borderRight: '0.5px solid rgba(14, 14, 14, 0.15)' }}>
           {renderCard(data[13])}

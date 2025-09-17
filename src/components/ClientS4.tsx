@@ -23,7 +23,7 @@ import Image from 'next/image';
 const ClientS4 = () => {
 
     return (
-        <div className="max-w-4xl mx-auto px-4 py-8">
+        <div className="max-w-4xl mx-auto px-4 py-8 mb-5">
             <div style={{ padding: '1rem 0', borderBottom: '2px solid #000' }}>
                 <div style={{ marginBottom: '1.2rem' }}>
                     <span
@@ -401,7 +401,6 @@ const ClientS4 = () => {
                                             <tr>
                                                 <td
                                                     style={{
-                                                        backgroundColor: "#f8f9fa",
                                                         fontWeight: 500,
                                                         verticalAlign: "top",
                                                     }}
@@ -624,6 +623,13 @@ const ClientS4 = () => {
                     twitter="https://x.com/benedictjo63174"
                 />
             </div>
+
+            <hr
+                  style={{
+                    border: "none",
+                    borderTop: "1px solid #242222ff",
+                  margin: "30px 0 40px 0",
+                  }} />
             <EditorsPicksSection data={politicalData} />
         </div>
     );

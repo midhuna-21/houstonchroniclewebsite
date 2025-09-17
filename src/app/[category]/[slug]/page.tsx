@@ -491,18 +491,30 @@ export default async function DetailPage({ params }: PageProps) {
             <div className="row mt-4">
               <div className="col-12 col-lg-8 mb-3 mb-lg-0">
                 <SingleParagraph text={article.description ?? ''} />
-                <AuthorInfo
-                  date={article.date}
-                  name={article.author}
-                  twitter={article.twitter}
-                  role="Founding Editor"
-                />
+                <div style={{ marginBottom: '30px', marginTop: '30px' }}>
+
+                  <AuthorInfo
+                    date={article.date}
+                    name={article.author}
+                    twitter={article.twitter}
+                    role="Founding Editor"
+                  />
+                
+                </div>
+
               </div>
+              
               <div className="col-12 col-lg-4">
                 <MostPopularList data={relatedArticles} />
                 {/* <LatestNewsCard data={relatedArticles} /> */}
               </div>
             </div>
+            <hr
+                  style={{
+                    border: "none",
+                    borderTop: "1px solid #242222ff",
+                  margin: "20px 0 40px 0",
+                  }} />
             <EditorsPicksSection data={relatedArticles} />
           </div>
           <div style={{ marginBottom: '3rem' }} />
