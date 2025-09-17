@@ -20,7 +20,7 @@ import { BiCalendar } from 'react-icons/bi';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-const ClientS2 = () => {
+const ClientS3 = () => {
 
     return (
         <div className="max-w-4xl mx-auto px-4 py-8">
@@ -69,7 +69,7 @@ const ClientS2 = () => {
                         fontStyle: 'italic',
                     }}
                 >
-                    When Lawyers Switch Sides on Their Own Client: The $15 Million Lesson of Bancrédito
+                    Banking on Counsel: The Long Road to Bancrédito’s $15 Million Fight
                 </h1>
 
                 <div
@@ -125,13 +125,12 @@ const ClientS2 = () => {
                 </div>
             </div>
 
-
             <div className="d-flex justify-content-center mt-3">
                 <div className="col-md-10">
                     <Image
-                        src="/images/bancredito-15-million-lawyers-switch.webp"
-                        alt="lawyers-switch-sides-bancredito-15-million-lesson"
-                        title="lawyers-switch-sides-bancredito-15-million-lesson"
+                        src="/images/bancredito-15-million-fight.webp"
+                        alt="bancredito-15-million-fight-legal-counsel"
+                        title="bancredito-15-million-fight-legal-counsel"
                         width={1200}
                         height={800}
                         priority
@@ -154,7 +153,7 @@ const ClientS2 = () => {
                             paddingLeft: '12px',
                         }}
                     >
-                        A Bank That Played by the Rules—Until It Didn’t
+                        A Familiar Pattern in Banking History
                     </h2>
                     <div
                         style={{
@@ -162,24 +161,18 @@ const ClientS2 = () => {
                             fontSize: '18px',
                             color: '#2D2D2D',
                         }}
-                        className='text-block'
+                         className='text-block'
                     >
                         <p>
-                            Bancrédito International Bank & Trust was a small Puerto Rican bank with a special offshore
-                            license. Like all banks, it had to follow the <strong>Bank Secrecy Act (BSA)</strong> and <strong>anti-money-laundering
-                                (AML)</strong> rules: laws designed to catch shady transactions and make sure suspicious activity reports
-                            (SARs) are filed when money looks questionable
+                            Banks have always lived under the twin shadows of <strong>regulators and lawyers</strong>. Regulators wield
+                            the power to fine, sanction, or shut down institutions. Lawyers serve as guides, telling banks what
+                            the rules mean and how far they can stretch.
                         </p>
                         <p>
-                            In 2020, Bancrédito’s lawyers—respected firms from San Juan and Miami—told regulators in
-                            writing that the bank’s compliance program was <strong>“adequate” and risk-based</strong>. They even stressed
-                            that filing SARs is a matter of <strong>judgment, not guesswork</strong>. In other words: the bank was doing
-                            what the law required.
-                        </p>
-                        <p>
-                            Those lawyers helped negotiate a settlement with Puerto Rico’s banking watchdog, which ended
-                            with a slap on the wrist: a <strong>$97,000 fine</strong> and a plan for improvements. For a bank, that’s like
-                            paying a speeding ticket—not pleasant, but survivable.
+                            When banks collapse, these two forces often collide. Regulators point to compliance failures;
+                            banks and their owners sometimes point back at their lawyers, arguing they were led astray. The
+                            Bancrédito dispute—where one year counsel praised a program as adequate and later advised
+                            admitting it had deteriorated—is only the latest chapter in this recurring drama.
                         </p>
                     </div>
                 </div>
@@ -196,7 +189,7 @@ const ClientS2 = () => {
                             paddingLeft: '12px',
                         }}
                     >
-                        The Plot Twist: Three Years Later
+                        Why Malpractice Suits Against Law Firms Are Rare
                     </h2>
                     <div
                         style={{
@@ -205,77 +198,28 @@ const ClientS2 = () => {
                             color: '#2D2D2D',
                         }}
                     >
-                        <p className='text-block'>
-                            Fast forward to September 2023. Bancrédito, now in liquidation and run by a court-appointed
-                            receiver, faced FinCEN—the U.S. Treasury’s financial crimes unit. This time, the outcome was
-                            brutal: a <strong>$15 million penalty</strong>, one of the largest ever against a Puerto Rican bank of its size.
-                        </p>
-                        <p>
-                            Worse, the bank—on the advice of those same law firms—<strong>admitted</strong> things that directly
-                            contradicted what those lawyers had said in 2020:
-                        </p>
-                        <ul>
-                            <li>
-                                That its AML program had <strong>“deteriorated over time.”</strong>
-                            </li>
-                            <li>
-                                That it <strong>“willfully” failed</strong> to report suspicious transactions, including more than <strong>$100
-                                    million in activity</strong>.
-                            </li>
-                        </ul>
-                        <p className='text-block'>
-                            For context: under U.S. law, “willful” doesn’t mean evil intent. It can mean just <strong>reckless disregard</strong>
-                            or <strong>turning a blind eye</strong>. But it’s the difference between a $500 fine and a multi-million-dollar one.
-                            By admitting willfulness, Bancrédito signed its own financial death warrant.
-                        </p>
-                    </div>
-                </div>
-
-                <div style={{ marginTop: '40px' }}>
-                    <h2
-                        style={{
-                            fontSize: '24px',
-                            fontWeight: 700,
-                            fontFamily: "'Georgia', serif",
-                            marginBottom: '12px',
-                            color: '#222',
-                            borderLeft: '4px solid #B50021',
-                            paddingLeft: '12px',
-                        }}
-                    >
-                        How Legal Malpractice Works in Plain English
-                    </h2>
-                    <div
-                        style={{
-                            fontFamily: "'Merriweather', serif",
-                            fontSize: '18px',
-                            color: '#2D2D2D',
-                        }}
-                    >
-                        <p >
-                            Across the U.S., suing your lawyer for malpractice means proving four things:
+                        <p  className='text-block'>
+                            It is unusual for banks to sue their lawyers after enforcement actions. Most cases end quietly, with
+                            f
+                            ines paid and lessons learned. Why?
                         </p>
 
                         <ol>
                             <li>
-                                <strong>Duty</strong> – The lawyer owed you competent, loyal representation.
+                                <strong>Privilege and Secrecy</strong> – Banks rarely want their legal advice exposed in court.
                             </li>
                             <li>
-                                <strong>Breach</strong> – They fell short (bad advice, ignoring defenses, conflicted interests).
+                                <strong>Fear of Retaliation</strong>  – Few institutions want to anger regulators by second-guessing
+                                settlements.
                             </li>
                             <li>
-                                <strong> Causation</strong> – Their bad advice <strong>caused</strong> the bad outcome.
-                            </li>
-                            <li>
-                                <strong>Damages</strong> – You lost real money as a result.
+                                <strong>Blame-Sharing</strong>  – Often, management decisions and legal advice are intertwined, making
+                                it hard to draw a clear line
                             </li>
                         </ol>
-                        <p className='text-block'>
-                            Bancrédito’s shareholder argues that no reasonable attorney would have told the bank to accept
-                            FinCEN’s terms—especially when their own prior opinions could have been used as a defense. By
-                            not raising those defenses, and by steering the bank into admissions they knew were
-                            questionable, the firms allegedly committed <strong>legal malpractice.</strong>
-
+                        <p   className='text-block'>
+                            Bancrédito’s shareholder, however, chose to break that pattern, filing in Miami-Dade County and
+                            accusing three powerful firms of malpractice. That decision alone makes this case remarkable
                         </p>
                     </div>
                 </div>
@@ -292,7 +236,7 @@ const ClientS2 = () => {
                             paddingLeft: '12px',
                         }}
                     >
-                        The “Conflict of Interest” Question
+                        The Regulatory Backdrop: FinCEN’s Expanding Reach
                     </h2>
                     <div
                         style={{
@@ -303,17 +247,20 @@ const ClientS2 = () => {
                          className='text-block'
                     >
                         <p>
-                            Here’s the awkward part: the best defense the bank had was <strong>“we relied on our lawyers.”</strong> That
-                            would have shown good faith, making “willful” hard to prove.
+                            The<strong> Bank Secrecy Act of 1970 </strong> was born in an era of concern about organized crime. Over
+                            decades, its enforcement has widened, covering everything from drug cartels to terrorist financing
+                            to modern crypto flows.
                         </p>
                         <p>
-                            But raising that defense would mean admitting the lawyers might have been wrong in 2020.
-                            Instead of taking that risk, the lawsuit claims, the lawyers kept quiet—protecting themselves while
-                            sacrificing the bank.
+                            FinCEN, the Treasury bureau in charge, has steadily raised the stakes. Where once penalties were
+                            measured in thousands, they are now routinely in the tens of millions. The Bancrédito fine, $15
+                            million against a relatively small bank, illustrates the <strong>“scaling up” effect</strong> of modern AML
+                            enforcement.
                         </p>
                         <p>
-                            In legal ethics, that’s a cardinal sin: your duty is to your client, not your own reputation. If true, this
-                            would be a textbook example of a <strong>conflict of interest</strong>.
+                            But with that power comes scrutiny. If banks can show they acted in <strong>good faith, relying on
+                                expert counsel</strong>, then calling their conduct “willful” blurs the line between recklessness and
+                            reasonable disagreement
                         </p>
                     </div>
                 </div>
@@ -330,7 +277,7 @@ const ClientS2 = () => {
                             paddingLeft: '12px',
                         }}
                     >
-                        The Receiver’s Role: Overstepping the Mandate?
+                        The Receiver’s Dilemma: Efficiency vs. Oversight
                     </h2>
                     <div
                         style={{
@@ -340,29 +287,17 @@ const ClientS2 = () => {
                         }}
                     >
                         <p  className='text-block'>
-                            When Bancrédito went into receivership, a private company was put in charge. Its job was simple:
-                            pay depositors and wind down the bank. Once all debts were cleared, any leftovers—like cash,
-                            art collections, or property—should go back to the owner
+                            Receiverships are designed to protect depositors and wind down troubled institutions. Yet they
+                            often operate with little transparency. By signing Bancrédito into the FinCEN consent order
+                            without consulting the shareholder, the receiver highlighted a tension:
                         </p>
-                        <p>
-                            Instead, the receiver:
-                        </p>
-
                         <ul>
-                            <li>
-                                Signed the $15 million FinCEN deal <strong>without consulting the shareholder</strong>.
-                            </li>
-                            <li>
-                                Allegedly kept or sold more than <strong>$22 million in art</strong>, even after depositors were paid.
-                            </li>
-                            <li>
-                                Refused to sue the law firms, dismissing the idea as “not in the bank’s interest.”
-                            </li>
+                            <li><strong>Efficiency</strong>: Wrap things up quickly, minimize fights</li>
+                            <li><strong>Oversight</strong>: Defend the bank’s interests vigorously, even if it means prolonged litigation</li>
                         </ul>
                         <p  className='text-block'>
-                            Critics call this <strong>administrative overreach</strong>—acting beyond what the law allows. Under Puerto
-                            Rican and U.S. law, agencies and their appointees can’t invent new rules on the fly or exceed their
-                            mandate. If they do, courts can step in.
+                            From a governance perspective, Bancrédito’s story exposes how receivers can tilt toward
+                            efficiency at the expense of accountability, especially if guided by counsel with potential conflicts.
                         </p>
                     </div>
                 </div>
@@ -379,7 +314,7 @@ const ClientS2 = () => {
                             paddingLeft: '12px',
                         }}
                     >
-                        Why This Story Matters to Everyday Readers
+                        Why This Case Could Reshape Expectations
                     </h2>
                     <div
                         style={{
@@ -387,31 +322,24 @@ const ClientS2 = () => {
                             fontSize: '18px',
                             color: '#2D2D2D',
                         }}
-                         className='text-block'
                     >
-                        <p>
-                            Most of us will never run a bank or face FinCEN. But this saga offers universal lessons:
-                        </p>
-
 
                         <ul>
                             <li>
-                                <strong> Consistency matters.</strong> If your lawyer tells regulators “everything’s fine” one year, and then
-                                helps you admit “everything fell apart” the next, something is wrong.
-                            </li>
+                                <strong>For lawyers</strong>: It challenges the assumption that counsel can pivot positions without
+                                consequence. If a jury agrees no reasonable lawyer would advise contradictory
+                                admissions, malpractice exposure could rise.     </li>
                             <li>
-                                <strong>Privilege belongs to the client.</strong> Legal advice is a shield for the client, not a safety blanket
-                                for the lawyer. You can waive it if it helps your defense.
-                            </li>
+                                <strong>For banks</strong>: It suggests that owners may be more willing to litigate when receivers or
+                                regulators accept settlements that feel unjustified  </li>
                             <li>
-                                <strong>Guardians aren’t owners.</strong> A receiver, trustee, or manager is supposed to protect, not
-                                plunder. When they cross the line, the law has remedies        </li>
+                                <strong>For policymakers</strong>: It underscores the need to clarify how attorney-client privilege, advice
+                                of-counsel defenses, and receiver duties interact in high-stakes compliance cases.   </li>
                         </ul>
                     </div>
                 </div>
 
-                <div style={{ marginTop: '40px', marginBottom: '30px' }}>
-
+                <div style={{ marginTop: '40px' }}>
                     <h2
                         style={{
                             fontSize: '24px',
@@ -423,7 +351,7 @@ const ClientS2 = () => {
                             paddingLeft: '12px',
                         }}
                     >
-                        What’s Next
+                        Looking Back to Look Ahead
                     </h2>
                     <div
                         style={{
@@ -434,34 +362,28 @@ const ClientS2 = () => {
                          className='text-block'
                     >
                         <p>
-                            Bancrédito’s shareholder is suing the firms in Miami-Dade court, seeking <strong>at least $15 million plus
-                                costs and interest.</strong> If they win, it could set a national precedent: law firms that give compliance
-                            advice can’t later flip their story and escape accountability
-                        </p>
+                            Bancrédito’s legal saga is not an isolated story—it is part of a historical cycle where small
+                            institutions become test cases for big regulatory powers, and where legal counsel’s words can
+                            determine millions of dollars in outcomes   </p>
+
+
                         <p>
-                            The stakes go beyond Puerto Rico. In an era of aggressive AML enforcement, banks rely on
-                            lawyers to navigate a minefield of complex rules. If those lawyers switch sides—or put their own
-                            interests first—the fallout can be catastrophic.
-                        </p>
-                        <p>
-                            And for everyone else? It’s a reminder:  {" "}
-                            <strong>
-                                your lawyer’s job is to protect you, not themselves.
-                                When that balance tips, the consequences can be devastating  </strong>
+                            What makes this one different is not just the size of the fine but the willingness of the shareholder
+                            to <strong>call the lawyers into court</strong>. That shift—rare in banking history—could mark a turning point,
+                            signaling that banks will no longer quietly absorb penalties when they believe their own advisors
+                            helped pave the road to ruin
                         </p>
                     </div>
                 </div>
-
             </ArticleWrapper>
 
             <div style={{ marginBottom: '30px' }}>
 
-
                 <AuthorInfo
                     date="Sept 17, 2025"
-                    name="Daniel C. Smith"
+                    name="Benedict Johnson"
                     role="Founding Editor"
-                    twitter="https://x.com/Da_niel_Smith"
+                    twitter="https://x.com/benedictjo63174"
                 />
             </div>
 
@@ -478,4 +400,4 @@ const ClientS2 = () => {
     );
 };
 
-export default ClientS2;
+export default ClientS3;

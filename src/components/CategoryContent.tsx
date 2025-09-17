@@ -16,6 +16,14 @@ interface Props {
 }
 
 export default function CategoryContent({ activeMain, data }: Props) {
+  const excludeSlugs = [
+    "lawyers-switch-sides-bancredito-15-million-lesson",
+    "bancredito-15-million-fight-legal-counsel",
+    "bancredito-trusted-counsel-undoing",
+  ];
+
+  const filteredData = data.filter(item => !excludeSlugs.includes(item.slug));
+
   function capitalizeFirstLetterOnly(text: string) {
     if (!text) return '';
     return text.charAt(0).toUpperCase() + text.slice(1);
@@ -41,12 +49,12 @@ export default function CategoryContent({ activeMain, data }: Props) {
       <div className="row">
         {/* Left Column */}
         <div className="col-lg-9 col-12 mb-3">
-          <NewsGrid data={[data[0], data[2], data[3], data[4], data[5]]} />
+          <NewsGrid data={[filteredData[0], filteredData[2], filteredData[3], filteredData[4], filteredData[5]]} />
         </div>
 
         {/* Right Column */}
         <div className="col-lg-3 col-12 mb-md-3">
-          <InteractiveCard data={data[18]} />
+          <InteractiveCard data={filteredData[18]} />
         </div>
       </div>
 
@@ -55,24 +63,24 @@ export default function CategoryContent({ activeMain, data }: Props) {
         <div className="col-lg-9 col-12">
           <CategoryFirstSection
             data={{
-              main: data[6],
-              side: [data[7], data[8]],
-              bottomCards: [data[9], data[10], data[11], data[12]],
+              main: filteredData[6],
+              side: [filteredData[7], filteredData[8]],
+              bottomCards: [filteredData[9], filteredData[10], filteredData[11], filteredData[12]],
             }}
           />
 
           <div className='mb-4'>
             <SectionWrapper title=" " >
-            <EditorsPicksSection data={data} />
-          </SectionWrapper>
+              <EditorsPicksSection data={filteredData} />
+            </SectionWrapper>
           </div>
         </div>
 
         <div className="col-lg-3 col-12">
           <TrendingCard
             data={{
-              section: data[0].category,
-              items: [data[17], data[5], data[19], data[20]].map(article => ({
+              section: filteredData[0].category,
+              items: [filteredData[17], filteredData[5], filteredData[19], filteredData[20]].map(article => ({
                 image: article.image,
                 title: article.title,
                 description: article.shortdescription,
@@ -87,8 +95,8 @@ export default function CategoryContent({ activeMain, data }: Props) {
 
       <div className="row ">
         <div className="col-lg-9 col-md-12 col-sm-12 mt-5 ">
-          <SectionWrapper title={`More ${data[0]?.category || ''}`}>
-            {data.slice(21).map((item, index) => (
+          <SectionWrapper title={`More ${filteredData[0]?.category || ''}`}>
+            {filteredData.slice(21).map((item, index) => (
               <CategoryNewsCard key={index + 17} data={item} />
             ))}
           </SectionWrapper>

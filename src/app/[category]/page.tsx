@@ -126,10 +126,7 @@ export async function generateMetadata({
 }
 
 
-export default async function CategoryPage({
-    params,
-}: {
-    params: Promise<{ category: string }>;
+export default async function CategoryPage({params,}: {params: Promise<{ category: string }>;
 }) {
 
     const { category } = await params;

@@ -19,6 +19,8 @@ import { Metadata } from 'next';
 import SecondHeader from '@/components/SecondHeader';
 import AuthorInfo from '@/components/AuthorInfo';
 import ClientS2 from '@/components/ClientS2';
+import ClientS3 from '@/components/ClientS3';
+import ClientS4 from '@/components/ClientS4';
 
 type Article = {
   category: string;
@@ -321,7 +323,7 @@ export default async function DetailPage({ params }: PageProps) {
         </main>
       </>
     );
-  } else if (slug === 'wanda-vazquez-campaign-finance-case-2025') {
+  } else if (slug === 'lawyers-switch-sides-bancredito-15-million-lesson') {
     return (
       <>
         <SecondHeader />
@@ -331,10 +333,10 @@ export default async function DetailPage({ params }: PageProps) {
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "NewsArticle",
-                "headline": "Wanda Vázquez: A Conservative Leader at the Crossroads",
-                "description": "An in-depth editorial feature on Wanda Vázquez, Puerto Rico’s former governor, her legacy, controversies, and enduring role in conservative politics.",
-                "datePublished": "2025-08-27T17:12:18-04:00",
-                "dateModified": "2025-08-28T00:01:15-04:00",
+                "headline": "When Lawyers Switch Sides on Their Own Client: The $15 Million Lesson of Bancrédito",
+                "description": "Bancrédito, a small Puerto Rican bank, faced a $15 million penalty for willfully failing to report suspicious transactions despite earlier legal assurances. This case highlights the costly consequences of compliance failures and legal misadvice.",
+                "datePublished": "2025-09-17T08:09:05-04:00",
+                "dateModified": "2025-09-17T08:09:05-04:00",
                 "author": {
                   "@type": "Organization",
                   "name": "Editorial Board"
@@ -347,9 +349,9 @@ export default async function DetailPage({ params }: PageProps) {
                     "url": "https://www.tangentweekly.com/images/tangent-logo.webp"
                   }
                 },
-                "mainEntityOfPage": "https://www.tangentweekly.com/politics/wanda-vazquez-campaign-finance-case-2025/",
+                "mainEntityOfPage": "https://www.tangentweekly.com/business/lawyers-switch-sides-bancredito-15-million-lesson/",
                 "wordCount": "2300",
-                "image": "https://www.tangentweekly.com/images/wanda-vazquez-campaign-law-plea.webpg"
+                "image": "https://www.tangentweekly.com/images/bancredito-15-million-lawyers-switch.webp"
               }),
             }}></Script>
 
@@ -360,7 +362,82 @@ export default async function DetailPage({ params }: PageProps) {
   }
 
 
+  else if (slug === 'bancredito-15-million-fight-legal-counsel') {
+    return (
+      <>
+        <SecondHeader />
+        <main className={`container ${styles.content}`}>
+          <Script type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "NewsArticle",
+                "headline": "Banking on Counsel: The Long Road to Bancrédito’s $15 Million Fight",
+                "description": "Bancrédito’s $15 million case shows how shifting legal advice and regulatory pressure can decide a bank’s fate.",
+                "datePublished": "2025-09-17T08:09:05-04:00",
+                "dateModified": "2025-09-17T08:09:05-04:00",
+                "author": {
+                  "@type": "Organization",
+                  "name": "Editorial Board"
+                },
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Conservative Business Journal",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.tangentweekly.com/images/tangent-logo.webp"
+                  }
+                },
+                "mainEntityOfPage": "https://www.tangentweekly.com/business/bancredito-15-million-fight-legal-counsel/",
+                "wordCount": "2300",
+                "image": "https://www.tangentweekly.com/images/bancredito-15-million-fight.webp"
+              }),
+            }}></Script>
 
+          <ClientS3 />
+        </main>
+      </>
+    )
+  }
+
+
+  else if (slug === 'bancredito-trusted-counsel-undoing') {
+    return (
+      <>
+        <SecondHeader />
+        <main className={`container ${styles.content}`}>
+          <Script type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "NewsArticle",
+                "headline": "Abandonment, Conflicted Loyalties, and Lost Opportunities: How Trusted Counsel Became Bancrédito’s Undoing",
+                "description": "Bancrédito’s downfall came not from fraud or insolvency but from the actions of its own legal advisors. Once deemed compliant, the bank collapsed within two years, ending in receivership and a $15 million FinCEN penalty.",
+                "datePublished": "2025-09-17T08:09:05-04:00",
+                "dateModified": "2025-09-17T08:09:05-04:00",
+                "author": {
+                  "@type": "Organization",
+                  "name": "Editorial Board"
+                },
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Conservative Business Journal",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.tangentweekly.com/images/tangent-logo.webp"
+                  }
+                },
+                "mainEntityOfPage": "https://www.tangentweekly.com/business/bancredito-trusted-counsel-undoing/",
+                "wordCount": "2300",
+                "image": "https://www.tangentweekly.com/images/bancredito-counsel-undoing.webp"
+              }),
+            }}></Script>
+
+          <ClientS4 />
+        </main>
+      </>
+    )
+  }
 
   else {
     return (

@@ -5,15 +5,15 @@ export default function Factbox() {
     <ArticleWrapper>
     <section
       style={{
-        borderLeft: "4px solid #004080",
+        // borderLeft: "4px solid #004080",
         padding: "1rem 1.5rem",
         // margin: "2rem 0",
         background: "#f9f9f9",
         fontFamily: "Georgia, serif",
         lineHeight: "1.4",
-        // maxWidth: "850px", // 🔹 SAME width as Timeline & PullQuotes
+        // maxWidth: "850px", 
         marginLeft: "auto", 
-        marginRight: "auto", // 🔹 keeps it centered
+        marginRight: "auto", 
       }}
     >
       <h2

@@ -51,7 +51,7 @@ export default function PullQuotes() {
             boxShadow:
               "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
             position: "relative",
-            borderLeft: "3px solid #475569",
+            // borderLeft: "3px solid #475569",
           }}
         >
           {/* <div
@@ -110,7 +110,7 @@ export default function PullQuotes() {
             boxShadow:
               "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
             position: "relative",
-            borderLeft: "3px solid #475569",
+            // borderLeft: "3px solid #475569",
           }}
         >
           {/* <div
@@ -169,7 +169,7 @@ export default function PullQuotes() {
             boxShadow:
               "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
             position: "relative",
-            borderLeft: "3px solid #475569",
+            // borderLeft: "3px solid #475569",
           }}
         >
           {/* <div
@@ -210,7 +210,7 @@ export default function PullQuotes() {
               fontWeight: "500",
               display: "block",
               textAlign: "right",
-              borderTop: "1px solid #e5e7eb",
+              // borderTop: "1px solid #e5e7eb",
               paddingTop: "12px",
             }}
           >

@@ -87,20 +87,7 @@ const ArticleHeader: React.FC<ArticleHeaderProps> = ({
         </div>
 
         <div className="d-flex gap-2 flex-shrink-0">
-          <button
-            className="btn btn-outline-dark rounded-circle d-flex justify-content-center align-items-center social-icon-btn"
-            style={{
-              width: '38px',
-              height: '38px',
-              fontSize: '14px',
-              border: '1px solid #ccc',
-              transition: 'all 0.3s ease',
-            }}
-          >
-            {/* <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page" style={{ color: 'inherit', textDecoration: 'none' }}>
-              <FaFacebookF />
-            </a> */}
-          </button>
+         
           <button
             className="btn btn-outline-dark rounded-circle d-flex justify-content-center align-items-center social-icon-btn"
             style={{

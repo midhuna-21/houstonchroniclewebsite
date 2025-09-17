@@ -88,98 +88,148 @@ function renderCard(item: {
 }) {
 
   return (
-    <Link
-      href={`/${item.category}/${item.slug}`}
-      className="text-decoration-none"
-      title={`${item.slug}`}
+//     <Link
+//   href={`/${item.category}/${item.slug}`}
+//   className="text-decoration-none"
+//   title={`${item.slug}`}
+// >
+//   <div
+//     className="h-100 text-start mb-0 mb-sm-4" 
+//   >
+//     <>
+//       {/* Mobile image */}
+//       <Image
+//         src={item.image || ""}
+//         alt={item.image}
+//         title={item.title}
+//         width={800}
+//         height={400} 
+//         className="img-fluid mb-2 d-xl-none"
+//         style={{
+//           width: "100%",
+//           height: "350px",
+//           objectFit: "cover",
+//         }}
+//       />
+
+//       {/* Desktop image */}
+//       <Image
+//         src={item.image || ""}
+//         alt={item.title}
+//         title={item.title}
+//         width={1000}
+//         height={250}
+//         className="img-fluid mb-2 d-none d-xl-block"
+//         style={{
+//           width: "100%",
+//           height: "250px",
+//           objectFit: "cover",
+//         }}
+//       />
+//     </>
+
+//     <h2
+//       className="fw-bold mt-2"
+//       style={{
+//         color: "#111111",
+//         fontSize: "18px",
+//         fontWeight: 700,
+//         fontFamily: "'Archivo', Arial, sans-serif",
+//         lineHeight: "1.2 !important",
+//         display: "inline-block",
+//       }}
+//     >
+//       {item.title}
+//     </h2>
+
+//     <div
+//       className="d-flex align-items-center mt-1"
+//       style={{
+//         fontSize: "10px",
+//         fontWeight: 200,
+//         fontFamily: "'Rubik', Arial, sans-serif",
+//       }}
+//     >
+//       <BiCalendar size={10} style={{ marginRight: "4px", color: "#000" }} />
+//       <span style={{ color: "#000", opacity: 0.6 }}>Published on</span>
+//       <span style={{ color: "#555", marginLeft: "4px" }}>{item.date}</span>
+//     </div>
+//   </div>
+// </Link>
+
+   <Link
+  href={`/${item.category}/${item.slug}`}
+  className="text-decoration-none"
+  title={`${item.slug}`}
+>
+  <div
+    className="h-100 text-start mb-0 mb-sm-4"
+    style={{
+      maxWidth: "90%",      // shrink card width a little
+      margin: "0 auto",     // center it
+    }}
+  >
+    <>
+      {/* Mobile image */}
+      <Image
+        src={item.image || ""}
+        alt={item.image}
+        title={item.title}
+        width={800}
+        height={300} // smaller height
+        className="img-fluid mb-2 d-xl-none"
+        style={{
+          width: "100%",
+          height: "280px", // ↓ reduced height for mobile
+          objectFit: "cover",
+        }}
+      />
+
+      {/* Desktop image */}
+      <Image
+        src={item.image || ""}
+        alt={item.title}
+        title={item.title}
+        width={1000}
+        height={220} // smaller height
+        className="img-fluid mb-2 d-none d-xl-block"
+        style={{
+          width: "100%",
+          height: "220px",
+          objectFit: "cover",
+        }}
+      />
+    </>
+
+    <h2
+      className="fw-bold mt-2"
+      style={{
+        color: "#111111",
+        fontSize: "16px", // smaller text
+        fontWeight: 700,
+        fontFamily: "'Archivo', Arial, sans-serif",
+        lineHeight: "1.3",
+        display: "inline-block",
+      }}
     >
-      <div
-        className="h-100 text-start"
+      {item.title}
+    </h2>
 
-      >
-        {/* <Image
-          src={item.image || ''}
-          alt={item.title}
-          width={1000}
-          height={250}
-          className="img-fluid w-100"
-          style={{
-            width: '100%',
-            height: '250px', 
-            objectFit: 'cover',
-          }}
-        /> */}
-        <>
-          <Image
-            src={item.image || ""}
-            alt={item.image}
-            title={item.title}
-            width={800}
-            height={500}
-            className="img-fluid mb-2 d-xl-none"
-            style={{
-              width: '100%',
-              height: '500px',
-              objectFit: 'cover',
-            }}
-          />
+    <div
+      className="d-flex align-items-center mt-1"
+      style={{
+        fontSize: "9px", 
+        fontWeight: 200,
+        fontFamily: "'Rubik', Arial, sans-serif",
+      }}
+    >
+      <BiCalendar size={9} style={{ marginRight: "4px", color: "#000" }} />
+      <span style={{ color: "#000", opacity: 0.6 }}>Published on</span>
+      <span style={{ color: "#555", marginLeft: "4px" }}>{item.date}</span>
+    </div>
+  </div>
+</Link>
 
-          <Image
-            src={item.image || ''}
-            alt={item.title}
-            title={item.title}
-            width={1000}
-            height={250}
-            className="img-fluid mb-2 d-none d-xl-block"
-            style={{
-              width: '100%',
-              height: '250px',
-              objectFit: 'cover',
-            }}
-          />
-
-        </>
-
-        {/* <p
-          style={{
-            fontSize: '14.224px',
-            fontWeight: 700,
-            color: '#b50021',
-            marginBottom: '4px',
-            textTransform: 'uppercase',
-            fontFamily: "'Rubik', Arial, sans-serif",
-          }}
-        >
-          {item.category}
-        </p> */}
-
-        <h2
-          className="fw-bold mt-2"
-          style={{
-            color: '#111111',
-            fontSize: '18px',
-            fontWeight: 700,
-            fontFamily: "'Archivo', Arial, sans-serif",
-            lineHeight: '1.2 !important',
-            display: 'inline-block',
-          }}
-        >
-          {item.title}
-        </h2>
-        <div
-          className="d-flex align-items-center mt-1"
-          style={{
-            fontSize: '10px',
-            fontWeight: 200,
-            fontFamily: "'Rubik', Arial, sans-serif",
-          }}
-        >
-          <BiCalendar size={10} style={{ marginRight: '4px', color: '#000' }} />
-          <span style={{ color: '#000', opacity: 0.6 }}>Published on</span>
-          <span style={{ color: '#555', marginLeft: '4px' }}>{item.date}</span>
-        </div>
-      </div>
-    </Link>
   );
 }
 

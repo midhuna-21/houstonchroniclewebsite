@@ -266,6 +266,7 @@ a {
   text-align: center;
 }
 
+
 .footer-dot {
   width: 40px; /* smaller */
   height: 40px;
@@ -382,5 +383,16 @@ a {
 
   .timeline-footer p {
     font-size: 0.7rem;
+  }
+
+}
+
+ .text-block {
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .text-block {
+    text-align: start;
   }
 }

@@ -80,7 +80,7 @@ export default function Timeline() {
             bottom: 0,
             // left: "28px",
             width: "2px",
-            background: "#475569",
+            // background: "#475569",
           }}
         ></div>
 

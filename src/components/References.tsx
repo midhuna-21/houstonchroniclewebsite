@@ -69,7 +69,64 @@ export default function References() {
 
 
                     {/* References list */}
-                    <ul className="list-disc list-inside space-y-4  text-sm leading-relaxed">
+                    <div className="space-y-4 text-sm leading-relaxed">
+                        {references.map((ref, index) => {
+                            const quoteMatch = ref.title.match(/"(.*?)"/);
+                            const quoteText = quoteMatch ? quoteMatch[0] : "";
+                            const beforeQuote = quoteMatch
+                                ? ref.title.split(quoteMatch[0])[0]
+                                : ref.title;
+                            const afterQuote = quoteMatch
+                                ? ref.title.split(quoteMatch[0])[1]
+                                : "";
+
+                            return (
+                                <p
+                                    key={index}
+                                    style={{
+                                        marginBottom: "10px",
+                                        fontSize: "17px",
+                                    }}
+                                >
+                                    <a
+                                        href={ref.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        style={{
+                                            fontSize: "1rem",
+                                            color: "#1f2937",
+                                            textDecoration: "none",
+                                        }}
+                                    >
+                                        {beforeQuote}
+                                        {quoteText && (
+                                            <span
+                                                style={{
+                                                    fontWeight: "500",
+                                                    
+                                                    color: "#1f2937",
+                                                }}
+                                            >
+                                                {quoteText}
+                                            </span>
+                                        )}
+                                        {afterQuote}
+                                    </a>
+                                    <span
+                                        style={{
+                                            fontSize: "13px",
+                                            color: "#6b7280",
+                                            marginLeft: "5px",
+                                        }}
+                                    >
+                                        {ref.date}
+                                    </span>
+                                </p>
+                            );
+                        })}
+                    </div>
+
+                    {/* <ul className="list-disc list-inside space-y-4  text-sm leading-relaxed">
                         {references.map((ref, index) => {
                             // Extract quoted text (anything between quotes "")
                             const quoteMatch = ref.title.match(/"(.*?)"/);
@@ -125,7 +182,7 @@ export default function References() {
 
                             );
                         })}
-                    </ul>
+                    </ul> */}
                 </div>
             </div>
         </ArticleWrapper>
