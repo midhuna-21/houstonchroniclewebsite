@@ -352,7 +352,6 @@ export default async function DetailPage({ params }: PageProps) {
                 "image": "https://www.tangentweekly.com/images/bancredito-15-million-lawyers-switch.webp"
               }),
             }}></Script>
-
           <ClientS2 />
         </main>
       </>

@@ -38,7 +38,6 @@ const ClientS2 = () => {
                         }}
                     >
                         Business
-
                         <motion.div
                             initial={{ width: '20%' }}
                             animate={{ width: ['20%', '100%', '20%'] }}
