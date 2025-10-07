@@ -15,7 +15,7 @@ interface LatestHomeSectionProps {
   data: Article[];
 }
 
-export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
+export default function  FirstHomeSection({ data }: LatestHomeSectionProps) {
   const main = data[0];
   const right1 = data[1];
   const right2 = data[2];
@@ -26,7 +26,7 @@ export default function FirstHomeSection({ data }: LatestHomeSectionProps) {
         {/* Left Column */}
         <div className="col-lg-3 text-start order-1 order-lg-0 d-flex flex-column justify-content-between">
           <Link href={`/${main.category}/${main.slug}`} className="text-decoration-none" title={main.slug}>
-            <div>
+            <div> 
               <p
                 style={{
                   color: "#B50021",

@@ -23,6 +23,9 @@ interface ContentLayoutProps {
 
 const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
   const { main, side, bottomCards } = data;
+const uniqueBottomCards = bottomCards?.filter(
+  (item, index, self) => index === self.findIndex((t) => t.slug === item.slug)
+);
 
   return (
     <div style={{ marginBottom: '3rem' }}>
@@ -181,7 +184,7 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
       <div className="row">
         <div className="col-lg-6 border-end pe-lg-4">
           <div className="row">
-            {bottomCards?.slice(0, 2).map((item, index) => (
+            {uniqueBottomCards?.slice(0, 2).map((item, index) => (
               <Link href={`/${item.category}/${item.slug}`} key={`${item.slug}-${index}`} className='text-decoration-none' title={`${item.slug}`}>
                 <div className="col-12 py-3 px-2" key={index}>
                   <div className="row g-2 align-items-center">
@@ -249,7 +252,7 @@ const CategoryFirstSection: React.FC<ContentLayoutProps> = ({ data }) => {
 
         <div className="col-lg-6 ps-lg-4">
           <div className="row">
-            {bottomCards?.slice(2, 4).map((item, index) => (
+            {uniqueBottomCards?.slice(2, 4).map((item, index) => (
               <Link href={`/${item.category}/${item.slug}`} key={`${item.slug}-${index}`} className='text-decoration-none' title={`${item.slug}`}>
                 <div className="col-12 py-3 px-2" key={index + 2}>
                   <div className="row g-2 align-items-center">

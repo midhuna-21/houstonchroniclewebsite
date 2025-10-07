@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import StaticHeader from './StaticHeader';
 import StaticParagraph from './StaticParagraph';
@@ -7,6 +5,20 @@ import StaticFirstSection from './StaticFirstSection';
 import AuthorInfo from './AuthorInfo';
 import EditorsPicksSection from './EditorsPick';
 import politicalData from '../../public/data/politics.json';
+
+  const wanda = {
+      category: "wanda-vazquez-garced",
+    title: "Federal Case Against Wanda Vázquez Collapses, Ending Years of Scrutiny",
+    slug: "wanda-vazquez-cleared-corruption-charges",
+    image: "/images/wanda-vazquez-cleared.webp",
+    date: "Oct 3, 2025",
+
+  }
+  const combinedData = [
+  politicalData[13],
+  politicalData[14],
+  wanda,
+];
 
 const StaticComponent = () => {
     const title = "Charges Dropped for Wanda Vázquez Amid Claims of Political Targeting";
@@ -64,7 +76,7 @@ const StaticComponent = () => {
             <StaticParagraph data={sub[6]} />
 
             <AuthorInfo
-                date="July 12, 2025"
+                date="Oct 03, 2025"
                 name="Stephen M. Knowles"
                 role="Founding Editor"
                 twitter="https://x.com/Stephenmknowles"
@@ -75,7 +87,7 @@ const StaticComponent = () => {
                     borderTop: "1px solid #242222ff",
                   margin: "30px 0 40px 0",
                   }} />
-        <EditorsPicksSection data={politicalData} />
+        <EditorsPicksSection data={combinedData} />
         </div>
     );
 };

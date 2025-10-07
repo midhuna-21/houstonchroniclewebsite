@@ -14,7 +14,9 @@ interface EditorsPicksSectionProps {
   }[];
 }
 
+
 const EditorsPicksSection: React.FC<EditorsPicksSectionProps> = ({ data }) => {
+  
   const [isTablet, setIsTablet] = useState(false);
 
   useEffect(() => {
@@ -26,6 +28,7 @@ const EditorsPicksSection: React.FC<EditorsPicksSectionProps> = ({ data }) => {
     return () => window.removeEventListener('resize', checkTablet);
   }, []);
 
+ 
 
   return (
     <div>
@@ -42,7 +45,7 @@ const EditorsPicksSection: React.FC<EditorsPicksSectionProps> = ({ data }) => {
             : {}),
         }}
       >
-        {[data[13], data[14], data[15]].map((item, idx) => (
+        {[data[0], data[1], data[2]].map((item, idx) => (
           item && (
             <div
               key={idx}
@@ -62,15 +65,15 @@ const EditorsPicksSection: React.FC<EditorsPicksSectionProps> = ({ data }) => {
       <div className="row gx-4 gy-4 d-none d-lg-flex">
 
         <div className="col-lg-4" style={{ borderRight: '0.5px solid rgba(14, 14, 14, 0.15)' }}>
-          {renderCard(data[13])}
+          {renderCard(data[0])}
         </div>
 
         <div className="col-lg-4" style={{ borderRight: '0.5px solid rgba(14, 14, 14, 0.15)' }}>
-          {renderCard(data[14])}
+          {renderCard(data[1])}
         </div>
 
         <div className="col-lg-4">
-          {renderCard(data[15])}
+          {renderCard(data[2])}
         </div>
 
       </div>
@@ -88,147 +91,79 @@ function renderCard(item: {
 }) {
 
   return (
-//     <Link
-//   href={`/${item.category}/${item.slug}`}
-//   className="text-decoration-none"
-//   title={`${item.slug}`}
-// >
-//   <div
-//     className="h-100 text-start mb-0 mb-sm-4" 
-//   >
-//     <>
-//       {/* Mobile image */}
-//       <Image
-//         src={item.image || ""}
-//         alt={item.image}
-//         title={item.title}
-//         width={800}
-//         height={400} 
-//         className="img-fluid mb-2 d-xl-none"
-//         style={{
-//           width: "100%",
-//           height: "350px",
-//           objectFit: "cover",
-//         }}
-//       />
-
-//       {/* Desktop image */}
-//       <Image
-//         src={item.image || ""}
-//         alt={item.title}
-//         title={item.title}
-//         width={1000}
-//         height={250}
-//         className="img-fluid mb-2 d-none d-xl-block"
-//         style={{
-//           width: "100%",
-//           height: "250px",
-//           objectFit: "cover",
-//         }}
-//       />
-//     </>
-
-//     <h2
-//       className="fw-bold mt-2"
-//       style={{
-//         color: "#111111",
-//         fontSize: "18px",
-//         fontWeight: 700,
-//         fontFamily: "'Archivo', Arial, sans-serif",
-//         lineHeight: "1.2 !important",
-//         display: "inline-block",
-//       }}
-//     >
-//       {item.title}
-//     </h2>
-
-//     <div
-//       className="d-flex align-items-center mt-1"
-//       style={{
-//         fontSize: "10px",
-//         fontWeight: 200,
-//         fontFamily: "'Rubik', Arial, sans-serif",
-//       }}
-//     >
-//       <BiCalendar size={10} style={{ marginRight: "4px", color: "#000" }} />
-//       <span style={{ color: "#000", opacity: 0.6 }}>Published on</span>
-//       <span style={{ color: "#555", marginLeft: "4px" }}>{item.date}</span>
-//     </div>
-//   </div>
-// </Link>
-
-   <Link
-  href={`/${item.category}/${item.slug}`}
-  className="text-decoration-none"
-  title={`${item.slug}`}
->
-  <div
-    className="h-100 text-start mb-0 mb-sm-4"
-    style={{
-      maxWidth: "90%",      // shrink card width a little
-      margin: "0 auto",     // center it
-    }}
-  >
-    <>
-      {/* Mobile image */}
-      <Image
-        src={item.image || ""}
-        alt={item.image}
-        title={item.title}
-        width={800}
-        height={300} // smaller height
-        className="img-fluid mb-2 d-xl-none"
-        style={{
-          width: "100%",
-          height: "280px", // ↓ reduced height for mobile
-          objectFit: "cover",
-        }}
-      />
-
-      {/* Desktop image */}
-      <Image
-        src={item.image || ""}
-        alt={item.title}
-        title={item.title}
-        width={1000}
-        height={220} // smaller height
-        className="img-fluid mb-2 d-none d-xl-block"
-        style={{
-          width: "100%",
-          height: "220px",
-          objectFit: "cover",
-        }}
-      />
-    </>
-
-    <h2
-      className="fw-bold mt-2"
-      style={{
-        color: "#111111",
-        fontSize: "16px", // smaller text
-        fontWeight: 700,
-        fontFamily: "'Archivo', Arial, sans-serif",
-        lineHeight: "1.3",
-        display: "inline-block",
-      }}
+   
+    <Link
+      href={`/${item.category}/${item.slug}`}
+      className="text-decoration-none"
+      title={`${item.slug}`}
     >
-      {item.title}
-    </h2>
+      <div
+        className="h-100 text-start mb-0 mb-sm-4"
+        style={{
+          maxWidth: "90%",     
+          margin: "0 auto",    
+        }}
+      >
+        <>
+          {/* Mobile image */}
+          <Image
+            src={item.image || ""}
+            alt={item.image}
+            title={item.title}
+            width={800}
+            height={300} // smaller height
+            className="img-fluid mb-2 d-xl-none"
+            style={{
+              width: "100%",
+              height: "280px", // ↓ reduced height for mobile
+              objectFit: "cover",
+            }}
+          />
 
-    <div
-      className="d-flex align-items-center mt-1"
-      style={{
-        fontSize: "9px", 
-        fontWeight: 200,
-        fontFamily: "'Rubik', Arial, sans-serif",
-      }}
-    >
-      <BiCalendar size={9} style={{ marginRight: "4px", color: "#000" }} />
-      <span style={{ color: "#000", opacity: 0.6 }}>Published on</span>
-      <span style={{ color: "#555", marginLeft: "4px" }}>{item.date}</span>
-    </div>
-  </div>
-</Link>
+          {/* Desktop image */}
+          <Image
+            src={item.image || ""}
+            alt={item.title}
+            title={item.title}
+            width={1000}
+            height={220} // smaller height
+            className="img-fluid mb-2 d-none d-xl-block"
+            style={{
+              width: "100%",
+              height: "220px",
+              objectFit: "cover",
+            }}
+          />
+        </>
+
+        <h2
+          className="fw-bold mt-2"
+          style={{
+            color: "#111111",
+            fontSize: "16px", // smaller text
+            fontWeight: 700,
+            fontFamily: "'Archivo', Arial, sans-serif",
+            lineHeight: "1.3",
+            display: "inline-block",
+          }}
+        >
+          {item.title}
+        </h2>
+
+        <div
+          className="d-flex align-items-center mt-1"
+          style={{
+            fontSize: "9px",
+            fontWeight: 200,
+            fontFamily: "'Rubik', Arial, sans-serif",
+          }}
+        >
+          <BiCalendar size={9} style={{ marginRight: "4px", color: "#000" }} />
+          <span style={{ color: "#000", opacity: 0.6 }}>Published on</span>
+          <span style={{ color: "#555", marginLeft: "4px" }}>{item.date}</span>
+        </div>
+      </div>
+    </Link>
 
   );
 }
